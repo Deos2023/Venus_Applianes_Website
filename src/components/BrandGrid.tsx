@@ -53,7 +53,7 @@ const brands: BrandProps[] = [
 
 const BrandGrid = () => {
   return (
-    <section className="section-padding" id="brands">
+    <section className="section-padding bg-white" id="brands">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900">Our Premium Brands</h2>
@@ -65,7 +65,7 @@ const BrandGrid = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {brands.map((brand) => (
             <Link to={`/brand/${brand.id}`} key={brand.id}>
-              <Card className="hover-lift overflow-hidden h-44 flex items-center justify-center">
+              <Card className="hover-lift overflow-hidden bg-white border border-gray-100 h-44 flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-cool-blue/30">
                 <CardContent className="p-6 flex items-center justify-center h-full">
                   <img
                     src={brand.logo}

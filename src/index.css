@@ -45,6 +45,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
 }
 
 @layer components {
@@ -63,4 +67,13 @@
   .section-padding {
     @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-20 lg:px-8;
   }
+  
+  .premium-gradient {
+    @apply bg-gradient-to-r from-blue-50 to-sky-50;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cool-blue to-cool-blue-dark;
+  }
 }
+
