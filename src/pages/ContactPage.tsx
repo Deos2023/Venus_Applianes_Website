@@ -1,10 +1,11 @@
+
 import { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Calendar, Mail, MapPin, Phone, Whatsapp } from 'lucide-react';
+import { Calendar, Mail, MapPin, Phone, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactPage = () => {
@@ -106,7 +107,7 @@ const ContactPage = () => {
                   type="submit" 
                   className="w-full bg-green-600 hover:bg-green-700"
                 >
-                  <Whatsapp className="w-4 h-4 mr-2" />
+                  <MessageSquare className="w-4 h-4 mr-2" />
                   Submit via WhatsApp
                 </Button>
               </div>
@@ -137,7 +138,7 @@ const ContactPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <Whatsapp className="w-6 h-6 text-cool-blue shrink-0 mt-1" />
+                  <MessageSquare className="w-6 h-6 text-cool-blue shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium text-gray-900">WhatsApp</h3>
                     <p className="text-gray-600">+1 (555) 123-4567</p>

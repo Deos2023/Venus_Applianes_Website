@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -7,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
 import { getACModel } from '@/lib/ac-data';
-import { Star, Check, Whatsapp } from 'lucide-react';
+import { Star, Check, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ACDetailsPage = () => {
@@ -201,7 +200,7 @@ const ACDetailsPage = () => {
                           type="submit" 
                           className="flex-1 bg-green-600 hover:bg-green-700"
                         >
-                          <Whatsapp className="w-4 h-4 mr-2" />
+                          <MessageSquare className="w-4 h-4 mr-2" />
                           Submit via WhatsApp
                         </Button>
                         <Button 
