@@ -1,0 +1,89 @@
+
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "./ui/card";
+
+interface BrandProps {
+  id: string;
+  name: string;
+  logo: string;
+}
+
+const brands: BrandProps[] = [
+  {
+    id: "samsung",
+    name: "Samsung",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png",
+  },
+  {
+    id: "lg",
+    name: "LG",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png",
+  },
+  {
+    id: "voltas",
+    name: "Voltas",
+    logo: "https://www.voltas.com/images/logo.png",
+  },
+  {
+    id: "daikin",
+    name: "Daikin",
+    logo: "https://www.daikin.com/-/media/Project/Daikin/daikin_com/global_common/ogp_common.jpg",
+  },
+  {
+    id: "hitachi",
+    name: "Hitachi",
+    logo: "https://seeklogo.com/images/H/hitachi-logo-F97A69D693-seeklogo.com.png",
+  },
+  {
+    id: "mitsubishi",
+    name: "Mitsubishi",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mitsubishi_logo.svg/2560px-Mitsubishi_logo.svg.png",
+  },
+  {
+    id: "carrier",
+    name: "Carrier",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Carrier_Corporation_logo.svg/1280px-Carrier_Corporation_logo.svg.png",
+  },
+  {
+    id: "bluestar",
+    name: "Blue Star",
+    logo: "https://5.imimg.com/data5/ANDROID/Default/2021/6/UX/RK/OC/22206362/product-jpeg-500x500.jpg",
+  }
+];
+
+const BrandGrid = () => {
+  return (
+    <section className="section-padding" id="brands">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">Our Premium Brands</h2>
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+            Choose from our selection of top-tier air conditioner manufacturers, each renowned for quality and innovation.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {brands.map((brand) => (
+            <Link to={`/brand/${brand.id}`} key={brand.id}>
+              <Card className="hover-lift overflow-hidden h-44 flex items-center justify-center">
+                <CardContent className="p-6 flex items-center justify-center h-full">
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="max-h-20 object-contain"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://via.placeholder.com/200x80?text=" + brand.name;
+                    }}
+                  />
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BrandGrid;
