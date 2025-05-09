@@ -1,76 +1,122 @@
 
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const heroSlides = [
+  {
+    id: 1,
+    title: "Welcome to a Home Beyond Excellence.",
+    subtitle: "Crafted for reliability, built for tomorrow.",
+    description: "Up to 50%* off | Cashback up to ₹15000*",
+    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png",
+    btnText: "Shop Now",
+    btnLink: "/brand/samsung"
+  },
+  {
+    id: 2,
+    title: "Experience Perfect Climate Control",
+    subtitle: "Premium Cooling Technology",
+    description: "Up to 40%* off | No Cost EMI on Select Products",
+    image: "public/lovable-uploads/32b80bca-8b8e-4aac-8316-76596978bb51.png",
+    btnText: "Explore",
+    btnLink: "/brand/lg"
+  },
+  {
+    id: 3,
+    title: "Smart Cooling. Smarter Living.",
+    subtitle: "AI-Powered Efficiency",
+    description: "Starting at ₹24999* | Free Installation",
+    image: "public/lovable-uploads/b2a1878a-860e-4e17-a78c-34dbf8285f1f.png",
+    btnText: "View Collection",
+    btnLink: "/brand/daikin"
+  }
+];
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-sky-50 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center py-16 lg:py-24">
-          <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0 animate-fade-in">
-            <span className="text-cool-blue font-semibold mb-2 block">Premium Air Conditioning Solutions</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Experience Perfect 
-              <span className="text-cool-blue block"> Climate Control</span>
-            </h1>
-            <p className="text-lg text-gray-700 mb-8 max-w-lg">
-              Discover premium air conditioners from top brands that combine efficiency, style, and innovation for your ultimate comfort.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-cool-blue hover:bg-cool-blue-dark">
-                <Link to="#brands">
-                  Explore Brands
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-cool-blue text-cool-blue hover:bg-cool-blue/10">
-                <Link to="/contact">
-                  Contact Us
-                </Link>
-              </Button>
-            </div>
-            
-            <div className="flex items-center gap-8 mt-10">
-              <div className="text-center">
-                <p className="text-3xl font-bold text-cool-blue">10+</p>
-                <p className="text-sm text-gray-600">Premium Brands</p>
-              </div>
-              <div className="h-8 border-r border-gray-300"></div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-cool-blue">50+</p>
-                <p className="text-sm text-gray-600">AC Models</p>
-              </div>
-              <div className="h-8 border-r border-gray-300"></div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-cool-blue">5000+</p>
-                <p className="text-sm text-gray-600">Happy Customers</p>
-              </div>
-            </div>
+    <div className="relative h-[650px] w-full overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
+      {heroSlides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+            index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          {/* Background Image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent">
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="h-full w-full object-cover opacity-80"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
+              }}
+            />
           </div>
           
-          <div className="lg:w-1/2 relative">
-            <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl hover-lift animate-scale-in">
-              <img
-                src="https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="Modern living room with air conditioner"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://images.pexels.com/photos/6207634/pexels-photo-6207634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
-                <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-                  <p className="text-gray-800 font-medium">Modern cooling solutions for every space</p>
-                </div>
-              </div>
+          {/* Content */}
+          <div className="container mx-auto px-4 h-full flex items-center relative z-10">
+            <div className="max-w-2xl text-white">
+              <span className="text-cool-blue font-medium mb-2 block text-lg">
+                {slide.subtitle}
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                {slide.title}
+              </h1>
+              <p className="text-xl text-gray-200 mb-8">{slide.description}</p>
+              <Button asChild size="lg" className="bg-cool-blue hover:bg-cool-blue-dark">
+                <Link to={slide.btnLink}>{slide.btnText}</Link>
+              </Button>
             </div>
-            
-            {/* Decorative elements for premium look */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-cool-blue/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-warm-amber/10 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 w-8 h-40 bg-cool-blue/20 rounded-full hidden lg:block"></div>
           </div>
         </div>
+      ))}
+      
+      {/* Navigation Arrows */}
+      <button 
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button 
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+      
+      {/* Slide Indicators */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-2 rounded-full transition-all ${
+              currentSlide === index ? "w-8 bg-cool-blue" : "w-2 bg-white/60"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
