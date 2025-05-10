@@ -2,6 +2,7 @@
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const deals = [
   {
@@ -30,47 +31,85 @@ const deals = [
   }
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
+
 const FeaturedDeals = () => {
   return (
-    <section className="section-padding bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">Featured Offers</h2>
-          <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+    <section className="section-padding">
+      <motion.div 
+        className="container mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div 
+          className="text-center mb-12"
+          variants={fadeInUp}
+        >
+          <h2 className="text-3xl font-bold text-white">Featured Offers</h2>
+          <p className="mt-2 text-gray-300 max-w-2xl mx-auto">
             Discover our exclusive deals on premium air conditioning solutions
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {deals.map((deal) => (
-            <div 
-              key={deal.id} 
-              className={`${deal.bgColor} rounded-lg overflow-hidden hover-lift shadow-xl relative`}
+          {deals.map((deal, index) => (
+            <motion.div 
+              key={deal.id}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { 
+                  opacity: 1, 
+                  y: 0,
+                  transition: { 
+                    duration: 0.5,
+                    delay: index * 0.2 
+                  } 
+                }
+              }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-              <img 
-                src={deal.image} 
-                alt={deal.title} 
-                className="w-full h-60 object-contain pt-8"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://via.placeholder.com/300x200?text=AC+Image";
+              <motion.div 
+                className={`${deal.bgColor} rounded-lg overflow-hidden shadow-xl relative`}
+                whileHover={{ 
+                  scale: 1.03,
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
                 }}
-              />
-              <div className="p-6 relative z-20 text-white">
-                <h3 className="text-2xl font-bold mb-2">{deal.title}</h3>
-                <p className="mb-4">{deal.description}</p>
-                <Button asChild className="bg-white text-gray-900 hover:bg-gray-100 group">
-                  <Link to={deal.link}>
-                    Buy Now
-                    <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                <img 
+                  src={deal.image} 
+                  alt={deal.title} 
+                  className="w-full h-60 object-contain pt-8"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://via.placeholder.com/300x200?text=AC+Image";
+                  }}
+                />
+                <div className="p-6 relative z-20 text-white">
+                  <h3 className="text-2xl font-bold mb-2">{deal.title}</h3>
+                  <p className="mb-4">{deal.description}</p>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button asChild className="bg-white text-gray-900 hover:bg-gray-100 group">
+                      <Link to={deal.link}>
+                        Buy Now
+                        <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

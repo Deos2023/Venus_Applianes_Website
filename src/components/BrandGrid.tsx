@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "./ui/card";
+import { motion } from "framer-motion";
 
 interface BrandProps {
   id: string;
@@ -51,36 +52,74 @@ const brands: BrandProps[] = [
   }
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 }
+  }
+};
+
 const BrandGrid = () => {
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white" id="brands">
+    <section className="section-padding bg-gradient-to-br from-gray-100 via-white to-gray-100" id="brands">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold text-gray-900">Our Premium Brands</h2>
           <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
             Choose from our selection of top-tier air conditioner manufacturers, each renowned for quality and innovation.
           </p>
-        </div>
+        </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {brands.map((brand) => (
-            <Link to={`/brand/${brand.id}`} key={brand.id}>
-              <Card className="hover-lift overflow-hidden bg-white border border-gray-100 h-32 flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-cool-blue/30">
-                <CardContent className="p-6 flex items-center justify-center h-full">
-                  <img
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    className="max-h-16 object-contain"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "https://via.placeholder.com/200x80?text=" + brand.name;
-                    }}
-                  />
-                </CardContent>
-              </Card>
-            </Link>
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={container}
+        >
+          {brands.map((brand, index) => (
+            <motion.div key={brand.id} variants={item}>
+              <Link to={`/brand/${brand.id}`}>
+                <motion.div
+                  whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <Card className="overflow-hidden bg-white border border-gray-100 h-32 flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-cool-blue/30">
+                    <CardContent className="p-6 flex items-center justify-center h-full">
+                      <img
+                        src={brand.logo}
+                        alt={`${brand.name} logo`}
+                        className="max-h-16 object-contain"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = "https://via.placeholder.com/200x80?text=" + brand.name;
+                        }}
+                      />
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
