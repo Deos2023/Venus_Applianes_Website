@@ -10,16 +10,16 @@ const heroSlides = [
     title: "Welcome to a Home Beyond Excellence.",
     subtitle: "Crafted for reliability, built for tomorrow.",
     description: "Up to 50%* off | Cashback up to ₹15000*",
-    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png",
+    image: "public/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.png",
     btnText: "Shop Now",
     btnLink: "/brand/samsung"
   },
   {
     id: 2,
-    title: "Experience Perfect Climate Control",
-    subtitle: "Premium Cooling Technology",
-    description: "Up to 40%* off | No Cost EMI on Select Products",
-    image: "public/lovable-uploads/32b80bca-8b8e-4aac-8316-76596978bb51.png",
+    title: "Built for Clarity, Speed & Performance.",
+    subtitle: "Launching Premium AC Series!",
+    description: "Starting at ₹24999* | No Cost EMI on Select Products",
+    image: "public/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
     btnText: "Explore",
     btnLink: "/brand/lg"
   },
@@ -27,8 +27,8 @@ const heroSlides = [
     id: 3,
     title: "Smart Cooling. Smarter Living.",
     subtitle: "AI-Powered Efficiency",
-    description: "Starting at ₹24999* | Free Installation",
-    image: "public/lovable-uploads/b2a1878a-860e-4e17-a78c-34dbf8285f1f.png",
+    description: "Free Installation | Extended Warranty",
+    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png",
     btnText: "View Collection",
     btnLink: "/brand/daikin"
   }
@@ -53,7 +53,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[650px] w-full overflow-hidden bg-gradient-to-r from-gray-900 to-gray-800">
+    <div className="relative h-[650px] w-full overflow-hidden">
       {heroSlides.map((slide, index) => (
         <div
           key={slide.id}
@@ -62,31 +62,59 @@ const Hero = () => {
           }`}
         >
           {/* Background Image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent">
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="h-full w-full object-cover opacity-80"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
-              }}
-            />
-          </div>
+          <img
+            src={slide.image}
+            alt={slide.title}
+            className="h-full w-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
+            }}
+          />
           
-          {/* Content */}
-          <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-            <div className="max-w-2xl text-white">
-              <span className="text-cool-blue font-medium mb-2 block text-lg">
-                {slide.subtitle}
-              </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                {slide.title}
-              </h1>
-              <p className="text-xl text-gray-200 mb-8">{slide.description}</p>
-              <Button asChild size="lg" className="bg-cool-blue hover:bg-cool-blue-dark">
-                <Link to={slide.btnLink}>{slide.btnText}</Link>
-              </Button>
+          {/* Content Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent">
+            <div className="container mx-auto px-4 h-full flex items-center">
+              <div className="max-w-2xl text-white">
+                <span className="text-white/80 font-medium mb-2 block text-lg">
+                  {slide.subtitle}
+                </span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-xl text-white/90 mb-8">{slide.description}</p>
+                
+                {/* CTA Button */}
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-red-600 hover:bg-red-700 rounded-full px-8 text-lg"
+                >
+                  <Link to={slide.btnLink}>{slide.btnText}</Link>
+                </Button>
+                
+                {/* Free Delivery Tag */}
+                <div className="flex items-center mt-12 gap-6">
+                  <div className="flex items-center gap-2">
+                    <span className="bg-white/20 p-2 rounded-full">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.5 20.5C19.5 21.3284 18.8284 22 18 22C17.1716 22 16.5 21.3284 16.5 20.5C16.5 19.6716 17.1716 19 18 19C18.8284 19 19.5 19.6716 19.5 20.5Z" fill="white"/>
+                        <path d="M9.5 20.5C9.5 21.3284 8.82843 22 8 22C7.17157 22 6.5 21.3284 6.5 20.5C6.5 19.6716 7.17157 19 8 19C8.82843 19 9.5 19.6716 9.5 20.5Z" fill="white"/>
+                        <path d="M5 2H19.25C19.6642 2 20 2.33579 20 2.75V14.25C20 14.6642 19.6642 15 19.25 15H5M9 15L3 15L3 8.5M3 6L3 4.5C3 4.22386 3.22386 4 3.5 4H5M7 8.5H11M9 11.5H13M5 8.5V11.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <span className="text-sm">Free Delivery</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="bg-white/20 p-2 rounded-full">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 14L11 16L15.5 11.5M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.0799 20 7.2 20Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <span className="text-sm">No Cost EMI* On Select Products</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,7 +141,7 @@ const Hero = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2 rounded-full transition-all ${
-              currentSlide === index ? "w-8 bg-cool-blue" : "w-2 bg-white/60"
+              currentSlide === index ? "w-8 bg-red-600" : "w-2 bg-white/60"
             }`}
           />
         ))}
