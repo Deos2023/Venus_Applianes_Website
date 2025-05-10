@@ -72,11 +72,11 @@ const Hero = () => {
             }}
           />
           
-          {/* Content Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent">
+          {/* Content Overlay with Premium Styling */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent">
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-2xl text-white">
-                <span className="text-white/80 font-medium mb-2 block text-lg">
+                <span className="text-white/90 font-medium mb-2 block text-lg tracking-wider">
                   {slide.subtitle}
                 </span>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
@@ -84,16 +84,16 @@ const Hero = () => {
                 </h1>
                 <p className="text-xl text-white/90 mb-8">{slide.description}</p>
                 
-                {/* CTA Button */}
+                {/* CTA Button with Premium Design */}
                 <Button 
                   asChild 
                   size="lg" 
-                  className="bg-red-600 hover:bg-red-700 rounded-full px-8 text-lg"
+                  className="bg-red-600 hover:bg-red-700 rounded-full px-8 text-lg font-medium"
                 >
                   <Link to={slide.btnLink}>{slide.btnText}</Link>
                 </Button>
                 
-                {/* Free Delivery Tag */}
+                {/* Premium Tags */}
                 <div className="flex items-center mt-12 gap-6">
                   <div className="flex items-center gap-2">
                     <span className="bg-white/20 p-2 rounded-full">
@@ -103,7 +103,7 @@ const Hero = () => {
                         <path d="M5 2H19.25C19.6642 2 20 2.33579 20 2.75V14.25C20 14.6642 19.6642 15 19.25 15H5M9 15L3 15L3 8.5M3 6L3 4.5C3 4.22386 3.22386 4 3.5 4H5M7 8.5H11M9 11.5H13M5 8.5V11.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                    <span className="text-sm">Free Delivery</span>
+                    <span className="text-sm font-medium">Free Delivery</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="bg-white/20 p-2 rounded-full">
@@ -111,7 +111,7 @@ const Hero = () => {
                         <path d="M9 14L11 16L15.5 11.5M7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V7.2C20 6.0799 20 5.51984 19.782 5.09202C19.5903 4.71569 19.2843 4.40973 18.908 4.21799C18.4802 4 17.9201 4 16.8 4H7.2C6.0799 4 5.51984 4 5.09202 4.21799C4.71569 4.40973 4.40973 4.71569 4.21799 5.09202C4 5.51984 4 6.0799 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.40973 19.2843 4.71569 19.5903 5.09202 19.782C5.51984 20 6.0799 20 7.2 20Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                    <span className="text-sm">No Cost EMI* On Select Products</span>
+                    <span className="text-sm font-medium">No Cost EMI* On Select Products</span>
                   </div>
                 </div>
               </div>
@@ -120,21 +120,23 @@ const Hero = () => {
         </div>
       ))}
       
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows with Premium Styling */}
       <button 
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
+        aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button 
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
+        aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
       
-      {/* Slide Indicators */}
+      {/* Premium Slide Indicators */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {heroSlides.map((_, index) => (
           <button
@@ -143,6 +145,7 @@ const Hero = () => {
             className={`h-2 rounded-full transition-all ${
               currentSlide === index ? "w-8 bg-red-600" : "w-2 bg-white/60"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

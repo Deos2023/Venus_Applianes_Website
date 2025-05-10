@@ -34,10 +34,10 @@ const features = [
 const HomePage = () => {
   return (
     <Layout>
-      {/* Hero Section with Slider */}
+      {/* Hero Section with Premium Slider */}
       <Hero />
       
-      {/* AC Selection Guide Section */}
+      {/* AC Selection Guide Section - Positioned directly below the hero */}
       <ACSelectionGuide />
       
       {/* Product Filtering Section */}
