@@ -63,7 +63,7 @@ const ACSelectionGuide = () => {
             >
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-400 text-white flex items-center justify-center text-xl font-bold mb-3 shadow-md">3</div>
               <p className="text-sm font-medium text-center">Specifications</p>
-            </div>
+            </motion.div>
             <div className="hidden md:flex items-center justify-center">
               <ChevronRight className="text-gray-400" />
             </div>
