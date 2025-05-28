@@ -1,4 +1,3 @@
-
 export interface ACProduct {
   id: string;
   type: ACType;
@@ -24,14 +23,9 @@ export const acTypes: { id: ACType; name: string; image: string }[] = [
     image: "public/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png"
   },
   {
-    id: 'cassette',
-    name: '4-WAY CASSETTE AC',
-    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png"
-  },
-  {
-    id: 'multi-split',
-    name: 'MULTI I AC',
-    image: "public/lovable-uploads/31389003-e760-4a88-b98d-1952c74143ec.png"
+    id: 'window',
+    name: 'WINDOW AC',
+    image: "public/lovable-uploads/e9e6f48b-038f-4a14-9b10-baead8c7a7e8.png"
   },
   {
     id: 'one-way-cassette',
@@ -39,9 +33,14 @@ export const acTypes: { id: ACType; name: string; image: string }[] = [
     image: "public/lovable-uploads/0c6a71d3-919c-4b3f-96dd-09055ff138b8.png"
   },
   {
-    id: 'window',
-    name: 'WINDOW AC',
-    image: "public/lovable-uploads/e9e6f48b-038f-4a14-9b10-baead8c7a7e8.png"
+    id: 'cassette',
+    name: '4-WAY CASSETTE AC',
+    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png"
+  },
+  {
+    id: 'multi-split',
+    name: 'MULTI AC',
+    image: "public/lovable-uploads/31389003-e760-4a88-b98d-1952c74143ec.png"
   }
 ];
 
@@ -50,17 +49,17 @@ export const brands: { id: Brand; name: string; logo: string }[] = [
   { id: 'mitsubishi-heavy', name: 'MITSUBISHI HEAVY INDUSTRIES', logo: "https://www.mhi.com/themes/custom/bootstrap_mhi/logo.svg" },
   { id: 'mitsubishi-electric', name: 'MITSUBISHI ELECTRIC', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mitsubishi_Electric_logo.svg/1280px-Mitsubishi_Electric_logo.svg.png" },
   { id: 'mitsubishi-akabishi', name: 'MITSUBISHI ELECTRIC AKABISHI', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mitsubishi_Electric_logo.svg/1280px-Mitsubishi_Electric_logo.svg.png" },
-  { id: 'daikin', name: 'DAIKIN', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Daikin_logo.svg/1280px-Daikin_logo.svg.png" },
-  { id: 'panasonic', name: 'PANASONIC', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Panasonic_logo_%28Blue%29.svg/1280px-Panasonic_logo_%28Blue%29.svg.png" },
-  { id: 'blue-star', name: 'BLUE STAR', logo: "https://www.bluestarindia.com/images/blue-star-ac-logo.jpg" },
-  { id: 'carrier', name: 'CARRIER', logo: "https://www.carrier.com/carrier/images/carrier-logo.svg" },
-  { id: 'hitachi', name: 'HITACHI', logo: "https://www.hitachi.com/image/layout/header/hitachi_logo.gif" },
-  { id: 'lg', name: 'LG', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png" },
-  { id: 'voltas', name: 'VOLTAS', logo: "https://www.voltasac.com/wp-content/themes/voltas/images/logo.png" },
-  { id: 'hisense', name: 'HISENSE', logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hisense_logo.svg/1280px-Hisense_logo.svg.png" },
-  { id: 'godrej', name: 'GODREJ', logo: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Godrej_Logo.png" },
-  { id: 'lloyd', name: 'LLOYD', logo: "https://havells.com/content/dam/havells/consumer/Brands/Lloyd/Lloyd_logo.png" },
-  { id: 'vestar', name: 'VESTAR', logo: "https://www.vestarac.com/images/logo.png" }
+  { id: 'daikin', name: 'DAIKIN', logo: "/lovable-uploads/94100e13-1446-47ff-8bb4-4cd8fb95035f.png" },
+  { id: 'panasonic', name: 'PANASONIC', logo: "/lovable-uploads/43b71c61-896e-4271-a7b2-a9a165a9f892.png" },
+  { id: 'blue-star', name: 'BLUE STAR', logo: "/lovable-uploads/72002498-a99e-40af-8002-2a7eddb8ffc5.png" },
+  { id: 'carrier', name: 'CARRIER', logo: "/lovable-uploads/4e7ddae9-0f68-40af-a6e0-27ecaa0e02ca.png" },
+  { id: 'hitachi', name: 'HITACHI', logo: "/lovable-uploads/833f8e8e-835d-435d-9db4-82dc17c80ebb.png" },
+  { id: 'lg', name: 'LG', logo: "/lovable-uploads/19ec5cdd-688a-4aa4-8d7f-df035add0390.png" },
+  { id: 'voltas', name: 'VOLTAS', logo: "/lovable-uploads/8ff31e4e-43c0-4f22-ad82-55bca8c06340.png" },
+  { id: 'hisense', name: 'HISENSE', logo: "/lovable-uploads/47dd82e6-33be-4d8e-b007-32a8c50c3375.png" },
+  { id: 'godrej', name: 'GODREJ', logo: "/lovable-uploads/0695482c-4008-45c0-9890-f4ce6044eaab.png" },
+  { id: 'lloyd', name: 'LLOYD', logo: "/lovable-uploads/61f614fc-2d7d-41ac-8c3a-78da8cf34f77.png" },
+  { id: 'vestar', name: 'VESTAR', logo: "/lovable-uploads/f9296fe5-440f-4f69-93f6-77b88ffc76aa.png" }
 ];
 
 export const inverterTypes: { id: InverterType; name: string }[] = [
