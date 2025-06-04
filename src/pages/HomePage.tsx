@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import { acTypes } from '@/lib/ac-selection-data';
 import { motion } from 'framer-motion';
+import ACInquiryForm from '@/components/ACInquiryForm';
 
 const features = [
   {
@@ -56,6 +57,8 @@ const HomePage = () => {
     <Layout>
       {/* Hero Section with Premium Slider */}
       <Hero />
+
+      <ACInquiryForm/>
       
       {/* AC Selection Guide Section - Positioned directly below the hero */}
       <motion.div

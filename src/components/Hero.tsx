@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
@@ -28,7 +27,7 @@ const heroSlides = [
     title: "Smart Cooling. Smarter Living.",
     subtitle: "AI-Powered Efficiency",
     description: "Free Installation | Extended Warranty",
-    image: "public/lovable-uploads/7994dc55-fdbd-440b-8eca-97984f41f39b.png",
+    image: "public/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.jpg",
     btnText: "View Collection",
     btnLink: "/brand/daikin"
   }
@@ -53,19 +52,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[650px] w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden" style={{ height: "100vh" }}>
       {heroSlides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full transition-opacity duration-1000 ${
             index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
+          style={{ height: "100vh" }}
         >
           {/* Background Image */}
           <img
             src={slide.image}
             alt={slide.title}
-            className="h-full w-full object-cover"
+            className="w-full h-full object-cover"
+            style={{ height: "100vh", width: "100vw" }}
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
@@ -73,7 +74,7 @@ const Hero = () => {
           />
           
           {/* Content Overlay with Premium Styling */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" style={{ height: "100vh" }}>
             <div className="container mx-auto px-4 h-full flex items-center">
               <div className="max-w-2xl text-white">
                 <span className="text-white/90 font-medium mb-2 block text-lg tracking-wider">
@@ -125,6 +126,7 @@ const Hero = () => {
         onClick={prevSlide}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
         aria-label="Previous slide"
+        style={{ height: "48px", width: "48px" }}
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
@@ -132,6 +134,7 @@ const Hero = () => {
         onClick={nextSlide}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition-all duration-200"
         aria-label="Next slide"
+        style={{ height: "48px", width: "48px" }}
       >
         <ChevronRight className="h-6 w-6" />
       </button>

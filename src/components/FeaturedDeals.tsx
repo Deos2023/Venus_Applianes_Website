@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
@@ -40,11 +39,30 @@ const fadeInUp = {
   }
 };
 
+// Use your own premium background image here
+const PREMIUM_BG_IMAGE = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80";
+
 const FeaturedDeals = () => {
   return (
-    <section className="section-padding">
+    <section
+      className="relative py-20 min-h-[80vh] flex items-center"
+      style={{
+        backgroundImage: `url('${PREMIUM_BG_IMAGE}')`,
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      {/* Glassmorphism Overlay */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[6px] z-0" />
+
+      {/* Decorative Glass Circles for extra premium feel */}
+      <div className="absolute top-[-120px] left-[-120px] w-[350px] h-[350px] bg-blue-300/30 rounded-full blur-3xl z-10 pointer-events-none" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[250px] h-[250px] bg-blue-400/20 rounded-full blur-2xl z-10 pointer-events-none" />
+
       <motion.div 
-        className="container mx-auto"
+        className="container mx-auto relative z-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -53,8 +71,8 @@ const FeaturedDeals = () => {
           className="text-center mb-12"
           variants={fadeInUp}
         >
-          <h2 className="text-3xl font-bold text-white">Featured Offers</h2>
-          <p className="mt-2 text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 drop-shadow-lg">Featured Offers</h2>
+          <p className="mt-2 text-gray-700 max-w-2xl mx-auto font-medium">
             Discover our exclusive deals on premium air conditioning solutions
           </p>
         </motion.div>

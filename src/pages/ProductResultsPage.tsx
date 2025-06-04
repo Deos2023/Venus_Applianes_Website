@@ -37,19 +37,7 @@ const ProductResultsPage = () => {
       product.starRating === starRating
     );
     
-    // If no products match the exact criteria, show products with the same type, brand, and inverter
-    if (products.length === 0) {
-      const fallbackProducts = acProducts.filter(product => 
-        product.type === acType && 
-        product.brand === brandId && 
-        product.inverter === inverterType
-      ).slice(0, 6);
-      
-      setFilteredProducts(fallbackProducts);
-    } else {
-      setFilteredProducts(products);
-    }
-    
+    setFilteredProducts(products);
     // Scroll to top
     window.scrollTo(0, 0);
   }, [acType, brandId, inverterType, tonnageValue, starRating]);

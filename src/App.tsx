@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,7 @@ import ACDetailsPage from "./pages/ACDetailsPage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import ProductDetailsPage from "./pages/ProductDetailsPage"; // Add this import
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +37,7 @@ const App = () => (
           <Route path="/products/:type/:brand/:inverter/:tonnage/:star" element={<ProductResultsPage />} />
           <Route path="/brand/:brandName" element={<BrandPage />} />
           <Route path="/brand/:brandName/ton/:tonValue/star/:starRating" element={<ACDetailsPage />} />
+          <Route path="/product/:id" element={<ProductDetailsPage />} /> {/* Add this route */}
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />

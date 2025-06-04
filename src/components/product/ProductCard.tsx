@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import WhatsAppInquiry from "@/components/WhatsAppInquiry";
@@ -52,8 +52,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
             price={product.price}
           />
           
-          <Button variant="outline" className="w-full group">
-            View Details <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          <Button asChild variant="outline" className="w-full group">
+            <Link to={`/product/${product.id}`}>
+              View Details <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
       </CardContent>
