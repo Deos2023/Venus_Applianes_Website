@@ -68,7 +68,7 @@ export const inverterTypes: { id: InverterType; name: string }[] = [
   { id: 'non-inverter', name: 'Non-Inverter AC' }
 ];
 
-export const tonnageOptions = ['1.0T', '1.14T', '1.5T', '2.0T', '2.5T', '2.6T', '3.0T', '3.6T', '8T'];
+export const tonnageOptions = ['1.0T', '1.14T', '1.5T', '2.0T', '2.5T', '3.0T'];
 export const starRatings = ['1★', '2★', '3★', '4★', '5★'];
 
 // This is just a subset of the data for example purposes
