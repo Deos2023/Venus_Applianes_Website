@@ -9,7 +9,7 @@ const heroSlides = [
     title: "Welcome to a Home Beyond Excellence.",
     subtitle: "Crafted for reliability, built for tomorrow.",
     description: "Up to 50%* off | Cashback up to ₹15000*",
-    image: "public/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.png",
+    image: "/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.png",
     btnText: "Shop Now",
     btnLink: "/brand/samsung"
   },
@@ -18,7 +18,7 @@ const heroSlides = [
     title: "Built for Clarity, Speed & Performance.",
     subtitle: "Launching Premium AC Series!",
     description: "Starting at ₹24999* | No Cost EMI on Select Products",
-    image: "public/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
+    image: "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
     btnText: "Explore",
     btnLink: "/brand/lg"
   },
@@ -27,7 +27,7 @@ const heroSlides = [
     title: "Smart Cooling. Smarter Living.",
     subtitle: "AI-Powered Efficiency",
     description: "Free Installation | Extended Warranty",
-    image: "public/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.jpg",
+    image: "/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.jpg",
     btnText: "View Collection",
     btnLink: "/brand/daikin"
   }

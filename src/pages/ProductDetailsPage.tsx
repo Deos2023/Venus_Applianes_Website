@@ -27,14 +27,17 @@ const ProductDetailsPage = () => {
       : img;
   }
 
-  // Mock multiple images for the product (real app: from product.images[])
-  const productImages = [
-    fixImagePath(product?.image),
-    "https://via.placeholder.com/600x600?text=AC+Side+View",
-    "https://via.placeholder.com/600x600?text=AC+Control+Panel",
-    "https://via.placeholder.com/600x600?text=AC+Installation",
-    "https://via.placeholder.com/600x600?text=AC+Remote"
-  ];
+  // Get product images from the product data
+  const productImages = product?.images 
+    ? product.images.map(img => fixImagePath(img))
+    : product?.image 
+      ? [fixImagePath(product.image)] 
+      : ["https://via.placeholder.com/600x600?text=AC+Image"];
+      
+  // Ensure we have at least one image
+  if (productImages.length === 0) {
+    productImages.push("https://via.placeholder.com/600x600?text=AC+Image");
+  }
 
   if (!product) {
     return (

@@ -14,6 +14,7 @@ interface WhatsAppInquiryProps {
   productName: string;
   modelNumber: string;
   price: number;
+  className?: string;
 }
 
 const formSchema = z.object({
@@ -21,7 +22,7 @@ const formSchema = z.object({
   mobile: z.string().min(10, { message: "Please enter a valid mobile number" })
 });
 
-const WhatsAppInquiry = ({ productName, modelNumber, price }: WhatsAppInquiryProps) => {
+const WhatsAppInquiry = ({ productName, modelNumber, price, className }: WhatsAppInquiryProps) => {
   const [open, setOpen] = useState(false);
   const { toast } = useToast();
   
@@ -62,7 +63,7 @@ const WhatsAppInquiry = ({ productName, modelNumber, price }: WhatsAppInquiryPro
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800">
+        <Button className={`w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 ${className || ''}`}>
           <MessageSquare className="mr-2 h-4 w-4" /> Buy Now on WhatsApp
         </Button>
       </DialogTrigger>
