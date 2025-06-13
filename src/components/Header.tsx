@@ -31,8 +31,8 @@ const Header = () => {
       <motion.header 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-xl shadow-2xl border-b border-gray-100/50"
-            : "bg-gradient-to-r from-blue-900/80 to-blue-800/80 backdrop-blur-md"
+            ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-100/50"
+            : "bg-gradient-to-r from-blue-900/85 to-blue-800/85 backdrop-blur-md"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -40,7 +40,7 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section - Headless Design */}
+            {/* Logo Section - Enhanced Design */}
             <Link to="/" className="flex items-center gap-3 group">
               <motion.div 
                 className="relative"
@@ -70,8 +70,8 @@ const Header = () => {
               </div>
             </Link>
 
-            {/* Desktop Navigation - Modern Headless */}
-            <nav className="hidden lg:flex items-center gap-1">
+            {/* Desktop Navigation - Modern with Better Spacing */}
+            <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -81,43 +81,56 @@ const Header = () => {
                 >
                   <Link 
                     to={item.path}
-                    className={`relative px-4 py-2 rounded-xl font-medium transition-all duration-300 group ${
+                    className={`relative px-5 py-3 xl:px-6 xl:py-3 rounded-2xl font-medium text-sm xl:text-base transition-all duration-300 group ${
                       scrolled
-                        ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                        : "text-white hover:text-blue-200 hover:bg-white/10"
+                        ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50/70"
+                        : "text-white hover:text-blue-200 hover:bg-white/15"
                     }`}
                   >
-                    <span className="relative z-10 flex items-center gap-1">
+                    <span className="relative z-10 flex items-center gap-1.5">
                       {item.name}
                       {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                     </span>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300"></div>
+                    {/* Enhanced hover effects */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"></div>
+                    {/* Active state indicator */}
+                    <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
                 </motion.div>
               ))}
             </nav>
 
-            {/* Contact Info & CTA - Desktop */}
+            {/* Contact Info & CTA - Desktop Enhanced */}
             <div className="hidden xl:flex items-center gap-6">
-              <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-5 text-sm">
                 <motion.div 
-                  className={`flex items-center gap-2 transition-colors duration-300 ${
+                  className={`flex items-center gap-2.5 transition-colors duration-300 ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <Phone className="w-4 h-4" />
+                  <div className={`p-1.5 rounded-lg ${
+                    scrolled ? "bg-blue-50" : "bg-white/10"
+                  }`}>
+                    <Phone className="w-3.5 h-3.5" />
+                  </div>
                   <span className="font-medium">+91 98765 43210</span>
                 </motion.div>
-                <div className="w-px h-4 bg-current opacity-30"></div>
+                <div className={`w-px h-5 ${
+                  scrolled ? "bg-gray-300" : "bg-white/30"
+                }`}></div>
                 <motion.div 
-                  className={`flex items-center gap-2 transition-colors duration-300 ${
+                  className={`flex items-center gap-2.5 transition-colors duration-300 ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <Mail className="w-4 h-4" />
+                  <div className={`p-1.5 rounded-lg ${
+                    scrolled ? "bg-blue-50" : "bg-white/10"
+                  }`}>
+                    <Mail className="w-3.5 h-3.5" />
+                  </div>
                   <span className="font-medium">info@coolbreeze.com</span>
                 </motion.div>
               </div>
@@ -127,7 +140,8 @@ const Header = () => {
               >
                 <Button 
                   asChild 
-                  className={`font-medium transition-all duration-300 shadow-lg hover:shadow-xl rounded-xl ${
+                  size="lg"
+                  className={`font-medium transition-all duration-300 shadow-lg hover:shadow-xl rounded-2xl px-6 ${
                     scrolled 
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" 
                       : "bg-white text-blue-700 hover:bg-blue-50"
@@ -138,7 +152,7 @@ const Header = () => {
               </motion.div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Enhanced */}
             <motion.div 
               className="lg:hidden"
               whileTap={{ scale: 0.95 }}
@@ -147,10 +161,10 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`p-2 rounded-xl transition-all duration-300 ${
+                className={`p-3 rounded-2xl transition-all duration-300 ${
                   scrolled 
                     ? "text-gray-700 hover:bg-blue-50 hover:text-blue-600" 
-                    : "text-white hover:bg-white/10"
+                    : "text-white hover:bg-white/15"
                 }`}
               >
                 <AnimatePresence mode="wait">
@@ -181,7 +195,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation - Modern Slide Down */}
+        {/* Mobile Navigation - Enhanced Design */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -191,12 +205,12 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               className={`lg:hidden overflow-hidden ${
                 scrolled
-                  ? "bg-white/95 backdrop-blur-xl border-t border-gray-100/50"
-                  : "bg-blue-900/95 backdrop-blur-xl border-t border-white/10"
+                  ? "bg-white/97 backdrop-blur-xl border-t border-gray-100/50"
+                  : "bg-blue-900/97 backdrop-blur-xl border-t border-white/10"
               }`}
             >
-              <nav className="max-w-7xl mx-auto px-4 py-6">
-                <div className="space-y-1">
+              <nav className="max-w-7xl mx-auto px-4 py-8">
+                <div className="space-y-2">
                   {navItems.map((item, index) => (
                     <motion.div
                       key={item.name}
@@ -206,42 +220,54 @@ const Header = () => {
                     >
                       <Link
                         to={item.path}
-                        className={`block px-4 py-3 rounded-xl transition-all duration-300 font-medium ${
+                        className={`block px-6 py-4 rounded-2xl transition-all duration-300 font-medium text-base ${
                           scrolled 
-                            ? "text-gray-700 hover:bg-blue-50 hover:text-blue-600" 
-                            : "text-white hover:bg-white/10"
+                            ? "text-gray-700 hover:bg-blue-50/70 hover:text-blue-600" 
+                            : "text-white hover:bg-white/15"
                         }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        {item.name}
+                        <div className="flex items-center justify-between">
+                          <span>{item.name}</span>
+                          <div className="w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
                       </Link>
                     </motion.div>
                   ))}
                 </div>
                 
-                {/* Mobile Contact Info */}
+                {/* Mobile Contact Info - Enhanced */}
                 <motion.div 
-                  className="mt-6 pt-6 border-t border-white/10 space-y-4"
+                  className="mt-8 pt-8 border-t border-white/10 space-y-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <div className={`flex items-center gap-3 px-4 text-sm ${
+                  <div className={`flex items-center gap-4 px-6 text-sm ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}>
-                    <Phone className="w-4 h-4" />
-                    <span>+91 98765 43210</span>
+                    <div className={`p-2 rounded-xl ${
+                      scrolled ? "bg-blue-50" : "bg-white/10"
+                    }`}>
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium">+91 98765 43210</span>
                   </div>
-                  <div className={`flex items-center gap-3 px-4 text-sm ${
+                  <div className={`flex items-center gap-4 px-6 text-sm ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}>
-                    <Mail className="w-4 h-4" />
-                    <span>info@coolbreeze.com</span>
+                    <div className={`p-2 rounded-xl ${
+                      scrolled ? "bg-blue-50" : "bg-white/10"
+                    }`}>
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium">info@coolbreeze.com</span>
                   </div>
-                  <div className="px-4">
+                  <div className="px-6">
                     <Button 
                       asChild 
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-xl"
+                      size="lg"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-2xl py-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Link to="/contact">Get Quote</Link>
