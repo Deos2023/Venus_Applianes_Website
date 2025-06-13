@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
@@ -26,7 +25,7 @@ const products = [
   {
     id: 2,
     name: "LG 1.5 Ton 3 Star AI Convertible 6-in-1 Split AC",
-    image: "/lovable-uploads/lg/split-ac/1.png",
+    image: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
     originalPrice: 78990,
     discountedPrice: 39491,
     discountPercent: 50,
@@ -156,7 +155,7 @@ const ProductFilter = () => {
                       className="max-h-48 w-auto object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = "https://via.placeholder.com/300x200?text=AC+Image";
+                        target.src = "/lovable-uploads/samsung/split-ac/1.png";
                       }}
                     />
                   </div>
