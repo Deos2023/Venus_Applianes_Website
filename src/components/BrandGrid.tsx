@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "./ui/card";
 import { motion } from "framer-motion";
@@ -13,17 +12,17 @@ const brands: BrandProps[] = [
   {
     id: "samsung",
     name: "Samsung",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png",
+    logo: "/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.png",
   },
   {
     id: "lg",
     name: "LG",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/LG_logo_%282015%29.svg/2560px-LG_logo_%282015%29.svg.png",
+    logo: "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
   },
   {
     id: "voltas",
     name: "Voltas",
-    logo: "https://www.voltas.com/images/logo.png",
+    logo: "/lovable-uploads/f9296fe5-440f-4f69-93f6-77b88ffc76aa.png",
   },
   {
     id: "daikin",

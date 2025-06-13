@@ -13,7 +13,7 @@ const products = [
   {
     id: 1,
     name: "Samsung 1.5 Ton 5 Star Inverter Split AC",
-    image: "/lovable-uploads/samsung/split-ac/1.png",
+    image: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
     originalPrice: 65000,
     discountedPrice: 39999,
     discountPercent: 38,
@@ -25,7 +25,7 @@ const products = [
   {
     id: 2,
     name: "LG 1.5 Ton 3 Star AI Convertible 6-in-1 Split AC",
-    image: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
+    image: "/lovable-uploads/lg/US-Q18KWXE/2.webp",
     originalPrice: 78990,
     discountedPrice: 39491,
     discountPercent: 50,
@@ -37,7 +37,7 @@ const products = [
   {
     id: 3,
     name: "Daikin 1.5 Ton 5 Star Inverter Smart Split AC",
-    image: "/lovable-uploads/daikin/split-ac/1.png",
+    image: "/lovable-uploads/Daikin/FTL35UV16/1.jpg",
     originalPrice: 65990,
     discountedPrice: 46999,
     discountPercent: 29,
@@ -49,7 +49,7 @@ const products = [
   {
     id: 4,
     name: "Voltas 1 Ton 3 Star Window AC",
-    image: "/lovable-uploads/voltas/window-ac/1.png",
+    image: "/lovable-uploads/voltas/125V_VECTRA_ELITE/1.webp",
     originalPrice: 35990,
     discountedPrice: 25999,
     discountPercent: 28,
@@ -61,7 +61,7 @@ const products = [
   {
     id: 5,
     name: "Mitsubishi 2 Ton 4 Star Inverter Split AC",
-    image: "/lovable-uploads/mitsubishi/split-ac/1.png",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/1.webp",
     originalPrice: 98990,
     discountedPrice: 75999,
     discountPercent: 23,
@@ -73,7 +73,7 @@ const products = [
   {
     id: 6,
     name: "Carrier 1.5 Ton Flexicool Inverter Split AC",
-    image: "/lovable-uploads/carrier/split-ac/1.png",
+    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
     originalPrice: 58990,
     discountedPrice: 42999,
     discountPercent: 27,
@@ -85,7 +85,7 @@ const products = [
   {
     id: 7,
     name: "Hitachi 1 Ton 5 Star Inverter Split AC",
-    image: "/lovable-uploads/hitachi/split-ac/1.png",
+    image: "/lovable-uploads/hitachi/B318PCAIBA/1.jpg",
     originalPrice: 52990,
     discountedPrice: 38999,
     discountPercent: 26,
@@ -97,7 +97,7 @@ const products = [
   {
     id: 8,
     name: "Blue Star 1.5 Ton 5 Star Inverter Split AC",
-    image: "/lovable-uploads/bluestar/split-ac/1.png",
+    image: "/lovable-uploads/bluestar/318TKU/1.webp",
     originalPrice: 61990,
     discountedPrice: 48999,
     discountPercent: 21,
@@ -155,7 +155,7 @@ const ProductFilter = () => {
                       className="max-h-48 w-auto object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = "/lovable-uploads/samsung/split-ac/1.png";
+                        target.src = "/lovable-uploads/lg/US-Q18KWXE/1.avif";
                       }}
                     />
                   </div>

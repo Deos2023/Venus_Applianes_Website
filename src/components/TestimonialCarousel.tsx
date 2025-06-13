@@ -1,4 +1,3 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
 import { Star } from "lucide-react";
@@ -11,7 +10,7 @@ const testimonials = [
     role: "Homeowner",
     content: "We installed the Samsung WindFree AC in our living room and the difference is remarkable. The cooling is even throughout the room with no cold drafts. Our electricity bill has reduced significantly too.",
     rating: 5,
-    imageSrc: "/lovable-uploads/samsung/split-ac/1.png"
+    imageSrc: "/lovable-uploads/lg/US-Q18KWXE/5.webp"
   },
   {
     id: 2,
@@ -19,7 +18,7 @@ const testimonials = [
     role: "Office Manager",
     content: "We equipped our entire office with LG Dual Inverter ACs and the improvement in comfort has boosted productivity. The quiet operation means no distractions during meetings.",
     rating: 5,
-    imageSrc: "/lovable-uploads/lg/US-Q18KWXE/1.avif"
+    imageSrc: "/lovable-uploads/Daikin/FTL35UV16/5.jpg"
   },
   {
     id: 3,
@@ -27,7 +26,7 @@ const testimonials = [
     role: "Interior Designer",
     content: "As an interior designer, I recommend Daikin ACs to my clients for their sleek design and powerful cooling. They blend seamlessly with any interior style and the air purification feature is a bonus.",
     rating: 4,
-    imageSrc: "/lovable-uploads/daikin/split-ac/1.png"
+    imageSrc: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/4.png"
   }
 ];
 
@@ -77,7 +76,7 @@ const TestimonialCarousel = () => {
                               className="w-full h-full object-cover"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
-                                target.src = "/lovable-uploads/samsung/split-ac/1.png";
+                                target.src = "/lovable-uploads/lg/US-Q18KWXE/1.avif";
                               }}
                             />
                           </motion.div>

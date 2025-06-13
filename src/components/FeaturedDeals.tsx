@@ -8,7 +8,7 @@ const deals = [
     id: 1,
     title: "Unlock Premium Cooling",
     description: "Up to 50%* off | Cashback up to ₹7500*",
-    image: "/lovable-uploads/samsung/split-ac/1.png",
+    image: "/lovable-uploads/lg/US-Q18KWXE/3.jpg",
     bgColor: "bg-gradient-to-r from-gray-900 to-gray-800",
     link: "/brand/samsung"
   },
@@ -16,7 +16,7 @@ const deals = [
     id: 2,
     title: "AI Powered Efficiency",
     description: "Up to 44%* off | Cashback up to ₹10%*",
-    image: "/lovable-uploads/lg/split-ac/1.png",
+    image: "/lovable-uploads/Daikin/FTL35UV16/2.jpg",
     bgColor: "bg-gradient-to-r from-blue-900 to-blue-800",
     link: "/brand/lg"
   },
@@ -24,7 +24,7 @@ const deals = [
     id: 3,
     title: "Superior Cooling Technology",
     description: "Up to 40%* off | No Cost EMI Available",
-    image: "/lovable-uploads/mitsubishi/split-ac/1.png",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/2.png",
     bgColor: "bg-gradient-to-r from-indigo-900 to-indigo-800",
     link: "/brand/daikin"
   }
@@ -108,7 +108,7 @@ const FeaturedDeals = () => {
                   className="w-full h-60 object-contain pt-8"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "https://via.placeholder.com/300x200?text=AC+Image";
+                    target.src = "/lovable-uploads/lg/US-Q18KWXE/1.avif";
                   }}
                 />
                 <div className="p-6 relative z-20 text-white">

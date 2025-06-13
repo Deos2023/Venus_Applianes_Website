@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "./ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { ChevronRight } from "lucide-react";
@@ -8,21 +7,21 @@ const showcaseItems = [
     id: 1,
     title: "Superior Cooling Technology",
     description: "Experience the perfect temperature in any weather condition with our advanced cooling systems.",
-    imageSrc: "/lovable-uploads/daikin/split-ac/1.png",
+    imageSrc: "/lovable-uploads/Daikin/FTL35UV16/4.webp",
     bgColor: "from-blue-500/10 to-cyan-500/10"
   },
   {
     id: 2,
     title: "Elegant Design",
     description: "Premium aesthetics that complement your interior decor while providing exceptional functionality.",
-    imageSrc: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
+    imageSrc: "/lovable-uploads/lg/US-Q18KWXE/4.avif",
     bgColor: "from-purple-500/10 to-blue-500/10"
   },
   {
     id: 3,
     title: "Energy Efficient",
     description: "Reduce your electricity bills with our energy-efficient air conditioning solutions.",
-    imageSrc: "/lovable-uploads/samsung/split-ac/1.png",
+    imageSrc: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/3.png",
     bgColor: "from-green-500/10 to-emerald-500/10"
   }
 ];
@@ -71,7 +70,7 @@ const PremiumShowcase = () => {
                             className="max-h-80 w-auto object-contain drop-shadow-xl"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = "/lovable-uploads/samsung/split-ac/1.png";
+                              target.src = "/lovable-uploads/lg/US-Q18KWXE/1.avif";
                             }}
                           />
                         </div>
