@@ -87,15 +87,15 @@ const Header = () => {
                         : "text-white hover:text-blue-200 hover:bg-white/15"
                     }`}
                   >
+                    {/* Enhanced hover effects - overlay first for full coverage */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                     <span className="relative z-10 flex items-center gap-1.5">
                       {item.name}
                       {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                     </span>
-                    {/* Enhanced hover effects */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full"></div>
+                    <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full z-10"></div>
                     {/* Active state indicator */}
-                    <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   </Link>
                 </motion.div>
               ))}
