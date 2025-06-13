@@ -35,7 +35,18 @@ const features = [
 
 const PremiumShowcase = () => {
   return (
-    <section className="section-padding relative text-white bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+    <section
+      className="section-padding relative text-white bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Overlay for darkening and premium effect */}
+      <div className="absolute inset-0 bg-blue-900/70 backdrop-blur-sm z-0"></div>
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold drop-shadow-lg mb-4">
@@ -56,9 +67,9 @@ const PremiumShowcase = () => {
                       <div className={`flex flex-col lg:flex-row h-full bg-gradient-to-br ${item.bgColor} rounded-2xl overflow-hidden min-h-[400px]`}>
                         <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                           <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-gray-900 dark:text-white">{item.title}</h3>
-                          <p className="text-gray-700 dark:text-gray-200 mb-8 text-lg leading-relaxed">{item.description}</p>
+                          <p className="text-gray-300 dark:text-gray-200 mb-8 text-lg leading-relaxed">{item.description}</p>
                           
-                          <div className="flex items-center text-blue-600 font-medium cursor-pointer group hover:text-blue-700 transition-colors">
+                          <div className="flex items-center text-blue-300 font-medium cursor-pointer group hover:text-blue-700 transition-colors">
                             <span className="text-lg">Learn more</span>
                             <ChevronRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                           </div>

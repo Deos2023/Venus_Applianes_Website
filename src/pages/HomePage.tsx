@@ -229,7 +229,7 @@ const HomePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cool-blue w-full sm:w-auto">
+            <Button asChild size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-cool-blue w-full sm:w-auto">
               <Link to="/select-type">
                 Start Selection
               </Link>

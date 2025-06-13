@@ -360,20 +360,7 @@ export const acProducts: ACProduct[] = [
 
   // O GENERAL
 // O GENERAL SPLIT AC PRICES (ENSURED ALL PRESENT)
-{
-  id: 'og-split-1-0t-inv-5star-12cgaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.0T',
-  starRating: '5★',
-  modelNumber: '12CGAA',
-  price: 50200,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/12CGAA/1.png',
-  images: ['/lovable-uploads/o-general/12CGAA/1.png'],
-  description: 'O GENERAL 1.0T INV 5★ 12CGAA Split AC'
-},
+
 {
   id: 'og-split-1-0t-inv-3star-12cpab',
   type: 'split',
@@ -388,76 +375,11 @@ export const acProducts: ACProduct[] = [
   images: ['/lovable-uploads/o-general/12CPAB/1.png'],
   description: 'O GENERAL 1.0T INV 3★ 12CPAB Split AC'
 },
-{
-  id: 'og-split-1-14t-noninv-3star-14bmaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'non-inverter',
-  tonnage: '1.14T',
-  starRating: '3★',
-  modelNumber: '14BMAA',
-  price: 42150,
-  features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/14BMAA/1.png',
-  images: ['/lovable-uploads/o-general/14BMAA/1.png'],
-  description: 'O GENERAL 1.14T NON INV 3★ 14BMAA Split AC'
-},
-{
-  id: 'og-split-1-5t-inv-5star-18cgaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.5T',
-  starRating: '5★',
-  modelNumber: '18CGAA',
-  price: 63490,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18CGAA/1.png',
-  images: ['/lovable-uploads/o-general/18CGAA/1.png'],
-  description: 'O GENERAL 1.5T INV 5★ 18CGAA Split AC'
-},
-{
-  id: 'og-split-1-5t-inv-5star-18cetb',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.5T',
-  starRating: '5★',
-  modelNumber: '18CETB',
-  price: 67250,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18CETB/1.png',
-  images: ['/lovable-uploads/o-general/18CETB/1.png'],
-  description: 'O GENERAL 1.5T INV 5★ 18CETB Split AC'
-},
-{
-  id: 'og-split-1-5t-inv-3star-18cpab',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.5T',
-  starRating: '3★',
-  modelNumber: '18CPAB',
-  price: 50210,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18CPAB/1.png',
-  images: ['/lovable-uploads/o-general/18CPAB/1.png'],
-  description: 'O GENERAL 1.5T INV 3★ 18CPAB Split AC'
-},
-{
-  id: 'og-split-1-5t-inv-3star-18cnaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.5T',
-  starRating: '3★',
-  modelNumber: '18CNAA',
-  price: 47390,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18CNAA/1.png',
-  images: ['/lovable-uploads/o-general/18CNAA/1.png'],
-  description: 'O GENERAL 1.5T INV 3★ 18CNAA Split AC'
-},
+
+
+
+
+
 {
   id: 'og-split-1-5t-noninv-3star-18bmaa',
   type: 'split',
@@ -486,48 +408,9 @@ export const acProducts: ACProduct[] = [
   images: ['/lovable-uploads/o-general/18BUTA/1.png'],
   description: 'O GENERAL 1.5T NON INV 3★ 18BUTA Split AC'
 },
-{
-  id: 'og-split-2-0t-inv-5star-24cgtb',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.0T',
-  starRating: '5★',
-  modelNumber: '24CGTB',
-  price: 77690,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24CGTB/1.png',
-  images: ['/lovable-uploads/o-general/24CGTB/1.png'],
-  description: 'O GENERAL 2.0T INV 5★ 24CGTB Split AC'
-},
-{
-  id: 'og-split-2-0t-inv-5star-24ggaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.0T',
-  starRating: '5★',
-  modelNumber: '24GGAA',
-  price: 77690,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24GGAA/1.png',
-  images: ['/lovable-uploads/o-general/24GGAA/1.png'],
-  description: 'O GENERAL 2.0T INV 5★ 24GGAA Split AC'
-},
-{
-  id: 'og-split-2-0t-inv-5star-24ceta',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.0T',
-  starRating: '5★',
-  modelNumber: '24CETA',
-  price: 81450,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24CETA/1.png',
-  images: ['/lovable-uploads/o-general/24CETA/1.png'],
-  description: 'O GENERAL 2.0T INV 5★ 24CETA Split AC'
-},
+
+
+
 {
   id: 'og-split-2-0t-inv-3star-24cpaa',
   type: 'split',
@@ -556,62 +439,10 @@ export const acProducts: ACProduct[] = [
   images: ['/lovable-uploads/o-general/24CPAB/1.png'],
   description: 'O GENERAL 2.0T INV 3★ 24CPAB Split AC'
 },
-{
-  id: 'og-split-2-0t-noninv-3star-24bmaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'non-inverter',
-  tonnage: '2.0T',
-  starRating: '3★',
-  modelNumber: '24BMAA',
-  price: 67250,
-  features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24BMAA/1.png',
-  images: ['/lovable-uploads/o-general/24BMAA/1.png'],
-  description: 'O GENERAL 2.0T NON INV 3★ 24BMAA Split AC'
-},
-{
-  id: 'og-split-2-0t-noninv-3star-24buta',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'non-inverter',
-  tonnage: '2.0T',
-  starRating: '3★',
-  modelNumber: '24BUTA',
-  price: 72000,
-  features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24BUTA/1.png',
-  images: ['/lovable-uploads/o-general/24BUTA/1.png'],
-  description: 'O GENERAL 2.0T NON INV 3★ 24BUTA Split AC'
-},
-{
-  id: 'og-split-2-5t-inv-4star-30ceb',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.5T',
-  starRating: '4★',
-  modelNumber: '30CEB',
-  price: 102310,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/30CEB/1.png',
-  images: ['/lovable-uploads/o-general/30CEB/1.png'],
-  description: 'O GENERAL 2.5T INV 4★ 30CEB Split AC'
-},
-{
-  id: 'og-split-3-0t-inv-5star-36ceb',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '3.0T',
-  starRating: '5★',
-  modelNumber: '36CEB',
-  price: 123190,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/36CEB/1.png',
-  images: ['/lovable-uploads/o-general/36CEB/1.png'],
-  description: 'O GENERAL 3.0T INV 5★ 36CEB Split AC'
-},
+
+
+
+
 
 // O GENERAL
   // PANASONIC SPLIT AC PRICES
@@ -2031,13 +1862,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "14CHWA",
     price: 33640,
     features: ["Inverter technology", "High star rating", "Silent operation"],
-    image: "/lovable-uploads/ogeneral-window.png",
+    image: "/lovable-uploads/o-general/14CHWA/1.webp",
     images: [
-      "/lovable-uploads/o-general/09BBWA/1.png",
-      "/lovable-uploads/o-general/09BBWA/2.png",
-      "/lovable-uploads/o-general/09BBWA/3.png",
-      "/lovable-uploads/o-general/09BBWA/4.png",
-      "/lovable-uploads/o-general/09BBWA/5.png",
+      "/lovable-uploads/o-general/14CHWA/1.webp",
+      "/lovable-uploads/o-general/14CHWA/2.jpg",
+      
     ],
     description: "O GENERAL 1.2T INV 5★ 14CHWA Window AC",
   },
@@ -2069,13 +1898,12 @@ export const acProducts: ACProduct[] = [
     modelNumber: "18CHAA",
     price: 43590,
     features: ["Inverter compressor", "High efficiency"],
-    image: "/lovable-uploads/ogeneral-window.png",
+    image: "/lovable-uploads/o-general/18CHAA/1.jpg",
     images: [
-      "/lovable-uploads/1c3da51e-7837-42fb-9c80-a4a43d253acb.png",
-      "/lovable-uploads/97d42845-0d65-42cd-9e69-51af08f84088.png",
-      "/lovable-uploads/94100e13-1446-47ff-8bb4-4cd8fb95035f.png",
-      "/lovable-uploads/43b71c61-896e-4271-a7b2-a9a165a9f892.png",
-      "/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.jpg",
+      "/lovable-uploads/o-general/18CHAA/1.jpg",
+      "/lovable-uploads/o-general/18CHAA/2.jpg",
+      "/lovable-uploads/o-general/18CHAA/3.jpg",
+      "/lovable-uploads/o-general/18CHAA/4.jpg",
     ],
     description: "O GENERAL 1.5T INV 5★ 18CHAA Window AC",
   },
