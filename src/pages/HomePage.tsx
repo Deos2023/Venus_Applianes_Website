@@ -56,9 +56,14 @@ const HomePage = () => {
   return (
     <Layout>
       {/* Hero Section with Premium Slider */}
-      <Hero />
+      <div className="w-full">
+        <Hero />
+      </div>
 
-      <ACInquiryForm/>
+      {/* AC Inquiry Form - Responsive */}
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <ACInquiryForm/>
+      </div>
       
       {/* AC Selection Guide Section - Positioned directly below the hero */}
       <motion.div
@@ -66,6 +71,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
+        className="w-full"
       >
         <ACSelectionGuide />
       </motion.div>
@@ -76,7 +82,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="bg-gradient-to-b from-blue-50 to-white"
+        className="w-full bg-gradient-to-b from-blue-50 to-white"
       >
         <ProductFilter />
       </motion.div>
@@ -87,7 +93,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="bg-cover bg-center bg-fixed"
+        className="w-full bg-cover bg-center bg-fixed"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3')" }}
       >
         <div className="bg-gradient-to-r from-gray-900/90 to-gray-900/80">
@@ -101,33 +107,34 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
+        className="w-full"
       >
         <BrandGrid />
       </motion.div>
       
       {/* Features Section */}
       <motion.section 
-        className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 section-padding"
+        className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 section-padding w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-        <div className="container mx-auto">
-          <motion.div className="text-center mb-12" variants={fadeIn}>
-            <h2 className="text-3xl font-bold text-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-8 sm:mb-12" variants={fadeIn}>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Premium Cooling Solutions
             </h2>
-            <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               Experience the perfect blend of efficiency, technology, and comfort with our premium range of ACs.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white shadow-lg rounded-lg overflow-hidden hover-lift border-none"
+                className="bg-white shadow-lg rounded-lg overflow-hidden hover-lift border-none p-4 sm:p-6"
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { 
@@ -141,15 +148,14 @@ const HomePage = () => {
                 }}
               >
                 <motion.div 
-                  className="p-6"
                   whileHover={{ scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="flex items-center gap-2 mb-3">
-                    <CheckCircle className="h-5 w-5 text-cool-blue" />
+                    <CheckCircle className="h-5 w-5 text-cool-blue flex-shrink-0" />
                     <h3 className="font-semibold text-lg">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-500">{feature.description}</p>
+                  <p className="text-gray-500 text-sm sm:text-base">{feature.description}</p>
                 </motion.div>
               </motion.div>
             ))}
@@ -163,7 +169,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="bg-cover bg-center"
+        className="w-full bg-cover bg-center"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3')" }}
       >
         <div className="bg-gradient-to-b from-gray-900/95 to-gray-900/90">
@@ -177,22 +183,22 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50"
+        className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50"
       >
         <TestimonialCarousel />
       </motion.div>
       
       {/* CTA Section */}
       <motion.section 
-        className="bg-gradient-to-r from-cool-blue to-blue-600 section-padding text-white"
+        className="bg-gradient-to-r from-cool-blue to-blue-600 section-padding text-white w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.h2 
-            className="text-3xl font-bold mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -200,7 +206,7 @@ const HomePage = () => {
             Ready to Experience Supreme Comfort?
           </motion.h2>
           <motion.p 
-            className="text-blue-100 max-w-2xl mx-auto mb-8"
+            className="text-blue-100 max-w-2xl mx-auto mb-6 sm:mb-8 text-base sm:text-lg px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -208,17 +214,17 @@ const HomePage = () => {
             Find the perfect cooling solution for your needs using our guided selection process.
           </motion.p>
           <motion.div 
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-col sm:flex-row justify-center gap-4 px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cool-blue">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-cool-blue w-full sm:w-auto">
               <Link to="/select-type">
                 Start Selection
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-white text-cool-blue hover:bg-blue-50">
+            <Button asChild size="lg" className="bg-white text-cool-blue hover:bg-blue-50 w-full sm:w-auto">
               <Link to="/contact">
                 Contact Us
               </Link>
