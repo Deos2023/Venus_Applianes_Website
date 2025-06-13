@@ -10,7 +10,6 @@ import ACSelectionGuide from '@/components/ACSelectionGuide';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
-import { acTypes } from '@/lib/ac-selection-data';
 import { motion } from 'framer-motion';
 import ACInquiryForm from '@/components/ACInquiryForm';
 
@@ -55,23 +54,34 @@ const staggerContainer = {
 const HomePage = () => {
   return (
     <Layout>
-      {/* Hero Section with Premium Slider */}
-      <div className="w-full">
+      {/* Hero Section */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="w-full"
+      >
         <Hero />
-      </div>
+      </motion.div>
 
-      {/* AC Inquiry Form - Responsive */}
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <ACInquiryForm/>
-      </div>
-      
-      {/* AC Selection Guide Section - Positioned directly below the hero */}
+      {/* AC Inquiry Form - Mobile First Responsive */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full"
+        className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      >
+        <ACInquiryForm/>
+      </motion.div>
+      
+      {/* AC Selection Guide Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="w-full overflow-hidden"
       >
         <ACSelectionGuide />
       </motion.div>
@@ -82,7 +92,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full bg-gradient-to-b from-blue-50 to-white"
+        className="w-full bg-gradient-to-b from-blue-50 to-white overflow-hidden"
       >
         <ProductFilter />
       </motion.div>
@@ -93,7 +103,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full bg-cover bg-center bg-fixed"
+        className="w-full bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3')" }}
       >
         <div className="bg-gradient-to-r from-gray-900/90 to-gray-900/80">
@@ -107,20 +117,20 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full"
+        className="w-full overflow-hidden"
       >
         <BrandGrid />
       </motion.div>
       
       {/* Features Section */}
       <motion.section 
-        className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 section-padding w-full"
+        className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 section-padding w-full overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-8 sm:mb-12" variants={fadeIn}>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Premium Cooling Solutions
@@ -169,7 +179,7 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full bg-cover bg-center"
+        className="w-full bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3')" }}
       >
         <div className="bg-gradient-to-b from-gray-900/95 to-gray-900/90">
@@ -183,20 +193,20 @@ const HomePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
-        className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50"
+        className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50 overflow-hidden"
       >
         <TestimonialCarousel />
       </motion.div>
       
       {/* CTA Section */}
       <motion.section 
-        className="bg-gradient-to-r from-cool-blue to-blue-600 section-padding text-white w-full"
+        className="bg-gradient-to-r from-cool-blue to-blue-600 section-padding text-white w-full overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.h2 
             className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
