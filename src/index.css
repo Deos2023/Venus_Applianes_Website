@@ -197,7 +197,7 @@
 }
 
 .container-lg {
-  @apply mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-8xl;
+  @apply mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl;
 }
 
 /* Selection process styles */
