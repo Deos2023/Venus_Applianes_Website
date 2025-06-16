@@ -1,4 +1,89 @@
-import { ACProduct } from "./ac-selection-data-types";
+
+import { Brand } from "./types";
+
+// Type definitions
+export type ACType = 'split' | 'window' | 'cassette' | 'tower' | 'portable';
+export type InverterType = 'inverter' | 'non-inverter';
+
+export interface ACProduct {
+  id: string;
+  brand: Brand;
+  type: ACType;
+  tonnage: string;
+  starRating: string;
+  inverter: InverterType;
+  price: number;
+  modelNumber: string;
+  features: string[];
+  image?: string;
+  images?: string[];
+  description: string;
+}
+
+// AC Types data
+export const acTypes = [
+  {
+    id: 'split' as ACType,
+    name: 'Split AC',
+    image: '/lovable-uploads/97d42845-0d65-42cd-9e69-51af08f84088.png'
+  },
+  {
+    id: 'window' as ACType,
+    name: 'Window AC',
+    image: '/lovable-uploads/833f8e8e-835d-435d-9db4-82dc17c80ebb.png'
+  },
+  {
+    id: 'cassette' as ACType,
+    name: 'Cassette AC',
+    image: '/lovable-uploads/31389003-e760-4a88-b98d-1952c74143ec.png'
+  },
+  {
+    id: 'tower' as ACType,
+    name: 'Tower AC',
+    image: '/lovable-uploads/72002498-a99e-40af-8002-2a7eddb8ffc5.png'
+  },
+  {
+    id: 'portable' as ACType,
+    name: 'Portable AC',
+    image: '/lovable-uploads/61f614fc-2d7d-41ac-8c3a-78da8cf34f77.png'
+  }
+];
+
+// Brands data
+export const brands = [
+  { id: 'samsung' as Brand, name: 'Samsung', logo: '/lovable-uploads/0695482c-4008-45c0-9890-f4ce6044eaab.png' },
+  { id: 'lg' as Brand, name: 'LG', logo: '/lovable-uploads/lg/logo.png' },
+  { id: 'voltas' as Brand, name: 'Voltas', logo: '/lovable-uploads/voltas/logo.png' },
+  { id: 'daikin' as Brand, name: 'Daikin', logo: '/lovable-uploads/daikin/logo.png' },
+  { id: 'panasonic' as Brand, name: 'Panasonic', logo: '/lovable-uploads/panasonic/logo.png' },
+  { id: 'hitachi' as Brand, name: 'Hitachi', logo: '/lovable-uploads/hitachi/logo.png' },
+  { id: 'bluestar' as Brand, name: 'Blue Star', logo: '/lovable-uploads/bluestar/logo.png' },
+  { id: 'mitsubishi-electric' as Brand, name: 'Mitsubishi Electric', logo: '/lovable-uploads/mitsubishi-electric/logo.png' },
+  { id: 'carrier' as Brand, name: 'Carrier', logo: '/lovable-uploads/carrier/logo.png' },
+  { id: 'o-general' as Brand, name: 'O General', logo: '/lovable-uploads/o-general/logo.png' }
+];
+
+// Inverter types data
+export const inverterTypes = [
+  {
+    id: 'inverter' as InverterType,
+    name: 'Inverter'
+  },
+  {
+    id: 'non-inverter' as InverterType,
+    name: 'Non-Inverter'
+  }
+];
+
+// Tonnage options
+export const tonnageOptions = [
+  "0.8T", "1 Ton", "1.2T", "1.5 Ton", "2 Ton", "2.5 Ton", "3 Ton", "4 Ton", "5 Ton"
+];
+
+// Star ratings
+export const starRatings = [
+  "1★", "2★", "3★", "4★", "5★"
+];
 
 export const acProducts: ACProduct[] = [
   // Samsung Products
@@ -713,7 +798,7 @@ export const acProducts: ACProduct[] = [
   // Mitsubishi Electric Products
   {
     id: "mitsubishi-agz13vf-1-3",
-    brand: "mitsubishi",
+    brand: "mitsubishi-electric",
     type: "split",
     tonnage: "1 Ton",
     starRating: "3★",
@@ -739,7 +824,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "mitsubishi-agz18vf-1.5-3",
-    brand: "mitsubishi",
+    brand: "mitsubishi-electric",
     type: "split",
     tonnage: "1.5 Ton",
     starRating: "3★",
@@ -764,7 +849,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "mitsubishi-agz24vf-2-3",
-    brand: "mitsubishi",
+    brand: "mitsubishi-electric",
     type: "split",
     tonnage: "2 Ton",
     starRating: "3★",
@@ -846,7 +931,7 @@ export const acProducts: ACProduct[] = [
   // O General Products
   {
     id: "ogeneral-18cgaa-1.5-3",
-    brand: "ogeneral",
+    brand: "o-general",
     type: "split",
     tonnage: "1.5 Ton",
     starRating: "3★",
@@ -871,7 +956,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "ogeneral-18chaa-1.5-5",
-    brand: "ogeneral",
+    brand: "o-general",
     type: "split",
     tonnage: "1.5 Ton",
     starRating: "5★",
@@ -898,7 +983,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "ogeneral-24cpaa-2-3",
-    brand: "ogeneral",
+    brand: "o-general",
     type: "split",
     tonnage: "2 Ton",
     starRating: "3★",
