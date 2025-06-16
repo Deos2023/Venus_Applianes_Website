@@ -111,16 +111,7 @@ const HomePage = () => {
         </div>
       </motion.div>
       
-      {/* Brands Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeIn}
-        className="w-full overflow-hidden"
-      >
-        <BrandGrid />
-      </motion.div>
+      
       
       {/* Features Section */}
       <motion.section 
