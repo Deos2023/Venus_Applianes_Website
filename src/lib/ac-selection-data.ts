@@ -1,9 +1,13 @@
 
+
 import { Brand } from "./types";
 
 // Type definitions
 export type ACType = 'split' | 'window' | 'cassette' | 'tower' | 'portable';
 export type InverterType = 'inverter' | 'non-inverter';
+
+// Re-export Brand type for use in other files
+export type { Brand } from "./types";
 
 export interface ACProduct {
   id: string;
@@ -57,7 +61,7 @@ export const brands = [
   { id: 'daikin' as Brand, name: 'Daikin', logo: '/lovable-uploads/daikin/logo.png' },
   { id: 'panasonic' as Brand, name: 'Panasonic', logo: '/lovable-uploads/panasonic/logo.png' },
   { id: 'hitachi' as Brand, name: 'Hitachi', logo: '/lovable-uploads/hitachi/logo.png' },
-  { id: 'bluestar' as Brand, name: 'Blue Star', logo: '/lovable-uploads/bluestar/logo.png' },
+  { id: 'blue-star' as Brand, name: 'Blue Star', logo: '/lovable-uploads/bluestar/logo.png' },
   { id: 'mitsubishi-electric' as Brand, name: 'Mitsubishi Electric', logo: '/lovable-uploads/mitsubishi-electric/logo.png' },
   { id: 'carrier' as Brand, name: 'Carrier', logo: '/lovable-uploads/carrier/logo.png' },
   { id: 'o-general' as Brand, name: 'O General', logo: '/lovable-uploads/o-general/logo.png' }
@@ -721,7 +725,7 @@ export const acProducts: ACProduct[] = [
   // Blue Star Products
   {
     id: "bluestar-312tku-1-3",
-    brand: "bluestar",
+    brand: "blue-star",
     type: "split",
     tonnage: "1 Ton",
     starRating: "3★",
@@ -747,7 +751,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "bluestar-318tku-1.5-3",
-    brand: "bluestar",
+    brand: "blue-star",
     type: "split",
     tonnage: "1.5 Ton",
     starRating: "3★",
@@ -771,7 +775,7 @@ export const acProducts: ACProduct[] = [
   },
   {
     id: "bluestar-324tku-2-3",
-    brand: "bluestar",
+    brand: "blue-star",
     type: "split",
     tonnage: "2 Ton",
     starRating: "3★",
