@@ -41,7 +41,7 @@ export const acTypes: { id: ACType; name: string; image: string }[] = [
   {
     id: "split",
     name: "SPLIT AC",
-    image: "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png",
+    image: "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc6.png",
   },
   {
     id: "window",
