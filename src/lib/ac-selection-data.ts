@@ -1908,5 +1908,5 @@ export const acProducts: ACProduct[] = [
 
 // Re-export types from types.ts for backward compatibility
 export type { Brand as BrandType } from './types';
-export type ACType as ACTypeDefinition = ACType;
-export type InverterType as InverterTypeDefinition = InverterType;
+export type { ACType as ACTypeDefinition } from './types';
+export type { InverterType as InverterTypeDefinition } from './types';
