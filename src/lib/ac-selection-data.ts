@@ -170,6 +170,7 @@ export const starRatings = ["1★", "2★", "3★", "4★", "5★"];
 
 // This is just a subset of the data for example purposes
 // In a real application, you would have a complete database
+// Duplicate products by modelNumber removed (kept first occurrence only)
 export const acProducts: ACProduct[] = [
   {
     id: "og-split-1t-inv-5star",
@@ -2078,11 +2079,13 @@ export const acProducts: ACProduct[] = [
     modelNumber: "14BBAA",
     price: 30780,
     features: ["Energy efficient", "Robust design"],
-    image: "/lovable-uploads/ogeneral-window.png",
+    image: "/lovable-uploads/o-general/12CGTB/1.png",
     images: [
-      "/lovable-uploads/1c3da51e-7837-42fb-9c80-a4a43d253acb.png",
-      "/lovable-uploads/b2a1878a-860e-4e17-a78c-34dbf8285f1f.png",
-      "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
+      "/lovable-uploads/o-general/12CGTB/1.png",
+      "/lovable-uploads/o-general/12CGTB/2.png",
+      "/lovable-uploads/o-general/12CGTB/3.png",
+      "/lovable-uploads/o-general/12CGTB/4.png",
+      "/lovable-uploads/o-general/12CGTB/5.png",
     ],
     description: "O GENERAL 1.2T NON INV 3★ 14BBAA Window AC",
   },
