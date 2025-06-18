@@ -5,60 +5,17 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 // AC Installation Gallery images 
 const acGalleryImages = [
-  {
-    id: 1,
-    src: "/lovable-uploads/samsung/split-ac/1.png",
-    alt: "Samsung Split AC Installation - Living Room",
-    caption: "Samsung 1.5 Ton Inverter Split AC - Modern Living Room Installation"
-  },
+  
   {
     id: 2,
     src: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
     alt: "LG Dual Inverter AC - Bedroom Setup",
     caption: "LG Dual Inverter AC - Energy Efficient Bedroom Cooling"
   },
-  {
-    id: 3,
-    src: "/lovable-uploads/daikin/split-ac/1.png",
-    alt: "Daikin AC Installation - Office Space",
-    caption: "Daikin Premium AC - Commercial Office Installation"
-  },
-  {
-    id: 4,
-    src: "/lovable-uploads/voltas/window-ac/1.png",
-    alt: "Voltas Window AC Installation",
-    caption: "Voltas Window AC - Compact Room Cooling Solution"
-  },
-  {
-    id: 5,
-    src: "/lovable-uploads/mitsubishi/split-ac/1.png",
-    alt: "Mitsubishi Heavy Industries AC",
-    caption: "Mitsubishi Premium AC - Advanced Cooling Technology"
-  },
-  {
-    id: 6,
-    src: "/lovable-uploads/carrier/split-ac/1.png",
-    alt: "Carrier Flexicool AC Installation",
-    caption: "Carrier Flexicool - Smart Home Integration"
-  },
-  {
-    id: 7,
-    src: "/lovable-uploads/hitachi/split-ac/1.png",
-    alt: "Hitachi Inverter AC - Master Bedroom",
-    caption: "Hitachi Inverter AC - Quiet Operation for Bedrooms"
-  },
-  {
-    id: 8,
-    src: "/lovable-uploads/bluestar/split-ac/1.png",
-    alt: "Blue Star AC - Luxury Installation",
-    caption: "Blue Star Premium AC - Luxury Home Cooling"
-  },
-  {
-    id: 9,
-    src: "/lovable-uploads/godrej/GODREJ 1.5T INV 5/1.jpg",
-    alt: "Godrej Green Inverter AC",
-    caption: "Godrej Green Technology - Eco-Friendly Cooling"
-  },
+  
+  
+  
+  
   {
     id: 10,
     src: "/lovable-uploads/lloyd/GLS18I5FOGEW/1.jpg",
