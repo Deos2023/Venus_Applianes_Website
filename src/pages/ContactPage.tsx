@@ -1,4 +1,3 @@
-
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -88,7 +87,7 @@ const ContactPage = () => {
                       <Mail className="h-6 w-6 text-orange-500" />
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Email</h3>
-                        <p className="text-gray-600">info@venusappliances.com</p>
+                        <p className="text-gray-600">venusapplianceskol@gmail.com</p>
                       </div>
                     </div>
                   </CardContent>

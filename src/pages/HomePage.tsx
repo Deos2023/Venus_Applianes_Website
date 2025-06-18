@@ -7,6 +7,7 @@ import ProductFilter from '@/components/ProductFilter';
 import FeaturedDeals from '@/components/FeaturedDeals';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ACSelectionGuide from '@/components/ACSelectionGuide';
+import MapSection from '@/components/MapSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
@@ -111,8 +112,6 @@ const HomePage = () => {
         </div>
       </motion.div>
       
-      
-      
       {/* Features Section */}
       <motion.section 
         className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 section-padding w-full overflow-hidden"
@@ -177,6 +176,9 @@ const HomePage = () => {
           <PremiumShowcase />
         </div>
       </motion.div>
+      
+      {/* Map Section */}
+      <MapSection />
       
       {/* Testimonials Section */}
       <motion.div

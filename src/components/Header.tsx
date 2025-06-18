@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
@@ -31,8 +30,8 @@ const Header = () => {
       <motion.header 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-100/50"
-            : "bg-gradient-to-r from-blue-900/85 to-blue-800/85 backdrop-blur-md"
+            ? "bg-white/90 backdrop-blur-xl shadow-2xl border-b border-gray-100/50"
+            : "bg-gradient-to-r from-blue-900/75 to-blue-800/75 backdrop-blur-md"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -119,7 +118,7 @@ const Header = () => {
                   }`}>
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-medium">info@venusappliances.com</span>
+                  <span className="font-medium">venusapplianceskol@gmail.com</span>
                 </motion.div>
               </div>
               <motion.div
@@ -249,7 +248,7 @@ const Header = () => {
                     }`}>
                       <Mail className="w-4 h-4" />
                     </div>
-                    <span className="font-medium">info@venusappliances.com</span>
+                    <span className="font-medium">venusapplianceskol@gmail.com</span>
                   </div>
                   <div className="px-6">
                     <Button 
