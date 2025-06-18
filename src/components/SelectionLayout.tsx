@@ -10,6 +10,7 @@ interface SelectionLayoutProps {
   description?: string;
   currentStep: number;
   showBackButton?: boolean;
+  backUrl?: string;
 }
 
 const steps = [
@@ -26,7 +27,8 @@ const SelectionLayout = ({
   title, 
   description, 
   currentStep,
-  showBackButton = true
+  showBackButton = true,
+  backUrl
 }: SelectionLayoutProps) => {
   return (
     <Layout>
@@ -35,7 +37,7 @@ const SelectionLayout = ({
           <StepIndicator steps={steps} currentStep={currentStep} />
           
           <div className="mt-8">
-            {showBackButton && <BackButton />}
+            {showBackButton && <BackButton customUrl={backUrl} />}
             
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold mb-2">{title}</h1>

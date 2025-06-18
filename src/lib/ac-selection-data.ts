@@ -3878,8 +3878,13 @@ export const acProducts: ACProduct[] = [
     modelNumber: "ZTNQ18GTLA1",
     price: 94500,
     features: ["1 Way Cassette", "Energy Efficient"],
-    image: "/lovable-uploads/lg/ONEWAY-2-0T/1.png",
-    images: ["/lovable-uploads/lg/ONEWAY-2-0T/1.png"],
+    image: "/lovable-uploads/lg/ZTNQ12GULA1/1.jpg",
+    images: [
+      "/lovable-uploads/lg/ZTNQ12GULA1/1.jpg",
+      "/lovable-uploads/lg/ZTNQ12GULA1/2.png",
+      "/lovable-uploads/lg/ZTNQ12GULA1/3.jpg",
+      "/lovable-uploads/lg/ZTNQ12GULA1/4.jpg",
+    ],
     description: "LG 1.5T ONE WAY INV 3★ ZTNQ18GTLA1",
   },
   {
@@ -3892,8 +3897,13 @@ export const acProducts: ACProduct[] = [
     modelNumber: "ZTNQ24GTLA1",
     price: 108500,
     features: ["1 Way Cassette", "Energy Efficient"],
-    image: "/lovable-uploads/lg/ZTNQ24GTLA1/1.png",
-    images: ["/lovable-uploads/lg/ZTNQ24GTLA1/1.png"],
+    image: "/lovable-uploads/lg/ZTNQ12GULA1/1.jpg",
+    images: [
+      "/lovable-uploads/lg/ZTNQ12GULA1/1.jpg",
+      "/lovable-uploads/lg/ZTNQ12GULA1/2.png",
+      "/lovable-uploads/lg/ZTNQ12GULA1/3.jpg",
+      "/lovable-uploads/lg/ZTNQ12GULA1/4.jpg",
+    ],
     description: "LG 2.0T ONE WAY INV 3★ ZTNQ24GTLA1",
   },
 

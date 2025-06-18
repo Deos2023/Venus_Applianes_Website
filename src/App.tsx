@@ -35,6 +35,7 @@ const App = () => (
           <Route path="/select-tonnage/:type/:brand/:inverter" element={<TonnageSelectionPage />} />
           <Route path="/select-star/:type/:brand/:inverter/:tonnage" element={<StarSelectionPage />} />
           <Route path="/products/:type/:brand/:inverter/:tonnage/:star" element={<ProductResultsPage />} />
+          <Route path="/products/:type/:brand/:inverter/:tonnage/" element={<ProductResultsPage />} />
           <Route path="/brand/:brandName" element={<BrandPage />} />
           <Route path="/brand/:brandName/ton/:tonValue/star/:starRating" element={<ACDetailsPage />} />
           <Route path="/product/:id" element={<ProductDetailsPage />} /> {/* Add this route */}

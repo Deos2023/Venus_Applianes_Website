@@ -29,24 +29,48 @@ const ProductResultsPage = () => {
   
   useEffect(() => {
     // Filter products based on selection
-    const products = acProducts.filter(product => 
-      product.type === acType && 
-      product.brand === brandId && 
-      product.inverter === inverterType && 
-      product.tonnage === tonnageValue && 
-      product.starRating === starRating
-    );
+    let products;
+    
+    if (starRating === "") {
+      // If star rating is empty, show products with empty star rating
+      products = acProducts.filter(product => 
+        product.type === acType && 
+        product.brand === brandId && 
+        product.inverter === inverterType && 
+        product.tonnage === tonnageValue && 
+        product.starRating === ""
+      );
+    } else {
+      // Otherwise, filter by the selected star rating
+      products = acProducts.filter(product => 
+        product.type === acType && 
+        product.brand === brandId && 
+        product.inverter === inverterType && 
+        product.tonnage === tonnageValue && 
+        product.starRating === starRating
+      );
+    }
     
     setFilteredProducts(products);
     // Scroll to top
     window.scrollTo(0, 0);
   }, [acType, brandId, inverterType, tonnageValue, starRating]);
 
+  // Determine the back URL based on whether star rating is present
+  const getBackUrl = () => {
+    if (starRating) {
+      return `/select-star/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}`;
+    } else {
+      return `/select-tonnage/${acType}/${brandId}/${inverterType}`;
+    }
+  };
+
   return (
     <SelectionLayout 
       title="Available Products" 
-      description={`${currentBrand} ${currentType} - ${tonnageValue}, ${starRating}, ${currentInverter}`}
+      description={`${currentBrand} ${currentType} - ${tonnageValue}${starRating ? `, ${starRating}` : ""}, ${currentInverter}`}
       currentStep={5}
+      backUrl={getBackUrl()}
     >
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

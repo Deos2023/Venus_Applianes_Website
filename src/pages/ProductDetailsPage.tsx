@@ -59,13 +59,29 @@ const ProductDetailsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto max-w-7xl">
-        {/* Breadcrumb */}
-        <div className="text-sm mb-6 text-gray-600 flex items-center gap-1">
-          <Link to="/" className="hover:underline text-blue-600">Home</Link>
-          <span>›</span>
-          <Link to={`/brand/${product.brand}`} className="hover:underline text-blue-600">{brand}</Link>
-          <span>›</span>
-          <span className="text-gray-800">{product.modelNumber}</span>
+        {/* Back button and Breadcrumb */}
+        <div className="flex justify-between items-center mb-6">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            onClick={() => {
+              // Construct the URL to go back to product results
+              const backUrl = `/products/${product.type}/${product.brand}/${product.inverter}/${encodeURIComponent(product.tonnage)}${product.starRating ? `/${encodeURIComponent(product.starRating)}` : '/'}`;              
+              navigate(backUrl);
+            }}
+            className="group"
+          >
+            <ChevronRight className="h-4 w-4 mr-1 rotate-180 group-hover:-translate-x-1 transition-transform" />
+            Back to Results
+          </Button>
+          
+          <div className="text-sm text-gray-600 flex items-center gap-1">
+            <Link to="/" className="hover:underline text-blue-600">Home</Link>
+            <span>›</span>
+            <Link to={`/brand/${product.brand}`} className="hover:underline text-blue-600">{brand}</Link>
+            <span>›</span>
+            <span className="text-gray-800">{product.modelNumber}</span>
+          </div>
         </div>
 
         <div className="bg-white rounded-xl shadow-md overflow-hidden">

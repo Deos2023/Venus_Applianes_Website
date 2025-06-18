@@ -1,13 +1,14 @@
 
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
 import SelectionCard from "@/components/SelectionCard";
-import { starRatings, acTypes, brands, inverterTypes, ACType, Brand, InverterType } from "@/lib/ac-selection-data";
-import { getAvailableStarRatings } from "@/lib/utils";
+import { starRatings, acTypes, brands, inverterTypes, ACType, Brand, InverterType, acProducts } from "@/lib/ac-selection-data";
+import { getAvailableStarRatings, hasStarRatings } from "@/lib/utils";
 
 const StarSelectionPage = () => {
   const { type, brand, inverter, tonnage } = useParams<{ type: string; brand: string; inverter: string; tonnage: string }>();
+  const navigate = useNavigate();
   const acType = type as ACType;
   const brandId = brand as Brand;
   const inverterType = inverter as InverterType;
@@ -23,7 +24,24 @@ const StarSelectionPage = () => {
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    
+    // Check if there are any products with star ratings for this combination
+    if (!hasStarRatings(acType, brandId, inverterType, tonnageValue)) {
+      // If no products have star ratings, find products without star ratings
+      const productsWithoutStarRating = acProducts.filter(product => 
+        product.type === acType && 
+        product.brand === brandId && 
+        product.inverter === inverterType && 
+        product.tonnage === tonnageValue &&
+        product.starRating === ""
+      );
+      
+      // If there are products without star ratings, redirect to the product results page
+        if (productsWithoutStarRating.length > 0) {
+          navigate(`/products/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}/`);
+        }
+    }
+  }, [acType, brandId, inverterType, tonnageValue, navigate]);
 
   return (
     <SelectionLayout 

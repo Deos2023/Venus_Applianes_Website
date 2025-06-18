@@ -50,7 +50,21 @@ export function getAvailableStarRatings(acType: ACType, brand: Brand, inverter: 
       product.tonnage === tonnage
     )
     .map(product => product.starRating)
+    .filter(rating => rating !== "") // Filter out empty star ratings
   
   // Remove duplicates
   return [...new Set(availableStarRatings)];
+}
+
+// Check if products have star ratings for a specific combination
+export function hasStarRatings(acType: ACType, brand: Brand, inverter: InverterType, tonnage: string): boolean {
+  const products = acProducts.filter(product => 
+    product.type === acType && 
+    product.brand === brand && 
+    product.inverter === inverter && 
+    product.tonnage === tonnage
+  );
+  
+  // Check if any product has a non-empty star rating
+  return products.some(product => product.starRating !== "");
 }
