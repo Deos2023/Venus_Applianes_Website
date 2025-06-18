@@ -9,8 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-cool-blue-light font-bold text-2xl">CoolBreeze</span>
-              <span className="text-warm-amber-light font-medium text-xl">AC</span>
+              <img 
+                src="/lovable-uploads/6c697fcb-f9ff-466e-97f0-7cddf3d6c664.png" 
+                alt="Venus Appliances" 
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Providing quality air conditioners from premium brands to keep your space comfortable all year round.
@@ -77,15 +80,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-cool-blue-light shrink-0 mt-1" />
-                <span className="text-gray-400">123 Cooling Street, Comfort City, AC 54321</span>
+                <span className="text-gray-400">metro station and Hind cinema, 63, Ganesh Chandra Ave, near Rbl Bank, Between, Chandni Chawk, Bowbazar, Kolkata, West Bengal 700013</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-cool-blue-light" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">8240223074 / 93319 62120</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-cool-blue-light" />
-                <span className="text-gray-400">info@coolbreeze-ac.com</span>
+                <span className="text-gray-400">info@venusappliances.com</span>
               </div>
             </div>
           </div>
@@ -93,7 +96,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} CoolBreeze AC. All rights reserved.
+            © Copyright © 2025. All Rights Reserved. Website Developed & Maintained by Digital Exposure Online Services
           </p>
         </div>
       </div>

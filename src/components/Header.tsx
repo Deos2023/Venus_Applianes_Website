@@ -40,34 +40,22 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section - Enhanced Design */}
+            {/* Logo Section - Updated with Venus Appliances Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <motion.div 
                 className="relative"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className={`w-10 h-10 lg:w-12 lg:h-12 rounded-2xl flex items-center justify-center transition-all duration-300 ${
-                  scrolled 
-                    ? "bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg" 
-                    : "bg-white/20 backdrop-blur-sm border border-white/20"
-                }`}>
-                  <span className="text-white font-bold text-lg lg:text-xl">❄</span>
+                <div className={`flex items-center justify-center transition-all duration-300`}>
+                  <img 
+                    src="/lovable-uploads/6c697fcb-f9ff-466e-97f0-7cddf3d6c664.png" 
+                    alt="Venus Appliances" 
+                    className="h-12 w-auto lg:h-14 object-contain"
+                  />
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
               </motion.div>
-              <div className="flex flex-col">
-                <span className={`font-bold text-xl lg:text-2xl tracking-tight transition-colors duration-300 ${
-                  scrolled ? "text-gray-900" : "text-white"
-                }`}>
-                  CoolBreeze
-                </span>
-                <span className={`text-xs lg:text-sm font-medium -mt-1 transition-colors duration-300 ${
-                  scrolled ? "text-blue-600" : "text-blue-200"
-                }`}>
-                  Air Conditioning
-                </span>
-              </div>
             </Link>
 
             {/* Desktop Navigation - Modern with Better Spacing */}
@@ -115,7 +103,7 @@ const Header = () => {
                   }`}>
                     <Phone className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-medium">+91 98765 43210</span>
+                  <span className="font-medium">8240223074</span>
                 </motion.div>
                 <div className={`w-px h-5 ${
                   scrolled ? "bg-gray-300" : "bg-white/30"
@@ -131,7 +119,7 @@ const Header = () => {
                   }`}>
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-medium">info@coolbreeze.com</span>
+                  <span className="font-medium">info@venusappliances.com</span>
                 </motion.div>
               </div>
               <motion.div
@@ -251,7 +239,7 @@ const Header = () => {
                     }`}>
                       <Phone className="w-4 h-4" />
                     </div>
-                    <span className="font-medium">+91 98765 43210</span>
+                    <span className="font-medium">8240223074 / 93319 62120</span>
                   </div>
                   <div className={`flex items-center gap-4 px-6 text-sm ${
                     scrolled ? "text-gray-600" : "text-blue-100"
@@ -261,7 +249,7 @@ const Header = () => {
                     }`}>
                       <Mail className="w-4 h-4" />
                     </div>
-                    <span className="font-medium">info@coolbreeze.com</span>
+                    <span className="font-medium">info@venusappliances.com</span>
                   </div>
                   <div className="px-6">
                     <Button 
