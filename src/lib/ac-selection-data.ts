@@ -3831,8 +3831,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "ONEWAY-1-5T",
     price: 95700,
     features: ["1 Way Cassette", "Energy Efficient"],
-    image: "/lovable-uploads/voltas/ONEWAY-1-5T/1.png",
-    images: ["/lovable-uploads/voltas/ONEWAY-1-5T/1.png"],
+    image: "/lovable-uploads/voltas/ONEWAY-1-0T/1.jpg",
+    images: ["/lovable-uploads/voltas/ONEWAY-1-0T/1.jpg"],
     description: "VOLTAS 1.5T ONE WAY INV",
   },
   {
@@ -3845,8 +3845,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "ONEWAY-2-0T",
     price: 100900,
     features: ["1 Way Cassette", "Energy Efficient"],
-    image: "/lovable-uploads/voltas/ONEWAY-2-0T/1.png",
-    images: ["/lovable-uploads/voltas/ONEWAY-2-0T/1.png"],
+    image: "/lovable-uploads/voltas/ONEWAY-1-0T/1.jpg",
+    images: ["/lovable-uploads/voltas/ONEWAY-1-0T/1.jpg"],
     description: "VOLTAS 2.0T ONE WAY INV",
   },
   {
