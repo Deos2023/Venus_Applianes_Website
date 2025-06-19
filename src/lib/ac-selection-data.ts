@@ -362,84 +362,19 @@ export const acProducts: ACProduct[] = [
   // O GENERAL
 // O GENERAL SPLIT AC PRICES (ENSURED ALL PRESENT)
 
-{
-  id: 'og-split-1-0t-inv-3star-12cpab',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '1.0T',
-  starRating: '3★',
-  modelNumber: '12CPAB',
-  price: 39790,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/12CPAB/1.png',
-  images: ['/lovable-uploads/o-general/12CPAB/1.png'],
-  description: 'O GENERAL 1.0T INV 3★ 12CPAB Split AC'
-},
 
 
 
 
 
-{
-  id: 'og-split-1-5t-noninv-3star-18bmaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'non-inverter',
-  tonnage: '1.5T',
-  starRating: '3★',
-  modelNumber: '18BMAA',
-  price: 53050,
-  features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18BMAA/1.png',
-  images: ['/lovable-uploads/o-general/18BMAA/1.png'],
-  description: 'O GENERAL 1.5T NON INV 3★ 18BMAA Split AC'
-},
-{
-  id: 'og-split-1-5t-noninv-3star-18buta',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'non-inverter',
-  tonnage: '1.5T',
-  starRating: '3★',
-  modelNumber: '18BUTA',
-  price: 57790,
-  features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/18BUTA/1.png',
-  images: ['/lovable-uploads/o-general/18BUTA/1.png'],
-  description: 'O GENERAL 1.5T NON INV 3★ 18BUTA Split AC'
-},
 
 
 
-{
-  id: 'og-split-2-0t-inv-3star-24cpaa',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.0T',
-  starRating: '3★',
-  modelNumber: '24CPAA',
-  price: 63428,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24CPAA/1.png',
-  images: ['/lovable-uploads/o-general/24CPAA/1.png'],
-  description: 'O GENERAL 2.0T INV 3★ 24CPAA Split AC'
-},
-{
-  id: 'og-split-2-0t-inv-3star-24cpab',
-  type: 'split',
-  brand: 'o-general',
-  inverter: 'inverter',
-  tonnage: '2.0T',
-  starRating: '3★',
-  modelNumber: '24CPAB',
-  price: 63428,
-  features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/o-general/24CPAB/1.png',
-  images: ['/lovable-uploads/o-general/24CPAB/1.png'],
-  description: 'O GENERAL 2.0T INV 3★ 24CPAB Split AC'
-},
+
+
+
+
+
 
 
 
@@ -4965,7 +4900,6 @@ export const acProducts: ACProduct[] = [
     images: [
       "/lovable-uploads/mitsubishi/mitsubishi_elec/GN13VF/1.jng",
       "/lovable-uploads/mitsubishi/mitsubishi_elec/GN13VF/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN13VF/3.png",
     ],
     description:
       "MITSUBISHI ELECTRIC 1.0T INV 4* GN13VF with premium features for enhanced comfort",
@@ -5332,10 +5266,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "UE13VG",
     price: 37855,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/UE13VG/1.jpg",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE13VG/1.jpg",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/UE13VG/1.jpg",
-      "/lovable-uploads/mitsubishi-akabishi/UE13VG/2.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE13VG/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE13VG/2.jpg",
     ],
     description: "MITSUBISHI AKABISHI 1.0T INV 5★ UE13VG Split AC",
   },
@@ -5349,11 +5283,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AE13VG",
     price: 31465,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/AE13VG/1.png",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/1.png",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/AE13VG/1.png",
-      "/lovable-uploads/mitsubishi-akabishi/AE13VG/2.webp",
-      "/lovable-uploads/mitsubishi-akabishi/AE13VG/3.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/1.png",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/2.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/3.webp",
     ],
     description: "MITSUBISHI AKABISHI 1.0T INV 3★ AE13VG Split AC",
   },
@@ -5367,10 +5301,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "SE13VG",
     price: 34447,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/SE13VG/1.webp",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE13VG/1.webp",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/SE13VG/1.webp",
-      "/lovable-uploads/mitsubishi-akabishi/SE13VG/2.png",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE13VG/1.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE13VG/2.png",
     ],
     description: "MITSUBISHI AKABI 1.0T NON INV 3★ SE13VG Split AC",
   },
@@ -5384,8 +5318,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AE13VG",
     price: 31465,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/AE13VG/1.png",
-    images: ["/lovable-uploads/mitsubishi-akabishi/AE13VG/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/1.png",
+    images: ["/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE13VG/1.png"],
     description: "MITSUBISHI AKABI 1.0T NON INV 2★ AE13VG Split AC",
   },
   {
@@ -5398,10 +5332,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "UE18VG",
     price: 44813,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/UE18VG/1.webp",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE18VG/1.webp",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/UE18VG/1.webp",
-      "/lovable-uploads/mitsubishi-akabishi/UE18VG/2.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE18VG/1.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE18VG/2.webp",
     ],
     description: "MITSUBISHI AKABISHI 1.5T INV 5★ UE18VG Split AC",
   },
@@ -5415,8 +5349,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AE18VG",
     price: 37926,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/AE18VG/1.png",
-    images: ["/lovable-uploads/mitsubishi-akabishi/AE18VG/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE18VG/1.png",
+    images: ["/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE18VG/1.png"],
     description: "MITSUBISHI AKABISHI 1.5T INV 3★ AE18VG Split AC",
   },
   {
@@ -5429,10 +5363,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "SE18VG",
     price: 41334,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/SE18VG/1.webp",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE18VG/1.webp",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/SE18VG/1.webp",
-      "/lovable-uploads/mitsubishi-akabishi/SE18VG/2.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE18VG/1.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE18VG/2.jpg",
     ],
     description: "MITSUBISHI AKABI 1.5T NON INV 3★ SE18VG Split AC",
   },
@@ -5446,8 +5380,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AE18VG",
     price: 37926,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/AE18VG/1.png",
-    images: ["/lovable-uploads/mitsubishi-akabishi/AE18VG/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE18VG/1.png",
+    images: ["/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE18VG/1.png"],
     description: "MITSUBISHI AKABI 1.5T NON INV 2★ AE18VG Split AC",
   },
   {
@@ -5460,10 +5394,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "UE22VG",
     price: 55037,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/UE22VG/1.jpg",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE22VG/1.jpg",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/UE22VG/1.jpg",
-      "/lovable-uploads/mitsubishi-akabishi/UE22VG/2.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE22VG/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/UE22VG/2.jpg",
     ],
     description: "MITSUBISHI AKABISHI 1.8T INV 5★ UE22VG Split AC",
   },
@@ -5477,11 +5411,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "SE22VG",
     price: 42967,
     features: ["Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/SE22VG/1.png",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/SE22VG/1.png",
-      "/lovable-uploads/mitsubishi-akabishi/SE22VG/2.webp",
-      "/lovable-uploads/mitsubishi-akabishi/SE22VG/2.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/2.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/2.webp",
     ],
     description: "MITSUBISHI AKABISHI 1.8T INV 3★ SE22VG Split AC",
   },
@@ -5495,8 +5429,8 @@ export const acProducts: ACProduct[] = [
     modelNumber: "SE22VG",
     price: 48647,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/SE22VG/1.png",
-    images: ["/lovable-uploads/mitsubishi-akabishi/SE22VG/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png",
+    images: ["/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png"],
     description: "MITSUBISHI AKABI 1.8T NON INV 3★ SE22VG Split AC",
   },
   {
@@ -5509,10 +5443,10 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AE22VG",
     price: 42967,
     features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi-akabishi/AE22VG/1.jpg",
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/1.jpg",
     images: [
-      "/lovable-uploads/mitsubishi-akabishi/AE22VG/1.jpg",
-      "/lovable-uploads/mitsubishi-akabishi/AE22VG/2.png",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/2.png",
     ],
     description: "MITSUBISHI AKABI 1.8T NON INV 2★ AE22VG Split AC",
   },
