@@ -2420,7 +2420,7 @@ export const acProducts: ACProduct[] = [
   '/lovable-uploads/daikin/FTL35UV16/3.jpg',
   '/lovable-uploads/daikin/FTL35UV16/4.webp',
   '/lovable-uploads/daikin/FTL35UV16/5.jpg',
-  '/lovable-uploads/daikin/FTL35UV16/6.jpg',
+  '/lovable-uploads/daikin/FTL35UV6/6.jpg',
   
     ],
     description: "DAIKIN 1.5T INV 5★ FTKU50UV16 Split AC",
