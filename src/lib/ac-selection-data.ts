@@ -2298,8 +2298,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "GN26VF",
     price: 81872,
     features: ["Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
+    ],
     description: "MITSUBISHI ELECTRIC 2.2T INV 4★ GN26VF Split AC",
   },
   {
@@ -2312,8 +2315,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "JR30VF",
     price: 96614,
     features: ["Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
+    ],
     description: "MITSUBISHI ELECTRIC 2.5T INV 3★ JR30VF Split AC",
   },
   {
@@ -2326,8 +2332,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AGZ24VF",
     price: 58000,
     features: ["Non-Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
+    ],
     description: "MITSUBISHI ELECTRIC 1.9T NON INV 3★ AGZ24VF Split AC",
   },
   {
@@ -2340,8 +2349,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "AJZ22VF",
     price: 47600,
     features: ["Non-Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
+    ],
     description: "MITSUBISHI ELECTRIC 1.8T NON INV 2★ AJZ22VF Split AC",
   },
   {
@@ -2354,8 +2366,11 @@ export const acProducts: ACProduct[] = [
     modelNumber: "JR36VF",
     price: 122432,
     features: ["Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
+      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
+    ],
     description: "MITSUBISHI ELECTRIC 3.0T INV 3★ JR36VF Split AC",
   },
   {
@@ -2368,8 +2383,15 @@ export const acProducts: ACProduct[] = [
     modelNumber: "FTKU50UV16",
     price: 43700,
     features: ["Inverter", "Energy Efficient"],
-    image: "",
-    images: [],
+    image: '/lovable-uploads/daikin/FTL35UV16/1.jpg',
+    images: ['/lovable-uploads/daikin/FTL35UV16/1.jpg',
+  '/lovable-uploads/daikin/FTL35UV16/2.jpg',
+  '/lovable-uploads/daikin/FTL35UV16/3.jpg',
+  '/lovable-uploads/daikin/FTL35UV16/4.webp',
+  '/lovable-uploads/daikin/FTL35UV16/5.jpg',
+  '/lovable-uploads/daikin/FTL35UV16/6.jpg',
+  
+    ],
     description: "DAIKIN 1.5T INV 5★ FTKU50UV16 Split AC",
   },
   {
