@@ -413,10 +413,10 @@ export const acProducts: ACProduct[] = [
   modelNumber: 'GTKC35UV16/FTKC35UV16',
   price: 34300,
   features: ['Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/daikin/GTKC35UV16/1.webp',
-  images: ['/lovable-uploads/daikin/GTKC35UV16/1.webp',
-    '/lovable-uploads/daikin/GTKC35UV16/2.webp',
-    '/lovable-uploads/daikin/GTKC35UV16/3.webp',
+  image: '/lovable-uploads/daikin/GTKC35UV16/1.jpg',
+  images: ['/lovable-uploads/daikin/GTKC35UV16/1.jpg',
+    '/lovable-uploads/daikin/GTKC35UV16/2.jpg',
+    '/lovable-uploads/daikin/GTKC35UV16/3.png',
   ],
   description: 'DAIKIN 1.0T INV 3★ GTKC35UV16/FTKC35UV16 Split AC'
 },
@@ -430,8 +430,12 @@ export const acProducts: ACProduct[] = [
   modelNumber: 'GTL35UV16',
   price: 33000,
   features: ['Non-Inverter', 'Energy Efficient'],
-  image: '/lovable-uploads/daikin/GTL35UV16/1.png',
-  images: ['/lovable-uploads/daikin/GTL35UV16/1.png'],
+  image: '/lovable-uploads/daikin/GTL35UV16/1.jpg',
+  images: [
+    '/lovable-uploads/daikin/GTL35UV16/1.jpg',
+    '/lovable-uploads/daikin/GTL35UV16/2.jpg',
+    '/lovable-uploads/daikin/GTL35UV16/3.jpg'
+  ],
   description: 'DAIKIN 1.0T NON INV 3★ GTL35UV16 Split AC'
 },
 {
