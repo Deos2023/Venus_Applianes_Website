@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
@@ -38,9 +39,9 @@ const Header = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo Section - Updated with Venus Appliances Logo */}
-            <Link to="/" className="flex items-center gap-3 group">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
+            {/* Logo Section */}
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
               <motion.div 
                 className="relative"
                 whileHover={{ scale: 1.05 }}
@@ -50,14 +51,14 @@ const Header = () => {
                   <img 
                     src="/lovable-uploads/6c697fcb-f9ff-466e-97f0-7cddf3d6c664.png" 
                     alt="Venus Appliances" 
-                    className="h-12 w-auto lg:h-14 object-contain"
+                    className="h-8 sm:h-10 lg:h-14 w-auto object-contain"
                   />
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
               </motion.div>
             </Link>
 
-            {/* Desktop Navigation - Modern with Better Spacing */}
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
               {navItems.map((item, index) => (
                 <motion.div
@@ -68,31 +69,29 @@ const Header = () => {
                 >
                   <Link 
                     to={item.path}
-                    className={`relative px-5 py-3 xl:px-6 xl:py-3 rounded-2xl font-medium text-sm xl:text-base transition-all duration-300 group ${
+                    className={`relative px-4 xl:px-6 py-2 xl:py-3 rounded-2xl font-medium text-sm xl:text-base transition-all duration-300 group ${
                       scrolled
                         ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50/70"
                         : "text-white hover:text-blue-200 hover:bg-white/15"
                     }`}
                   >
-                    {/* Enhanced hover effects - overlay first for full coverage */}
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                     <span className="relative z-10 flex items-center gap-1.5">
                       {item.name}
                       {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                     </span>
                     <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-8 group-hover:left-1/2 group-hover:-translate-x-1/2 transition-all duration-300 rounded-full z-10"></div>
-                    {/* Active state indicator */}
                     <div className="absolute top-1 right-1 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   </Link>
                 </motion.div>
               ))}
             </nav>
 
-            {/* Contact Info & CTA - Desktop Enhanced */}
-            <div className="hidden xl:flex items-center gap-6">
-              <div className="flex items-center gap-5 text-sm">
+            {/* Contact Info & CTA - Desktop */}
+            <div className="hidden xl:flex items-center gap-4">
+              <div className="flex items-center gap-4 text-sm">
                 <motion.div 
-                  className={`flex items-center gap-2.5 transition-colors duration-300 ${
+                  className={`flex items-center gap-2 transition-colors duration-300 ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                   whileHover={{ scale: 1.05 }}
@@ -102,13 +101,13 @@ const Header = () => {
                   }`}>
                     <Phone className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-medium">8240223074</span>
+                  <span className="font-medium">93319 62120</span>
                 </motion.div>
                 <div className={`w-px h-5 ${
                   scrolled ? "bg-gray-300" : "bg-white/30"
                 }`}></div>
                 <motion.div 
-                  className={`flex items-center gap-2.5 transition-colors duration-300 ${
+                  className={`flex items-center gap-2 transition-colors duration-300 ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}
                   whileHover={{ scale: 1.05 }}
@@ -118,7 +117,8 @@ const Header = () => {
                   }`}>
                     <Mail className="w-3.5 h-3.5" />
                   </div>
-                  <span className="font-medium">venusapplianceskol@gmail.com</span>
+                  <span className="font-medium hidden 2xl:inline">venusapplianceskol@gmail.com</span>
+                  <span className="font-medium 2xl:hidden">Email</span>
                 </motion.div>
               </div>
               <motion.div
@@ -128,7 +128,7 @@ const Header = () => {
                 <Button 
                   asChild 
                   size="lg"
-                  className={`font-medium transition-all duration-300 shadow-lg hover:shadow-xl rounded-2xl px-6 ${
+                  className={`font-medium transition-all duration-300 shadow-lg hover:shadow-xl rounded-2xl px-4 xl:px-6 ${
                     scrolled 
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white" 
                       : "bg-white text-blue-700 hover:bg-blue-50"
@@ -139,7 +139,7 @@ const Header = () => {
               </motion.div>
             </div>
 
-            {/* Mobile Menu Button - Enhanced */}
+            {/* Mobile Menu Button */}
             <motion.div 
               className="lg:hidden"
               whileTap={{ scale: 0.95 }}
@@ -148,7 +148,7 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`p-3 rounded-2xl transition-all duration-300 ${
+                className={`p-2 sm:p-3 rounded-2xl transition-all duration-300 ${
                   scrolled 
                     ? "text-gray-700 hover:bg-blue-50 hover:text-blue-600" 
                     : "text-white hover:bg-white/15"
@@ -163,7 +163,7 @@ const Header = () => {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <X className="w-6 h-6" />
+                      <X className="w-5 h-5 sm:w-6 sm:h-6" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -173,7 +173,7 @@ const Header = () => {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Menu className="w-6 h-6" />
+                      <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -182,7 +182,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation - Enhanced Design */}
+        {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -196,7 +196,7 @@ const Header = () => {
                   : "bg-blue-900/97 backdrop-blur-xl border-t border-white/10"
               }`}
             >
-              <nav className="max-w-7xl mx-auto px-4 py-8">
+              <nav className="max-w-7xl mx-auto px-4 py-6 sm:py-8">
                 <div className="space-y-2">
                   {navItems.map((item, index) => (
                     <motion.div
@@ -207,7 +207,7 @@ const Header = () => {
                     >
                       <Link
                         to={item.path}
-                        className={`block px-6 py-4 rounded-2xl transition-all duration-300 font-medium text-base ${
+                        className={`block px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 font-medium text-base ${
                           scrolled 
                             ? "text-gray-700 hover:bg-blue-50/70 hover:text-blue-600" 
                             : "text-white hover:bg-white/15"
@@ -223,14 +223,14 @@ const Header = () => {
                   ))}
                 </div>
                 
-                {/* Mobile Contact Info - Enhanced */}
+                {/* Mobile Contact Info */}
                 <motion.div 
-                  className="mt-8 pt-8 border-t border-white/10 space-y-6"
+                  className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/10 space-y-4 sm:space-y-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <div className={`flex items-center gap-4 px-6 text-sm ${
+                  <div className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 text-sm ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}>
                     <div className={`p-2 rounded-xl ${
@@ -238,9 +238,9 @@ const Header = () => {
                     }`}>
                       <Phone className="w-4 h-4" />
                     </div>
-                    <span className="font-medium">8240223074 / 93319 62120</span>
+                    <span className="font-medium">93319 62120</span>
                   </div>
-                  <div className={`flex items-center gap-4 px-6 text-sm ${
+                  <div className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 text-sm ${
                     scrolled ? "text-gray-600" : "text-blue-100"
                   }`}>
                     <div className={`p-2 rounded-xl ${
@@ -248,13 +248,13 @@ const Header = () => {
                     }`}>
                       <Mail className="w-4 h-4" />
                     </div>
-                    <span className="font-medium">venusapplianceskol@gmail.com</span>
+                    <span className="font-medium break-all">venusapplianceskol@gmail.com</span>
                   </div>
-                  <div className="px-6">
+                  <div className="px-4 sm:px-6">
                     <Button 
                       asChild 
                       size="lg"
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-2xl py-4"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-2xl py-3 sm:py-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Link to="/contact">Get Quote</Link>
@@ -268,7 +268,7 @@ const Header = () => {
       </motion.header>
       
       {/* Spacer to prevent content overlap */}
-      <div className="h-16 lg:h-20"></div>
+      <div className="h-14 sm:h-16 lg:h-20"></div>
     </>
   );
 };
