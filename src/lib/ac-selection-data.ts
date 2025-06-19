@@ -334,7 +334,7 @@ export const acProducts: ACProduct[] = [
     description:
       "VOLTAS 1.5T INV 5* 185V VECTRA PEARL Window AC with modern features",
   },
-=======
+
   {
     id: "daikin-cassette-2t-inv-3star",
     type: "cassette",
