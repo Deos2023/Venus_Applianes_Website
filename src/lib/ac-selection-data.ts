@@ -330,33 +330,7 @@ export const acProducts: ACProduct[] = [
     ],
     description: "DAIKIN 2.0T INV 3* FCVFQ71 Cassette AC for commercial spaces",
   },
-  {
-    id: "voltas-window-1-5t-inv-5star",
-    type: "window",
-    brand: "voltas",
-    inverter: "inverter",
-    tonnage: "1.5T",
-    starRating: "5★",
-    modelNumber: "185V VECTRA PEARL",
-    price: 36500,
-    features: [
-      "High Energy Efficiency",
-      "Anti-dust Filter",
-      "Sleep Mode",
-      "Self Diagnosis",
-      "Copper Condenser",
-    ],
-    image: "/lovable-uploads/voltas/185V_VECTRA_PEARL/1.png",
-    images: [
-      "/lovable-uploads/voltas/185V_VECTRA_PEARL/1.png",
-      "/lovable-uploads/voltas/185V_VECTRA_PEARL/2.png",
-      "/lovable-uploads/voltas/185V_VECTRA_PEARL/3.png",
-      "/lovable-uploads/voltas/185V_VECTRA_PEARL/4.png",
-      "/lovable-uploads/voltas/185V_VECTRA_PEARL/5.png",
-    ],
-    description:
-      "VOLTAS 1.5T INV 5* 185V VECTRA PEARL Window AC with modern features",
-  },
+  
   /* --- Add these entries to the acProducts array in src/lib/ac-selection-data.ts --- */
 
   // O GENERAL
