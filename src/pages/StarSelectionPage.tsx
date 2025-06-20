@@ -38,7 +38,7 @@ const StarSelectionPage = () => {
       
       // If there are products without star ratings, redirect to the product results page
         if (productsWithoutStarRating.length > 0) {
-          navigate(`/products/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}/`);
+          navigate(`/products/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}/`, { replace: true });
         }
     }
   }, [acType, brandId, inverterType, tonnageValue, navigate]);
