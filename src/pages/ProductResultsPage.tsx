@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
@@ -14,7 +15,7 @@ const ProductResultsPage = () => {
   }>();
   
   const [filteredProducts, setFilteredProducts] = useState<ACProduct[]>([]);
-
+  
   const acType = type as ACType;
   const brandId = brand as Brand;
   const inverterType = inverter as InverterType;
@@ -86,7 +87,7 @@ const ProductResultsPage = () => {
           </Button>
         </div>
       )}
-
+      
       <div className="mt-12 text-center">
         <p className="mb-4 text-gray-600">Not finding what you're looking for?</p>
         <div className="flex justify-center space-x-4">

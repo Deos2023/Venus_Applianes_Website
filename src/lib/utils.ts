@@ -1,4 +1,3 @@
-
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { acProducts, ACType, Brand, InverterType } from "./ac-selection-data"
@@ -21,7 +20,7 @@ export function getAvailableBrands(acType: ACType): Brand[] {
 export function getAvailableInverterTypes(acType: ACType, brand: Brand): InverterType[] {
   const availableInverterTypes = acProducts
     .filter(product => product.type === acType && product.brand === brand)
-    .map(product => product.inverter as InverterType)
+    .map(product => product.inverter)
   
   // Remove duplicates
   return [...new Set(availableInverterTypes)];
