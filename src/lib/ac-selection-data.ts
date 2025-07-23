@@ -3,7 +3,7 @@ import { Brand, ACProduct } from "./types";
 // Export type definitions
 export type ACType = 'split' | 'window' | 'cassette';
 export type InverterType = 'inverter' | 'non-inverter';
-export { Brand, ACProduct };
+export type { Brand, ACProduct };
 
 export const brands: { id: Brand; name: string; logo?: string }[] = [
   { id: "daikin", name: "Daikin", logo: "/logos/daikin.png" },

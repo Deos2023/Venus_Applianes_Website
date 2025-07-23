@@ -1,8 +1,9 @@
+
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
 import SelectionCard from "@/components/SelectionCard";
-import { inverterTypes, brands, acTypes, ACType, Brand } from "@/lib/ac-selection-data";
+import { inverterTypes, brands, acTypes, ACType, Brand, InverterType } from "@/lib/ac-selection-data";
 import { getAvailableInverterTypes } from "@/lib/utils";
 
 const InverterSelectionPage = () => {
@@ -17,7 +18,7 @@ const InverterSelectionPage = () => {
   // Get only inverter types that have products available for this AC type and brand
   const availableInverterTypeIds = getAvailableInverterTypes(acType, brandId);
   const availableInverterTypes = inverterTypes.filter(inverterType => 
-    availableInverterTypeIds.includes(inverterType.id)
+    availableInverterTypeIds.includes(inverterType.id as InverterType)
   );
   
   // Scroll to top on component mount
