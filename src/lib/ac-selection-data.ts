@@ -1,5 +1,10 @@
 import { Brand, ACProduct } from "./types";
 
+// Export type definitions
+export type ACType = 'split' | 'window' | 'cassette';
+export type InverterType = 'inverter' | 'non-inverter';
+export { Brand, ACProduct };
+
 export const brands: { id: Brand; name: string; logo?: string }[] = [
   { id: "daikin", name: "Daikin", logo: "/logos/daikin.png" },
   { id: "o-general", name: "O General", logo: "/logos/o-general.png" },
@@ -20,14 +25,22 @@ export const brands: { id: Brand; name: string; logo?: string }[] = [
 ];
 
 export const acTypes = [
-  { id: "split", name: "Split AC" },
-  { id: "window", name: "Window AC" },
-  { id: "cassette", name: "Cassette AC" }
+  { id: "split", name: "Split AC", image: "/images/split-ac.jpg" },
+  { id: "window", name: "Window AC", image: "/images/window-ac.jpg" },
+  { id: "cassette", name: "Cassette AC", image: "/images/cassette-ac.jpg" }
 ];
 
 export const inverterTypes = [
   { id: "inverter", name: "Inverter" },
   { id: "non-inverter", name: "Non-Inverter" }
+];
+
+export const tonnageOptions = [
+  "0.8T", "1.0T", "1.1T", "1.14T", "1.3T", "1.4T", "1.5T", "1.6T", "2.0T"
+];
+
+export const starRatings = [
+  "2★", "3★", "4★", "5★"
 ];
 
 // Updated AC Products with comprehensive details
