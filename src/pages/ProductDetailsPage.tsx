@@ -158,7 +158,15 @@ const ProductDetailsPage = () => {
               </div>
 
               <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                {product.mrp && (
+                  <div className="text-lg text-gray-500 line-through mb-1">MRP: ₹{product.mrp.toLocaleString()}</div>
+                )}
                 <div className="text-3xl font-bold text-gray-900 mb-1">₹{product.price.toLocaleString()}</div>
+                {product.mrp && (
+                  <div className="text-green-600 font-medium mb-2">
+                    You Save: ₹{(product.mrp - product.price).toLocaleString()} ({Math.round(((product.mrp - product.price) / product.mrp) * 100)}% off)
+                  </div>
+                )}
                 <div className="text-green-600 font-medium flex items-center gap-1">
                   <Check className="h-4 w-4" />
                   <span>Inclusive of all taxes</span>
@@ -239,6 +247,24 @@ const ProductDetailsPage = () => {
                       <span className="w-40 font-medium text-gray-700">Type</span>
                       <span className="text-gray-600">{acType}</span>
                     </div>
+                    {product.coolingCapacity && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Cooling Capacity</span>
+                        <span className="text-gray-600">{product.coolingCapacity} WT</span>
+                      </div>
+                    )}
+                    {product.gasType && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Gas Type</span>
+                        <span className="text-gray-600">{product.gasType}</span>
+                      </div>
+                    )}
+                    {product.indoorUnitDimensions && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Indoor Unit Size</span>
+                        <span className="text-gray-600">{product.indoorUnitDimensions}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <div className="flex">
@@ -253,6 +279,24 @@ const ProductDetailsPage = () => {
                       <span className="w-40 font-medium text-gray-700">Inverter</span>
                       <span className="text-gray-600">{product.inverter === 'inverter' ? 'Yes' : 'No'}</span>
                     </div>
+                    {product.outdoorUnitDimensions && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Outdoor Unit Size</span>
+                        <span className="text-gray-600">{product.outdoorUnitDimensions}</span>
+                      </div>
+                    )}
+                    {product.specialFeatures && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Special Features</span>
+                        <span className="text-gray-600">{product.specialFeatures}</span>
+                      </div>
+                    )}
+                    {product.productUrl && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Product Link</span>
+                        <a href={product.productUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">View Details</a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
