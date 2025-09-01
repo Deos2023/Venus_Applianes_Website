@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ACInquiryForm from '@/components/ACInquiryForm';
+import { acProducts, brands, acTypes } from "@/lib/ac-selection-data";
+import { useState } from 'react';
 
 const features = [
   {
@@ -53,6 +55,26 @@ const staggerContainer = {
 };
 
 const HomePage = () => {
+  const [search, setSearch] = useState('');
+  const [showResults, setShowResults] = useState(false);
+
+  // Helper to get brand/type names
+  const getBrandName = id => (brands.find(b => b.id === id)?.name || id);
+  const getTypeName = id => (acTypes.find(t => t.id === id)?.name || id);
+
+  // Filter products based on search
+  const filteredProducts = acProducts.filter(product => {
+    const q = search.trim().toLowerCase();
+    if (!q) return false;
+    // Check modelNumber, product name (description), brand, type
+    return (
+      (product.modelNumber && product.modelNumber.toLowerCase().includes(q)) ||
+      (product.description && product.description.toLowerCase().includes(q)) ||
+      getBrandName(product.brand).toLowerCase().includes(q) ||
+      getTypeName(product.type).toLowerCase().includes(q)
+    );
+  });
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -65,6 +87,51 @@ const HomePage = () => {
         <Hero />
       </motion.div>
 
+      {/* Product Search Section */}
+      <div className="w-full bg-white mb-6 py-8 px-4 sm:px-6 lg:px-8 shadow-sm border-b">
+        <div className="max-w-2xl mx-auto">
+          <input
+            type="text"
+            placeholder="Search by Model Number, Product Name, Brand, or Category..."
+            className="w-full border border-gray-300 rounded-lg py-2 px-4 mb-3 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+            value={search}
+            onChange={e => { setSearch(e.target.value); setShowResults(true); }}
+            aria-label="Product search"
+          />
+        </div>
+        {/* Results shown only while searching */}
+        {showResults && search.trim() !== '' && (
+          <div className="max-w-2xl mx-auto">
+            {filteredProducts.length === 0 ? (
+              <div className="text-gray-500 py-8 text-center">No products found.</div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {filteredProducts.map(product => (
+                  <div key={product.id} className="bg-gray-50 p-4 rounded-lg shadow flex flex-col gap-2 border hover:border-blue-400">
+                    <div className="flex items-center gap-2">
+                      <img src={product.image} alt={product.modelNumber} className="h-16 w-16 object-contain rounded" />
+                      <div>
+                        <div className="font-bold text-gray-800">{product.modelNumber}</div>
+                        <div className="text-sm text-gray-700">{getBrandName(product.brand)} | {getTypeName(product.type)}</div>
+                        <div className="text-sm text-gray-600">{product.description?.slice(0,50)}{product.description?.length > 50 ? '...' : ''}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-end justify-between mt-2">
+                      <div className="font-bold text-blue-600 text-lg">₹{product.price?.toLocaleString() ?? '---'}</div>
+                      <a
+                        href={`/product/${product.id}`}
+                        className="ml-2 px-3 py-1 rounded text-sm bg-blue-600 text-white hover:bg-blue-700 transition"
+                      >
+                        View Details
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
       {/* AC Inquiry Form - Mobile First Responsive */}
       <motion.div
         initial="hidden"

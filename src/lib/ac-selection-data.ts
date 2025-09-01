@@ -188,6 +188,10 @@ export const acProducts: ACProduct[] = [
     starRating: "5★",
     modelNumber: "12CGTB",
     price: 50200,
+    mrp: 53500,
+    coolingCapacity: "3500W",
+    gasType: "R32",
+    productUrl: "https://www.ogeneral.com/12CGTB", // Replace with correct URL or keep as #
     features: [
       "Digital Inverter Technology",
       "Plasma Air Purifier",
@@ -215,6 +219,10 @@ export const acProducts: ACProduct[] = [
     starRating: "3★",
     modelNumber: "12CPAA",
     price: 39790,
+    mrp: 42000,
+    coolingCapacity: "3200W",
+    gasType: "R410A",
+    productUrl: "https://www.ogeneral.com/12CPAA",
     features: [
       "Digital Inverter Technology",
       "Auto Restart",
@@ -240,6 +248,10 @@ export const acProducts: ACProduct[] = [
     starRating: "5★",
     modelNumber: "18CGTB",
     price: 63490,
+    mrp: 67990,
+    coolingCapacity: "5200W",
+    gasType: "R32",
+    productUrl: "https://www.ogeneral.com/18CGTB",
     features: [
       "Digital Inverter Technology",
       "Plasma Air Purifier",
@@ -268,6 +280,10 @@ export const acProducts: ACProduct[] = [
     starRating: "5★",
     modelNumber: "FTKU35UV16",
     price: 38600,
+    mrp: 41500,
+    coolingCapacity: "3500W",
+    gasType: "R32",
+    productUrl: "https://www.daikinindia.com/product/ftku35uv16",
     features: [
       "Power Chill Operation",
       "Econo Mode",
@@ -294,6 +310,10 @@ export const acProducts: ACProduct[] = [
     starRating: "5★",
     modelNumber: "US-Q19BNZE",
     price: 46000,
+    mrp: 48500,
+    coolingCapacity: "5000W",
+    gasType: "R32",
+    productUrl: "https://www.lg.com/in/air-conditioners/lg-us-q19bnze",
     features: [
       "Dual Inverter Compressor",
       "AI Convertible 6-in-1 Cooling",
@@ -5194,58 +5214,6 @@ export const acProducts: ACProduct[] = [
     description:
       "O GENERAL 3.0T INV 5* 36CEB with premium features for enhanced comfort",
   },
-  {
-    id: "mhi-split-1-1t-inv-5star-srk13yxs",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "inverter",
-    tonnage: "1.1T",
-    starRating: "5★",
-    modelNumber: "SRK13YXS",
-    price: 54040,
-    features: [
-      "Digital Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-      "Premium Design",
-      "Allergen Clear Filter",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/2.webp",
-    ],
-    description:
-      "MITSUBISHI HEAVY 1.1T INV 5* SRK13YXS with premium features for enhanced comfort",
-  },
-  {
-    id: "mhi-split-1-0t-inv-3star-srk13yym",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "SRK13YYM",
-    price: 49200,
-    features: [
-      "Digital Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-      "Allergen Clear Filter",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/3.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/4.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/5.webp",
-    ],
-    description:
-      "MITSUBISHI HEAVY 1.0T INV 3* SRK13YYM with reliable cooling performance",
-  },
   
   {
     id: "mhi-split-1-3t-noninv-2star-srk15cxs",
@@ -6062,7 +6030,7 @@ export const acProducts: ACProduct[] = [
     type: "split",
     brand: "daikin",
     inverter: "non-inverter",
-    tonnage: ".8T",
+    tonnage: "0.8T",
     starRating: "3★",
     modelNumber: "FTL30UV16V1-RL30UV16V1",
     price: 27900,
@@ -6156,8 +6124,11 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1ea47c0a-b64f-42ae-98e0-b9dd468cfa6a",
     features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi-heavy/SRK13YXS-W6/1.png",
-    images: ["/lovable-uploads/mitsubishi-heavy/SRK13YXS-W6/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/1.webp",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/1.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YXS-W6/2.webp",
+    ],
     description: "MITSUBISHI HEAVY 1.1T INVERTER 5 STAR SPLIT AC R32 GAS",
   },
 
@@ -6177,8 +6148,14 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1ea47c0a-b64f-42ae-98e0-b9dd468cfa6a",
     features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi-heavy/SRK13YYM-W6/1.png",
-    images: ["/lovable-uploads/mitsubishi-heavy/SRK13YYM-W6/1.png"],
+    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/1.webp",
+    images: [
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/1.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/2.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/3.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/4.webp",
+      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/5.webp",
+    ],
     description: "MITSUBISHI HEAVY 1.0T INVERTER 3 STAR SPLIT AC",
   },
 
