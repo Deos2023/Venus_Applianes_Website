@@ -448,7 +448,10 @@ export const acProducts: ACProduct[] = [
   gasType: "R32",
   features: ["Non-Inverter"],
   image: "/lovable-uploads/tower/voltas-4-0t-noninv/1.jpg",
-  images: ["/lovable-uploads/tower/voltas-4-0t-noninv/1.jpg"],
+  images: ["/lovable-uploads/tower/voltas-4-0t-noninv/1.jpg",
+    "/lovable-uploads/tower/voltas-4-0t-noninv/2.jpg",
+    "/lovable-uploads/tower/voltas-4-0t-noninv/3.jpg"
+  ],
   productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
   indoorUnitDimensions: "H-70.8\" X W-21.6\" X 13.8\"",
   description: "Voltas 4.0T (Non Inverter) Tower AC R32 Gas- FAC 48 CZMM. Only product without pipe. MRP 127990, 114500/-",
