@@ -38,14 +38,22 @@ const ProductDetailsPage = () => {
   if (productImages.length === 0) {
     productImages.push("https://via.placeholder.com/600x600?text=AC+Image");
   }
+  const handleGoback = ()=>{ 
+  if (window.history.length > 1) {
+    navigate(-1);
+  } else {
+    navigate('/'); // fallback route
+  }
+};
 
+  
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="bg-white p-8 rounded-xl shadow-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Product Not Found</h2>
           <p className="mb-4 text-gray-500">Sorry, we couldn't find details for this product.</p>
-          <Button onClick={() => navigate(-1)}>Go Back</Button>
+          <Button onClick={() => handleGoback()}>Go Back</Button>
         </div>
       </div>
     );
