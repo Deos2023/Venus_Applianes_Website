@@ -53,8 +53,8 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg font-semibold mb-4">Top Brands</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/brand/samsung" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
-                  Samsung
+                <Link to="/brand/hitachi" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
+                  Hitachi
                 </Link>
               </li>
               <li>

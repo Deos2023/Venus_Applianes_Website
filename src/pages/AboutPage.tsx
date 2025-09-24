@@ -133,15 +133,15 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/samsung/split-ac/1.png" 
-                    alt="Samsung AC" 
+                    src="/lovable-uploads/hitachi/RAK.B312PCAIBA1-RAC312WCAID/1.jpg" 
+                    alt="Hitachi AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
-                  <span className="text-sm font-medium text-gray-600">Samsung</span>
+                  <span className="text-sm font-medium text-gray-600">Hitachi</span>
                 </div>
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/lg/US-Q18KWXE/1.avif" 
+                    src="/lovable-uploads/lg/Q18JNYE/1.jpg" 
                     alt="LG AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -149,7 +149,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/daikin/split-ac/1.png" 
+                    src="/lovable-uploads/daikin/ATKL35UV16W/1.jpg" 
                     alt="Daikin AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -157,7 +157,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/voltas/window-ac/1.png" 
+                    src="/lovable-uploads/voltas/185V_VECTRA_PRISM/1.webp" 
                     alt="Voltas AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -165,7 +165,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/mitsubishi/split-ac/1.png" 
+                    src="/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/1.webp" 
                     alt="Mitsubishi AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />
@@ -173,7 +173,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex flex-col items-center group">
                   <img 
-                    src="/lovable-uploads/carrier/split-ac/1.png" 
+                    src="/lovable-uploads/carrier/Xcel-Lumo-Fxi/1.jpg" 
                     alt="Carrier AC" 
                     className="h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                   />

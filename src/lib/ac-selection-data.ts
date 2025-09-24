@@ -25,7 +25,8 @@ export type ACType =
   | "window"
   | "cassette"
   | "multi-split"
-  | "one-way-cassette";
+  | "one-way-cassette"
+  | "tower";
 export type Brand =
   | "o-general"
   | "mitsubishi-heavy"
@@ -2102,7 +2103,6 @@ export const acProducts: ACProduct[] = [
     gasType:"R32",
     coolingCapacity:"14070 ",
     productUrl:"https://acrobat.adobe.com/id/urn:aaid:sc:AP:2387b7ef-b339-4256-bca9-8a88797f22f8",
-    indoorUnitDimensions:"W-33\" x 33\" x H-11.3\"",
     features: ["Inverter", "5 Star", "1 Phase 220V Needed"],
     image: "/lovable-uploads/lg/4way_casset_Ac/1.png",
     images: [
@@ -2114,8 +2114,7 @@ export const acProducts: ACProduct[] = [
     ],
     indoorUnitDimensions:
       'W-33" x 33" x H-11.3"; Grill-W-37.4" x 37.4" x H-1.4"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:2387b7ef-b339-4256-bca9-8a88797f22f8",
+
     description:
       "LG 4.0T Inverter 5 Star Cassette AC R32 Gas- ZTNQ48GNLH2/ZTUQ48GNLH2. CC 14070 WT. 1 Phase 220V needed. Only product without pipe. 124000/-",
   },
