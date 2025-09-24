@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
 import ProductCard from "@/components/product/ProductCard";
 import { Button } from "@/components/ui/button";
@@ -11,16 +10,17 @@ import {
 
 const ProductResultsPage = () => {
   const { type, brand, inverter, tonnage, star } = useParams<{ 
-    type: string; brand: string; inverter: string; tonnage: string; star: string 
+    type: string; brand: string; inverter: string; tonnage: string; star?: string 
   }>();
   
+  const navigate = useNavigate();
   const [filteredProducts, setFilteredProducts] = useState<ACProduct[]>([]);
   
   const acType = type as ACType;
   const brandId = brand as Brand;
   const inverterType = inverter as InverterType;
   const tonnageValue = decodeURIComponent(tonnage || "");
-  const starRating = decodeURIComponent(star || "");
+  const starRating = star ? decodeURIComponent(star) : ""; // Handle undefined star parameter
   
   // Find the current selections for display
   const currentType = acTypes.find(t => t.id === acType)?.name || "AC";
@@ -31,8 +31,8 @@ const ProductResultsPage = () => {
     // Filter products based on selection
     let products;
     
-    if (starRating === "") {
-      // If star rating is empty, show products with empty star rating
+    if (!star) {
+      // If star rating is not provided, show products with empty star rating
       products = acProducts.filter(product => 
         product.type === acType && 
         product.brand === brandId && 
@@ -52,13 +52,12 @@ const ProductResultsPage = () => {
     }
     
     setFilteredProducts(products);
-    // Scroll to top
     window.scrollTo(0, 0);
-  }, [acType, brandId, inverterType, tonnageValue, starRating]);
+  }, [acType, brandId, inverterType, tonnageValue, star, starRating]);
 
   // Determine the back URL based on whether star rating is present
   const getBackUrl = () => {
-    if (starRating) {
+    if (star) {
       return `/select-star/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}`;
     } else {
       return `/select-tonnage/${acType}/${brandId}/${inverterType}`;
@@ -68,7 +67,7 @@ const ProductResultsPage = () => {
   return (
     <SelectionLayout 
       title="Available Products" 
-      description={`${currentBrand} ${currentType} - ${tonnageValue}${starRating ? `, ${starRating}` : ""}, ${currentInverter}`}
+      description={`${currentBrand} ${currentType} - ${tonnageValue}${star ? `, ${starRating}` : ""}, ${currentInverter}`}
       currentStep={5}
       backUrl={getBackUrl()}
     >

@@ -1,5 +1,4 @@
-
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
 import SelectionCard from "@/components/SelectionCard";
@@ -13,6 +12,7 @@ const StarSelectionPage = () => {
   const brandId = brand as Brand;
   const inverterType = inverter as InverterType;
   const tonnageValue = decodeURIComponent(tonnage || "");
+  const hasRedirected = useRef(false); // Add this ref to track redirects
   
   // Find the current selections for display
   const currentType = acTypes.find(t => t.id === acType)?.name || "AC";
@@ -26,7 +26,7 @@ const StarSelectionPage = () => {
     window.scrollTo(0, 0);
     
     // Check if there are any products with star ratings for this combination
-    if (!hasStarRatings(acType, brandId, inverterType, tonnageValue)) {
+    if (!hasStarRatings(acType, brandId, inverterType, tonnageValue) && !hasRedirected.current) {
       // If no products have star ratings, find products without star ratings
       const productsWithoutStarRating = acProducts.filter(product => 
         product.type === acType && 
@@ -37,11 +37,32 @@ const StarSelectionPage = () => {
       );
       
       // If there are products without star ratings, redirect to the product results page
-        if (productsWithoutStarRating.length > 0) {
-          navigate(`/products/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}/`, { replace: true });
-        }
+      if (productsWithoutStarRating.length > 0) {
+        hasRedirected.current = true; // Mark that we've redirected
+        navigate(`/products/${acType}/${brandId}/${inverterType}/${encodeURIComponent(tonnageValue)}`, { replace: true });
+      }
     }
+    
+    // Reset the redirect flag when component unmounts or parameters change
+    return () => {
+      hasRedirected.current = false;
+    };
   }, [acType, brandId, inverterType, tonnageValue, navigate]);
+
+  // If we have no available star ratings and haven't redirected, show a message
+  if (availableStarRatings.length === 0 && !hasStarRatings(acType, brandId, inverterType, tonnageValue)) {
+    return (
+      <SelectionLayout 
+        title="No Star Ratings Available" 
+        description={`There are no products with star ratings for your selection. Showing all available products.`}
+        currentStep={4}
+      >
+        <div className="text-center py-8">
+          <p className="text-gray-600 mb-4">Redirecting to products...</p>
+        </div>
+      </SelectionLayout>
+    );
+  }
 
   return (
     <SelectionLayout 
