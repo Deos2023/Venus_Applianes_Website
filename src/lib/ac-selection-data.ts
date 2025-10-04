@@ -260,7 +260,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     features: ["Non-Inverter", "1 Star", "1 Phase 220V Needed"],
     image: "/lovable-uploads/tower/bluestar-2-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/tower/bluestar-2-0t-noninv/1.jpg"],
+    images: ["/lovable-uploads/tower/bluestar-2-0t-noninv/1.jpg","/lovable-uploads/tower/bluestar-2-0t-noninv/2.webp","/lovable-uploads/tower/bluestar-2-0t-noninv/3.jpeg"],
     indoorUnitDimensions: 'H-68.9" X W-20" X D-9.4"',
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b3f6e869-c12b-49e2-a266-7e9305c20834",

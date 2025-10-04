@@ -76,8 +76,8 @@ const HomePage = () => {
 
   return (
     <Layout>
-      {/* Prevent horizontal scroll */}
-      <div className="overflow-x-hidden w-full">
+      {/* Main container with proper width control */}
+      <div className="w-full max-w-[100vw] overflow-clip">
         {/* Hero Section */}
         <motion.div
           initial="hidden"
@@ -151,7 +151,7 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
-          className="w-full overflow-hidden"
+          className="w-full"
         >
           <ACSelectionGuide />
         </motion.div>
@@ -162,7 +162,7 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
-          className="w-full bg-gradient-to-b from-blue-50 to-white overflow-hidden"
+          className="w-full bg-gradient-to-b from-blue-50 to-white"
         >
           <ProductFilter />
         </motion.div>
@@ -173,7 +173,7 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
-          className="w-full bg-cover bg-center overflow-hidden"
+          className="w-full bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3')" }}
         >
           <div className="bg-gradient-to-r from-gray-900/90 to-gray-900/80 w-full">
@@ -183,7 +183,7 @@ const HomePage = () => {
         
         {/* Features Section */}
         <motion.section 
-          className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 py-12 w-full overflow-hidden"
+          className="bg-gradient-to-r from-cool-blue/5 to-blue-300/20 py-12 w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -219,6 +219,7 @@ const HomePage = () => {
                   <motion.div 
                     whileHover={{ scale: 1.03 }}
                     transition={{ type: "spring", stiffness: 300 }}
+                    className="w-full"
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <CheckCircle className="h-5 w-5 text-cool-blue flex-shrink-0" />
@@ -238,7 +239,7 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
-          className="w-full bg-cover bg-center overflow-hidden"
+          className="w-full bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3')" }}
         >
           <div className="bg-gradient-to-b from-gray-900/95 to-gray-900/90 w-full">
@@ -247,7 +248,7 @@ const HomePage = () => {
         </motion.div>
         
         {/* Map Section */}
-        <div className="w-full overflow-hidden">
+        <div className="w-full">
           <MapSection />
         </div>
         
@@ -257,14 +258,14 @@ const HomePage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
-          className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50 overflow-hidden"
+          className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50"
         >
           <TestimonialCarousel />
         </motion.div>
         
         {/* CTA Section */}
         <motion.section 
-          className="bg-gradient-to-r from-cool-blue to-blue-600 py-16 text-white w-full overflow-hidden"
+          className="bg-gradient-to-r from-cool-blue to-blue-600 py-16 text-white w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
