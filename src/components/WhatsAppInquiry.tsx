@@ -42,7 +42,7 @@ const WhatsAppInquiry = ({ productName, modelNumber, price, className }: WhatsAp
     const encodedMessage = encodeURIComponent(message);
     
     // WhatsApp business number - replace with your actual number
-    const phoneNumber = "919876543210";
+    const phoneNumber = "93319 62120";
     
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
