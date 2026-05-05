@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
           <div className="container mx-auto px-4 py-8 lg:py-16 w-full">
             <div className="max-w-4xl mx-auto mb-16 text-center w-full">
-              <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">About CoolBreeze AC</h1>
+              <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">About VenusApplianes</h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
                 Your trusted partners in creating comfortable living and working environments through premium air conditioning solutions.
               </p>
@@ -21,7 +21,7 @@ const AboutPage = () => {
               <div className="space-y-6 w-full">
                 <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Founded in 2010, CoolBreeze AC started as a small family business with a vision to provide quality air conditioning solutions to homes and businesses. Over the years, we've grown into a trusted name in the industry, serving thousands of satisfied customers.
+                  Founded in 2010, Venus Applianes started as a small family business with a vision to provide quality air conditioning solutions to homes and businesses. Over the years, we've grown into a trusted name in the industry, serving thousands of satisfied customers.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
                   Our mission is simple: to help people create comfortable living and working environments through premium air conditioning solutions and exceptional service. We believe that comfort shouldn't be a luxury, and we're dedicated to making it accessible to everyone.
@@ -51,7 +51,7 @@ const AboutPage = () => {
             
             {/* Why Choose Us Section */}
             <div className="mb-20 w-full">
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose CoolBreeze AC</h2>
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose VenusApplianes</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white w-full">
                   <CardContent className="p-8 text-center w-full">

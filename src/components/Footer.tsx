@@ -99,7 +99,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 text-center">
           <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            © Copyright © 2025. All Rights Reserved. Website Developed & Maintained by 
+            © 2026 Venus Appliances. Website Developed & Maintained by 
             <a
               href="https://www.teamdeoskolkata.in/"
               target="_blank"
