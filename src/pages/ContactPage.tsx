@@ -271,7 +271,7 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
                       </div>
                     </div>
                     
-                    <div>
+                    {/* <div>
                       <Label htmlFor="email" className="text-sm font-medium">
                         Email *
                       </Label>
@@ -285,7 +285,7 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
                       {errors.email && (
                         <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
                       )}
-                    </div>
+                    </div> */}
                     
                     <div>
                       <Label htmlFor="phone" className="text-sm font-medium">
@@ -303,7 +303,7 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
                       )}
                     </div>
                     
-                    <div>
+                    {/* <div>
                       <Label htmlFor="subject" className="text-sm font-medium">
                         Subject *
                       </Label>
@@ -316,7 +316,7 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
                       {errors.subject && (
                         <p className="text-red-500 text-xs mt-1">{errors.subject.message}</p>
                       )}
-                    </div>
+                    </div> */}
                     
                     <div>
                       <Label htmlFor="message" className="text-sm font-medium">

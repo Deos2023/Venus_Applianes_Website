@@ -99,7 +99,15 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 text-center">
           <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            © Copyright © 2025. All Rights Reserved. Website Developed & Maintained by Digital Exposure Online Services
+            © Copyright © 2025. All Rights Reserved. Website Developed & Maintained by 
+            <a
+              href="https://www.teamdeoskolkata.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold hover:text-red-700 transition-colors duration-300 ml-1"
+            >
+              Digital Exposure Online Service 
+            </a>.
           </p>
         </div>
       </div>

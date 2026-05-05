@@ -134,7 +134,7 @@ const HomePage = () => {
           )}
         </div>
 
-        {/* AC Inquiry Form - Mobile First Responsive */}
+        {/* AC Inquiry Form - Mobile First Responsive
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -143,7 +143,7 @@ const HomePage = () => {
           className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
         >
           <ACInquiryForm/>
-        </motion.div>
+        </motion.div> */}
         
         {/* AC Selection Guide Section */}
         <motion.div
