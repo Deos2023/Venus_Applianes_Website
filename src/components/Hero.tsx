@@ -65,6 +65,8 @@ const Hero = () => {
             src={slide.image}
             alt={slide.title}
             className="w-full h-full object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+            fetchpriority={index === 0 ? "high" : "auto"}
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";

@@ -110,7 +110,7 @@ const HomePage = () => {
                   {filteredProducts.map(product => (
                     <div key={product.id} className="bg-gray-50 p-4 rounded-lg shadow flex flex-col gap-2 border hover:border-blue-400">
                       <div className="flex items-center gap-2">
-                        <img src={product.image} alt={product.modelNumber} className="h-16 w-16 object-contain rounded" />
+                        <img src={product.image} alt={product.modelNumber} loading="lazy" className="h-16 w-16 object-contain rounded" />
                         <div>
                           <div className="font-bold text-gray-800">{product.modelNumber}</div>
                           <div className="text-sm text-gray-700">{getBrandName(product.brand)} | {getTypeName(product.type)}</div>
