@@ -1,19 +1,38 @@
+// import Layout from '@/components/Layout';
+// import Hero from '@/components/Hero';
+// import PremiumShowcase from '@/components/PremiumShowcase';
+// import ProductFilter from '@/components/ProductFilter';
+// import FeaturedDeals from '@/components/FeaturedDeals';
+// import TestimonialCarousel from '@/components/TestimonialCarousel';
+// import ACSelectionGuide from '@/components/ACSelectionGuide';
+// import MapSection from '@/components/MapSection';
+// import { Button } from '@/components/ui/button';
+// import { Link } from 'react-router-dom';
+// import { CheckCircle } from 'lucide-react';
+// import { motion } from 'framer-motion';
+// import { acProducts, brands, acTypes } from "@/lib/ac-selection-data";
+// import { useState, Suspense, lazy } from 'react';
 import Layout from '@/components/Layout';
 import Hero from '@/components/Hero';
-import BrandGrid from '@/components/BrandGrid';
-import PremiumShowcase from '@/components/PremiumShowcase';
-import ProductFilter from '@/components/ProductFilter';
-import FeaturedDeals from '@/components/FeaturedDeals';
-import TestimonialCarousel from '@/components/TestimonialCarousel';
-import ACSelectionGuide from '@/components/ACSelectionGuide';
-import MapSection from '@/components/MapSection';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ACInquiryForm from '@/components/ACInquiryForm';
 import { acProducts, brands, acTypes } from "@/lib/ac-selection-data";
-import { useState } from 'react';
+import { Suspense, lazy, useDeferredValue, useMemo, useState } from 'react';
+
+const ACSelectionGuide = lazy(() => import('@/components/ACSelectionGuide'));
+const ProductFilter = lazy(() => import('@/components/ProductFilter'));
+const FeaturedDeals = lazy(() => import('@/components/FeaturedDeals'));
+const PremiumShowcase = lazy(() => import('@/components/PremiumShowcase'));
+const MapSection = lazy(() => import('@/components/MapSection'));
+const TestimonialCarousel = lazy(() => import('@/components/TestimonialCarousel'));
+
+const SectionFallback = () => (
+  <div className="w-full py-16">
+    <div className="mx-auto h-40 max-w-7xl animate-pulse rounded-2xl bg-gray-100" />
+  </div>
+);
 
 const features = [
   {
@@ -54,25 +73,52 @@ const staggerContainer = {
 };
 
 const HomePage = () => {
+  // const [search, setSearch] = useState('');
+  // const [showResults, setShowResults] = useState(false);
+  // // Helper to get brand/type names
+  // const getBrandName =  id => (brands.find(b => b.id === id)?.name || id);
+  // const getTypeName = id => (acTypes.find(t => t.id === id)?.name || id);
+
+  // // Filter products based on search
+  // const filteredProducts = acProducts.filter(product => {
+  //   const q = search.trim().toLowerCase();
+  //   if (!q) return false;
+  //   // Check modelNumber, product name (description), brand, type
+  //   return (
+  //     (product.modelNumber && product.modelNumber.toLowerCase().includes(q)) ||
+  //     (product.description && product.description.toLowerCase().includes(q)) ||
+  //     getBrandName(product.brand).toLowerCase().includes(q) ||
+  //     getTypeName(product.type).toLowerCase().includes(q)
+  //   );
+  // });
   const [search, setSearch] = useState('');
   const [showResults, setShowResults] = useState(false);
 
-  // Helper to get brand/type names
-  const getBrandName = id => (brands.find(b => b.id === id)?.name || id);
-  const getTypeName = id => (acTypes.find(t => t.id === id)?.name || id);
+  const deferredSearch = useDeferredValue(search);
 
-  // Filter products based on search
-  const filteredProducts = acProducts.filter(product => {
-    const q = search.trim().toLowerCase();
-    if (!q) return false;
-    // Check modelNumber, product name (description), brand, type
-    return (
-      (product.modelNumber && product.modelNumber.toLowerCase().includes(q)) ||
-      (product.description && product.description.toLowerCase().includes(q)) ||
-      getBrandName(product.brand).toLowerCase().includes(q) ||
-      getTypeName(product.type).toLowerCase().includes(q)
-    );
-  });
+  const brandNameMap = useMemo(
+    () => new Map(brands.map((b) => [b.id, b.name])),
+    []
+  );
+
+  const typeNameMap = useMemo(
+    () => new Map(acTypes.map((t) => [t.id, t.name])),
+    []
+  );
+
+  const filteredProducts = useMemo(() => {
+    const q = deferredSearch.trim().toLowerCase();
+    if (!q) return [];
+
+    return acProducts.filter((product) => {
+      return (
+        (product.modelNumber && product.modelNumber.toLowerCase().includes(q)) ||
+        (product.description && product.description.toLowerCase().includes(q)) ||
+        (brandNameMap.get(product.brand)?.toLowerCase().includes(q) ?? false) ||
+        (typeNameMap.get(product.type)?.toLowerCase().includes(q) ?? false)
+      );
+    });
+  }, [deferredSearch, brandNameMap, typeNameMap]);
 
   return (
     <Layout>
@@ -113,7 +159,7 @@ const HomePage = () => {
                         <img src={product.image} alt={product.modelNumber} loading="lazy" className="h-16 w-16 object-contain rounded" />
                         <div>
                           <div className="font-bold text-gray-800">{product.modelNumber}</div>
-                          <div className="text-sm text-gray-700">{getBrandName(product.brand)} | {getTypeName(product.type)}</div>
+                          <div className="text-sm text-gray-700">{(product.brand)} | {(product.type)}</div>
                           <div className="text-sm text-gray-600">{product.description?.slice(0,50)}{product.description?.length > 50 ? '...' : ''}</div>
                         </div>
                       </div>
@@ -153,9 +199,11 @@ const HomePage = () => {
           variants={fadeIn}
           className="w-full"
         >
-          <ACSelectionGuide />
+          <Suspense fallback={<SectionFallback />}>
+            <ACSelectionGuide />
+          </Suspense>
         </motion.div>
-        
+
         {/* Product Filtering Section */}
         <motion.div
           initial="hidden"
@@ -164,7 +212,9 @@ const HomePage = () => {
           variants={fadeIn}
           className="w-full bg-gradient-to-b from-blue-50 to-white"
         >
-          <ProductFilter />
+          <Suspense fallback={<SectionFallback />}>
+            <ProductFilter />
+          </Suspense>
         </motion.div>
         
         {/* Featured Deals */}
@@ -174,10 +224,12 @@ const HomePage = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeIn}
           className="w-full bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3')" }}
+          // style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3')" }}
         >
           <div className="bg-gradient-to-r from-gray-900/90 to-gray-900/80 w-full">
-            <FeaturedDeals />
+            <Suspense fallback={<SectionFallback />}>
+              <FeaturedDeals />
+            </Suspense>
           </div>
         </motion.div>
         
@@ -243,13 +295,17 @@ const HomePage = () => {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3')" }}
         >
           <div className="bg-gradient-to-b from-gray-900/95 to-gray-900/90 w-full">
-            <PremiumShowcase />
+            <Suspense fallback={<SectionFallback />}>
+              <PremiumShowcase />
+            </Suspense>
           </div>
         </motion.div>
         
         {/* Map Section */}
         <div className="w-full">
-          <MapSection />
+          <Suspense fallback={<SectionFallback />}>
+            <MapSection />
+          </Suspense>
         </div>
         
         {/* Testimonials Section */}
@@ -260,7 +316,9 @@ const HomePage = () => {
           variants={fadeIn}
           className="w-full bg-gradient-to-r from-gray-50 via-blue-50 to-gray-50"
         >
-          <TestimonialCarousel />
+          <Suspense fallback={<SectionFallback />}>
+            <TestimonialCarousel />
+          </Suspense>
         </motion.div>
         
         {/* CTA Section */}

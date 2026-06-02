@@ -8,9 +8,9 @@ const deals = [
     id: 1,
     title: "Unlock Premium Cooling",
     description: "Up to 50%* off | Cashback up to ₹7500*",
-    image: "/lovable-uploads/lg/US-Q18KWXE/3.jpg",
+    image: "/lovable-uploads/voltas/CAS-363V-CZ2MM/2.png",
     bgColor: "bg-gradient-to-r from-gray-900 to-gray-800",
-    link: "/brand/samsung"
+    link: "/brand/voltas"
   },
   {
     id: 2,
@@ -24,9 +24,9 @@ const deals = [
     id: 3,
     title: "Superior Cooling Technology",
     description: "Up to 40%* off | No Cost EMI Available",
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/2.png",
+    image: "/lovable-uploads/hitachi/B318PCAIBA/2.webp",
     bgColor: "bg-gradient-to-r from-indigo-900 to-indigo-800",
-    link: "/brand/daikin"
+    link: "/brand/hitachi"
   }
 ];
 
@@ -102,9 +102,11 @@ const FeaturedDeals = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                <img 
-                  src={deal.image} 
-                  alt={deal.title} 
+                <img
+                  src={deal.image}
+                  alt={deal.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-60 object-contain pt-8"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -116,7 +118,7 @@ const FeaturedDeals = () => {
                   <p className="mb-4">{deal.description}</p>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                     <Button asChild className="bg-white text-gray-900 hover:bg-gray-100 group">
-                      <Link to={deal.link}>
+                      <Link to={deal.link} onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}>
                         Buy Now
                         <ChevronRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </Link>

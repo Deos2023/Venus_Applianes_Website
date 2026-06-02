@@ -53,22 +53,22 @@ const Footer = () => {
             <h3 className="text-base sm:text-lg font-semibold mb-4">Top Brands</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/brand/hitachi" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
+                <Link to="/gallery?brand=hitachi" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
                   Hitachi
                 </Link>
               </li>
               <li>
-                <Link to="/brand/lg" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
+                <Link to="/gallery?brand=lg" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
                   LG
                 </Link>
               </li>
               <li>
-                <Link to="/brand/voltas" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
+                <Link to="/gallery?brand=voltas" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
                   Voltas
                 </Link>
               </li>
               <li>
-                <Link to="/brand/daikin" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
+                <Link to="/gallery?brand=daikin" className="text-gray-400 hover:text-cool-blue-light transition text-sm sm:text-base">
                   Daikin
                 </Link>
               </li>

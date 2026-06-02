@@ -48,6 +48,11 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -265,3 +270,5 @@
     @apply py-20 px-8;
   }
 }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

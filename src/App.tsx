@@ -20,6 +20,7 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const ProductDetailsPage = lazy(() => import("./pages/ProductDetailsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+import ScrolltoTop from "./components/ScrolltoTop";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +36,12 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}>
+        <ScrolltoTop />
         <GlobalContactButtons />
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>

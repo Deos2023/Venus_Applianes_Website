@@ -12,11 +12,31 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > HEADER_SCROLL_THRESHOLD);
+      if (ticking) return;
+
+      ticking = true;
+
+      requestAnimationFrame(() => {
+        const next = window.scrollY > 50;
+
+        setScrolled(prev =>
+          prev === next ? prev : next
+        );
+
+        ticking = false;
+      });
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navItems = [
@@ -73,6 +93,7 @@ const Header = () => {
                 >
                   <Link
                     to={item.path}
+                    onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
                     className={`relative px-4 xl:px-6 py-2 xl:py-3 rounded-2xl font-medium text-sm xl:text-base transition-all duration-300 group ${scrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50/70"
                       : "text-white hover:text-blue-200 hover:bg-white/15"
@@ -131,7 +152,9 @@ const Header = () => {
                     : "bg-white text-blue-700 hover:bg-blue-50"
                     }`}
                 >
-                  <Link to="/contact">Get Quote</Link>
+                  <Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}>
+                    Get Quote
+                  </Link>
                 </Button>
               </motion.div>
             </div>
@@ -186,10 +209,11 @@ const Header = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className={`lg:hidden overflow-hidden ${scrolled
-                ? "bg-white/97 backdrop-blur-xl border-t border-gray-100/50"
-                : "bg-blue-900/97 backdrop-blur-xl border-t border-white/10"
-                }`}
+              className={`lg:hidden overflow-hidden ${
+                scrolled
+                  ? "bg-white/97 backdrop-blur-xl border-t border-gray-100/50"
+                  : "bg-blue-900/97 backdrop-blur-xl border-t border-white/10"
+              }`}
             >
               <nav className="max-w-7xl mx-auto px-4 py-6 sm:py-8">
                 <div className="space-y-2">
@@ -202,11 +226,14 @@ const Header = () => {
                     >
                       <Link
                         to={item.path}
+                        onClick={() => {
+                          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                          setIsMenuOpen(false);
+                        }}
                         className={`block px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 font-medium text-base ${scrolled
                           ? "text-gray-700 hover:bg-blue-50/70 hover:text-blue-600"
                           : "text-white hover:bg-white/15"
                           }`}
-                        onClick={() => setIsMenuOpen(false)}
                       >
                         <div className="flex items-center justify-between">
                           <span>{item.name}</span>
@@ -247,7 +274,9 @@ const Header = () => {
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-2xl py-3 sm:py-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <Link to="/contact">Get Quote</Link>
+                      <Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}>
+                        Get Quote
+                      </Link>
                     </Button>
                   </div>
                 </motion.div>

@@ -3,7 +3,14 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "@/components/ui/dialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,8 +26,7 @@ interface WhatsAppInquiryProps {
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters long" }),
-  mobile: z.string().min(10, { message: "Please enter a valid mobile number" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
+  // mobile: z.string().min(10, { message: "Please enter a valid mobile number" }),
   message: z.string().optional()
 });
 
@@ -33,8 +39,7 @@ const WhatsAppInquiry = ({ productName, modelNumber, price, className }: WhatsAp
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      mobile: "",
-      email: "",
+      // mobile: "",
       message: ""
     }
   });
@@ -54,8 +59,6 @@ const WhatsAppInquiry = ({ productName, modelNumber, price, className }: WhatsAp
 
 👤 *Customer Details:*
 • Name: ${values.name}
-• Mobile: ${values.mobile}
-• Email: ${values.email}
 ${values.message ? `• Message: ${values.message}` : ''}
 
 🕒 *Inquiry Time:* ${new Date().toLocaleString()}
@@ -108,7 +111,7 @@ Please contact me with more details about this product. Thank you! 🙏
           <MessageSquare className="mr-2 h-4 w-4" /> Request Quote
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto" aria-describedby={undefined}>
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-semibold">
             Product Inquiry Form
@@ -180,7 +183,7 @@ Please contact me with more details about this product. Thank you! 🙏
                     )}
                   />
                   
-                  <FormField
+                  {/* <FormField
                     control={form.control}
                     name="mobile"
                     render={({ field }) => (
@@ -198,29 +201,10 @@ Please contact me with more details about this product. Thank you! 🙏
                         <FormMessage />
                       </FormItem>
                     )}
-                  />
+                  /> */}
                 </div>
 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium">
-                        Email Address <span className="text-red-500">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        <Input 
-                          type="email"
-                          placeholder="Enter your email address" 
-                          {...field} 
-                          className="focus:ring-2 focus:ring-blue-500"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+
 
                 <FormField
                   control={form.control}

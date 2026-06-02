@@ -8100,7 +8100,7 @@ export const acProducts: ACProduct[] = [
     brand: "lg",
     inverter: "inverter",
     tonnage: "1.5T",
-    starRating: "3",
+    starRating: "3★",
     modelNumber: "ZTNQ18GPLA1",
     mrp: 71500,
     gasType: "R32",

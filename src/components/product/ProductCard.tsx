@@ -27,7 +27,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const features = Array.isArray(product.features) ? product.features : [];
 
   return (
-    <Card className="overflow-hidden border border-gray-200 shadow-lg hover-lift">
+    <Card className="overflow-hidden border border-gray-200 shadow-lg hover-lift flex flex-col h-full">
       <div className="h-52 flex items-center justify-center  p-4">
         <img 
           src={imageSrc}
@@ -39,7 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           }}
         />
       </div>
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex flex-col flex-1">
         <h3 className="font-semibold text-lg mb-1">{brand} {product.tonnage || ""} {product.starRating || ""}</h3>
         <p className="text-gray-500 mb-2">Model: {modelNumber}</p>
         <p className="text-2xl font-bold text-gray-900 mb-4">₹{price.toLocaleString()}</p>
@@ -60,7 +60,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </ul>
         </div>
         
-        <div className="space-y-3 mt-6">
+        <div className="space-y-3 mt-auto pt-6">
           <WhatsAppInquiry 
             productName={`${brand} ${product.tonnage || ""} ${product.starRating || ""} ${acType}`}
             modelNumber={modelNumber}

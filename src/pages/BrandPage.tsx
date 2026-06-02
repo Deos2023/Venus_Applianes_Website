@@ -82,7 +82,6 @@ const BrandPage = () => {
                       {tonnage}
                     </span>
                     <span className="text-lg font-medium text-cool-blue ml-1">
-                      Ton
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">

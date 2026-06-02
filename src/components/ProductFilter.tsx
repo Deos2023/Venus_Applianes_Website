@@ -106,7 +106,55 @@ const products = [
     reviews: 94,
     badge: "ENERGY SAVER",
     tag: "most-popular"
-  }
+  },
+  {
+    id: "panasonic-split-1-5t-inv-5star-cscu-eu18bky5x",
+    name: "Panasonic 1.5 Ton 5 Star Inverter Split AC",
+    image: "/lovable-uploads/panasonic/EU18BKY5X/1.png",
+    originalPrice: 44551,
+    discountedPrice: 44551,
+    discountPercent: 20,
+    stars: 5,
+    reviews: 61,
+    badge: "CASHBACK",
+    tag: "best-deal"
+  },
+  {
+    id: "hisense-split-1-5t-inv-5star-as-18tr4r5aj1",
+    name: "Hisense 1.5 Ton 5 Star Inverter Split AC",
+    image: "/lovable-uploads/hisense/AS-18TR4R3AK1/1.jpg",
+    originalPrice: 40000,
+    discountedPrice: 40000,
+    discountPercent: 18,
+    stars: 5,
+    reviews: 44,
+    badge: "BESTSELLER",
+    tag: "most-popular"
+  },
+  {
+    id: "lloyd-split-1-0t-inv-5star-gls12i5fogec",
+    name: "Lloyd 1 Ton 5 Star Inverter Split AC",
+    image: "/lovable-uploads/lloyd/GLS12I5FOGEC/1.jpg",
+    originalPrice: 56990,
+    discountedPrice: 56990,
+    discountPercent: 15,
+    stars: 5,
+    reviews: 38,
+    badge: "NEW ARRIVAL",
+    tag: "newest"
+  },
+  {
+    id: "o-general-split-1t-inv-5star-asgg12cgaa-b",
+    name: "O General 1 Ton 5 Star Inverter Split AC",
+    image: "/lovable-uploads/o-general/ASGG12CGAA-B/1.png",
+    originalPrice: 55790,
+    discountedPrice: 50200,
+    discountPercent: 10,
+    stars: 5,
+    reviews: 29,
+    badge: "NEW",
+    tag: "newest"
+  },
 ];
 
 const ProductFilter = () => {
@@ -150,9 +198,11 @@ const ProductFilter = () => {
                     </span>
                   )}
                   <div className="h-52 flex items-center justify-center mb-4">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      decoding="async"
                       className="max-h-48 w-auto object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

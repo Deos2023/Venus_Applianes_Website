@@ -7,7 +7,7 @@ const showcaseItems = [
     id: 1,
     title: "Superior Cooling Technology",
     description: "Experience the perfect temperature in any weather condition with our advanced cooling systems.",
-    imageSrc: "/lovable-uploads/Daikin/FTL35UV16/4.webp",
+    imageSrc: "/lovable-uploads/bpl/V243PBYG/2.jpg",
     bgColor: "from-blue-500/10 to-cyan-500/10"
   },
   {
@@ -75,14 +75,12 @@ const PremiumShowcase = () => {
                           </div>
                         </div>
                         <div className="lg:w-1/2 h-64 lg:h-auto relative bg-white/50 flex items-center justify-center p-8">
-                          <img 
+                          <img
                             src={item.imageSrc}
                             alt={item.title}
-                            className="max-h-80 w-auto object-contain drop-shadow-xl"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = "/lovable-uploads/lg/US-Q18KWXE/1.avif";
-                            }}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover"
                           />
                         </div>
                       </div>

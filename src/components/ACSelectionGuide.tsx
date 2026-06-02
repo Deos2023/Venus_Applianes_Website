@@ -125,9 +125,11 @@ const ACSelectionGuide = () => {
                   >
                     <Card className="bg-white/40 border border-white/30 hover:border-blue-400/80 hover:shadow-2xl hover:-translate-y-2 p-6 h-full flex flex-col items-center justify-center rounded-2xl backdrop-blur-lg transition-all duration-300">
                       <div className="h-36 mb-4 flex items-center justify-center">
-                        <img 
-                          src={type.image} 
-                          alt={type.name} 
+                        <img
+                          src={type.image}
+                          alt={type.name}
+                          loading="lazy"
+                          decoding="async"
                           className="max-h-32 w-auto object-contain drop-shadow-lg"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
