@@ -98,6 +98,8 @@ const GalleryPage = () => {
                 <img
                   src={brand.logo}
                   alt={brand.name}
+                  loading='lazy'
+                  decoding='async'
                   className={`h-5 w-auto object-contain ${activeBrand === brand.id ? 'brightness-0 invert' : ''}`}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
@@ -123,6 +125,7 @@ const GalleryPage = () => {
                     alt={product.description}
                     className="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
                         'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&q=60';

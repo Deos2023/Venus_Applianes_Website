@@ -93,7 +93,6 @@ const Header = () => {
                 >
                   <Link
                     to={item.path}
-                    onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
                     className={`relative px-4 xl:px-6 py-2 xl:py-3 rounded-2xl font-medium text-sm xl:text-base transition-all duration-300 group ${scrolled
                       ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50/70"
                       : "text-white hover:text-blue-200 hover:bg-white/15"
@@ -152,7 +151,7 @@ const Header = () => {
                     : "bg-white text-blue-700 hover:bg-blue-50"
                     }`}
                 >
-                  <Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}>
+                  <Link to="/contact">
                     Get Quote
                   </Link>
                 </Button>
@@ -227,7 +226,6 @@ const Header = () => {
                       <Link
                         to={item.path}
                         onClick={() => {
-                          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                           setIsMenuOpen(false);
                         }}
                         className={`block px-4 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 font-medium text-base ${scrolled
@@ -274,7 +272,7 @@ const Header = () => {
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-2xl py-3 sm:py-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      <Link to="/contact" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}>
+                      <Link to="/contact">
                         Get Quote
                       </Link>
                     </Button>

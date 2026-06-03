@@ -9,16 +9,16 @@ const heroSlides = [
     title: "Welcome to a Home Beyond Excellence.",
     subtitle: "Crafted for reliability, built for tomorrow.",
     description: "Up to 50%* off | Cashback up to ₹15000*",
-    image: "/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.jpg",
+    image: "/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.webp",
     btnText: "Shop Now",
-    btnLink: "/brand/samsung"
+    btnLink: "/brand/voltas"
   },
   {
     id: 2,
     title: "Built for Clarity, Speed & Performance.",
     subtitle: "Launching Premium AC Series!",
     description: "Starting at ₹24999* | No Cost EMI on Select Products",
-    image: "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.png",
+    image: "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.webp",
     btnText: "Explore",
     btnLink: "/brand/lg"
   },
@@ -27,7 +27,7 @@ const heroSlides = [
     title: "Smart Cooling. Smarter Living.",
     subtitle: "AI-Powered Efficiency",
     description: "Free Installation | Extended Warranty",
-    image: "/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.png",
+    image: "/lovable-uploads/1873a8be-c9ed-4348-a7bc-ea7b325b29d3.webp",
     btnText: "View Collection",
     btnLink: "/brand/daikin"
   }
@@ -69,7 +69,8 @@ const Hero = () => {
               src={slide.image}
               alt={slide.title}
               className="w-full object-cover"
-              loading="lazy"
+              loading="eager"
+              fetchpriority="high"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
@@ -172,8 +173,8 @@ const Hero = () => {
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover object-center"
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchpriority={index === 0 ? "high" : "auto"}
+              loading="eager"
+              fetchpriority="high"
               decoding="async"
               width="1200"
               height="800"

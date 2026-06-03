@@ -8,7 +8,7 @@ const deals = [
     id: 1,
     title: "Unlock Premium Cooling",
     description: "Up to 50%* off | Cashback up to ₹7500*",
-    image: "/lovable-uploads/voltas/CAS-363V-CZ2MM/2.png",
+    image: "/lovable-uploads/voltas/CAS-363V-CZ2MM/2.webp",
     bgColor: "bg-gradient-to-r from-gray-900 to-gray-800",
     link: "/brand/voltas"
   },
