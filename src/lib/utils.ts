@@ -6,6 +6,24 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function formatCoolingCapacity(value?: string): string {
+  const normalizedValue = value?.trim();
+
+  if (!normalizedValue) {
+    return "";
+  }
+
+  if (/W(?:T)?\s*$/i.test(normalizedValue)) {
+    return normalizedValue;
+  }
+
+  if (/^\d+(?:\.\d+)?$/.test(normalizedValue)) {
+    return `${normalizedValue} W`;
+  }
+
+  return normalizedValue;
+}
+
 // Get available brands for a specific AC type
 export function getAvailableBrands(acType: ACType): Brand[] {
   const availableBrands = acProducts

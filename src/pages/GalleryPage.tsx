@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { acProducts, brands, ACProduct } from '@/lib/ac-selection-data';
+import { formatCoolingCapacity } from '@/lib/utils';
 import { Star, Zap } from 'lucide-react';
 
 const getBrandName = (brandId: string) =>
@@ -208,12 +209,18 @@ const GalleryPage = () => {
                       ))}
                     </div>
 
-                    {(selectedProduct.coolingCapacity || selectedProduct.gasType || selectedProduct.indoorUnitDimensions) && (
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+                    {(selectedProduct.coolingCapacity ||
+                      selectedProduct.gasType ||
+                      selectedProduct.indoorUnitDimensions ||
+                      selectedProduct.outdoorUnitDimensions ||
+                      selectedProduct.airWing) && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                         {selectedProduct.coolingCapacity && (
                           <div className="bg-blue-50 rounded-xl p-3">
                             <p className="text-xs text-blue-500 mb-0.5">Cooling Capacity</p>
-                            <p className="text-sm font-semibold text-blue-800">{selectedProduct.coolingCapacity}</p>
+                            <p className="text-sm font-semibold text-blue-800">
+                              {formatCoolingCapacity(selectedProduct.coolingCapacity)}
+                            </p>
                           </div>
                         )}
                         {selectedProduct.gasType && (
@@ -226,6 +233,18 @@ const GalleryPage = () => {
                           <div className="bg-purple-50 rounded-xl p-3">
                             <p className="text-xs text-purple-500 mb-0.5">IDU Dimensions</p>
                             <p className="text-sm font-semibold text-purple-800">{selectedProduct.indoorUnitDimensions}</p>
+                          </div>
+                        )}
+                        {selectedProduct.outdoorUnitDimensions && (
+                          <div className="bg-orange-50 rounded-xl p-3">
+                            <p className="text-xs text-orange-500 mb-0.5">ODU Dimensions</p>
+                            <p className="text-sm font-semibold text-orange-800">{selectedProduct.outdoorUnitDimensions}</p>
+                          </div>
+                        )}
+                        {selectedProduct.airWing && (
+                          <div className="bg-cyan-50 rounded-xl p-3">
+                            <p className="text-xs text-cyan-500 mb-0.5">Air Wing</p>
+                            <p className="text-sm font-semibold text-cyan-800">{selectedProduct.airWing}</p>
                           </div>
                         )}
                       </div>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { ACProduct, brands, acTypes } from "@/lib/ac-selection-data";
+import { formatCoolingCapacity } from "@/lib/utils";
 
 interface ProductCardProps {
   product: ACProduct;
@@ -26,6 +27,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
   // Defensive: fallback for features
   const features = Array.isArray(product.features) ? product.features : [];
 
+  const productSpecs = [
+    {
+      label: "Cooling",
+      value: formatCoolingCapacity(product.coolingCapacity),
+    },
+    { label: "IDU", value: product.indoorUnitDimensions },
+    { label: "ODU", value: product.outdoorUnitDimensions },
+    { label: "Air Wing", value: product.airWing },
+  ].filter((spec) => Boolean(spec.value));
+
   return (
     <Card className="overflow-hidden border border-gray-200 shadow-lg hover-lift flex flex-col h-full">
       <div className="h-52 flex items-center justify-center  p-4">
@@ -42,6 +53,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <CardContent className="p-6 flex flex-col flex-1">
         <h3 className="font-semibold text-lg mb-1">{brand} {product.tonnage || ""} {product.starRating || ""}</h3>
         <p className="text-gray-500 mb-2">Model: {modelNumber}</p>
+        {productSpecs.length > 0 && (
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 mb-3 text-xs">
+            {productSpecs.map((spec) => (
+              <div key={spec.label} className="flex min-w-0 gap-1.5">
+                <dt className="font-medium text-gray-600 flex-shrink-0">{spec.label}:</dt>
+                <dd className="text-gray-500 break-words">{spec.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
         <p className="text-2xl font-bold text-gray-900 mb-4">₹{price.toLocaleString()}</p>
         
         <div className="mb-4">

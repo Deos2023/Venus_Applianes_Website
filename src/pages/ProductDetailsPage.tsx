@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 import { Star, ChevronRight, Check, Shield, Truck, Zap } from "lucide-react";
 import { ACProduct, brands, acTypes, acProducts } from "@/lib/ac-selection-data";
+import { formatCoolingCapacity } from "@/lib/utils";
 
 function getStarNumber(starRating: string) {
   // Extracts number from values like "5★", "3★"
@@ -254,7 +255,7 @@ const ProductDetailsPage = () => {
                     </div>
                     <div className="flex">
                       <span className="w-40 font-medium text-gray-700">Cooling Capacity</span>
-                      <span className="text-gray-600">{product.coolingCapacity || '---'} WT</span>
+                      <span className="text-gray-600">{formatCoolingCapacity(product.coolingCapacity) || '---'}</span>
                     </div>
                     <div className="flex">
                       <span className="w-40 font-medium text-gray-700">Gas Type</span>
@@ -284,6 +285,12 @@ const ProductDetailsPage = () => {
                       <div className="flex">
                         <span className="w-40 font-medium text-gray-700">Outdoor Unit Size</span>
                         <span className="text-gray-600">{product.outdoorUnitDimensions}</span>
+                      </div>
+                    )}
+                    {product.airWing && (
+                      <div className="flex">
+                        <span className="w-40 font-medium text-gray-700">Air Wing</span>
+                        <span className="text-gray-600">{product.airWing}</span>
                       </div>
                     )}
                     {product.specialFeatures && (
