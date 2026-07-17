@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { visualizer } from "rollup-plugin-visualizer";
-import viteImagemin from 'vite-plugin-imagemin';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 
 // https://vitejs.dev/config/
@@ -15,21 +15,37 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          motion: ["framer-motion"],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) return 'react';
+            if (id.includes('react-router-dom')) return 'router';
+            if (id.includes('framer-motion')) return 'motion';
+            if (id.includes('lucide-react')) return 'lucide';
+            if (id.includes('@radix-ui')) return 'radix';
+            return 'vendor';
+          }
+          if (id.includes('src/lib/ac-selection-data') || id.includes('src/lib/ac-data')) {
+            return 'ac-data';
+          }
         },
       },
     },
   },
   plugins: [
     react(),
-    viteImagemin({
-      gifsicle: { optimizationLevel: 7 },
-      mozjpeg: { quality: 75 }, // Reduces JPG size
-      pngquant: { quality: [0.6, 0.8], speed: 4 },
-      webp: { quality: 75 } // Automatically outputs efficient AVIF format
+    ViteImageOptimizer({
+      png: { quality: 80 },
+      jpeg: { quality: 75 },
+      jpg: { quality: 75 },
+      webp: { quality: 75 },
+      avif: { quality: 70 },
+      svg: {
+        plugins: [
+          {
+            name: 'preset-default',
+          },
+        ],
+      },
     }),
     visualizer({
       open: true,

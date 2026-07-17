@@ -209,26 +209,6 @@ export const acProducts: ACProduct[] = [
     productUrl: "",
   },
   {
-    id: "daikin-tower-2-0t-noninv-fvfs24av16",
-    type: "tower",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "FVFS24AV16",
-    price: 71100,
-    mrp: 96000,
-    gasType: "R32",
-    features: ["Non-Inverter", "2 Star"],
-    image: "/lovable-uploads/daikin/daikin-2-0t-noninv/1.webp",
-    images: ["/lovable-uploads/daikin/daikin-2-0t-noninv/1.webp","/lovable-uploads/daikin/daikin-2-0t-noninv/2.jpg"],
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:0e32d2ca-a9f8-4675-8180-05e4ee15b683",
-    indoorUnitDimensions: "",
-    description:
-      "Daikin 2.0T (Non Inverter) 2 Star Tower AC R32 Gas FVFS24AV16. MRP 96000, 71100/-",
-  },
-  {
     id: "carrier-tower-2-0t-inv-cfii-070r1-0csr5",
     type: "tower",
     brand: "carrier",
@@ -247,46 +227,6 @@ export const acProducts: ACProduct[] = [
     images: ["/lovable-uploads/carrier/carrier-2-0t-inv/1.jpg", "/lovable-uploads/carrier/carrier-2-0t-inv/2.jpg"],
     description:
       "Carrier 2.0T Inverter 3 Star Tower AC R32 Gas- CFII-070R1-0CSR5. Only product without pipe. ₹89000/-.",
-  },
-  {
-    id: "bluestar-tower-2-0t-noninv-vc124gbtur1",
-    type: "tower",
-    brand: "blue-star",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "1★",
-    modelNumber: "VC124GBTUR1",
-    price: 67900,
-    mrp: 86500,
-    gasType: "R32",
-    features: ["Non-Inverter", "1 Star", "1 Phase 220V Needed"],
-    image: "/lovable-uploads/tower/bluestar-2-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/tower/bluestar-2-0t-noninv/1.jpg","/lovable-uploads/tower/bluestar-2-0t-noninv/2.webp","/lovable-uploads/tower/bluestar-2-0t-noninv/3.jpeg"],
-    indoorUnitDimensions: 'H-68.9" X W-20" X D-9.4"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b3f6e869-c12b-49e2-a266-7e9305c20834",
-    description:
-      "Blue Star 2.0T (Non Inverter) 1 Star Tower AC R32 Gas- VC124GBTUR1. Only product without pipe. MRP 86500, 67900/-",
-  },
-  {
-    id: "voltas-tower-2-0t-noninv-fac241cz2mm",
-    type: "tower",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "1★",
-    modelNumber: "FAC 241 CZ2MM",
-    price: 68700,
-    mrp: 76990,
-    gasType: "R32",
-    features: ["Non-Inverter"],
-    image: "/lovable-uploads/tower/voltas-4-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/tower/voltas-4-0t-noninv/1.jpg", "/lovable-uploads/tower/voltas-4-0t-noninv/2.jpg", "/lovable-uploads/tower/voltas-4-0t-noninv/3.jpg"],
-    indoorUnitDimensions: 'H-68.9" X W-20" X 16"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    description:
-      "Voltas 2.0T 1 Star (Non Inverter) Tower AC R32 Gas- FAC 241 CZ2MM. Only product without pipe. MRP 76990, 68700/-",
   },
 
   {
@@ -310,26 +250,6 @@ export const acProducts: ACProduct[] = [
       "Mitsubishi Electric 3.0T Inverter Tower AC R410A Gas - PSY-SP36KA-N / PUY-SP36YKA3.DA. Only product without pipe. MRP 177000, 147140/-",
   },
   {
-    id: "daikin-tower-3-0t-noninv-fvfs36av16",
-    type: "tower",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "2★",
-    modelNumber: "FVFS36AV16",
-    price: 120800,
-    mrp: 135000,
-    gasType: "R32",
-    features: ["Non-Inverter", "2 Star"],
-    image: "/lovable-uploads/tower/daikin-3-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/tower/daikin-3-0t-noninv/1.jpg","/lovable-uploads/tower/daikin-3-0t-noninv/2.jpg"],
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:0e32d2ca-a9f8-4675-8180-05e4ee15b683",
-    indoorUnitDimensions: "",
-    description:
-      "Daikin 3.0T (Non Inverter) 2 Star Tower AC R32 Gas FVFS36AV16. MRP 135000, 120800/-",
-  },
-  {
     id: "carrier-tower-3-0t-inv-cfii-109r1-0csr5",
     type: "tower",
     brand: "carrier",
@@ -348,26 +268,6 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: "",
     description:
       "Carrier 3.0 Inverter 3 Star Tower AC R32 Gas- CFII-109R1-0CSR5. Only product without pipe. ₹112000/-.",
-  },
-  {
-    id: "bluestar-tower-3-0t-noninv-vc136gbtur3",
-    type: "tower",
-    brand: "blue-star",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "1★",
-    modelNumber: "VC136GBTUR3",
-    price: 102500,
-    mrp: 109000,
-    gasType: "R32",
-    features: ["Non-Inverter", "1 Star", "3 Phase 440V Needed", "ISEER 2.82"],
-    image: "/lovable-uploads/tower/bluestar-3-0t-noninv/1.jpeg",
-    images: ["/lovable-uploads/tower/bluestar-3-0t-noninv/1.jpeg","/lovable-uploads/tower/bluestar-3-0t-noninv/2.jpg"],
-    indoorUnitDimensions: 'H-70.9" X W-21.6" X D-13.8"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:0f8b74ee-2c36-4e0e-ada6-7694b8c0b573",
-    description:
-      "Blue Star 3.0T (Non Inverter) 1 Star Tower AC R32 Gas- VC136GBTUR3. Only product without pipe. MRP 109000, 102500/-",
   },
   {
     id: "voltas-tower-3-0t-noninv-fac36czmm",
@@ -408,26 +308,6 @@ export const acProducts: ACProduct[] = [
       "https://mitsubishielectric.in/products/air-conditioning-systems/floor-standing/psy-sp48ka",
     description:
       "Mitsubishi Electric 4.0T Inverter Tower AC R410A Gas - PSY-SP48KA-N / PUY-SP48YKA2.DA. Only product without pipe. MRP 212000, 175840/-",
-  },
-  {
-    id: "daikin-tower-4-0t-noninv-fvfs48av16",
-    type: "tower",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "4.0T",
-    starRating: "1★",
-    modelNumber: "FVFS48AV16",
-    price: 138300,
-    mrp: 155000,
-    gasType: "R32",
-    features: ["Non-Inverter"],
-    image: "/lovable-uploads/tower/daikin-3-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/tower/daikin-3-0t-noninv/1.jpg","/lovable-uploads/tower/daikin-3-0t-noninv/2.jpg"],
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:0e32d2ca-a9f8-4675-8180-05e4ee15b683",
-    description:
-      "Daikin 4.0T (Non Inverter) 1 Star Tower AC R32 Gas FVFS48AV16. MRP 155000, 138300/-",
-    indoorUnitDimensions: "",
   },
   {
     id: "carrier-tower-4-0t-inv-cfii-135r1-0csr5",
@@ -662,31 +542,6 @@ export const acProducts: ACProduct[] = [
     description:
       "Panasonic 1.5T Inverter 3 Star Split AC R32 Gas - CS/CU-EU18BKY3FM (7 in 1, Wi-Fi), MRP 60900, 40033/-",
   },
-  {
-    id: "panasonic-split-1-5t-noninv-3star-cscu-kn18bky",
-    type: "split",
-    brand: "panasonic",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "CS/CU-KN18BKY",
-    price: 39210,
-    mrp: 55400,
-    coolingCapacity: "5050W",
-    indoorUnitDimensions: 'W-39.4" X H-11.6"',
-    gasType: "R32",
-    features: ["Non-Inverter"],
-    image: "/lovable-uploads/panasonic/CSCU-KN18BKY/1.jpg",
-    images: [
-      "/lovable-uploads/panasonic/CSCU-KN18BKY/1.jpg",
-      "/lovable-uploads/panasonic/CSCU-KN18BKY/2.jpeg",
-      "/lovable-uploads/panasonic/CSCU-KN18BKY/3.jpeg",
-    ],
-    productUrl:
-      "https://www.panasonic.com/in/consumer/air-conditioners/split-ac/cs-cu-kn18bky.html",
-    description:
-      "Panasonic 1.5T Non-Inverter 3 Star Split AC R32 Gas - CS/CU-KN18BKY, MRP 55400, 39210/-",
-  },
 
   {
     id: "og-split-1t-inv-5star",
@@ -793,13 +648,7 @@ export const acProducts: ACProduct[] = [
     coolingCapacity: "3500W",
     gasType: "R32",
     productUrl: "https://www.daikinindia.com/product/ftku35uv16",
-    features: [
-      "Power Chill Operation",
-      "Econo Mode",
-      "Coanda Airflow",
-      "PM 2.5 Filter",
-      "Wi-Fi Optional",
-    ],
+    features: ["Power Chill Operation", "Econo Mode", "Coanda Airflow", "PM 2.5 Filter", "Wi-Fi Optional", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKU35UV16/1.png",
     images: [
       "/lovable-uploads/daikin/FTKU35UV16/1.png",
@@ -968,191 +817,6 @@ export const acProducts: ACProduct[] = [
     description:
       "VOLTAS 1.5T INV 3* 183V VERTIS ELITE Window AC with modern features",
   },
-
-  // {
-  //   id: "daikin-cassette-2t-inv-3star",
-  //   type: "cassette",
-  //   brand: "daikin",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "FCVFQ71",
-  //   price: 82000,
-  //   features: [
-  //     "360° Airflow",
-  //     "Anti-Corrosion Treatment",
-  //     "Individual Flap Control",
-  //     "Fresh Air Intake",
-  //     "Low Noise Operation",
-  //   ],
-  //   image: "/lovable-uploads/daikin/FCVFQ71/1.png",
-  //   images: [
-  //     "/lovable-uploads/daikin/FCVFQ71/1.png",
-  //     "/lovable-uploads/daikin/FCVFQ71/2.png",
-  //     "/lovable-uploads/daikin/FCVFQ71/3.png",
-  //     "/lovable-uploads/daikin/FCVFQ71/4.png",
-  //   ],
-  //   description: "DAIKIN 2.0T INV 3* FCVFQ71 Cassette AC for commercial spaces",
-  // },
-
-  /* --- Add these entries to the acProducts array in src/lib/ac-selection-data.ts --- */
-
-  // O GENERAL
-  // O GENERAL SPLIT AC PRICES (ENSURED ALL PRESENT)
-
-  // O GENERAL
-  // PANASONIC SPLIT AC PRICES
-  // DAIKIN SPLIT AC PRICES (ADDED)
-  // {
-  //   id: "daikin-split-0-8t-noninv-3star-ftl30uv16",
-  //   type: "split",
-  //   brand: "daikin",
-  //   inverter: "non-inverter",
-  //   tonnage: "0.8T",
-  //   starRating: "3★",
-  //   modelNumber: "FTL30UV16",
-  //   price: 27900,
-  //   features: ["Non-Inverter", "Energy Efficient"],
-  //   image: "/lovable-uploads/daikin/FTL30UV16/1.webp",
-  //   images: [
-  //     "/lovable-uploads/daikin/FTL30UV16/1.webp",
-  //     "/lovable-uploads/daikin/FTL30UV16/2.jpg",
-  //     "/lovable-uploads/daikin/FTL30UV16/4.png",
-  //     "/lovable-uploads/daikin/FTL30UV16/5.jpg",
-  //     "/lovable-uploads/daikin/FTL30UV16/6.jpg",
-  //     "/lovable-uploads/daikin/FTL30UV16/7.jpg",
-  //   ],
-  //   description: "DAIKIN 0.8T NON INV 3★ FTL30UV16 Split AC",
-  // },
-  // {
-  //   id: "daikin-split-1-0t-inv-3star-gtkc35uv16-ftkc35uv16",
-  //   type: "split",
-  //   brand: "daikin",
-  //   inverter: "inverter",
-  //   tonnage: "1.0T",
-  //   starRating: "3★",
-  //   modelNumber: "GTKC35UV16/FTKC35UV16",
-  //   price: 34300,
-  //   features: ["Inverter", "Energy Efficient"],
-  //   image: "/lovable-uploads/daikin/GTKC35UV16/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/daikin/GTKC35UV16/1.jpg",
-  //     "/lovable-uploads/daikin/GTKC35UV16/2.jpg",
-  //     "/lovable-uploads/daikin/GTKC35UV16/3.png",
-  //   ],
-  //   description: "DAIKIN 1.0T INV 3★ GTKC35UV16/FTKC35UV16 Split AC",
-  // },
-  // {
-  //   id: "daikin-split-1-0t-noninv-3star-gtl35uv16",
-  //   type: "split",
-  //   brand: "daikin",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.0T",
-  //   starRating: "3★",
-  //   modelNumber: "GTL35UV16",
-  //   price: 33000,
-  //   features: ["Non-Inverter", "Energy Efficient"],
-  //   image: "/lovable-uploads/daikin/GTL35UV16/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/daikin/GTL35UV16/1.jpg",
-  //     "/lovable-uploads/daikin/GTL35UV16/2.jpg",
-  //     "/lovable-uploads/daikin/GTL35UV16/3.jpg",
-  //   ],
-  //   description: "DAIKIN 1.0T NON INV 3★ GTL35UV16 Split AC",
-  // },
-  // {
-  //   id: "daikin-split-1-0t-noninv-3star-ftl35uv16",
-  //   type: "split",
-  //   brand: "daikin",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.0T",
-  //   starRating: "3★",
-  //   modelNumber: "FTL35UV16",
-  //   price: 33500,
-  //   features: ["Non-Inverter", "Energy Efficient"],
-  //   image: "/lovable-uploads/daikin/FTL35UV16/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/daikin/FTL35UV16/1.jpg",
-  //     "/lovable-uploads/daikin/FTL35UV16/2.jpg",
-  //     "/lovable-uploads/daikin/FTL35UV16/3.jpg",
-  //     "/lovable-uploads/daikin/FTL35UV16/4.webp",
-  //     "/lovable-uploads/daikin/FTL35UV16/5.jpg",
-  //     "/lovable-uploads/daikin/FTL35UV16/6.jpg",
-  //   ],
-  //   description: "DAIKIN 1.0T NON INV 3★ FTL35UV16 Split AC",
-  // },
-  {
-    id: "daikin-split-1-5t-inv-3star-gtkc50uv16v-ftkc50uv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "GTKC50UV16V/FTKC50UV16",
-    price: 37500,
-    mrp: 58400,
-    gasType:"R32",
-    coolingCapacity:"5000",
-    productUrl:"https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/gtkc/5.0/gtkc50",
-    indoorUnitDimensions:"W-34.8\" X H-11.7\"",
-    features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/daikin/GTKC50UV16/1.png",
-    images: [
-      "/lovable-uploads/daikin/GTKC50UV16/1.png",
-      "/lovable-uploads/daikin/GTKC50UV16/2.png",
-      "/lovable-uploads/daikin/GTKC50UV16/3.jpg",
-      "/lovable-uploads/daikin/GTKC50UV16/4.jpg",
-    ],
-    description: "DAIKIN 1.5T INV 3★ GTKC50UV16V/FTKC50UV16 Split AC",
-  },
-  {
-    id: "daikin-split-1-5t-noninv-3star-gtl50uv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "GTL50UV16",
-    price: 40200,
-    mrp: 55600,
-    gasType: "R32",
-    coolingCapacity: "5050",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-ac-residential/gtl/5-1.5/gtl50u",
-    indoorUnitDimensions: 'W-34.8" X H-11.7"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/daikin/GTL50UV16/1.webp",
-    images: [
-      "/lovable-uploads/daikin/GTL50UV16/1.webp",
-      "/lovable-uploads/daikin/GTL50UV16/2.jpeg",
-      "/lovable-uploads/daikin/GTL50UV16/3.jpg",
-    ],
-    description: "DAIKIN 1.5T NON INV 3★ GTL50UV16 Split AC",
-  },
-  {
-    id: "daikin-split-1-5t-noninv-3star-ftl50uv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "FTL50UV16",
-    price: 40200,
-    mrp: 55600,
-    gasType: "R32",
-    coolingCapacity: "5050",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftl/5/ftl50u",
-    indoorUnitDimensions: 'W-34.8" X H-11.7"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/daikin/FTL50UV16/1.png",
-    images: [
-      "/lovable-uploads/daikin/FTL50UV16/1.png",
-      "/lovable-uploads/daikin/FTL50UV16/2.jpg",
-      "/lovable-uploads/daikin/FTL50UV16/3.jpg",
-    ],
-    description: "DAIKIN 1.5T NON INV 3★ FTL50UV16 Split AC",
-  },
   {
     id: "daikin-split-1-5t-inv-5star-ftkm50uv16u",
     type: "split",
@@ -1168,7 +832,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkm/5/ftkm",
     indoorUnitDimensions: 'W-34.8" X H-11.7" ',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -1193,7 +857,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/jtkj/6.0/jtkj",
     specialFeatures: ["Streamer Discharge"],
-    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
@@ -1218,7 +882,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/atkm/5.28/atkm50u",
     indoorUnitDimensions: 'W-34.8" X H-11.7" ',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -1242,7 +906,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/atkl/5.0/atkl",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
     images: [
       "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
@@ -1266,7 +930,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkm/6/ftkm",
     indoorUnitDimensions: 'W-34.8" X  H-11.7"',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -1290,7 +954,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkl/6.0/ftkl",
     indoorUnitDimensions: 'W-34.8" X  H-11.7"',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL60UV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKL60UV16/1.jpg",
@@ -1314,7 +978,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/atkl/6.0/atkl",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
     images: [
       "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
@@ -1338,7 +1002,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkl/5.0/ftkl",
     indoorUnitDimensions: 'W-35.7" X H-11.7"',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL60UV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKL60UV16/1.jpg",
@@ -1346,30 +1010,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/daikin/FTKL60UV16/3.jpg",
     ],
     description: "DAIKIN 1.5T INV 3★ FTKL50UV16 Split AC",
-  },
-  {
-    id: "daikin-split-1-8t-noninv-1star-fte60uv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.8T",
-    starRating: "1★",
-    modelNumber: "FTE60UV16",
-    price: 43100,
-    mrp: 61600,
-    gasType: "R32",
-    coolingCapacity: "6400",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-ac-residential/fte/6.4-1.8/fte60u",
-    indoorUnitDimensions: 'W-34.8" X  H-11.7"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/daikin/FTE60UV16/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTE60UV16/1.webp",
-      "/lovable-uploads/daikin/FTE60UV16/2.jpg",
-      "/lovable-uploads/daikin/FTE60UV16/3.jpeg",
-    ],
-    description: "DAIKIN 1.8T NON INV 1★ FTE60UV16 Split AC",
   },
   {
     id: "daikin-split-1t-inv-3star-hot-cold-ftht60uv16u",
@@ -1387,7 +1027,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftht/6/ftht",
     specialFeatures: ["Hot & Cold"],
-    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
@@ -1412,7 +1052,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkl/7.1/ftkl",
     indoorUnitDimensions: 'W-43.3" X  H-13"',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL71UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL71UV16/1.webp",
@@ -1438,7 +1078,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftkl/9.15/ftkl90",
     indoorUnitDimensions: 'W-48" X  H-12.8" ',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL90UV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKL90UV16/1.jpg",
@@ -1939,162 +1579,6 @@ export const acProducts: ACProduct[] = [
     images: ["/lovable-uploads/cassette/voltas-4-0t-inv-hot-cold/1.jpg"],
     description:
       "Voltas 4.0 Ton Inverter Hot & Cold Cassette AC - R32. Only product without pipe. MRP 218718, 148500/-",
-  },
-  {
-    id: "voltas-cassette-4-0t-inv-cas482vcz2mm",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "inverter",
-    tonnage: "4.0T",
-    starRating: "2★",
-    modelNumber: "CAS 482V CZ2MM",
-    price: 128500,
-    mrp: 150000,
-    gasType: "R32",
-    features: ["Inverter", "2 Star", "Wireless Remote", "3 Phase 440V Needed"],
-    image: "/lovable-uploads/cassete/voltas-4-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/cassete/voltas-4-0t-noninv/1.jpg", "/lovable-uploads/cassete/voltas-4-0t-noninv/2.png", "/lovable-uploads/cassete/voltas-4-0t-noninv/3.jpg"],
-    indoorUnitDimensions:
-      'IDU-W-33" x 33" x H-11.4"; Grill-W-37.4" x 37.4" x H-2.2"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    description:
-      "Voltas 4.0T Inverter 2 Star Cassette AC R32 - CAS 482V CZ2MM. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 150000, 128500/-",
-  },
-  {
-    id: "voltas-cassette-4-0t-noninv-cas48czmm",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "4.0T",
-    starRating: "1★",
-    modelNumber: "CAS 48 CZMM",
-    price: 116500,
-    mrp: 131000,
-    gasType: "R32",
-    features: [
-      "Non-Inverter",
-      "1 Star",
-      "Wireless Remote",
-      "3 Phase 440V Needed",
-    ],
-    image: "/lovable-uploads/cassete/voltas-4-0t-noninv/4.jpg",
-    images: ["/lovable-uploads/cassete/voltas-4-0t-noninv/4.jpg", "/lovable-uploads/cassete/voltas-4-0t-noninv/5.jpg"],
-    indoorUnitDimensions:
-      'IDU-W-33" x 33" x H-11.4"; Grill-W-37.4" x 37.4" x H-2.2"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    description:
-      "Voltas 4.0T (Non Inverter) 1 Star Cassette AC R32 - CAS 48 CZMM. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 131000, 116500/-",
-  },
-  {
-    id: "carrier-cassette-4-0t-noninv-40gkx045ea-51msg-045er3a",
-    type: "cassette",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "4.0T",
-    starRating: "1★",
-    modelNumber: "40GKX045EA+51MSG-045ER3A",
-    price: 133516,
-    mrp: 192400,
-    gasType: "R32",
-    features: [
-      "Non-Inverter",
-      "1 Star",
-      "3 Phase 440V Needed",
-      "Wireless Remote",
-    ],
-    image: "/lovable-uploads/cassete/carrier-4-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/cassete/carrier-4-0t-noninv/1.jpg", "/lovable-uploads/cassete/carrier-4-0t-noninv/2.webp", "/lovable-uploads/cassete/carrier-4-0t-noninv/3.webp"],
-    indoorUnitDimensions: 'W-33" x 33" x H-9.6"; Grill-W-37.4" x 37.4" x 2.16"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1b399451-9048-4565-a8b3-84f04982ee17",
-    description:
-      "Carrier 4.0T (Non Inverter) 1 Star Cassette AC R32 - 40GKX045EA+51MSG-045ER3A. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 192400, 133516/-",
-  },
-  {
-    id: "carrier-cassette-3-0t-noninv-40gkx045ea-51msg-045er3a",
-    type: "cassette",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "2★",
-    modelNumber: "40GKX045EA+51MSG-045ER3A",
-    price: 115190,
-    mrp: 171200,
-    gasType: "R32",
-    features: [
-      "Non-Inverter",
-      "2 Star",
-      "3 Phase 440V Needed",
-      "Wireless Remote",
-    ],
-    image: "/lovable-uploads/cassette/carrier-4-0t-noninv/1.jpg",
-    images: ["/lovable-uploads/cassette/carrier-4-0t-noninv/1.jpg"],
-    indoorUnitDimensions:
-      'W-32.5" x 32.5" x H-11.7"; Grill-W-37.4" x 37.4" x 2.16"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1b399451-9048-4565-a8b3-84f04982ee17",
-    description:
-      "Carrier 3.0T (Non Inverter) 2 Star Cassette AC R32 - 40GKX045EA+51MSG-045ER3A. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 192400, 133516/-",
-  },
-  {
-    id: "carrier-cassette-1-5t-noninv-40gkx-018ea-51msg",
-    type: "cassette",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "2★",
-    modelNumber: "40GKX-018EA+51MSG",
-    price: 79616,
-    mrp: 101700,
-    gasType: "R32",
-    features: [
-      "Non-Inverter",
-      "2 Star",
-      "3 Phase 440V Needed",
-      "Wireless Remote",
-    ],
-    image: "/lovable-uploads/cassete/carrier-1-5t-noninv/1.jpg",
-    images: [
-      "/lovable-uploads/cassete/carrier-1-5t-noninv/1.jpg",
-      "/lovable-uploads/cassete/carrier-1-5t-noninv/2.webp",
-    ],
-    indoorUnitDimensions:
-      'W-32.5" x 32.5" x H-11.7"; Grill-W-37.4" x 37.4" x 2.16"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1b399451-9048-4565-a8b3-84f04982ee17",
-    description:
-      "Carrier 1-5T (Non Inverter) 2 Star Cassette AC R32 - 40GKX045EA+51MSG-045ER3A. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 192400, 133516/-",
-  },
-  {
-    id: "carrier-cassette-2-0t-noninv-40gkx-024ea-51msg",
-    type: "cassette",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "40GKX-024EA+51MSG",
-    price: 82850,
-    mrp: 156300,
-    gasType: "R32",
-    features: [
-      "Non-Inverter",
-      "2 Star",
-      "3 Phase 440V Needed",
-      "Wireless Remote",
-    ],
-    image: "/lovable-uploads/cassete/carrier-1-5t-noninv/1.jpg",
-    images: [
-      "/lovable-uploads/cassete/carrier-1-5t-noninv/1.jpg",
-      "/lovable-uploads/cassete/carrier-1-5t-noninv/2.webp",
-    ],
-    indoorUnitDimensions:
-      'W-32.5" x 32.5" x H-11.7"; Grill-W-37.4" x 37.4" x 2.16"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1b399451-9048-4565-a8b3-84f04982ee17",
-    description:
-      "Carrier 2T (Non Inverter) 2 Star Cassette AC R32 - 40GKX045EA+51MSG-045ER3A. 3 Phase 440V line needed. Wireless Remote. Only product without pipe. MRP 192400, 133516/-",
   },
   {
     id: "lg-cassette-4-0t-inv-ztnq48gnlh2-ztuq48gnlh2",
@@ -3096,30 +2580,6 @@ export const acProducts: ACProduct[] = [
     description: "HITACHI 1.8T INV 3★ E322PCAIB Split AC",
   },
   {
-    id: "hitachi-split-1-8t-noninv-2star-b222pcaiba",
-    type: "split",
-    brand: "hitachi",
-    inverter: "non-inverter",
-    tonnage: "1.8T",
-    starRating: "2★",
-    modelNumber: "B222PCAIBA",
-    price: 45800,
-    mrp: 66900,
-    gasType: "R32",
-    coolingCapacity: "6350",
-    productUrl:
-      "https://buy.hitachiaircon.in/e-shop/product-details/hitachi-senpai-3200fl-2-0-ras-b222pcaiba-tr/732",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/hitachi/B222PCAIBA/1.webp",
-    images: [
-      "/lovable-uploads/hitachi/B222PCAIBA/1.webp",
-      "/lovable-uploads/hitachi/B222PCAIBA/2.webp",
-      "/lovable-uploads/hitachi/B222PCAIBA/3.webp",
-      "/lovable-uploads/hitachi/B222PCAIBA/4.webp",
-    ],
-    description: "HITACHI 1.8T NON INV 2★ B222PCAIBA Split AC",
-  },
-  {
     id: "hitachi-split-2-0t-inv-3star-g324pcbisf",
     type: "split",
     brand: "hitachi",
@@ -4007,30 +3467,6 @@ export const acProducts: ACProduct[] = [
     description: "GODREJ 1.0T INV 3★ Split AC R32 Gas",
   },
   {
-    id: "godrej-split-1-0t-noninv-2star-ei-wfc12utc3-wwa",
-    type: "window",
-    brand: "godrej",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "WFC12UTC3_WWA",
-    price: 26900,
-    mrp: 26900,
-    gasType: "R32",
-    indoorUnitDimensions: 'W-33.4" X  H-11.4"',
-    productUrl:
-      "https://www.godrejenterprises.com/home-appliances/air-conditioners/window-ac/p/ac-1-t-wfc-12-utc-3-wwa-window-3-s",
-    features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/godrej/WFC12UTC3/1.jpg",
-    images: [
-      "/lovable-uploads/godrej/WFC12UTC3/1.jpg",
-      "/lovable-uploads/godrej/WFC12UTC3/2.jpg",
-      "/lovable-uploads/godrej/WFC12UTC3/3.jpg",
-      "/lovable-uploads/godrej/WFC12UTC3/4.jpg",
-    ],
-    description: "GODREJ 1.0T NON INV 2★ Window AC R32 Gas WFC12UTC3 WWA",
-  },
-  {
     id: "godrej-split-1-5t-inv-5star-ei-18utc5-wwa",
     type: "window",
     brand: "godrej",
@@ -4593,29 +4029,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "VESTAR 2.0T INV 3★ VAKE223IA27H Split AC",
   },
-  {
-    id: "vestar-split-2-0t-noninv-2star-vaskd222fei3h",
-    type: "split",
-    brand: "vestar",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "VASKD222FEI3H",
-    price: 41000,
-    mrp: 65990,
-    gasType: "R32",
-    coolingCapacity: "6200 ",
-    productUrl:
-      "https://vestar.in/index.php/product/vestar-2ton-2star-split-ac-100-copper-coil-with-hidden-display-eco-power-saving-mode-white/?srsltid=AfmBOoqCU7Bb7ELKXd5Ja3-CyEs4kYfRBEhaLBttpAW5Mjx7Utdik0_K",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/vestar/VASKE123IA15H/1.jpg",
-    images: [
-      "/lovable-uploads/vestar/VASKE123IA15H/1.jpg",
-      "/lovable-uploads/vestar/VASKE123IA15H/2.jpg",
-      "/lovable-uploads/vestar/VASKE123IA15H/3.jpg",
-    ],
-    description: "VESTAR 2.0T NON INV 2★ VASKD222FEI3H Split AC",
-  },
   // PANASONIC SPLIT AC PRICES
   {
     id: "panasonic-split-1-0t-inv-5star-eu12bky5",
@@ -4695,31 +4108,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/panasonic/RU12BKY/6.jpg",
     ],
     description: "PANASONIC 1.0T INV 3★ RU12BKY Split AC",
-  },
-  {
-    id: "panasonic-split-1-0t-noninv-3star-kn12bky",
-    type: "split",
-    brand: "panasonic",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "KN12BKY",
-    price: 34320,
-    gasType: "R32",
-    mrp: 48100,
-    coolingCapacity: "3350",
-    indoorUnitDimensions: 'W-31.5" X  H-11.6"',
-    productUrl:
-      "https://www.panasonic.com/in/consumer/air-conditioners/split-ac/cs-cu-kn12bky.html",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/panasonic/KN12BKY/1.png",
-    images: [
-      "/lovable-uploads/panasonic/KN12BKY/1.png",
-      "/lovable-uploads/panasonic/KN12BKY/2.jpg",
-      "/lovable-uploads/panasonic/KN12BKY/3.jpg",
-      "/lovable-uploads/panasonic/KN12BKY/4.jpg",
-    ],
-    description: "PANASONIC 1.0T NON INV 3★ KN12BKY Split AC",
   },
   // {
   //   id: "panasonic-split-1-5t-inv-5star-eu18aky5xfm",
@@ -4923,31 +4311,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/panasonic/EU24BKY3/7.jpg",
     ],
     description: "PANASONIC 2.0T INV 3★ EU24BKY3FM WI-FI Split AC",
-  },
-  {
-    id: "panasonic-split-2-0t-noninv-3star-kn24bky",
-    type: "split",
-    brand: "panasonic",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "3★",
-    modelNumber: "KN24BKY",
-    price: 52009,
-    gasType: "R32",
-    mrp: 69400,
-    coolingCapacity: "6100",
-    indoorUnitDimensions: ' H-15 X W-22" X D-22.8"',
-    productUrl:
-      "https://www.panasonic.com/in/consumer/air-conditioners/split-ac/cs-cu-kn24bky.html",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/panasonic/KN24BKY/1.png",
-    images: [
-      "/lovable-uploads/panasonic/KN24BKY/1.png",
-      "/lovable-uploads/panasonic/KN24BKY/2.jpg",
-      "/lovable-uploads/panasonic/KN24BKY/3.jpg",
-      "/lovable-uploads/panasonic/KN24BKY/4.jpg",
-    ],
-    description: "PANASONIC 2.0T NON INV 3★ KN24BKY Split AC",
   },
   {
     id: "og-window-0.9t-noninv-3star-09bbwa",
@@ -5489,83 +4852,6 @@ export const acProducts: ACProduct[] = [
       "MITSUBISHI ELECTRIC 1.5T INVERTER 3 STAR SPLIT AC R32 GAS MSY/MUY-JS18VF, MRP 64300, 53654/-",
   },
   {
-    id: "mitsubishi-electric-1-5t-inv-2star-msy-muy-jp18vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "inverter",
-    tonnage: "1.5T",
-    starRating: "2★",
-    modelNumber: "MSY/MUY-JP18VF",
-    price: 47816,
-    mrp: 57200,
-    coolingCapacity: "5200W",
-    indoorUnitDimensions: 'W-33" X H-11"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-series/msy-jp18vf",
-    features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/JP18VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/JP18VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/JP18VF/2.webp",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.5T INVERTER 2 STAR SPLIT AC R32 GAS MSY/MUY-JP18VF, MRP 57200, 47816/-",
-  },
-  {
-    id: "mitsubishi-electric-1-5t-noninv-3star-ms-mu-agz18vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "MS/MU-AGZ18VF",
-    price: 44696,
-    mrp: 53200,
-    coolingCapacity: "5050W",
-    indoorUnitDimensions: 'W-39.4" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-agz18vf",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/3.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AGZ18VF/4.png",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.5T (NON INVERTER) 3 STAR SPLIT AC R32 GAS MS/MU-AGZ18VF, MRP 53200, 44696/-",
-  },
-  {
-    id: "mitsubishi-electric-1-5t-noninv-2star-ms-mu-ajz18vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "2★",
-    modelNumber: "MS/MU-AJZ18VF",
-    price: 42400,
-    mrp: 49000,
-    coolingCapacity: "5100W",
-    indoorUnitDimensions: 'W-39.4" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-ajz18vf",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/3.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/4.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/AJZ18VF/5.webp",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.5T (NON INVERTER) 2 STAR SPLIT AC R32 GAS MS/MU-AJZ18VF, MRP 49000, 42400/-",
-  },
-  {
     id: "mitsubishi-electric-1-5t-inv-4star-hotcold-msz-muz-hp18va",
     type: "split",
     brand: "mitsubishi-electric",
@@ -5662,29 +4948,6 @@ export const acProducts: ACProduct[] = [
     description: "MITSUBISHI ELECTRIC 1.9T INV 3★ JR22VF Split AC",
   },
   {
-    id: "mitsubishi-electric-1-75t-inv-2star-jp22vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "inverter",
-    tonnage: "1.75T",
-    starRating: "2★",
-    modelNumber: "JP22VF",
-    price: 55916,
-    mrp: 67200,
-    gasType: "R32",
-    coolingCapacity: "6600",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-series/msy-jp22vf",
-    indoorUnitDimensions: 'W-36.3" X  H-12"',
-    features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
-    ],
-    description: "MITSUBISHI ELECTRIC 1.75T INV 2★ JP22VF Split AC",
-  },
-  {
     id: "mitsubishi-electric-2-2t-inv-4star-gn26vf",
     type: "split",
     brand: "mitsubishi-electric",
@@ -5731,75 +4994,6 @@ export const acProducts: ACProduct[] = [
     description: "MITSUBISHI ELECTRIC 2.5T INV 3★ JR30VF Split AC",
   },
   {
-    id: "mitsubishi-electric-1-9t-noninv-3star-agz24vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.9T",
-    starRating: "3★",
-    modelNumber: "AGZ24VF",
-    price: 59500,
-    mrp: 70000,
-    gasType: "R32",
-    coolingCapacity: "6600",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-agz24vf",
-    indoorUnitDimensions: 'W-43.3" X  H-13"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
-    ],
-    description: "MITSUBISHI ELECTRIC 1.9T NON INV 3★ AGZ24VF Split AC",
-  },
-  {
-    id: "mitsubishi-electric-1-8t-noninv-2star-ajz22vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.8T",
-    starRating: "2★",
-    modelNumber: "AJZ22VF",
-    price: 49100,
-    mrp: 57000,
-    gasType: "R32",
-    coolingCapacity: "6200",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-ajz22vf",
-    indoorUnitDimensions: 'W-39.4" X  H-11.6"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
-    ],
-    description: "MITSUBISHI ELECTRIC 1.8T NON INV 2★ AJZ22VF Split AC",
-  },
-  {
-    id: "mitsubishi-electric-2-0t-noninv-3star-hp24va",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "3★",
-    modelNumber: "HP24VA ",
-    price: 79238,
-    mrp: 97100,
-    gasType: "R410A",
-    coolingCapacity: "7100",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-winter-and-summer-series/msz-hp24va",
-    indoorUnitDimensions: 'W-36.3" X  H-12"',
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/GN22VF/2.webp",
-    ],
-    description: "MITSUBISHI ELECTRIC 2.0T NON INV 3★ AJZ22VF Split AC",
-  },
-  {
     id: "mitsubishi-electric-3-0t-inv-3star-jr36vf",
     type: "split",
     brand: "mitsubishi-electric",
@@ -5837,7 +5031,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftku/5/ftku50",
     indoorUnitDimensions: 'W-34.8" X H-11.7"',
-    features: ["Inverter", "Energy Efficient"],
+    features: ["Inverter", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTL35UV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTL35UV16/1.jpg",
@@ -6061,31 +5255,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/voltas/183 VECTRA PEARL/4.jpg",
     ],
     description: "VOLTAS 1.5T NON INV 3★ 183 VECTRA PEARL Window AC",
-  },
-  {
-    id: "voltas-2.0t-noninv-2star-242vectraplus",
-    type: "window",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "242 VECTRA PLUS",
-    price: 36700,
-    mrp: 46990,
-    gasType: "R32",
-    coolingCapacity: "5800",
-    productUrl:
-      "https://www.voltas.com/products/voltas-fixed-speed-window-ac-2-ton-2-star-242-vectra-plus?srsltid=AfmBOoqKFZXrwoLJThbgVcaLs0QgVDbcFEkXHZK8reoIzuseoUZyROCy",
-    indoorUnitDimensions: 'H-17" X W-26" X D-31.7"',
-    features: ["Large capacity", "Energy efficient"],
-    image: "/lovable-uploads/voltas/242 VECTRA PLUS/1.jpg",
-    images: [
-      "/lovable-uploads/voltas/242 VECTRA PLUS/1.jpg",
-      "/lovable-uploads/voltas/242 VECTRA PLUS/2.jpg",
-      "/lovable-uploads/voltas/242 VECTRA PLUS/3.jpg",
-      "/lovable-uploads/voltas/242 VECTRA PLUS/4.jpg",
-    ],
-    description: "VOLTAS 2.0T NON INV 2★ 242 VECTRA PLUS Window AC",
   },
 
   // BLUE STAR
@@ -6323,113 +5492,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "CARRIER 2.0T NON INV 3★ ESTRELLA FX Window AC",
   },
-  // {
-  //   id: "carrier-1.5t-noninv-3star-esterlla-fx",
-  //   type: "window",
-  //   brand: "carrier",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.5T",
-  //   starRating: "3★",
-  //   modelNumber: "ESTERLLA FX",
-  //   price: 31100,
-  //   features: ["Energy efficient", "Turbo mode"],
-  //   image: "/lovable-uploads/bluestar/28891/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/bluestar/28891/1.jpg",
-  //     "/lovable-uploads/bluestar/28891/2.jpg",
-  //     "/lovable-uploads/bluestar/28891/3.jpg",
-  //     "/lovable-uploads/bluestar/28891/4.jpg",
-  //     "/lovable-uploads/bluestar/28891/5.jpg",
-  //   ],
-  //   description: "CARRIER 1.5T NON INV 3★ ESTERLLA FX Window AC",
-  // },
-  // {
-  //   id: "carrier-2.0t-noninv-3star-esterlla-fx",
-  //   type: "window",
-  //   brand: "carrier",
-  //   inverter: "non-inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "ESTERLLA FX",
-  //   price: 38495,
-  //   features: ["Large capacity", "Energy efficient"],
-  //   image: "/lovable-uploads/bluestar/28891/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/bluestar/28891/1.jpg",
-  //     "/lovable-uploads/bluestar/28891/2.jpg",
-  //     "/lovable-uploads/bluestar/28891/3.jpg",
-  //     "/lovable-uploads/bluestar/28891/4.jpg",
-  //     "/lovable-uploads/bluestar/28891/5.jpg",
-  //   ],
-  //   description: "CARRIER 2.0T NON INV 3★ ESTERLLA FX Window AC",
-  // },
-
-  // GODREJ
-  // {
-  //   id: "godrej-1.5t-inv-5star",
-  //   type: "window",
-  //   brand: "godrej",
-  //   inverter: "inverter",
-  //   tonnage: "1.5T",
-  //   starRating: "5★",
-  //   modelNumber: "",
-  //   price: 34000,
-  //   features: ["Inverter compressor", "High efficiency"],
-  //   image: "/lovable-uploads/godrej/34000/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/godrej/34000/1.jpg",
-  //     "/lovable-uploads/godrej/34000/2.jpg",
-  //     "/lovable-uploads/godrej/34000/3.jpg",
-  //     "/lovable-uploads/godrej/34000/4.jpg",
-  //   ],
-  //   description: "GODREJ 1.5T INV 5★ Window AC",
-  // },
-  // {
-  //   id: "godrej-1.5t-noninv-3star",
-  //   type: "window",
-  //   brand: "godrej",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.5T",
-  //   starRating: "3★",
-  //   modelNumber: "",
-  //   price: 29500,
-  //   features: ["Energy efficient", "Turbo mode"],
-  //   image: "/lovable-uploads/godrej/34000/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/godrej/34000/1.jpg",
-  //     "/lovable-uploads/godrej/34000/2.jpg",
-  //     "/lovable-uploads/godrej/34000/3.jpg",
-  //     "/lovable-uploads/godrej/34000/4.jpg",
-  //   ],
-  //   description: "GODREJ 1.5T NON INV 3★ Window AC",
-  // },
-
-  // HITACHI
-  {
-    id: "hitachi-1.0t-noninv-2star-raw312hedo",
-    type: "window",
-    brand: "hitachi",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "RAW312HEDO",
-    price: 28200,
-    mrp: 28200,
-    gasType: "R32",
-    coolingCapacity: "3300",
-    productUrl:
-      "https://buy.hitachiaircon.in/e-shop/product-details/hitachi-new-kaze-plus-1-0-raw312hedo-tr/648",
-    indoorUnitDimensions: ' H-15" X W-22" X D-25.4" ',
-    features: ["Energy efficient", "Turbo mode"],
-    image: "/lovable-uploads/hitachi/RAW312HEDO/1.png",
-    images: [
-      "/lovable-uploads/hitachi/RAW312HEDO/1.png",
-      "/lovable-uploads/hitachi/RAW312HEDO/2.png",
-      "/lovable-uploads/hitachi/RAW312HEDO/3.png",
-      "/lovable-uploads/hitachi/RAW312HEDO/4.png",
-    ],
-    description: "HITACHI 1.0T NON INV 2★ RAW312HEDO Window AC",
-  },
   {
     id: "hitachi-1.5t-inv-5star-raw518hheo",
     type: "window",
@@ -6636,31 +5698,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "LG 2.0T INV 4★ UW-Q24WWYA (WI-FI) Window AC",
   },
-
-  // LLOYD
-  {
-    id: "lloyd-1.0t-noninv-2star-glw12c2ywsew",
-    type: "window",
-    brand: "lloyd",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "GLW12C2YWSEW",
-    price: 26000,
-    mrp: 39990,
-    gasType: "R32",
-    coolingCapacity: "3100",
-    productUrl:
-      "https://havells.com/lloyd/ew-series-fixed-speed-window-ac-10-2-star-glw12c2ywsew.html",
-    indoorUnitDimensions: 'H-15.1" X W-24" X D-23.6"',
-    features: ["Energy efficient", "Turbo mode"],
-    image: "/lovable-uploads/lloyd/GLW12C2YWSEW/1.jpg",
-    images: [
-      "/lovable-uploads/lloyd/GLW12C2YWSEW/1.jpg",
-      "/lovable-uploads/lloyd/GLW12C2YWSEW/2.webp",
-    ],
-    description: "LLOYD 1.0T NON INV 2★ GLW12C2YWSEW Window AC",
-  },
   {
     id: "lloyd-1.0t-noninv-3star-glw12c3xwsew",
     type: "window",
@@ -6756,56 +5793,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "LLOYD 2.0T NON INV 3★ GLW24C3YWSMR Window AC",
   },
-  //HAIER
-  {
-    id: "haier-1.0t-noninv-2star-hsu12t-tqs2be-fs",
-    type: "split",
-    brand: "haier",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "HSU12T-TQS2BE-FS",
-    price: 28500,
-    mrp: 28500,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://www.haier.com/in/air-conditioners/1-ton-2-star-fixed-speed-split-ac-turbocool-hsu12t-tqs2be-fs.shtml",
-    indoorUnitDimensions: "",
-    features: ["Large capacity", "Energy efficient"],
-    image: "/lovable-uploads/haier/HSU12T-TQS2BE-FS/1.jpg",
-    images: [
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/1.jpg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/2.jpg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/3.jpeg",
-    ],
-    description: "LLOYD 1.0T NON INV 2★ HSU12T-TQS2BE-FS split AC",
-  },
-  {
-    id: "haier-2.0t-noninv-2star-hsu24t-pow2bn-fs",
-    type: "split",
-    brand: "haier",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "HSU24T-POW2BN-FS",
-    price: 43000,
-    mrp: 43000,
-    gasType: "R32",
-    productUrl:
-      "https://www.haier.com/in/air-conditioners/1-ton-2-star-fixed-speed-split-ac-turbocool-hsu12t-tqs2be-fs.shtml",
-    indoorUnitDimensions: 'W-39.8" X H-12.6"',
-    features: ["Large capacity", "Energy efficient"],
-    image: "/lovable-uploads/haier/HSU12T-TQS2BE-FS/6.jpg",
-    images: [
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/6.jpg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/2.jpg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/3.jpeg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/4.jpg",
-      "/lovable-uploads/haier/HSU12T-TQS2BE-FS/5.png",
-    ],
-    description: "LLOYD 2.0T NON INV 2★ HSU24T-POW2BN-FS split AC",
-  },
   /* --- End of new window AC entries --- */
 
   // --- 4-WAY CASSETTE AC PRICES ---
@@ -6826,16 +5813,9 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
 
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_1_1784201773767.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_1_1784201773767.png'],
     description: "DAIKIN 1.5T INV 5★ FCMF50 4-way cassette AC",
   },
   {
@@ -6853,45 +5833,10 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_2_1784201784259.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_2_1784201784259.png'],
     description: "DAIKIN 1.5T INV 4★ FCVF50 4-way cassette AC",
-  },
-
-  {
-    id: "daikin-cassette-1-5t-noninv-2star-fcqf18",
-    type: "cassette",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "2★",
-    modelNumber: "FCQF18",
-    price: 67300,
-    mrp: 78600,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
-    description: "DAIKIN 1.5T NON INV 2★ FCQF18 4-way cassette AC",
   },
 
   {
@@ -6909,45 +5854,10 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_3_1784201794908.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_3_1784201794908.png'],
     description: "DAIKIN 2.0T INV 4★ FCVF71 4-way cassette AC",
-  },
-
-  {
-    id: "daikin-cassette-2-0t-noninv-2star-fcqf24",
-    type: "cassette",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "2★",
-    modelNumber: "FCQF24",
-    price: 74700,
-    mrp: 87600,
-    gasType: "R32",
-    coolingCapacity: "6000",
-    productUrl:
-      "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
-    description: "DAIKIN 2.0T NON INV 2★ FCQF24 4-way cassette AC",
   },
   {
     id: "daikin-cassette-2-6t-inv-5star-fcmf90",
@@ -6964,16 +5874,9 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_4_1784201805093.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_4_1784201805093.png'],
     description: "DAIKIN 2.6T INV 5★ FCMF90 4-way cassette AC",
   },
   {
@@ -6991,16 +5894,9 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_5_1784201815460.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_5_1784201815460.png'],
     description: "DAIKIN 2.6T INV 4★ FCVF90 4-way cassette AC",
   },
   {
@@ -7018,44 +5914,10 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_6_1784201834670.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_6_1784201834670.png'],
     description: "DAIKIN 2.6T INV 3★ FCVFQ90 4-way cassette AC",
-  },
-  {
-    id: "daikin-cassette-2-5t-noninv-2star-fcqf30",
-    type: "cassette",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "2.5T",
-    starRating: "2★",
-    modelNumber: "FCQF30",
-    price: 91200,
-    mrp: 105400,
-    gasType: "R32",
-    coolingCapacity: "6000",
-    productUrl:
-      "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
-    description: "DAIKIN 2.5T NON INV 2★ FCQF30 4-way cassette AC",
   },
   // {
   //   id: "daikin-cassette-3-0t-inv-5star-fcmf100",
@@ -7338,33 +6200,6 @@ export const acProducts: ACProduct[] = [
     description: "VOLTAS 1.5T INV 3★ 183V CZ2MM 4-way cassette AC",
   },
   {
-    id: "voltas-cassette-1-5t-noninv-1star-181czaa",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "1★",
-    modelNumber: "181_CZAA",
-    price: 66000,
-    mrp: 71000,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    indoorUnitDimensions: 'W-33" x 33" X H-8"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/voltas/4way_casset_ac/1.png",
-    images: [
-      "/lovable-uploads/voltas/4way_casset_ac/1.png",
-      "/lovable-uploads/voltas/4way_casset_ac/2.png",
-      "/lovable-uploads/voltas/4way_casset_ac/3.png",
-      "/lovable-uploads/voltas/4way_casset_ac/4.png",
-      "/lovable-uploads/voltas/4way_casset_ac/5.png",
-      "/lovable-uploads/voltas/4way_casset_ac/6.png",
-    ],
-    description: "VOLTAS 1.5T NON INV 1★ 181 CZAA 4-way cassette AC",
-  },
-  {
     id: "voltas-cassette-2-0t-inv-3star-243vcz2mm",
     type: "cassette",
     brand: "voltas",
@@ -7390,33 +6225,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/voltas/4way_casset_ac/6.png",
     ],
     description: "VOLTAS 2.0T INV 3★ 243V CZ2MM 4-way cassette AC",
-  },
-  {
-    id: "voltas-cassette-2-0t-noninv-1star-241cz2aa",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "1★",
-    modelNumber: "241_CZ2AA",
-    price: 72100,
-    mrp: 80000,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    indoorUnitDimensions: 'W-33" x 33" X H-8"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/voltas/4way_casset_ac/1.png",
-    images: [
-      "/lovable-uploads/voltas/4way_casset_ac/1.png",
-      "/lovable-uploads/voltas/4way_casset_ac/2.png",
-      "/lovable-uploads/voltas/4way_casset_ac/3.png",
-      "/lovable-uploads/voltas/4way_casset_ac/4.png",
-      "/lovable-uploads/voltas/4way_casset_ac/5.png",
-      "/lovable-uploads/voltas/4way_casset_ac/6.png",
-    ],
-    description: "VOLTAS 2.0T NON INV 1★ 241 CZ2AA 4-way cassette AC",
   },
   {
     id: "voltas-cassette-2-0t-noninv-3star-243cz2aa",
@@ -7856,32 +6664,6 @@ export const acProducts: ACProduct[] = [
     description: "MITSUBISHI ELECTRIC 1.5T INV 4★ RP50EA 4-way cassette AC",
   },
   {
-    id: "me-cassette-1-5t-noninv-1star-m18vak",
-    type: "cassette",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "1★",
-    modelNumber: "M18VAK",
-    mrp: 96000,
-    gasType: "R32",
-    coolingCapacity: "5450",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/ceiling-cassette/non-inverter-series/pl-m18bak-da",
-    indoorUnitDimensions: 'W-37.4" x 37.4" X 1.4"',
-    price: 80720,
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/3.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/4.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/5.png",
-    ],
-    description: "MITSUBISHI ELECT 1.5T NON INV 1★ M18VAK 4-way cassette AC",
-  },
-  {
     id: "me-cassette-2-0t-inv-4star-sa24va2",
     type: "cassette",
     brand: "mitsubishi-electric",
@@ -7937,32 +6719,6 @@ export const acProducts: ACProduct[] = [
       "MITSUBISHI ELECTRIC 2.0T INV 4★ KA71VA 4-way cassette AC, Wireless remote",
   },
   {
-    id: "me-cassette-2-0t-noninv-1star-m24ba",
-    type: "cassette",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "1★",
-    modelNumber: "M24BA",
-    price: 85640,
-    mrp: 102000,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/ceiling-cassette/non-inverter-series/pl-m24bak-da",
-    indoorUnitDimensions: 'W-33" x 33" X H-10.2"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/3.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/4.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/5.png",
-    ],
-    description: "MITSUBISHI ELECT 2.0T NON INV 1★ M24BA 4-way cassette AC",
-  },
-  {
     id: "me-cassette-2-5t-inv-4star-sp30ea",
     type: "cassette",
     brand: "mitsubishi-electric",
@@ -7987,32 +6743,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/5.png",
     ],
     description: "MITSUBISHI ELECTRIC 2.5T INV 4★ SP30EA 4-way cassette AC",
-  },
-  {
-    id: "me-cassette-2-5t-noninv-2star-m30bak",
-    type: "cassette",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "2.5T",
-    starRating: "2★",
-    modelNumber: "M30BAK",
-    price: 100400,
-    mrp: 120000,
-    gasType: "R32",
-    coolingCapacity: "",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/ceiling-cassette/non-inverter-series/pl-m30bak-da",
-    indoorUnitDimensions: 'W-33" x 33" X H-10.2"',
-    features: ["360° Airflow", "Energy Efficient", "Low Noise"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/3.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/4.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/5.png",
-    ],
-    description: "MITSUBISHI ELEC 2.5T NON INV 2★ M30BAK 4-way cassette AC",
   },
   // {
   //   id: "me-cassette-3-0t-inv-sp36ea",
@@ -8362,7 +7092,7 @@ export const acProducts: ACProduct[] = [
     starRating: "3★",
     modelNumber: "FKCAQ50AV16",
     price: 94700,
-    features: ["1 Way Cassette", "Energy Efficient"],
+    features: ["1 Way Cassette", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FKCAQ50AV16/1.jpg",
     images: ["/lovable-uploads/daikin/FKCAQ50AV16/1.jpg"],
     description: "DAIKIN 1.5T ONE WAY INV 3★ FKCAQ50AV16",
@@ -8376,7 +7106,7 @@ export const acProducts: ACProduct[] = [
     starRating: "3★",
     modelNumber: "FKCAQ71AV16",
     price: 104800,
-    features: ["1 Way Cassette", "Energy Efficient"],
+    features: ["1 Way Cassette", "Energy Efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FKCAQ50AV16/1.jpg",
     images: ["/lovable-uploads/daikin/FKCAQ50AV16/1.jpg"],
     description: "DAIKIN 2.0T INV 3★ FKCAQ71AV16",
@@ -8797,80 +7527,6 @@ export const acProducts: ACProduct[] = [
     images: ["/lovable-uploads/voltas/183_VECTR_ELEGANT/1.webp"],
     description:
       "VOLTAS 2.5T INV 3★ 303V VECTRA PLUS Split AC,1 Phase 220 volt line to be needed",
-  },
-  {
-    id: "voltas-split-3-0t-noninv-361czv-mega-dup",
-    type: "split",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "1★",
-    modelNumber: "361CZV_MEGA",
-    price: 74800,
-    mrp: 89000,
-    gasType: "R32",
-    coolingCapacity: "",
-    indoorUnitDimensions: 'W-49.6" X  H-14.2"',
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:c2c7e64c-00c3-4824-9c88-2c4e23fb20ff",
-    features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/voltas/183_VECTR_ELEGANT/new.webp",
-    images: [
-      "/lovable-uploads/voltas/183_VECTR_ELEGANT/new.webp",
-      "/lovable-uploads/voltas/183_VECTR_ELEGANT/new2.png",
-      "/lovable-uploads/voltas/183_VECTR_ELEGANT/new3.webp",
-    ],
-    description:
-      "VOLTAS 3.0T NON INV 361 CZV MEGA Split AC,3 Phase 440 volt line to be needed",
-  },
-
-  // O GENERAL
-
-  // MITSUBISHI HEAVY INDUSTRIES
-
-  // {
-  //   id: "mitsubishi-heavy-1.1t-noninv-2star-srk13crs",
-  //   type: "split",
-  //   brand: "mitsubishi-heavy",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.1T",
-  //   starRating: "2★",
-  //   modelNumber: "SRK13CRS",
-  //   price: 47440,
-  //   features: ["Non-Inverter", "Energy efficient"],
-  //   image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS/1.png",
-  //   images: [
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS/1.png",
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS/2.webp",
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS/3.avif",
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS/4.webp",
-  //   ],
-  //   description: "MITSUBISHI HEAVY 1.1T NON INV 2★ SRK13CRS Split AC",
-  // },
-
-  {
-    id: "mitsubishi-heavy-1.6t-noninv-3star-srk20cxs",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.6T",
-    starRating: "3★",
-    modelNumber: "SRK20CXS",
-    price: 59760,
-    mrp: 64500,
-    gasType: "R32",
-    coolingCapacity: "5665",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    indoorUnitDimensions: 'W-47.1" X H-13.3"',
-    features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CXS/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CXS/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CXS/2.avif",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CXS/3.webp",
-    ],
-    description: "MITSUBISHI HEAVY 1.6T NON INV 3★ SRK20CXS Split AC",
   },
 
   {
@@ -9569,305 +8225,6 @@ export const acProducts: ACProduct[] = [
     description:
       "O GENERAL 2T INV 4* ASGG24KJTA-B with premium features for enhanced comfort",
   },
-  // {
-  //   id: "og-split-2-0t-inv-5star-24cgtb",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "5★",
-  //   modelNumber: "24CGTB",
-  //   price: 77690,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Plasma Air Purifier",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Smart Diagnosis",
-  //     "4-Way Air Direction",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24CGTB/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/o-general/24CGTB/1.jpg",
-  //     "/lovable-uploads/o-general/24CGTB/2.jpg",
-  //     "/lovable-uploads/o-general/24CGTB/3.jpg",
-  //     "/lovable-uploads/o-general/24CGTB/4.jpg",
-  //   ],
-  //   description: "O GENERAL 2.0T INV 5* 24CGTB perfect for large rooms",
-  // },
-  // {
-  //   id: "og-split-2-0t-inv-5star-24ggaa",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "5★",
-  //   modelNumber: "24GGAA",
-  //   price: 77690,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Plasma Air Purifier",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Smart Diagnosis",
-  //     "4-Way Air Direction",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24GGAA/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/24GGAA/1.png",
-  //     "/lovable-uploads/o-general/24GGAA/2.png",
-  //     "/lovable-uploads/o-general/24GGAA/3.png",
-  //     "/lovable-uploads/o-general/24GGAA/4.png",
-  //     "/lovable-uploads/o-general/24GGAA/5.png",
-  //   ],
-  //   description: "O GENERAL 2.0T INV 5* 24GGAA perfect for large rooms",
-  // },
-  // {
-  //   id: "og-split-2-0t-inv-5star-24ceta",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "5★",
-  //   modelNumber: "24CETA",
-  //   price: 81450,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Plasma Air Purifier",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Smart Diagnosis",
-  //     "4-Way Air Direction",
-  //     "Premium Design",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24CETA/1.jpg",
-  //   images: [
-  //     "/lovable-uploads/o-general/24CETA/1.jpg",
-  //     "/lovable-uploads/o-general/24CETA/2.jpg",
-  //     "/lovable-uploads/o-general/24CETA/3.jpg",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.0T INV 5* 24CETA with premium features for enhanced comfort",
-  // },
-  // {
-  //   id: "og-split-2-0t-inv-3star-24cpaa",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "24CPAA",
-  //   price: 63428,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Energy Saving Mode",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24CPAA/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/24CPAA/1.png",
-  //     "/lovable-uploads/o-general/24CPAA/2.png",
-  //     "/lovable-uploads/o-general/24CPAA/3.png",
-  //     "/lovable-uploads/o-general/24CPAA/4.png",
-  //     "/lovable-uploads/o-general/24CPAA/5.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.0T INV 3* 24CPAA with reliable cooling performance",
-  // },
-  // {
-  //   id: "og-split-2-0t-inv-3star-24cpab",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "24CPAB",
-  //   price: 63428,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Energy Saving Mode",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24CPAB/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/24CPAB/1.png",
-  //     "/lovable-uploads/o-general/24CPAB/2.png",
-  //     "/lovable-uploads/o-general/24CPAB/3.png",
-  //     "/lovable-uploads/o-general/24CPAB/4.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.0T INV 3* 24CPAB with reliable cooling performance",
-  // },
-  // {
-  //   id: "og-split-2-0t-noninv-3star-24bmaa",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "non-inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "24BMAA",
-  //   price: 67250,
-  //   features: [
-  //     "Non-Inverter Technology",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Energy Saving Mode",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24BMAA/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/24BMAA/1.png",
-  //     "/lovable-uploads/o-general/24BMAA/2.png",
-  //     "/lovable-uploads/o-general/24BMAA/3.png",
-  //     "/lovable-uploads/o-general/24BMAA/4.png",
-  //     "/lovable-uploads/o-general/24BMAA/5.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.0T NON INV 3* 24BMAA with reliable cooling performance",
-  // },
-  // {
-  //   id: "og-split-2-0t-noninv-3star-24buta",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "non-inverter",
-  //   tonnage: "2.0T",
-  //   starRating: "3★",
-  //   modelNumber: "24BUTA",
-  //   price: 72000,
-  //   features: [
-  //     "Non-Inverter Technology",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Energy Saving Mode",
-  //     "Premium Design",
-  //   ],
-  //   image: "/lovable-uploads/o-general/24BUTA/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/24BUTA/1.png",
-  //     "/lovable-uploads/o-general/24BUTA/2.png",
-  //     "/lovable-uploads/o-general/24BUTA/3.png",
-  //     "/lovable-uploads/o-general/24BUTA/4.png",
-  //     "/lovable-uploads/o-general/24BUTA/5.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.0T NON INV 3* 24BUTA with reliable cooling performance",
-  // },
-  // {
-  //   id: "og-split-2-5t-inv-4star-30ceb",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "2.5T",
-  //   starRating: "4★",
-  //   modelNumber: "30CEB",
-  //   price: 102310,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Plasma Air Purifier",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Smart Diagnosis",
-  //     "4-Way Air Direction",
-  //     "Premium Design",
-  //   ],
-  //   image: "/lovable-uploads/o-general/30CEB/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/30CEB/1.png",
-  //     "/lovable-uploads/o-general/30CEB/2.png",
-  //     "/lovable-uploads/o-general/30CEB/3.png",
-  //     "/lovable-uploads/o-general/30CEB/4.png",
-  //     "/lovable-uploads/o-general/30CEB/5.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 2.5T INV 4* 30CEB with premium features for enhanced comfort",
-  // },
-  // {
-  //   id: "og-split-3-0t-inv-5star-36ceb",
-  //   type: "split",
-  //   brand: "o-general",
-  //   inverter: "inverter",
-  //   tonnage: "3.0T",
-  //   starRating: "5★",
-  //   modelNumber: "36CEB",
-  //   price: 123190,
-  //   features: [
-  //     "Digital Inverter Technology",
-  //     "Plasma Air Purifier",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Smart Diagnosis",
-  //     "4-Way Air Direction",
-  //     "Premium Design",
-  //     "High Capacity Cooling",
-  //   ],
-  //   image: "/lovable-uploads/o-general/36CEB/1.png",
-  //   images: [
-  //     "/lovable-uploads/o-general/36CEB/1.png",
-  //     "/lovable-uploads/o-general/36CEB/2.png",
-  //     "/lovable-uploads/o-general/36CEB/3.png",
-  //     "/lovable-uploads/o-general/36CEB/4.png",
-  //     "/lovable-uploads/o-general/36CEB/5.png",
-  //   ],
-  //   description:
-  //     "O GENERAL 3.0T INV 5* 36CEB with premium features for enhanced comfort",
-  // },
-
-  // {
-  //   id: "mhi-split-1-3t-noninv-2star-srk15cxs",
-  //   type: "split",
-  //   brand: "mitsubishi-heavy",
-  //   inverter: "non-inverter",
-  //   tonnage: "1.3T",
-  //   starRating: "2★",
-  //   modelNumber: "SRK15CXS",
-  //   price: 49640,
-  //   features: [
-  //     "Non-Inverter Technology",
-  //     "Auto Restart",
-  //     "Sleep Mode",
-  //     "Energy Saving Mode",
-  //   ],
-  //   image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS/SRK15CXS.png",
-  //   images: [
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS/SRK15CXS.png",
-  //     "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS/SRK15CXS.webp",
-  //   ],
-  //   description:
-  //     "MITSUBISHI HEA 1.3T NON INV 2*SRK15CXS with reliable cooling performance",
-  // },
-
-  {
-    id: "mhi-split-1-6t-noninv-3star-srk20css",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.6T",
-    starRating: "3★",
-    modelNumber: "SRK20CSS",
-    price: 61520,
-    mrp: 66500,
-    gasType: "R410A",
-    coolingCapacity: "5925",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    indoorUnitDimensions: 'W-47.1" X H-13.3"',
-    features: [
-      "Non-Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-      "Premium Design",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CSS/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CSS/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CSS/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK20CSS/3.webp",
-    ],
-    description:
-      "MITSUBISHI HEA 1.6T NON INV 3*SRK20CSS with reliable cooling performance",
-  },
   {
     id: "mhi-split-1-5t-inv-4star-srk50zs",
     type: "split",
@@ -9930,101 +8287,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "MITSUBISHI HEAVY 1.8T INV 5* SRK20YYM with premium features for enhanced comfort",
-  },
-  {
-    id: "mhi-split-1-95t-noninv-2star-srk24cw",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.95T",
-    starRating: "2★",
-    modelNumber: "SRK24CW",
-    price: 69000,
-    mrp: 75000,
-    gasType: "R410A",
-    coolingCapacity: "6860",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    indoorUnitDimensions: 'W-47.1" X H-13.3"',
-    features: [
-      "Non-Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/3.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/4.webp",
-    ],
-    description:
-      "MITSUBI HEAV 1.95T NON INV 2* SRK24CW with reliable cooling performance",
-  },
-  {
-    id: "mhi-split-2-2t-noninv-2star-srk25css",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "2.2T",
-    starRating: "2★",
-    modelNumber: "SRK25CSS-S6/A",
-    price: 77800,
-    mrp: 85000,
-    gasType: "R410A",
-    coolingCapacity: "7625",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    indoorUnitDimensions: 'W-47.1" X H-13.3"',
-    features: [
-      "Non-Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/3.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK24CW/4.webp",
-    ],
-    description:
-      "MITSUBISHI HEAVY 2.2T NON INV 2* SRK24CW with reliable cooling performance",
-  },
-  {
-    id: "mhi-split-1-95t-noninv-3star-srk25cwx",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.95T",
-    starRating: "3★",
-    modelNumber: "SRK25CWX",
-    price: 74280,
-    mrp: 81000,
-    gasType: "R32",
-    coolingCapacity: "6875",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    indoorUnitDimensions: 'W-47.1" X H-13.3"',
-    features: [
-      "Non-Inverter Technology",
-      "Auto Restart",
-      "Sleep Mode",
-      "Energy Saving Mode",
-      "Premium Design",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/2.avif",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/3.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/4.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK25CWX/5.avif",
-    ],
-    description:
-      "MITSUBI HEA 1.95T NON INV 3* SRK25CWX with reliable cooling performance",
   },
 
   {
@@ -10867,51 +9129,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "MITSUBISHI AKABISHI 1.8T INV 3★ SE22VG Split AC",
   },
-  {
-    id: "mitsubishi-akabi-1-8t-noninv-3star-se22vg",
-    type: "split",
-    brand: "mitsubishi-akabishi",
-    inverter: "non-inverter",
-    tonnage: "1.8T",
-    starRating: "3★",
-    modelNumber: "SE22VG",
-    price: 49847,
-    mrp: 65700,
-    gasType: "R32",
-    coolingCapacity: "6150",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ram-se22vg",
-    indoorUnitDimensions: 'W-43.4" X  H-13"',
-    features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/SE22VG/1.png",
-    ],
-    description: "MITSUBISHI AKABI 1.8T NON INV 3★ SE22VG Split AC",
-  },
-  {
-    id: "mitsubishi-akabi-1-8t-noninv-2star-ae22vg",
-    type: "split",
-    brand: "mitsubishi-akabishi",
-    inverter: "non-inverter",
-    tonnage: "1.8T",
-    starRating: "2★",
-    modelNumber: "AE22VG",
-    price: 44167,
-    mrp: 57700,
-    gasType: "R32 ",
-    coolingCapacity: "6200",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ram-ae22vg",
-    indoorUnitDimensions: 'W-39.4" X  H-11.6"',
-    features: ["Non-Inverter", "Energy efficient"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/AE22VG/2.png",
-    ],
-    description: "MITSUBISHI AKABI 1.8T NON INV 2★ AE22VG Split AC",
-  },
 
   // --- NEW CASSETTE AC ENTRIES ---
 
@@ -11090,37 +9307,6 @@ export const acProducts: ACProduct[] = [
     description:
       "MITSUBISHI ELECTRIC 4.0T INVERTER CASSETTE AC HOT & COLD R410A GAS",
   },
-  {
-    id: "mitsubishi-electric-4-0t-noninv-1star-cassette-pl-m48bak-da",
-    type: "cassette",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "4.0T",
-    starRating: "1★",
-    modelNumber: "PL-M48BAK-DA/PU-M48YAK-DA.DA",
-    price: 152880,
-    mrp: 184000,
-    indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 1.4"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/ceiling-cassette/non-inverter-series/pl-m48bak-da",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/2.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/3.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/4.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/4way_casset_Ac/5.png",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 4.0T NON-INVERTER 1 STAR CASSETTE AC R32 GAS",
-  },
 
   // DAIKIN CASSETTE ACs
   {
@@ -11138,11 +9324,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF140ARV169/1.png",
     images: ["/lovable-uploads/daikin/FCMF140ARV169/1.png", "/lovable-uploads/daikin/FCMF140ARV169/2.webp"],
     description: "DAIKIN 4.0T INVERTER 5 STAR CASSETTE AC R32 GAS",
@@ -11162,11 +9344,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF140ARV169/1.png",
     images: ["/lovable-uploads/daikin/FCMF140ARV169/1.png"],
     description: "DAIKIN 4.0T INVERTER 5 STAR CASSETTE AC R32 GAS",
@@ -11186,11 +9364,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVF140ARV169/1.jpg",
     images: ["/lovable-uploads/daikin/FCVF140ARV169/1.jpg", "/lovable-uploads/daikin/FCVF140ARV169/2.png", "/lovable-uploads/daikin/FCVF140ARV169/3.png"],
     description: "DAIKIN 4.0T INVERTER 4 STAR CASSETTE AC R32 GAS",
@@ -11210,11 +9384,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
    image: "/lovable-uploads/daikin/FCVF140ARV169/1.jpg",
     images: ["/lovable-uploads/daikin/FCVF140ARV169/1.jpg", "/lovable-uploads/daikin/FCVF140ARV169/2.png", "/lovable-uploads/daikin/FCVF140ARV169/3.png"],
     description: "DAIKIN 4.0T INVERTER 4 STAR CASSETTE AC R32 GAS",
@@ -11234,11 +9404,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVFQ140AV16/1.jpg",
     images: ["/lovable-uploads/daikin/FCVFQ140AV16/1.jpg", "/lovable-uploads/daikin/FCVFQ140AV16/2.jpg", "/lovable-uploads/daikin/FCVFQ140AV16/3.jpg"],
     description: "DAIKIN 4.0T INVERTER 3 STAR CASSETTE AC R32 GAS",
@@ -11256,12 +9422,7 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2"',
     gasType: "R32",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe",
-      "KATAI ALUMINIUM",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe", "KATAI ALUMINIUM", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVFQ140AV16/4.jpg",
     images: ["/lovable-uploads/daikin/FCVFQ140AV16/4.jpg", "/lovable-uploads/daikin/FCVFQ140AV16/5.jpg", "/lovable-uploads/daikin/FCVFQ140AV16/6.webp"],
     description:
@@ -11282,36 +9443,10 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCQF48ARV16/1.webp",
     images: ["/lovable-uploads/daikin/FCQF48ARV16/1.webp", "/lovable-uploads/daikin/FCQF48ARV16/2.jpg"],
     description: "DAIKIN 4.0T NON-INVERTER 0 STAR CASSETTE AC R32 GAS",
-  },
-
-  // BLUE STAR CASSETTE AC
-  {
-    id: "blue-star-4-0t-inv-2star-cassette-id248mbtur3",
-    type: "cassette",
-    brand: "blue-star",
-    inverter: "inverter",
-    tonnage: "4.0T",
-    starRating: "2★",
-    modelNumber: "ID248MBTUR3",
-    price: 124000,
-    mrp: 150000,
-    indoorUnitDimensions: 'W-33" x 33" X H-9.6"',
-    outdoorUnitDimensions: 'GRILL-41" x 41" X 2.6"',
-    gasType: "R32",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:9df6b3da-cc21-4f46-bd8b-4bca36545265",
-    features: ["3 Phase 440 volt line needed", "Only product without pipe"],
-    image: "/lovable-uploads/bluestar/ID248MBTUR3/1.png",
-    images: ["/lovable-uploads/bluestar/ID248MBTUR3/1.png", "/lovable-uploads/bluestar/ID248MBTUR3/2.jpg", "/lovable-uploads/bluestar/ID248MBTUR3/3.webp"],
-    description: "BLUE STAR 4.0T INVERTER 2 STAR CASSETTE AC R32 GAS",
   },
 
   // O GENERAL CASSETTE AC
@@ -11445,34 +9580,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "MITSUBISHI ELECTRIC 3.0T INVERTER HOT & COLD CASSETTE AC R410A GAS",
-  },
-  {
-    id: "mitsubishi-electric-3-0t-noninv-1star-cassette-pl-m36bak-da",
-    type: "cassette",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "1★",
-    modelNumber: "PL-M36BAK-DA/PU-M36YAK-DA",
-    price: 123360,
-    mrp: 148000,
-    indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
-    outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 1.4"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/ceiling-cassette/non-inverter-series/pl-m36bak-da",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/PL-M36BAK-DA/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/PL-M36BAK-DA/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/PL-M36BAK-DA/2.jpg",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 3.0T NON-INVERTER 1 STAR CASSETTE AC R32 GAS",
   },
 
   // O GENERAL CASSETTE AC
@@ -11622,11 +9729,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF100ARV169/1.jpeg",
     images: [
       "/lovable-uploads/daikin/FCMF100ARV169/1.jpeg",
@@ -11649,11 +9752,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF100ARV169/1.jpeg",
     images: [
       "/lovable-uploads/daikin/FCMF100ARV169/1.jpeg",
@@ -11676,11 +9775,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVFQ100AV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FCVFQ100AV16/1.jpg",
@@ -11702,12 +9797,7 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2"',
     gasType: "R32",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe",
-      "KATAI ALUMINIUM",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe", "KATAI ALUMINIUM", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVFQ100AV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FCVFQ100AV16/1.jpg",
@@ -11716,34 +9806,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "DAIKIN 3.0T INVERTER 3 STAR CASSETTE AC R32 GAS (KATAI ALUMINIUM)",
-  },
-  {
-    id: "daikin-3-0t-noninv-2star-cassette-fcqf36arv16-rgvf36asv16",
-    type: "cassette",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "2★",
-    modelNumber: "FCQF36ARV16 - RGVF36ASV16",
-    price: 110600,
-    mrp: 131100,
-    indoorUnitDimensions: 'W-33" x 33" X H-11.3"',
-    outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2.3"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
-    image: "/lovable-uploads/daikin/FCQF36ARV16/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FCQF36ARV16/1.webp",
-      "/lovable-uploads/daikin/FCQF36ARV16/2.jpg",
-      "/lovable-uploads/daikin/FCQF36ARV16/3.jpg",
-    ],
-    description: "DAIKIN 3.0T NON-INVERTER 2 STAR CASSETTE AC R32 GAS",
   },
 
   // DAIKIN CASSETTE ACs 3.6T
@@ -11762,11 +9824,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF125ARV169/1.png",
     images: [
       "/lovable-uploads/daikin/FCMF125ARV169/1.png",
@@ -11789,11 +9847,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCMF125ARV169/1.png",
     images: [
       "/lovable-uploads/daikin/FCMF125ARV169/1.png",
@@ -11816,11 +9870,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "1 Phase 220 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["1 Phase 220 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVF125ARV169/1.jpg",
     images: [
       "/lovable-uploads/daikin/FCVF125ARV169/1.jpg",
@@ -11843,11 +9893,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVF125ARV169/1.jpg",
     images: [
       "/lovable-uploads/daikin/FCVF125ARV169/1.jpg",
@@ -11870,11 +9916,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe 5838", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCVFQ125AV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FCVFQ125AV16/1.webp",
@@ -11896,12 +9938,7 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2"',
     gasType: "R32",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe",
-      "KATAI ALUMINIUM",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe", "KATAI ALUMINIUM", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCFQ125AV16/1.png",
     images: ["/lovable-uploads/daikin/FCFQ125AV16/1.png"],
     description:
@@ -11920,12 +9957,7 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2"',
     gasType: "R32",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe",
-      "KATAI ALUMINIUM",
-    ],
+    features: ["3 Phase 440 volt line needed", "Wireless Remote", "Only product without pipe", "KATAI ALUMINIUM", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FCFQ125AV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FCFQ125AV16/1.jpg",
@@ -11934,34 +9966,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "DAIKIN 2.6T INVERTER 3 STAR CASSETTE AC R32 GAS (KATAI ALUMINIUM)",
-  },
-  {
-    id: "daikin-3-5t-noninv-2star-cassette-fcqf42arv16-rgvf42bsy16",
-    type: "cassette",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "3.5T",
-    starRating: "2★",
-    modelNumber: "FCQF42ARV16 - RGVF42BSY16",
-    price: 126600,
-    mrp: 150600,
-    indoorUnitDimensions: 'W-33" x 33" X H-11.3"',
-    outdoorUnitDimensions: 'GRILL- W-37.4" x 37.4" X 2.3"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcqf-series/7.03/fcqf-series",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
-    image: "/lovable-uploads/daikin/FCQF42ARV16/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FCQF42ARV16/1.webp",
-      "/lovable-uploads/daikin/FCQF42ARV16/2.webp",
-      "/lovable-uploads/daikin/FCQF42ARV16/3.jpg",
-    ],
-    description: "DAIKIN 3.5T NON-INVERTER 2 STAR CASSETTE AC R32 GAS",
   },
 
   // BLUE STAR CASSETTE AC
@@ -12035,24 +10039,6 @@ export const acProducts: ACProduct[] = [
     ],
     description: "BLUE STAR 3.0T INVERTER 3 STAR CASSETTE AC R32 GAS",
   },
-
-  // VOLTAS CASSETTE ACs
-  {
-    id: "voltas-3-0t-inv-hotcold-cassette",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "inverter",
-    tonnage: "3.0T",
-    starRating: "1★",
-    modelNumber: "",
-    price: 124000,
-    mrp: 181339,
-    gasType: "R32",
-    features: ["Only product without pipe", "Hot & Cold"],
-    image: "/lovable-uploads/voltas/cassette-3t-hotcold/1.png",
-    images: ["/lovable-uploads/voltas/cassette-3t-hotcold/1.png"],
-    description: "VOLTAS 3.0T INVERTER CASSETTE AC HOT & COLD R32 GAS",
-  },
   {
     id: "voltas-3-0t-inv-3star-cassette-cas-363v-cz2mm",
     type: "cassette",
@@ -12080,63 +10066,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/voltas/CAS-363V-CZ2MM/3.jpg",
     ],
     description: "VOLTAS 3.0T INVERTER 3 STAR CASSETTE AC R32 GAS",
-  },
-  {
-    id: "voltas-3-0t-noninv-1star-cassette-cas-361-czaa",
-    type: "cassette",
-    brand: "voltas",
-    inverter: "non-inverter",
-    tonnage: "3.0T",
-    starRating: "1★",
-    modelNumber: "CAS 361 CZAA",
-    price: 98100,
-    mrp: 110000,
-    indoorUnitDimensions: 'W-33" x 33" X H-9.6"',
-    outdoorUnitDimensions: 'GRILL-W-37.8" x 37.8" X H-1.2"',
-    gasType: "R32",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:118c86c1-c5ab-461a-9e07-4c08135e31a4",
-    features: [
-      "3 Phase 440 volt line needed",
-      "Wireless Remote",
-      "Only product without pipe 5838",
-    ],
-    image: "/lovable-uploads/voltas/CAS-361-CZAA/1.jpeg",
-    images: [
-      "/lovable-uploads/voltas/CAS-361-CZAA/1.jpeg",
-      "/lovable-uploads/voltas/CAS-361-CZAA/2.png",
-      "/lovable-uploads/voltas/CAS-361-CZAA/3.png",
-    ],
-    description: "VOLTAS 3.0T NON-INVERTER 1 STAR CASSETTE AC R32 GAS",
-  },
-
-  // DAIKIN 0.8T NON-INVERTER 3 STAR
-  {
-    id: "daikin-split-08t-noninv-3star-ftl30uv16v1",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "0.8T",
-    starRating: "3★",
-    modelNumber: "FTL30UV16V1-RL30UV16V1",
-    price: 27900,
-    mrp: 37400,
-    coolingCapacity: "2930 WT",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftl/2.93/ftl30",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTL30UV16V1/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTL30UV16/1.webp",
-      "/lovable-uploads/daikin/FTL30UV16/2.jpg",
-      // "/lovable-uploads/daikin/FTL30UV16/4.png",
-      "/lovable-uploads/daikin/FTL30UV16/5.jpg",
-      "/lovable-uploads/daikin/FTL30UV16/6.jpg",
-      "/lovable-uploads/daikin/FTL30UV16/7.jpg",
-    ],
-    description: "DAIKIN .8T NON INVERTER 3 STAR SPLIT AC SAC R32 GAS",
   },
 
   // O GENERAL 1.0T INVERTER 5 STAR
@@ -12223,8 +10152,8 @@ export const acProducts: ACProduct[] = [
     tonnage: "1.1T",
     starRating: "5★",
     modelNumber: "SRK13YXS-W6",
-    price: 54040,
-    mrp: 58000,
+    price: 52400,
+    mrp: 57200,
     coolingCapacity: "3810 WT",
     indoorUnitDimensions: 'W-34.2" X H-11.4"',
     gasType: "R32",
@@ -12248,8 +10177,8 @@ export const acProducts: ACProduct[] = [
     tonnage: "1.0T",
     starRating: "3★",
     modelNumber: "SRK13YYM-W6",
-    price: 49200,
-    mrp: 52500,
+    price: 47800,
+    mrp: 52000,
     coolingCapacity: "3525 WT",
     indoorUnitDimensions: 'W-31.4" X H-11.6"',
     gasType: "R32",
@@ -12265,56 +10194,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13YYM/5.webp",
     ],
     description: "MITSUBISHI HEAVY 1.0T INVERTER 3 STAR SPLIT AC",
-  },
-
-  // MITSUBISHI HEAVY 1.1T NON-INVERTER 2 STAR
-  {
-    id: "mitsubishi-heavy-split-11t-noninv-2star-srk13crs-s6",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.1T",
-    starRating: "2★",
-    modelNumber: "SRK13CRS-S6",
-    price: 48500,
-    mrp: 50500,
-    coolingCapacity: "3600 WT",
-    indoorUnitDimensions: 'W-31.1" X H-10.6"',
-    gasType: "R410A",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    features: ["Non-Inverter", "Energy efficient", "R410A Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS-S6/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS-S6/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK13CRS-S6/3.jpg",
-    ],
-    description: "MITSUBISHI HEAVY 1.1T NON INVERTER 2 STAR SPLIT AC R410A GAS",
-  },
-
-  // MITSUBISHI HEAVY 1.3T NON-INVERTER 2 STAR
-  {
-    id: "mitsubishi-heavy-split-13t-noninv-2star-srk15cxs-w6",
-    type: "split",
-    brand: "mitsubishi-heavy",
-    inverter: "non-inverter",
-    tonnage: "1.3T",
-    starRating: "2★",
-    modelNumber: "SRK15CXS-W6",
-    price: 50700,
-    mrp: 53000,
-    coolingCapacity: "4200",
-    indoorUnitDimensions: 'W-34.2" X H-11.4"',
-    gasType: "R32",
-    productUrl:
-      "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS-W6/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS-W6/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_heavy/SRK15CXS-W6/2.webp",
-    ],
-    description: "MITSUBISHI HEAVY 1.3T NON INVERTER 2 STAR SPLIT AC R32 GAS",
   },
 
   // MITSUBISHI ELECTRIC 1.0T INVERTER 5 STAR - MSY/MUY-GR13VF
@@ -12443,111 +10322,6 @@ export const acProducts: ACProduct[] = [
     description: "MITSUBISHI ELECTRIC 1.0T INVERTER 3 STAR SPLIT AC R32 GAS",
   },
 
-  // MITSUBISHI ELECTRIC 1.0T INVERTER 2 STAR
-  {
-    id: "mitsubishi-electric-split-1t-inv-2star-msy-muy-jp13vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "MSY/MUY-JP13VF",
-    price: 39920,
-    mrp: 45900,
-    coolingCapacity: "3600 WT",
-    indoorUnitDimensions: 'W-33" X H-11"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-series/msy-jp13vf",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/MSY-MUY-JP13VF/1.png",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MSY-MUY-JP13VF/1.png",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MSY-MUY-JP13VF/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MSY-MUY-JP13VF/3.webp",
-    ],
-    description: "MITSUBISHI ELECTRIC 1.0T INVERTER 2 STAR SPLIT AC R32 GAS",
-  },
-
-  // MITSUBISHI ELECTRIC 1.0T NON-INVERTER 3 STAR
-  {
-    id: "mitsubishi-electric-split-1t-noninv-3star-ms-mu-agz13vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "MS/MU-AGZ13VF",
-    price: 38400,
-    mrp: 44000,
-    coolingCapacity: "3400 WT",
-    indoorUnitDimensions: 'W-31.5" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-agz13vf",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AGZ13VF/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AGZ13VF/2.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AGZ13VF/1.webp",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.0T NON INVERTER 3 STAR SPLIT AC R32 GAS",
-  },
-
-  // MITSUBISHI ELECTRIC 1.0T NON-INVERTER 2 STAR
-  {
-    id: "mitsubishi-electric-split-1t-noninv-2star-ms-mu-ajz13vf",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "MS/MU-AJZ13VF",
-    price: 35360,
-    mrp: 40200,
-    coolingCapacity: "3300",
-    indoorUnitDimensions: 'W-31.5" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ms-ajz13vf",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AJZ13VF/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AJZ13VF/2.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AJZ13VF/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MS-MU-AJZ13VF/3.jpg",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.0T NON INVERTER 2 STAR SPLIT AC R32 GAS",
-  },
-
-  // MITSUBISHI ELECTRIC 1.0T INVERTER 2 STAR HOT & COLD
-  {
-    id: "mitsubishi-electric-split-1t-inv-2star-hot-cold-msz-muz-hp13va",
-    type: "split",
-    brand: "mitsubishi-electric",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "MSZ/MUZ-HP13VA",
-    price: 49064,
-    mrp: 58800,
-    coolingCapacity: "3150",
-    gasType: "R410A",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/inverter-winter-and-summer-series/msz-hp13va",
-    specialFeatures: ["Hot & Cold"],
-    features: ["Digital Inverter Technology", "Hot & Cold", "R410A Gas"],
-    image: "/lovable-uploads/mitsubishi/mitsubishi_elec/MSZ-MUZ-HP13VA/1.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MSZ-MUZ-HP13VA/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec/MSZ-MUZ-HP13VA/2.jpg",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC 1.0T INVERTER 2 STAR SPLIT AC HOT & COLD R410A GAS",
-  },
-
   // MITSUBISHI ELECTRIC AKABISHI 1.0T INVERTER 5 STAR
   {
     id: "mitsubishi-electric-akabishi-split-1t-inv-5star-ray-rby-ue13vgy1",
@@ -12604,60 +10378,6 @@ export const acProducts: ACProduct[] = [
       "MITSUBISHI ELECTRIC AKABISHI 1.0T INVERTER 3 STAR SPLIT AC R32 GAS",
   },
 
-  // MITSUBISHI ELECTRIC AKABISHI 1.0T NON-INVERTER 3 STAR
-  {
-    id: "mitsubishi-electric-akabishi-split-1t-noninv-3star-ram-rbm-se13vgy1",
-    type: "split",
-    brand: "mitsubishi-akabishi",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "RAM/RBM-SE13VGY1",
-    price: 35647,
-    mrp: 45700,
-    coolingCapacity: "3400",
-    indoorUnitDimensions: 'W-31.5" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ram-se13vg",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image:
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-SE13VGY1/2.jpg",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-SE13VGY1/1.jpg",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-SE13VGY1/2.jpg",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC AKABISHI 1.0T NON INVERTER 3 STAR SPLIT AC R32 GAS",
-  },
-
-  // MITSUBISHI ELECTRIC AKABISHI 1.0T NON-INVERTER 2 STAR
-  {
-    id: "mitsubishi-electric-akabishi-split-1t-noninv-2star-ram-rbm-ae13vgx1",
-    type: "split",
-    brand: "mitsubishi-akabishi",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "RAM/RBM-AE13VGX1",
-    price: 32665,
-    mrp: 41500,
-    coolingCapacity: "3400",
-    indoorUnitDimensions: 'W-31.5" X H-11.6"',
-    gasType: "R32",
-    productUrl:
-      "https://mitsubishielectric.in/products/air-conditioning-systems/split-air-conditioners/non-inverter-series/ram-ae13vg",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image:
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-AE13VGX1/1.webp",
-    images: [
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-AE13VGX1/1.webp",
-      "/lovable-uploads/mitsubishi/mitsubishi_elec_AKABISHI/RAM-RBM-AE13VGX1/2.webp",
-    ],
-    description:
-      "MITSUBISHI ELECTRIC AKABISHI 1.0T NON INVERTER 2 STAR SPLIT AC R32 GAS",
-  },
-
   // MITSUBISHI ELECTRIC AKABISHI 1.0T INVERTER 3 STAR HOT & COLD
   {
     id: "mitsubishi-electric-akabishi-split-1t-inv-3star-hot-cold-raz-rbz-se13vgy1",
@@ -12685,58 +10405,6 @@ export const acProducts: ACProduct[] = [
     description:
       "MITSUBISHI ELECTRIC AKABISHI 1.0T INVERTER 3 STAR SPLIT AC HOT & COLD R32 GAS",
   },
-
-  // DAIKIN XV16 SPLIT AC PRODUCTS
-  {
-    id: "daikin-split-0-8t-noninv-2star-ftq28xv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: ".8T",
-    starRating: "2★",
-    modelNumber: "FTQ28XV16",
-    price: 27400,
-    mrp: 36000,
-    coolingCapacity: "",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://daikinindia.com/product-category/splitac/standard-series/FTQ28XV",
-    features: ["Non-Inverter", "2 Star", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTL30UV16V1/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTL30UV16V1/1.webp",
-      "/lovable-uploads/daikin/FTL30UV16V1/2 .png",
-      "/lovable-uploads/daikin/FTL30UV16V1/3.jpg",
-    ],
-    description:
-      "Daikin .8T Non-Inverter 2 Star Split AC R32 Gas - FTQ28XV16. MRP 36000, 27400/-",
-  },
-  {
-    id: "daikin-split-0-84t-noninv-2star-ftq30xv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: ".84T",
-    starRating: "2★",
-    modelNumber: "FTQ30XV16",
-    price: 27800,
-    mrp: 36600,
-    coolingCapacity: "2930",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://daikinindia.com/product-category/splitac/standard-series/FTQ30XV",
-    features: ["Non-Inverter", "2 Star", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTL30UV16V1/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTL30UV16V1/1.webp",
-      "/lovable-uploads/daikin/FTL30UV16V1/2 .png",
-      "/lovable-uploads/daikin/FTL30UV16V1/3.jpg",
-    ],
-    description:
-      "Daikin .84T Non-Inverter 2 Star Split AC R32 Gas - FTQ30XV16. MRP 36600, 27800/-",
-  },
   {
     id: "daikin-split-1-0t-inv-5star-ftku35xv16vaa",
     type: "split",
@@ -12752,7 +10420,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/standard-series/FTKU35XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKU35UV16W/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKU35UV16W/1.jpg",
@@ -12776,7 +10444,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FKTM35XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM35UV16W/1.png",
     images: [
       "/lovable-uploads/daikin/FTKM35UV16W/1.png",
@@ -12800,7 +10468,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi"],
+    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM35UV16W/1.png",
     images: [
       "/lovable-uploads/daikin/FTKM35UV16W/1.png",
@@ -12825,7 +10493,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
     specialFeatures: ["Streamer Discharge"],
-    features: ["Inverter", "5 Star", "R32 Gas", "Streamer Discharge"],
+    features: ["Inverter", "5 Star", "R32 Gas", "Streamer Discharge", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
@@ -12850,7 +10518,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKU50UV16/1.png",
     images: [
       "/lovable-uploads/daikin/FTKU50UV16/1.png",
@@ -12876,7 +10544,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKU50UV16/1.png",
     images: [
       "/lovable-uploads/daikin/FTKU50UV16/1.png",
@@ -12886,56 +10554,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "Daikin 1.2T Inverter 5 Star Split AC R32 Gas - FTKU42XV16. MRP 59000, 42100/-",
-  },
-  {
-    id: "daikin-split-1-0t-noninv-2star-ftq35xv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "2★",
-    modelNumber: "FTQ35XV16",
-    price: 32500,
-    mrp: 45400,
-    coolingCapacity: "3350",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://daikinindia.com/product-category/splitac/standard-series/FTQ35XV",
-    features: ["Non-Inverter", "2 Star", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/1.webp",
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/2.webp",
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/3.webp",
-    ],
-    description:
-      "Daikin 1.0T Non-Inverter 2 Star Split AC R32 Gas - FTQ35XV16. MRP 45400, 32500/-",
-  },
-  {
-    id: "daikin-split-1-0t-inv-3star-ftkc35xv16",
-    type: "split",
-    brand: "daikin",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "FTKC35XV16",
-    price: 34000,
-    mrp: 47800,
-    coolingCapacity: "3520",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://daikinindia.com/product-category/splitac/standard-series/FTKC35XV",
-    features: ["Inverter", "3 Star", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTKC35UV16W/1.jpg",
-    images: [
-      "/lovable-uploads/daikin/FTKC35UV16W/1.jpg",
-      "/lovable-uploads/daikin/FTKC35UV16W/2.jpg",
-      "/lovable-uploads/daikin/FTKC35UV16W/3.jpg",
-    ],
-    description:
-      "Daikin 1.0T Inverter 3 Star Split AC R32 Gas - FTKC35XV16. MRP 47800, 34000/-",
   },
   {
     id: "daikin-split-1-0t-inv-3star-ftkl35xv16",
@@ -12952,7 +10570,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FTKL35XV",
-    features: ["Inverter", "3 Star", "R32 Gas"],
+    features: ["Inverter", "3 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
@@ -12977,7 +10595,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "3 Star", "R32 Gas"],
+    features: ["Inverter", "3 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
@@ -13003,7 +10621,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
     specialFeatures: ["Hot & Cold"],
-    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold"],
+    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
@@ -13028,7 +10646,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/standard-series/FTKU50XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKU50UV16/1.png",
     images: [
       "/lovable-uploads/daikin/FTKU50UV16/1.png",
@@ -13054,7 +10672,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FKTM50XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13079,7 +10697,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi"],
+    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13104,7 +10722,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FKTM53XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13129,7 +10747,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FKTM60XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13154,7 +10772,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/wifi-series/FTKR60XV",
-    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi"],
+    features: ["Inverter", "5 Star", "R32 Gas", "Wi-Fi", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13180,7 +10798,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://daikinindia.com/product-category/splitac/waizu-Series/JTKJ60XV",
     specialFeatures: ["Streamer Discharge"],
-    features: ["Inverter", "5 Star", "R32 Gas", "Streamer Discharge"],
+    features: ["Inverter", "5 Star", "R32 Gas", "Streamer Discharge", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
@@ -13205,7 +10823,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/highest-iseer-series/FTKF60XV",
-    features: ["Inverter", "5 Star", "R32 Gas"],
+    features: ["Inverter", "5 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM60UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKM60UV16/1.webp",
@@ -13230,7 +10848,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
-    features: ["Inverter", "3 Star", "R32 Gas"],
+    features: ["Inverter", "3 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL71UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL71UV16/1.webp",
@@ -13258,7 +10876,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
     specialFeatures: ["Hot & Cold"],
-    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold"],
+    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
@@ -13284,7 +10902,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:d953f90f-65fd-4e28-9ac3-9bd15e5a24e7",
     specialFeatures: ["Hot & Cold"],
-    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold"],
+    features: ["Inverter", "3 Star", "R32 Gas", "Hot & Cold", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL71UV16/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL71UV16/1.webp",
@@ -13311,7 +10929,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://daikinindia.com/product-category/splitac/premium-series/FTKL90XV",
-    features: ["Inverter", "3 Star", "R32 Gas"],
+    features: ["Inverter", "3 Star", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL90UV16/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKL90UV16/1.jpg",
@@ -13340,7 +10958,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftku/3.52/ftku35",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
     image: "/lovable-uploads/daikin/FTKU35UV16W/1.jpg",
     images: [
       "/lovable-uploads/daikin/FTKU35UV16W/2.jpg",
@@ -13365,7 +10983,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkm/3.5/ftkm",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKM35UV16W/1.png",
     images: [
       "/lovable-uploads/daikin/FTKM35UV16W/2.jpg",
@@ -13391,7 +11009,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/jtkj/3.5/jtkj35u",
     specialFeatures: ["Streamer Discharge"],
-    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
@@ -13417,7 +11035,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/jtkj/5.0/jtkj-1",
     specialFeatures: ["Streamer Discharge"],
-    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Streamer Discharge Technology", "Intelligent Eye", "Dew Clean Technology", "Triple Display"],
     image: "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/JTKJ35UV16W/1.webp",
@@ -13426,84 +11044,6 @@ export const acProducts: ACProduct[] = [
     ],
     description:
       "DAIKIN 1.5T INVERTER 5 STAR SPLIT AC R32 GAS STREAMER DISCHARGE",
-  },
-  {
-    id: "daikin-split-1-4t-inv-3star-ftkc48uv16w",
-    type: "split",
-    brand: "daikin",
-    inverter: "inverter",
-    tonnage: "1.4T",
-    starRating: "3★",
-    modelNumber: "FTKC48UV16W ",
-    price: 36700,
-    mrp: 58400,
-    coolingCapacity: "4800",
-    indoorUnitDimensions: ' W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftkc/4.8/ftkc48",
-    specialFeatures: ["Streamer Discharge"],
-    features: ["Digital Inverter Technology", "Streamer Discharge", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTKC48UV16W/3.jpg",
-    images: [
-      "/lovable-uploads/daikin/FTKC48UV16W/1.jpg",
-      "/lovable-uploads/daikin/FTKC48UV16W/2.png",
-      "/lovable-uploads/daikin/FTKC48UV16W/3.jpg",
-    ],
-    description:
-      "DAIKIN 1.4T INVERTER 3 STAR SPLIT AC R32 GAS STREAMER DISCHARGE",
-  },
-
-  // DAIKIN 1.0T INVERTER 3 STAR - GTKC35UV16W
-  {
-    id: "daikin-split-1t-inv-3star-gtkc35uv16w",
-    type: "split",
-    brand: "daikin",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "GTKC35UV16W",
-    price: 34300,
-    mrp: 48200,
-    coolingCapacity: "3520",
-    indoorUnitDimensions: 'W-32.3" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/gtkc/3.52/gtkc35",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/daikin/GTKC35UV16W/1.webp",
-    images: [
-      "/lovable-uploads/daikin/GTKC35UV16W/1.webp",
-      "/lovable-uploads/daikin/GTKC35UV16W/2.jpg",
-      "/lovable-uploads/daikin/GTKC35UV16W/3.jpg",
-    ],
-    description: "DAIKIN 1.0T INVERTER 3 STAR SPLIT AC R32 GAS",
-  },
-
-  // DAIKIN 1.0T INVERTER 3 STAR - FTKC35UV16W
-  {
-    id: "daikin-split-1t-inv-3star-ftkc35uv16w",
-    type: "split",
-    brand: "daikin",
-    inverter: "inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "FTKC35UV16W",
-    price: 34300,
-    mrp: 48200,
-    coolingCapacity: "3520",
-    indoorUnitDimensions: 'W-32.3" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftkc/3.52/ftkc35",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTKC35UV16W/1.jpg",
-    images: [
-      "/lovable-uploads/daikin/FTKC35UV16W/1.jpg",
-      "/lovable-uploads/daikin/FTKC35UV16W/2.jpg",
-      "/lovable-uploads/daikin/FTKC35UV16W/3.jpg",
-    ],
-    description: "DAIKIN 1.0T INVERTER 3 STAR SPLIT AC R32 GAS",
   },
 
   // DAIKIN 1.0T INVERTER 3 STAR - FTKL35UV16W-RLG35UV16W
@@ -13522,7 +11062,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/ftkl/3.5/ftkl",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTKL35UV16W-RLG35UV16W/1.webp",
@@ -13548,7 +11088,7 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     productUrl:
       "https://www.daikinindia.com/products-services/split-ac-residential/atkl/3.5/atkl",
-    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Energy efficient", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
     images: [
       "/lovable-uploads/daikin/ATKL35UV16W/1.jpg",
@@ -13556,58 +11096,6 @@ export const acProducts: ACProduct[] = [
       "/lovable-uploads/daikin/ATKL35UV16W/3.webp",
     ],
     description: "DAIKIN 1.0T INVERTER 3 STAR SPLIT AC R32 GAS",
-  },
-
-  // DAIKIN 1.0T NON-INVERTER 3 STAR - GTL35UV16W1-RLG35UV16W1
-  {
-    id: "daikin-split-1t-noninv-3star-gtl35uv16w1-rlg35uv16w1",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "GTL35UV16W1-RLG35UV16W1",
-    price: 33200,
-    mrp: 46000,
-    coolingCapacity: "3350",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/gtl/3.3/gtl35u",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/daikin/GTL35UV16W1-RLG35UV16W1/2.webp",
-    images: [
-      "/lovable-uploads/daikin/GTL35UV16W1-RLG35UV16W1/1.jpg",
-      "/lovable-uploads/daikin/GTL35UV16W1-RLG35UV16W1/2.webp",
-      "/lovable-uploads/daikin/GTL35UV16W1-RLG35UV16W1/3.webp",
-    ],
-    description: "DAIKIN 1.0T NON INVERTER 3 STAR SPLIT AC R32 GAS",
-  },
-
-  // DAIKIN 1.0T NON-INVERTER 3 STAR - FTL35UV16W1-RL35UV16W1
-  {
-    id: "daikin-split-1t-noninv-3star-ftl35uv16w1-rl35uv16w1",
-    type: "split",
-    brand: "daikin",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "FTL35UV16W1-RL35UV16W1",
-    price: 33000,
-    mrp: 46000,
-    coolingCapacity: "3350",
-    indoorUnitDimensions: 'W-31.5" X H-11.7"',
-    gasType: "R32",
-    productUrl:
-      "https://www.daikinindia.com/products-services/split-ac-residential/ftl/3.35/ftl",
-    features: ["Non-Inverter", "Energy efficient", "R32 Gas"],
-    image: "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/1.webp",
-    images: [
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/1.webp",
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/2.webp",
-      "/lovable-uploads/daikin/FTL35UV16W1-RL35UV16W1/3.webp",
-    ],
-    description: "DAIKIN 1.0T NON INVERTER 3 STAR SPLIT AC R32 GAS",
   },
 
   // DAIKIN 1.0T INVERTER 3 STAR HOT & COLD
@@ -13627,7 +11115,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftht/3.5/ftht35u",
     specialFeatures: ["Hot & Cold"],
-    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
@@ -13654,16 +11142,9 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["4-Way Cassette", "Inverter", "Energy efficient"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_7_1784201844348.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_7_1784201844348.png'],
     description: "DAIKIN 1.5T INV 3★ FCVFQ50AV16 4-Way Cassette AC",
   },
   {
@@ -13682,7 +11163,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/split-hi-wall-air-conditioner/ftht/3.5/ftht35u",
     specialFeatures: ["Hot & Cold"],
-    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas"],
+    features: ["Digital Inverter Technology", "Hot & Cold", "R32 Gas", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside", "Dew Clean Technology", "Coanda Airflow", "Triple Display"],
     image: "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
     images: [
       "/lovable-uploads/daikin/FTHT35UV16W/1.webp",
@@ -13707,16 +11188,9 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["4-Way Cassette", "Inverter", "Energy efficient"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_8_1784201854498.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_8_1784201854498.png'],
     description: "DAIKIN 2.0T INV 5★ FCMF71 4-Way Cassette AC",
   },
   // {
@@ -13748,16 +11222,9 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
-    features: ["4-Way Cassette", "Inverter", "Energy efficient"],
-    image: "/lovable-uploads/daikin/FCMF50/1.png",
-    images: [
-      "/lovable-uploads/daikin/FCMF50/1.png",
-      "/lovable-uploads/daikin/FCMF50/2.png",
-      "/lovable-uploads/daikin/FCMF50/3.png",
-      "/lovable-uploads/daikin/FCMF50/4.png",
-      "/lovable-uploads/daikin/FCMF50/5.png",
-      "/lovable-uploads/daikin/FCMF50/6.png",
-    ],
+    features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
+    image: '/lovable-uploads/daikin/generated/daikin_cassette_9_1784201866857.png',
+    images: ['/lovable-uploads/daikin/generated/daikin_cassette_9_1784201866857.png'],
     description: "DAIKIN 2.0T INV 3★ FCVFQ71 4-Way Cassette AC",
   },
   // === BULK PRODUCT ADD: see documentation for standard entry format. Images, links, all required fields ===
@@ -13954,6 +11421,573 @@ export const acProducts: ACProduct[] = [
   //   description: "DAIKIN 1.0T INVERTER 3 STAR SPLIT AC HOT & COLD R32 GAS FTHT35UV16W, MRP 50700, 37200/-",
   // },
   // ... (additional entries can continue here)
+
+  // MITSUBISHI HEAVY 1.0T INVERTER 3★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-0t-inv-3star-srk13yamda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.0T",
+    starRating: "3★",
+    modelNumber: "SRK13YAMDA-W",
+    price: 43400,
+    mrp: 47000,
+    coolingCapacity: "3450 WT",
+    indoorUnitDimensions: 'W-32" X  H-12"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK13YAMDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK13YAMDA-W"],
+    description: "MITSUBISHI HEAVY 1.0T INVERTER 3★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.1T NON INVERTER 2★ SPLIT AC R410A GAS
+  {
+    id: "mitsubishi-heavy-split-1-1t-non-2star-srk13crs-s6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.1T",
+    starRating: "2★",
+    modelNumber: "SRK13CRS-S6",
+    price: 47300,
+    mrp: 51500,
+    coolingCapacity: "3600 WT",
+    indoorUnitDimensions: 'W-31.1" X  H-10.6"',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R410A Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK13CRS-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK13CRS-S6"],
+    description: "MITSUBISHI HEAVY 1.1T NON INVERTER 2★ SPLIT AC R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.2T NON INVERTER 2★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-2t-non-2star-srk15capda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.2T",
+    starRating: "2★",
+    modelNumber: "SRK15CAPDA-W",
+    price: 46900,
+    mrp: 51000,
+    coolingCapacity: "4050 WT",
+    indoorUnitDimensions: 'W-40" X  H-12"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK15CAPDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK15CAPDA-W"],
+    description: "MITSUBISHI HEAVY 1.2T NON INVERTER 2★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.3T NON INVERTER 2★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-3t-non-2star-srk15cxs-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.3T",
+    starRating: "2★",
+    modelNumber: "SRK15CXS-W6",
+    price: 49200,
+    mrp: 53600,
+    coolingCapacity: "4200 WT",
+    indoorUnitDimensions: 'W-34.2" X  H-11.4"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK15CXS-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK15CXS-W6"],
+    description: "MITSUBISHI HEAVY 1.3T NON INVERTER 2★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.65T INVERTER 5 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-65t-inv-5star-srk18yxs2-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.65T",
+    starRating: "5★",
+    modelNumber: "SRK18YXS2-W6",
+    price: 67200,
+    mrp: 74000,
+    coolingCapacity: "5665 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R32",
+    productUrl: "https://iaplgroup.com/wp-content/uploads/2021/04/HYPER-INVERTER-FOLDER-2021-1.pdf",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YXS2-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YXS2-W6"],
+    description: "MITSUBISHI HEAVY 1.65T INVERTER 5 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.6T INVERTER 5 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-6t-inv-5star-srk18yys-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.6T",
+    starRating: "5★",
+    modelNumber: "SRK18YYS-W6",
+    price: 67200,
+    mrp: 74000,
+    coolingCapacity: "5628 WT",
+    indoorUnitDimensions: 'W-34.3" X H-11.4"',
+    gasType: "R32",
+    productUrl: "https://iaplgroup.com/wp-content/uploads/2023/06/Hyper-Inverter-New-Range-2023.pdf",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas","Wi-Fi Enabled"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YYS-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YYS-W6"],
+    description: "MITSUBISHI HEAVY 1.6T INVERTER 5 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.6T INVERTER 4 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-6t-inv-4star-srk18yym-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.6T",
+    starRating: "4★",
+    modelNumber: "SRK18YYM-W6",
+    price: 64300,
+    mrp: 70800,
+    coolingCapacity: "",
+    indoorUnitDimensions: 'W-40" X H-12"',
+    gasType: "R32",
+    productUrl: "https://iaplgroup.com/wp-content/uploads/2023/06/Hyper-Inverter-New-Range-2023.pdf",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YYM-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YYM-W6"],
+    description: "MITSUBISHI HEAVY 1.6T INVERTER 4 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.5T INVERTER 3★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-5t-inv-3star-srk18yamda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.5T",
+    starRating: "3★",
+    modelNumber: "SRK18YAMDA-W",
+    price: 54400,
+    mrp: 59500,
+    coolingCapacity: "5150 WT",
+    indoorUnitDimensions: 'W-40" X  H-12"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YAMDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YAMDA-W"],
+    description: "MITSUBISHI HEAVY 1.5T INVERTER 3★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.5T INVERTER 3 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-5t-inv-3star-srk18yxp-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.5T",
+    starRating: "3★",
+    modelNumber: "SRK18YXP-W6",
+    price: 57700,
+    mrp: 63300,
+    coolingCapacity: "",
+    indoorUnitDimensions: 'W-32" X H-11"',
+    gasType: "R32",
+    productUrl: "https://www.mhi.com/group/maco/products/for-residential/inverter-single-split/yxp_series",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YXP-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18YXP-W6"],
+    description: "MITSUBISHI HEAVY 1.5T INVERTER 3 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.5T NON INVERTER 2★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-5t-non-2star-srk18capda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.5T",
+    starRating: "2★",
+    modelNumber: "SRK18CAPDA-W",
+    price: 53500,
+    mrp: 58500,
+    coolingCapacity: "5100 WT",
+    indoorUnitDimensions: 'W-44" X  H-13"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18CAPDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK18CAPDA-W"],
+    description: "MITSUBISHI HEAVY 1.5T NON INVERTER 2★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.6T NON INVERTER 2★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-6t-non-2star-srk20capda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.6T",
+    starRating: "2★",
+    modelNumber: "SRK20CAPDA-W",
+    price: 54800,
+    mrp: 60000,
+    coolingCapacity: "5400 WT",
+    indoorUnitDimensions: 'W-44" X  H-13"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CAPDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CAPDA-W"],
+    description: "MITSUBISHI HEAVY 1.6T NON INVERTER 2★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.6T NON INVERTER 3★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-6t-non-3star-srk20cxs-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.6T",
+    starRating: "3★",
+    modelNumber: "SRK20CXS-W6",
+    price: 59200,
+    mrp: 65000,
+    coolingCapacity: "5665 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CXS-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CXS-W6"],
+    description: "MITSUBISHI HEAVY 1.6T NON INVERTER 3★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.6T NON INVERTER 3★ SPLIT AC R410A GAS
+  {
+    id: "mitsubishi-heavy-split-1-6t-non-3star-srk20css-s6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.6T",
+    starRating: "3★",
+    modelNumber: "SRK20CSS-S6",
+    price: 61000,
+    mrp: 67000,
+    coolingCapacity: "5925 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R410A Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CSS-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20CSS-S6"],
+    description: "MITSUBISHI HEAVY 1.6T NON INVERTER 3★ SPLIT AC R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.5T INVERTER 4 STAR SPLIT AC HOT & COLD R410A GAS
+  {
+    id: "mitsubishi-heavy-hot-cold-1-5t-inv-4star-srk50zs-s6",
+    type: "hot-cold",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.5T",
+    starRating: "4★",
+    modelNumber: "SRK50ZS-S6",
+    price: 85600,
+    mrp: 95000,
+    coolingCapacity: "5050 WT",
+    indoorUnitDimensions: '',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Digital Inverter Technology","Energy efficient","R410A Gas","Hot & Cold"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK50ZS-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK50ZS-S6"],
+    description: "MITSUBISHI HEAVY 1.5T INVERTER 4 STAR SPLIT AC HOT & COLD R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.8T INVERTER 5 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-8t-inv-5star-srk20yym-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.8T",
+    starRating: "5★",
+    modelNumber: "SRK20YYM-W6",
+    price: 73100,
+    mrp: 80800,
+    coolingCapacity: "6480 WT",
+    indoorUnitDimensions: 'W-39.3" X  H-11.6"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1fedb7b7-68cb-4b58-8b99-28942173fcb8",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20YYM-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK20YYM-W6"],
+    description: "MITSUBISHI HEAVY 1.8T INVERTER 5 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.2T INVERTER 5 STAR SPLIT AC  R32 GAS
+  {
+    id: "mitsubishi-heavy-split-2-2t-inv-5star-srk24yvs-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "2.2T",
+    starRating: "5★",
+    modelNumber: "SRK24YVS-W6",
+    price: 98000,
+    mrp: 109000,
+    coolingCapacity: "7700 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:2ed6857f-6c70-4478-b536-9dd02c3e6587",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YVS-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YVS-W6"],
+    description: "MITSUBISHI HEAVY 2.2T INVERTER 5 STAR SPLIT AC  R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.2T INVERTER 5 STAR SPLIT AC  R32 GAS
+  {
+    id: "mitsubishi-heavy-split-2-2t-inv-5star-srk24yys-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "2.2T",
+    starRating: "5★",
+    modelNumber: "SRK24YYS-W6",
+    price: 111100,
+    mrp: 124000,
+    coolingCapacity: "7600 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:1ea47c0a-b64f-42ae-98e0-b9dd468cfa6a",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas","Wi-Fi Enabled"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YYS-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YYS-W6"],
+    description: "MITSUBISHI HEAVY 2.2T INVERTER 5 STAR SPLIT AC  R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.1T INVERTER 4 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-2-1t-inv-4star-srk24yym-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "2.1T",
+    starRating: "4★",
+    modelNumber: "SRK24YYM-W6",
+    price: 89900,
+    mrp: 99900,
+    coolingCapacity: "7455 WT",
+    indoorUnitDimensions: 'W-39.3" X  H-11.6"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:4a316a46-4d88-4267-b55e-a9fd348abede",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YYM-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24YYM-W6"],
+    description: "MITSUBISHI HEAVY 2.1T INVERTER 4 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.75T INVERTER 3★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-1-75t-inv-3star-srk21yamda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "1.75T",
+    starRating: "3★",
+    modelNumber: "SRK21YAMDA-W",
+    price: 57000,
+    mrp: 62500,
+    coolingCapacity: "6100 WT",
+    indoorUnitDimensions: 'W-40" X  H-12"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK21YAMDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK21YAMDA-W"],
+    description: "MITSUBISHI HEAVY 1.75T INVERTER 3★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.25T INVERTER 3★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-2-25t-inv-3star-srk27yamda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "2.25T",
+    starRating: "3★",
+    modelNumber: "SRK27YAMDA-W",
+    price: 75100,
+    mrp: 83000,
+    coolingCapacity: "00 WT",
+    indoorUnitDimensions: 'W-44" X  H-13"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK27YAMDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK27YAMDA-W"],
+    description: "MITSUBISHI HEAVY 2.25T INVERTER 3★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.95T NON INVERTER 3★ SPLIT AC R410A GAS
+  {
+    id: "mitsubishi-heavy-split-1-95t-non-3star-srk25cwx-s6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.95T",
+    starRating: "3★",
+    modelNumber: "SRK25CWX-S6",
+    price: 74100,
+    mrp: 81900,
+    coolingCapacity: "6875 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R410A Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CWX-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CWX-S6"],
+    description: "MITSUBISHI HEAVY 1.95T NON INVERTER 3★ SPLIT AC R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 1.95T NON INVERTER 2★ SPLIT AC R410A GAS
+  {
+    id: "mitsubishi-heavy-split-1-95t-non-2star-srk24cw-s6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "1.95T",
+    starRating: "2★",
+    modelNumber: "SRK24CW-S6",
+    price: 68500,
+    mrp: 75500,
+    coolingCapacity: "6860 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R410A Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24CW-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK24CW-S6"],
+    description: "MITSUBISHI HEAVY 1.95T NON INVERTER 2★ SPLIT AC R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.15T NON INVERTER 2★ SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-2-15t-non-2star-srk25capda-w",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "2.15T",
+    starRating: "2★",
+    modelNumber: "SRK25CAPDA-W",
+    price: 70200,
+    mrp: 77500,
+    coolingCapacity: "7200 WT",
+    indoorUnitDimensions: 'W-44" X  H-13"',
+    gasType: "R32",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:ed613b0d-6ad2-4b5c-8a4b-d990f10c77d4",
+    features: ["Non-Inverter","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CAPDA-W",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CAPDA-W"],
+    description: "MITSUBISHI HEAVY 2.15T NON INVERTER 2★ SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.2T NON INVERTER 2★ SPLIT AC R410A GAS
+  {
+    id: "mitsubishi-heavy-split-2-2t-non-2star-srk25css-s6-a",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "non-inverter",
+    tonnage: "2.2T",
+    starRating: "2★",
+    modelNumber: "SRK25CSS-S6/A",
+    price: 77300,
+    mrp: 85500,
+    coolingCapacity: "7625 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R410A",
+    productUrl: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:aafd59fe-46c1-46e8-888b-627e8bf0781f",
+    features: ["Non-Inverter","Energy efficient","R410A Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CSS-S6%2FA",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK25CSS-S6%2FA"],
+    description: "MITSUBISHI HEAVY 2.2T NON INVERTER 2★ SPLIT AC R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 2.1T INVERTER 4 STAR SPLIT AC HOT & COLD R410A GAS
+  {
+    id: "mitsubishi-heavy-hot-cold-2-1t-inv-4star-srk71zr-s6",
+    type: "hot-cold",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "2.1T",
+    starRating: "4★",
+    modelNumber: "SRK71ZR-S6",
+    price: 104000,
+    mrp: 115900,
+    coolingCapacity: "7625 WT",
+    indoorUnitDimensions: 'W-47.1" X H-13.3"',
+    gasType: "R410A",
+    productUrl: "https://iaplgroup.com/wp-content/uploads/2021/04/HYPER-INVERTER-FOLDER-2021-1.pdf",
+    features: ["Digital Inverter Technology","Energy efficient","R410A Gas","Hot & Cold"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK71ZR-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK71ZR-S6"],
+    description: "MITSUBISHI HEAVY 2.1T INVERTER 4 STAR SPLIT AC HOT & COLD R410A GAS",
+  },
+
+  // MITSUBISHI HEAVY 3.0T INVERTER 4 STAR SPLIT AC R32 GAS
+  {
+    id: "mitsubishi-heavy-split-3-0t-inv-4star-srk100ya-w6",
+    type: "split",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "3.0T",
+    starRating: "4★",
+    modelNumber: "SRK100YA-W6",
+    price: 129100,
+    mrp: 144400,
+    coolingCapacity: "",
+    indoorUnitDimensions: '',
+    gasType: "R32",
+    productUrl: "https://iaplgroup.com/wp-content/uploads/2024/04/Hyper-Inverter-folder-Catalog-18-04-2024.pdf",
+    features: ["Digital Inverter Technology","Energy efficient","R32 Gas"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK100YA-W6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK100YA-W6"],
+    description: "MITSUBISHI HEAVY 3.0T INVERTER 4 STAR SPLIT AC R32 GAS",
+  },
+
+  // MITSUBISHI HEAVY 3.1T INVERTER SPLIT AC HOT & COLD R410A GAS
+  {
+    id: "mitsubishi-heavy-hot-cold-3-1t-inv-0star-srk100zr-s6",
+    type: "hot-cold",
+    brand: "mitsubishi-heavy",
+    inverter: "inverter",
+    tonnage: "3.1T",
+    starRating: "0★",
+    modelNumber: "SRK100ZR-S6",
+    price: 131400,
+    mrp: 147000,
+    coolingCapacity: "",
+    indoorUnitDimensions: '',
+    gasType: "R410A",
+    productUrl: "",
+    features: ["Digital Inverter Technology","Energy efficient","R410A Gas","Hot & Cold"],
+    image: "https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK100ZR-S6",
+    images: ["https://via.placeholder.com/600x600/ffffff/000000?text=MHI%0ASRK100ZR-S6"],
+    description: "MITSUBISHI HEAVY 3.1T INVERTER SPLIT AC HOT & COLD R410A GAS",
+  },
 ];
 
 // Helper functions for filtering products

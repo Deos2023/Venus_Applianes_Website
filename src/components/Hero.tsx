@@ -69,8 +69,9 @@ const Hero = () => {
               src={slide.image}
               alt={slide.title}
               className="w-full object-cover"
-              loading="eager"
-              fetchpriority="high"
+              loading={currentSlide === 0 ? "eager" : "lazy"}
+              fetchpriority={currentSlide === 0 ? "high" : "auto"}
+              decoding={currentSlide === 0 ? "sync" : "async"}
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
@@ -173,9 +174,9 @@ const Hero = () => {
               src={slide.image}
               alt={slide.title}
               className="w-full h-full object-cover object-center"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchpriority={index === 0 ? "high" : "auto"}
+              decoding={index === 0 ? "sync" : "async"}
               width="1200"
               height="800"
               onError={(e) => {
