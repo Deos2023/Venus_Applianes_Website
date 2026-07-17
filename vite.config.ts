@@ -16,17 +16,11 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) return 'react';
-            if (id.includes('react-router-dom')) return 'router';
-            if (id.includes('framer-motion')) return 'motion';
-            if (id.includes('lucide-react')) return 'lucide';
-            if (id.includes('@radix-ui')) return 'radix';
-            return 'vendor';
-          }
+          // Keep our large data files in a separate chunk to improve loading
           if (id.includes('src/lib/ac-selection-data') || id.includes('src/lib/ac-data')) {
             return 'ac-data';
           }
+          // Let Vite handle the rest automatically, avoiding circular dependencies
         },
       },
     },
