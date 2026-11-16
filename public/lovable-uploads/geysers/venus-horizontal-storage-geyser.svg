@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 280" width="760" height="560">
+  <defs>
+    <linearGradient id="horizBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#F8FAFC"/>
+      <stop offset="70%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <filter id="shadowHoriz" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Mounting Wall Clamps -->
+  <rect x="70" y="30" width="20" height="20" rx="3" fill="#64748B"/>
+  <rect x="290" y="30" width="20" height="20" rx="3" fill="#64748B"/>
+
+  <!-- Horizontal Cylindrical Main Tank -->
+  <rect x="40" y="45" width="300" height="150" rx="60" fill="url(#horizBody)" stroke="#CBD5E1" stroke-width="2" filter="url(#shadowHoriz)"/>
+
+  <!-- Left Cap Accent -->
+  <path d="M100 46 C65 46 42 70 42 120 C42 170 65 194 100 194 Z" fill="url(#accentBlue)" fill-opacity="0.08"/>
+
+  <!-- Brand Center Plate -->
+  <rect x="125" y="80" width="130" height="80" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="190" y="105" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#0F172A" text-anchor="middle" letter-spacing="3">VENUS</text>
+  <text x="190" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#0284C7" text-anchor="middle" letter-spacing="1.5">SLIM HORIZONTAL</text>
+
+  <!-- Thermostat Dial -->
+  <circle cx="155" cy="142" r="12" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+  <circle cx="155" cy="142" r="8" fill="url(#accentBlue)"/>
+
+  <!-- LEDs -->
+  <circle cx="190" cy="142" r="4" fill="#10B981"/>
+  <circle cx="210" cy="142" r="4" fill="#EF4444"/>
+
+  <!-- BEE Star Rating Badge -->
+  <rect x="270" y="88" width="55" height="42" rx="5" fill="#065F46" stroke="#047857" stroke-width="1"/>
+  <text x="297" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#FEF08A" text-anchor="middle">★ ★ ★ ★</text>
+  <text x="297" y="117" font-family="system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">4-STAR</text>
+
+  <!-- Side / Bottom Connectors -->
+  <rect x="150" y="195" width="16" height="30" rx="3" fill="#94A3B8"/>
+  <rect x="148" y="225" width="20" height="6" rx="2" fill="#3B82F6"/>
+  <text x="158" y="214" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle">IN</text>
+
+  <rect x="214" y="195" width="16" height="30" rx="3" fill="#94A3B8"/>
+  <rect x="212" y="225" width="20" height="6" rx="2" fill="#EF4444"/>
+  <text x="222" y="214" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle">OUT</text>
+</svg>

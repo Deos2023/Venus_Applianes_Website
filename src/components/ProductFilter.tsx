@@ -13,8 +13,8 @@ const filters = [
 const products = [
   {
     id: "hitachi-split-1-5t-inv-5star-e518pcbib",
-    name: "Samsung 1.5 Ton 5 Star Inverter Split AC",
-    image: "/lovable-uploads/lg/US-Q18KWXE/1.avif",
+    name: "Hitachi 1.5 Ton 5 Star Inverter Split AC",
+    image: "/lovable-uploads/hitachi/B318PCAIBA/1.jpg",
     originalPrice: 40500,
     discountedPrice: 40500,
     discountPercent: 38,

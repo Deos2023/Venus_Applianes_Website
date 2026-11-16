@@ -5,6 +5,7 @@ import WhatsAppInquiry from "@/components/WhatsAppInquiry";
 import { Star, ChevronRight, Check, Shield, Truck, Zap } from "lucide-react";
 import { ACProduct, brands, acTypes, acProducts } from "@/lib/ac-selection-data";
 import { formatCoolingCapacity } from "@/lib/utils";
+import SEO from "@/components/SEO";
 
 function getStarNumber(starRating: string) {
   // Extracts number from values like "5★", "3★"
@@ -22,7 +23,7 @@ const ProductDetailsPage = () => {
 
   // Robust image path handling
   function fixImagePath(img?: string) {
-    if (!img) return "https://via.placeholder.com/600x600?text=AC+Image";
+    if (!img) return "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
     return img.startsWith("public/")
       ? img.replace(/^public/, "")
       : img;
@@ -33,11 +34,11 @@ const ProductDetailsPage = () => {
     ? product.images.map(img => fixImagePath(img))
     : product?.image 
       ? [fixImagePath(product.image)] 
-      : ["https://via.placeholder.com/600x600?text=AC+Image"];
+      : ["/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png"];
       
   // Ensure we have at least one image
   if (productImages.length === 0) {
-    productImages.push("https://via.placeholder.com/600x600?text=AC+Image");
+    productImages.push("/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png");
   }
   const handleGoback = ()=>{ 
   if (window.history.length > 1) {
@@ -105,8 +106,12 @@ const ProductDetailsPage = () => {
                     src={productImages[mainImage]}
                     alt={product.modelNumber}
                     className="max-h-full max-w-full object-contain"
+                    width="400"
+                    height="384"
+                    loading="eager"
+
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "https://via.placeholder.com/600x600?text=AC+Image";
+                      (e.target as HTMLImageElement).src = "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
                     }}
                   />
                 </div>
@@ -123,8 +128,12 @@ const ProductDetailsPage = () => {
                         src={img}
                         alt={`Thumbnail ${idx + 1}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        width="64"
+                        height="64"
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src = "https://via.placeholder.com/100x100?text=Thumb";
+                          (e.target as HTMLImageElement).src = "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
                         }}
                       />
                     </button>

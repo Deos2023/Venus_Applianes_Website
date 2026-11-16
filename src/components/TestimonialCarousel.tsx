@@ -8,7 +8,7 @@ const testimonials = [
     id: 1,
     name: "Sarah Johnson",
     role: "Homeowner",
-    content: "We installed the Samsung WindFree AC in our living room and the difference is remarkable. The cooling is even throughout the room with no cold drafts. Our electricity bill has reduced significantly too.",
+    content: "We installed the O General Inverter AC in our living room and the difference is remarkable. The cooling is even throughout the room even in peak Kolkata humidity. Our electricity bill has reduced significantly too.",
     rating: 5,
     imageSrc: "/lovable-uploads/lg/US-Q18KWXE/5.webp"
   },

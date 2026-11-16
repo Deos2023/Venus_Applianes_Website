@@ -1,14 +1,20 @@
+# Robots.txt for Venus Appliances Kolkata
+# Website: https://www.venusappliances.com/
+# Store Location: 63, Ganesh Chandra Avenue, Chandni Chowk, Bowbazar, Kolkata, West Bengal 700013
+
+User-agent: *
+Allow: /
+Allow: /lovable-uploads/
+
 User-agent: Googlebot
 Allow: /
+
+User-agent: Googlebot-Image
+Allow: /lovable-uploads/
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
-Allow: /
+# Sitemap Index
+Sitemap: https://www.venusappliances.com/sitemap.xml
+Host: https://www.venusappliances.com

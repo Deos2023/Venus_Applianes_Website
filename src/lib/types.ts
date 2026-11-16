@@ -14,5 +14,4 @@ export type Brand =
   | 'hisense'
   | 'godrej'
   | 'lloyd'
-  | 'vestar'
-  | 'samsung';
+  | 'vestar';

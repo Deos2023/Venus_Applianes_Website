@@ -16,7 +16,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const acType = acTypes.find(t => t.id === product.type)?.name || product.type || "AC";
 
   // Defensive: fallback for image
-  const imageSrc = product.image || "https://via.placeholder.com/300x200?text=AC+Image";
+  const imageSrc = product.image || "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
 
   // Defensive: fallback for model number
   const modelNumber = product.modelNumber || "N/A";
@@ -44,9 +44,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
           src={imageSrc}
           alt={modelNumber}
           className="max-h-48 w-auto object-contain"
+          loading="lazy"
+          decoding="async"
+          width="240"
+          height="192"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            target.src = "https://via.placeholder.com/300x200?text=AC+Image";
+            target.src = "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
           }}
         />
       </div>

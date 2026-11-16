@@ -13,7 +13,7 @@ interface SelectionCardProps {
 
 const SelectionCard = ({ image, title, to, selected = false, className }: SelectionCardProps) => {
   return (
-    <Link to={to} className="block w-full">
+    <Link to={to} className="block w-full group">
       <Card 
         className={cn(
           "transition-all duration-300 overflow-hidden h-full",
@@ -24,14 +24,18 @@ const SelectionCard = ({ image, title, to, selected = false, className }: Select
       >
         <div className="flex flex-col items-center justify-center p-6 h-full">
           {image && (
-            <div className="mb-4 flex items-center justify-center h-32">
+            <div className="mb-4 flex items-center justify-center h-32 w-full">
               <img 
                 src={image} 
                 alt={title} 
-                className="max-h-32 w-auto object-contain"
+                className="h-32 max-h-32 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                width="160"
+                height="128"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = "https://via.placeholder.com/200x150?text=AC+Image";
+                  target.src = "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
                 }}
               />
             </div>

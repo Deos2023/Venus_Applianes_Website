@@ -1,24 +1,28 @@
-import Layout from '@/components/Layout';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, MapPin, Phone, Clock, MessageSquare } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
+import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, MapPin, Phone, Clock, MessageSquare, ExternalLink, Navigation, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const GOOGLE_MAPS_LINK =
+  "https://maps.google.com/maps?vet=10CAAQoqAOahcKEwio_4GY5-uXAxUAAAAAHQAAAAAQCA..i&rlz=1C1UEAD_enIN1068IN1068&udm&fvr=1&pvq=Cg0vZy8xMWRkeWs1azE2IhYKEHZlbnVzIGFwcGxpYW5jZXMQAhgD&lqi=ChB2ZW51cyBhcHBsaWFuY2VzSKaIy9izrICACFoiEAAQARgAGAEiEHZlbnVzIGFwcGxpYW5jZXMqBggCEAAQAZIBD2FwcGxpYW5jZV9zdG9yZQ&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3a0277aa23527e69:0x768adf630181c6e8";
 
 // Form validation schema
 const contactFormSchema = z.object({
-  firstName: z.string().min(2, { message: 'First name must be at least 2 characters' }),
-  lastName: z.string().min(2, { message: 'Last name must be at least 2 characters' }),
-  phone: z.string().min(10, { message: 'Please enter a valid phone number' }),
-  subject: z.string().min(5, { message: 'Subject must be at least 5 characters' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' })
+  firstName: z.string().min(2, { message: "First name must be at least 2 characters" }),
+  lastName: z.string().min(2, { message: "Last name must be at least 2 characters" }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
+  subject: z.string().min(3, { message: "Subject must be at least 3 characters" }),
+  message: z.string().min(5, { message: "Message must be at least 5 characters" }),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -26,72 +30,52 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema)
+    resolver: zodResolver(contactFormSchema),
   });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
-    try {
-      // Format the WhatsApp message
-      const message = `
-🏢 *Venus Appliances - New Contact Inquiry*
 
-👤 *Customer Information:*
+    try {
+      const message = `
+🏢 *Venus Appliances Kolkata - Contact Inquiry*
+
+👤 *Customer Details:*
 • Name: ${data.firstName} ${data.lastName}
 • Phone: ${data.phone}
 
-📋 *Inquiry Details:*
+📋 *Inquiry:*
 • Subject: ${data.subject}
 • Message: ${data.message}
 
-🕒 *Submitted On:* ${new Date().toLocaleString('en-IN', { 
-  timeZone: 'Asia/Kolkata',
-  dateStyle: 'full',
-  timeStyle: 'short'
-})}
-
-📍 *Location:* 63 Ganesh Chandra Avenue, Kolkata - 700013
-
-Please respond to this inquiry at your earliest convenience. Thank you! 🙏
+📍 *Store:* 63 Ganesh Chandra Avenue, Chandni Chowk, Kolkata 700013
       `.trim();
 
-      // Encode the message for WhatsApp URL
       const encodedMessage = encodeURIComponent(message);
-      
-      // WhatsApp business number
-      const phoneNumber = "9331962120";
-      
-      // Create WhatsApp URL
+      const phoneNumber = "919331962120";
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-      
-      // Simulate brief processing delay
-      await new Promise(resolve => setTimeout(resolve, 800));
-      
-      // Open WhatsApp in a new tab
+
+      await new Promise((resolve) => setTimeout(resolve, 600));
       window.open(whatsappUrl, "_blank");
-      
-      // Show success message
+
       toast({
-        title: "Message Prepared Successfully!",
-        description: "Redirecting to WhatsApp to send your inquiry.",
+        title: "Inquiry Prepared Successfully!",
+        description: "Redirecting to WhatsApp to chat with our Kolkata store specialist.",
         duration: 3000,
       });
-      
-      // Reset form
+
       reset();
-      
     } catch (error) {
       toast({
         title: "Failed to prepare message",
-        description: "Please try again later.",
+        description: "Please call us directly at 93319 62120.",
         variant: "destructive",
         duration: 3000,
       });
@@ -100,258 +84,302 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
     }
   };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Venus Appliances Kolkata",
+    description: "Contact information and showroom location for Venus Appliances in Chandni Chowk, Kolkata.",
+    url: "https://www.venusappliances.com/contact",
+    mainEntity: {
+      "@type": "LocalBusiness",
+      name: "Venus Appliances Kolkata",
+      telephone: "+919331962120",
+      email: "venusapplianceskol@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "63, Ganesh Chandra Avenue, Between Chandni Chawk Metro & Hind Cinema, Beside RBL Bank, Ground Floor",
+        addressLocality: "Kolkata",
+        addressRegion: "West Bengal",
+        postalCode: "700013",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 22.5664314,
+        longitude: 88.3579329,
+      },
+      hasMap: GOOGLE_MAPS_LINK,
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          opens: "10:30",
+          closes: "20:30",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Sunday"],
+          opens: "11:00",
+          closes: "18:00",
+        },
+      ],
+    },
+  };
+
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        {/* Hero Section */}
-        <motion.section 
-          className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative container mx-auto px-4 text-center">
-            <motion.h1 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Contact Venus Appliances
-            </motion.h1>
-            <motion.p 
-              className="text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto text-blue-100 px-4"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Get in touch with our experts for the best AC solutions for your home or office
-            </motion.p>
+      <SEO
+        title="Contact Venus Appliances Kolkata | Showroom in Chandni Chowk"
+        description="Visit Venus Appliances at 63 Ganesh Chandra Ave, Chandni Chowk, Bowbazar, Kolkata 700013. Authorized dealer for Daikin, Hitachi, O General, Voltas, Visi Coolers & Geysers. Call 93319 62120."
+        keywords="contact venus appliances, ac showroom chandni chowk kolkata, ac dealer near me kolkata, ganesh chandra avenue ac shop, buy ac bowbazar kolkata, deep freezer showroom kolkata, visi cooler dealer kolkata phone"
+        canonical="/contact"
+        schema={contactSchema}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        {/* Header Hero Banner */}
+        <section className="relative py-12 sm:py-16 bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-950 text-white">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-200 text-xs font-semibold border border-blue-400/30 mb-3">
+              <MapPin className="h-3.5 w-3.5" /> Chandni Chowk Electronics Hub, Kolkata
+            </span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight">
+              Contact Venus Appliances Kolkata
+            </h1>
+            <p className="text-sm sm:text-base lg:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
+              Visit our showroom for live demos or reach out to our AC and commercial appliance specialists for direct wholesale &amp; retail price quotes in Kolkata.
+            </p>
           </div>
-        </motion.section>
+        </section>
 
-        <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+        <div className="container mx-auto px-4 py-10 sm:py-16 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Contact Information */}
+            {/* Store Information */}
             <motion.div
-              initial={{ x: -50, opacity: 0 }}
+              initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
             >
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Get in Touch</h2>
-              
-              <div className="space-y-4 sm:space-y-6">
-                <Card className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 sm:p-6">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2">
+                  Get in Touch with Our Kolkata Team
+                </h2>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  We are here to assist you with AC sizing, brand comparisons, wholesale discounts, and installation bookings.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {/* Location Card */}
+                <Card className="border-l-4 border-l-blue-600 shadow-sm hover:shadow-md transition">
+                  <CardContent className="p-5 sm:p-6">
                     <div className="flex items-start gap-4">
-                      <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 shrink-0 mt-1" />
+                      <div className="p-3 rounded-xl bg-blue-50 text-blue-600 shrink-0">
+                        <MapPin className="h-6 w-6" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold text-base sm:text-lg mb-2">Our Location</h3>
-                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                          63 GANESH CHANDRA AVENUE KOLKATA 700013<br />
-                          BETWEEN CHANDNI METRO STATION AND HIND CINEMA BESIDE RBL BANK, GROUND FLOOR.
+                        <h3 className="font-bold text-gray-900 text-base sm:text-lg mb-1">
+                          Showroom Address
+                        </h3>
+                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
+                          <strong>Chandni, 63, Ganesh Chandra Ave</strong>, near RBL Bank, Between Chandni Chawk Metro Station &amp; Hind Cinema, Bowbazar, Kolkata, West Bengal 700013 (Ground Floor).
                         </p>
+                        <div className="flex flex-wrap gap-2 text-xs">
+                          <span className="bg-blue-100/70 text-blue-800 px-2.5 py-1 rounded-md font-medium">
+                            2 min walk from Chandni Chowk Metro
+                          </span>
+                          <span className="bg-emerald-100/70 text-emerald-800 px-2.5 py-1 rounded-md font-medium">
+                            Beside RBL Bank
+                          </span>
+                        </div>
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white text-xs">
+                            <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer">
+                              <Navigation className="h-3.5 w-3.5 mr-1.5" /> Get Directions
+                            </a>
+                          </Button>
+                          <Button asChild size="sm" variant="outline" className="border-gray-300 text-xs">
+                            <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="h-3.5 w-3.5 mr-1.5" /> Google Maps Profile
+                            </a>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-green-500 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 sm:p-6">
+                {/* Phone Card */}
+                <Card className="border-l-4 border-l-emerald-600 shadow-sm hover:shadow-md transition">
+                  <CardContent className="p-5 sm:p-6">
                     <div className="flex items-center gap-4">
-                      <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-green-500" />
+                      <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600 shrink-0">
+                        <Phone className="h-6 w-6" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold text-base sm:text-lg mb-2">Phone Number</h3>
-                        <p className="text-gray-600 text-sm sm:text-base">93319 62120</p>
+                        <h3 className="font-bold text-gray-900 text-base sm:text-lg mb-0.5">
+                          Phone Helpline
+                        </h3>
+                        <a href="tel:+919331962120" className="text-blue-600 font-extrabold text-base sm:text-lg hover:underline block">
+                          +91 93319 62120
+                        </a>
+                        <span className="text-xs text-gray-500">Call for instant price quote &amp; model availability</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 sm:p-6">
+                {/* Email Card */}
+                <Card className="border-l-4 border-l-orange-500 shadow-sm hover:shadow-md transition">
+                  <CardContent className="p-5 sm:p-6">
                     <div className="flex items-center gap-4">
-                      <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-orange-500" />
+                      <div className="p-3 rounded-xl bg-orange-50 text-orange-600 shrink-0">
+                        <Mail className="h-6 w-6" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold text-base sm:text-lg mb-2">Email</h3>
-                        <p className="text-gray-600 text-sm sm:text-base break-all">venusapplianceskol@gmail.com</p>
+                        <h3 className="font-bold text-gray-900 text-base sm:text-lg mb-0.5">
+                          Email Support
+                        </h3>
+                        <a href="mailto:venusapplianceskol@gmail.com" className="text-gray-700 hover:text-blue-600 text-sm sm:text-base break-all">
+                          venusapplianceskol@gmail.com
+                        </a>
+                        <span className="text-xs text-gray-500 block">For corporate tenders &amp; bulk institutional orders</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-purple-500 hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-4 sm:p-6">
+                {/* Hours Card */}
+                <Card className="border-l-4 border-l-purple-600 shadow-sm hover:shadow-md transition">
+                  <CardContent className="p-5 sm:p-6">
                     <div className="flex items-center gap-4">
-                      <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-purple-500" />
+                      <div className="p-3 rounded-xl bg-purple-50 text-purple-600 shrink-0">
+                        <Clock className="h-6 w-6" />
+                      </div>
                       <div>
-                        <h3 className="font-semibold text-base sm:text-lg mb-2">Business Hours</h3>
-                        <p className="text-gray-600 text-sm sm:text-base">Monday - Saturday: 9:00 AM - 7:00 PM</p>
-                        <p className="text-gray-600 text-sm sm:text-base">Sunday: 10:00 AM - 6:00 PM</p>
+                        <h3 className="font-bold text-gray-900 text-base sm:text-lg mb-0.5">
+                          Showroom Timings
+                        </h3>
+                        <p className="text-gray-700 text-xs sm:text-sm">
+                          <strong>Monday – Saturday:</strong> 10:30 AM – 8:30 PM
+                        </p>
+                        <p className="text-gray-700 text-xs sm:text-sm">
+                          <strong>Sunday:</strong> 11:00 AM – 6:00 PM
+                        </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* WhatsApp Quick Action */}
-              <Card className="mt-6 border-l-4 border-l-green-500 bg-green-50">
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center gap-4">
-                    <MessageSquare className="h-6 w-6 text-green-600" />
-                    <div>
-                      <h3 className="font-semibold text-base sm:text-lg mb-1 text-green-800">
-                        Quick WhatsApp Connect
-                      </h3>
-                      <p className="text-green-700 text-sm mb-3">
-                        Prefer to chat directly? Click below to start a conversation on WhatsApp.
-                      </p>
-                      <Button 
-                        onClick={() => window.open('https://wa.me/9331962120', '_blank')}
-                        className="bg-green-600 hover:bg-green-700 text-white"
-                      >
-                        <MessageSquare className="h-4 w-4 mr-2" />
-                        Chat on WhatsApp
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              {/* Service Areas Note */}
+              <div className="p-4 rounded-xl bg-blue-50 border border-blue-100 text-xs text-blue-900">
+                <span className="font-bold">Prompt Delivery &amp; Certified Installation Across:</span> Chandni Chowk, Bowbazar, Central Avenue, Esplanade, Park Street, Salt Lake, New Town Rajarhat, Howrah, Hooghly, Ballygunge, Behala, Dum Dum, Barasat, and all West Bengal locations.
+              </div>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* Contact / WhatsApp Inquiry Form */}
             <motion.div
-              initial={{ x: 50, opacity: 0 }}
+              initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <CardTitle className="text-lg sm:text-xl flex items-center gap-2">
-                    <MessageSquare className="h-5 w-5" />
-                    Send us a Message
-                  </CardTitle>
-                  <CardDescription className="text-sm sm:text-base">
-                    Fill out the form below and we'll redirect you to WhatsApp with your message.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
+              <Card className="border border-gray-200 shadow-lg rounded-2xl bg-white overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-4 text-white">
+                  <h3 className="text-lg sm:text-xl font-bold">Request an Instant Quote</h3>
+                  <p className="text-blue-100 text-xs mt-0.5">
+                    Fill the form below to receive immediate dealer pricing via WhatsApp
+                  </p>
+                </div>
+
+                <CardContent className="p-6">
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="firstName" className="text-sm font-medium">
-                          First Name *
-                        </Label>
-                        <Input 
-                          id="firstName" 
-                          placeholder="Your first name" 
+                        <Label htmlFor="firstName" className="text-xs font-semibold text-gray-700">First Name *</Label>
+                        <Input
+                          id="firstName"
+                          placeholder="e.g. Rahul"
+                          {...register("firstName")}
                           className="mt-1"
-                          {...register('firstName')}
                         />
                         {errors.firstName && (
                           <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>
                         )}
                       </div>
+
                       <div>
-                        <Label htmlFor="lastName" className="text-sm font-medium">
-                          Last Name *
-                        </Label>
-                        <Input 
-                          id="lastName" 
-                          placeholder="Your last name" 
+                        <Label htmlFor="lastName" className="text-xs font-semibold text-gray-700">Last Name *</Label>
+                        <Input
+                          id="lastName"
+                          placeholder="e.g. Banerjee"
+                          {...register("lastName")}
                           className="mt-1"
-                          {...register('lastName')}
                         />
                         {errors.lastName && (
                           <p className="text-red-500 text-xs mt-1">{errors.lastName.message}</p>
                         )}
                       </div>
                     </div>
-                    
-                    {/* <div>
-                      <Label htmlFor="email" className="text-sm font-medium">
-                        Email *
-                      </Label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="your.email@example.com" 
-                        className="mt-1"
-                        {...register('email')}
-                      />
-                      {errors.email && (
-                        <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
-                      )}
-                    </div> */}
-                    
+
                     <div>
-                      <Label htmlFor="phone" className="text-sm font-medium">
-                        Phone Number *
-                      </Label>
-                      <Input 
-                        id="phone" 
-                        type="tel" 
-                        placeholder="Your phone number" 
+                      <Label htmlFor="phone" className="text-xs font-semibold text-gray-700">Mobile / WhatsApp Number *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="e.g. 98300XXXXX"
+                        {...register("phone")}
                         className="mt-1"
-                        {...register('phone')}
                       />
                       {errors.phone && (
                         <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
                       )}
                     </div>
-                    
-                    {/* <div>
-                      <Label htmlFor="subject" className="text-sm font-medium">
-                        Subject *
-                      </Label>
-                      <Input 
-                        id="subject" 
-                        placeholder="What is this regarding?" 
+
+                    <div>
+                      <Label htmlFor="subject" className="text-xs font-semibold text-gray-700">Product / Appliance Required *</Label>
+                      <Input
+                        id="subject"
+                        placeholder="e.g. Daikin 1.5T 5 Star AC / Visi Cooler 400L / Deep Freezer"
+                        {...register("subject")}
                         className="mt-1"
-                        {...register('subject')}
                       />
                       {errors.subject && (
                         <p className="text-red-500 text-xs mt-1">{errors.subject.message}</p>
                       )}
-                    </div> */}
-                    
+                    </div>
+
                     <div>
-                      <Label htmlFor="message" className="text-sm font-medium">
-                        Message *
-                      </Label>
-                      <Textarea 
-                        id="message" 
-                        placeholder="Tell us more about your AC requirements..."
+                      <Label htmlFor="message" className="text-xs font-semibold text-gray-700">Message / Delivery Location *</Label>
+                      <Textarea
+                        id="message"
                         rows={4}
+                        placeholder="Share your requirements, room size, delivery area in Kolkata..."
+                        {...register("message")}
                         className="mt-1"
-                        {...register('message')}
                       />
                       {errors.message && (
                         <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
                       )}
                     </div>
-                    
-                    <Button 
-                      type="submit" 
+
+                    <Button
+                      type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-sm sm:text-base py-2 sm:py-3"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 text-sm shadow-md"
                     >
                       {isSubmitting ? (
-                        <>
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                          Preparing WhatsApp Message...
-                        </>
+                        "Opening WhatsApp..."
                       ) : (
                         <>
-                          <MessageSquare className="mr-2 h-4 w-4" />
-                          Send via WhatsApp
+                          <MessageSquare className="mr-2 h-4 w-4" /> Send Inquiry via WhatsApp
                         </>
                       )}
                     </Button>
 
-                    <p className="text-xs text-gray-500 text-center">
-                      * Required fields. After submission, you'll be redirected to WhatsApp with your message pre-filled.
+                    <p className="text-[11px] text-gray-400 text-center">
+                      Your inquiry will be sent directly to our Chandni Chowk showroom team for priority response.
                     </p>
                   </form>
                 </CardContent>
@@ -359,32 +387,34 @@ Please respond to this inquiry at your earliest convenience. Thank you! 🙏
             </motion.div>
           </div>
 
-          {/* Map Section */}
-          <motion.div
-            className="mt-12 sm:mt-16"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Find Us on the Map</h2>
-            <Card className="hover:shadow-lg transition-shadow duration-300">
+          {/* Interactive Google Map Section */}
+          <div className="mt-16">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                Showroom Location Map
+              </h2>
+              <p className="text-gray-500 text-sm mt-1">
+                63, Ganesh Chandra Avenue, Chandni Chowk, Bowbazar, Kolkata, West Bengal 700013
+              </p>
+            </div>
+
+            <Card className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
               <CardContent className="p-0">
-                <div className="w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.0272914546995!2d88.3579329!3d22.5664314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277a98756e675%3A0x53fdcc792ee02617!2s63%2C%20Ganesh%20Chandra%20Ave%2C%20Chandni%20Chawk%2C%20Bowbazar%2C%20Kolkata%2C%20West%20Bengal%20700012!5e1!3m2!1sen!2sin!4v1750314538333!5m2!1sen!2sin"
-                    width="100%" 
-                    height="100%" 
-                    style={{border:0}} 
-                    allowFullScreen 
-                    loading="lazy" 
+                <div className="w-full h-80 sm:h-96 lg:h-[450px]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.0272914546995!2d88.3579329!3d22.5664314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277aa23527e69%3A0x768adf630181c6e8!2sVenus%20Appliances!5e0!3m2!1sen!2sin!4v1750314538333!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full"
-                    title="Venus Appliances Location"
+                    title="Venus Appliances Store Location Kolkata"
                   />
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         </div>
       </div>
     </Layout>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
+import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -77,7 +78,7 @@ const ACDetailsPage = () => {
     );
     
     // Open WhatsApp with the message
-    window.open(`https://wa.me/+911234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/919331962120?text=${message}`, '_blank');
     
     // Show success toast
     toast({
@@ -132,9 +133,11 @@ const ACDetailsPage = () => {
                 src={acModel.image} 
                 alt={`${displayBrandName} ${acModel.tonnage} Ton ${acModel.starRating} Star AC`}
                 className="mx-auto h-auto max-h-80 object-contain"
+                loading="lazy"
+                decoding="async"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = "https://via.placeholder.com/400x300?text=AC+Image";
+                  target.src = "/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png";
                 }}
               />
             </div>

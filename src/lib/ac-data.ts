@@ -1,3 +1,6 @@
+import { acProducts } from "./ac-selection-data";
+import { getPopularACsByBrand, fixGalleryImage } from "./gallery-service";
+
 export interface ACModel {
   id: string;
   brand: string;
@@ -280,21 +283,35 @@ export const acModels: ACModel[] = [
 ];
 
 export const getTonnageOptions = (brand: string): string[] => {
+  const normalized = brand.toLowerCase().trim();
   const tonnages = new Set<string>();
 
-  acModels
-    .filter((model) => model.brand === brand)
+  acProducts
+    .filter((model) => model.brand.toLowerCase() === normalized)
     .forEach((model) => tonnages.add(model.tonnage));
+
+  if (tonnages.size === 0) {
+    acModels
+      .filter((model) => model.brand.toLowerCase() === normalized)
+      .forEach((model) => tonnages.add(model.tonnage));
+  }
 
   return Array.from(tonnages).sort((a, b) => parseFloat(a) - parseFloat(b));
 };
 
 export const getStarRatings = (brand: string, tonnage: string): string[] => {
+  const normalized = brand.toLowerCase().trim();
   const ratings = new Set<string>();
 
-  acModels
-    .filter((model) => model.brand === brand && model.tonnage === tonnage)
+  acProducts
+    .filter((model) => model.brand.toLowerCase() === normalized && model.tonnage === tonnage)
     .forEach((model) => ratings.add(model.starRating));
+
+  if (ratings.size === 0) {
+    acModels
+      .filter((model) => model.brand.toLowerCase() === normalized && model.tonnage === tonnage)
+      .forEach((model) => ratings.add(model.starRating));
+  }
 
   return Array.from(ratings).sort((a, b) => parseInt(a) - parseInt(b));
 };
@@ -304,14 +321,58 @@ export const getACModel = (
   tonnage: string,
   starRating: string
 ): ACModel | undefined => {
+  const normalized = brand.toLowerCase().trim();
+  const product = acProducts.find(
+    (model) =>
+      model.brand.toLowerCase() === normalized &&
+      model.tonnage === tonnage &&
+      model.starRating === starRating
+  );
+  if (product) {
+    return {
+      id: product.id,
+      brand: product.brand,
+      type: product.type,
+      inverter: product.inverter,
+      tonnage: product.tonnage,
+      starRating: product.starRating,
+      price: product.price,
+      modelNumber: product.modelNumber,
+      features: product.features || [],
+      image: productFixImage(product.image || (product.images && product.images[0]) || ""),
+      description: product.description || `${product.brand.toUpperCase()} ${product.tonnage} ${product.starRating} AC`,
+    };
+  }
   return acModels.find(
     (model) =>
-      model.brand === brand &&
+      model.brand.toLowerCase() === normalized &&
       model.tonnage === tonnage &&
       model.starRating === starRating
   );
 };
 
 export const getACModels = (brand: string): ACModel[] => {
-  return acModels.filter((model) => model.brand === brand);
+  const normalized = brand.toLowerCase().trim();
+  // Return top 10 recently popular models with individual original images
+  const popular = getPopularACsByBrand(normalized, "all", 10);
+  if (popular.length > 0) {
+    return popular.map((p) => ({
+      id: p.id,
+      brand: p.brand,
+      type: p.type,
+      inverter: p.inverter,
+      tonnage: p.tonnage,
+      starRating: p.starRating,
+      price: p.price,
+      modelNumber: p.modelNumber,
+      features: p.features || [],
+      image: fixGalleryImage(p.image || (p.images && p.images[0]) || ""),
+      description: p.description || `${p.brand.toUpperCase()} ${p.tonnage} ${p.starRating} AC`,
+    }));
+  }
+  return acModels.filter((model) => model.brand.toLowerCase() === normalized);
 };
+
+function productFixImage(img?: string): string {
+  return fixGalleryImage(img);
+}

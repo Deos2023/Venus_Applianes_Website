@@ -27,7 +27,8 @@ export type ACType =
   | "cassette"
   | "multi-split"
   | "one-way-cassette"
-  | "tower";
+  | "tower"
+  | "geyser";
 export type Brand =
   | "o-general"
   | "mitsubishi-heavy"
@@ -75,6 +76,11 @@ export const acTypes: { id: ACType; name: string; image: string }[] = [
     name: "MULTI AC",
     image: "/lovable-uploads/31389003-e760-4a88-b98d-1952c74143ec.png",
   },
+  {
+    id: "geyser",
+    name: "WATER GEYSER",
+    image: "/lovable-uploads/geysers/venus-water-geyser.png",
+  },
 ];
 
 export const brands: { id: Brand; name: string; logo: string }[] = [
@@ -96,7 +102,7 @@ export const brands: { id: Brand; name: string; logo: string }[] = [
   {
     id: "mitsubishi-akabishi",
     name: "MITSUBISHI ELECTRIC AKABISHI",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Mitsubishi_Electric_logo.svg/1280px-Mitsubishi_Electric_logo.svg.png",
+    logo: "/lovable-uploads/97d42845-0d65-42cd-9e69-51af08f84088.png",
   },
   {
     id: "daikin",
@@ -153,6 +159,7 @@ export const brands: { id: Brand; name: string; logo: string }[] = [
     name: "VESTAR",
     logo: "/lovable-uploads/f9296fe5-440f-4f69-93f6-77b88ffc76aa.png",
   },
+
 ];
 
 export const inverterTypes: { id: InverterType; name: string }[] = [
@@ -1847,7 +1854,7 @@ export const acProducts: ACProduct[] = [
     coolingCapacity: "3500",
     indoorUnitDimensions: 'W-31.5" X  H-10.8"',
     features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -1870,7 +1877,7 @@ export const acProducts: ACProduct[] = [
     features: ["Inverter", "Energy Efficient"],
     productUrl:
       "https://carriermideaindia.com/product/indus-fxi-3-star-split-inverter-ac/",
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -1894,7 +1901,7 @@ export const acProducts: ACProduct[] = [
     features: ["Inverter", "Energy Efficient"],
     productUrl:
       "https://carriermideaindia.com/product/indus-fxi-smart-5-star-split-inverter-ac/",
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -1918,7 +1925,7 @@ export const acProducts: ACProduct[] = [
     features: ["Inverter", "Energy Efficient"],
     productUrl:
       "https://carriermideaindia.com/product/indus-fxi-smart-5-star-split-inverter-ac/",
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -1942,7 +1949,7 @@ export const acProducts: ACProduct[] = [
     features: ["Inverter", "Energy Efficient"],
     productUrl:
       "https://carriermideaindia.com/product/indus-fxi-smart-5-star-split-inverter-ac/",
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -1990,7 +1997,7 @@ export const acProducts: ACProduct[] = [
     features: ["Inverter", "Energy Efficient"],
     productUrl:
       "https://carriermideaindia.com/product/xpert-edge-fxi-3-star-star-split-inverter-ac/",
-    image: "/lovable-uploads/carrier/XCEL_EDGE_FXI/1.jpg",
+    image: "/lovable-uploads/carrier/XCELedge/1.jpg",
     images: [
       "/lovable-uploads/carrier/INDUS_FXI/1.jpg",
       "/lovable-uploads/carrier/INDUS_FXI/2.jpg",
@@ -2618,11 +2625,12 @@ export const acProducts: ACProduct[] = [
     gasType: "R32",
     indoorUnitDimensions: ' W-37.3"X H-12.4"',
     features: ["Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/hitachi/G324PCBISF/1.webp",
+    image: "/lovable-uploads/bpl/V243PBYG/1.webp",
     images: [
-      "/lovable-uploads/hitachi/G324PCBISF/1.webp",
-      "/lovable-uploads/hitachi/G324PCBISF/2.webp",
-      "/lovable-uploads/hitachi/G324PCBISF/3.webp",
+      "/lovable-uploads/bpl/V243PBYG/1.webp",
+      "/lovable-uploads/bpl/V243PBYG/2.jpg",
+      "/lovable-uploads/bpl/V243PBYG/3.avif",
+      "/lovable-uploads/bpl/V243PBYG/4.webp",
     ],
     description: "BPL 2.0T INV 3★ F182ATFC Split AC",
   },
@@ -3330,7 +3338,7 @@ export const acProducts: ACProduct[] = [
     coolingCapacity: "5000",
     indoorUnitDimensions: 'W-38.2" X H-11.8"',
     features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/godrej/1-5T-INV-5STAR/1.jpg",
+    image: "/lovable-uploads/godrej/34000/1.jpg",
     images: [
       "/lovable-uploads/godrej/1-5T-INV-5STAR/1.jpg",
       "/lovable-uploads/godrej/1-5T-INV-5STAR/2.jpg",
@@ -3406,7 +3414,7 @@ export const acProducts: ACProduct[] = [
     productUrl:
       "https://www.godrejenterprises.com/home-appliances/air-conditioners/split-ac/p/ac-2-t-sic-24-ltc-5-wwr",
     features: ["Non-Inverter", "Energy Efficient"],
-    image: "/lovable-uploads/godrej/1-5T-INV-5STAR/1.jpg",
+    image: "/lovable-uploads/godrej/2-0T-INV-5STAR/1.jpg",
     images: [
       "/lovable-uploads/godrej/1-5T-INV-5STAR/1.jpg",
       "/lovable-uploads/godrej/1-5T-INV-5STAR/2.jpg",
@@ -5363,136 +5371,6 @@ export const acProducts: ACProduct[] = [
 
   // CARRIER
   {
-    id: "carrier-1.0t-noninv-3star-estrella-fx",
-    type: "window",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "1.0T",
-    starRating: "3★",
-    modelNumber: "ESTRELLA FX",
-    price: 28891,
-    mrp: 39090,
-    gasType: "R32",
-    coolingCapacity: "3300",
-    productUrl:
-      "https://cmiestore.com/room-air-conditioners/estrella-fx-1-0-ton-3-star",
-    indoorUnitDimensions: 'H-17" X W-26" X D-27.6"',
-    features: ["Energy efficient", "Turbo mode"],
-    image: "/lovable-uploads/bluestar/28891/1.jpg",
-    images: [
-      "/lovable-uploads/bluestar/28891/1.jpg",
-      "/lovable-uploads/bluestar/28891/2.jpg",
-      "/lovable-uploads/bluestar/28891/3.jpg",
-      "/lovable-uploads/bluestar/28891/4.jpg",
-      "/lovable-uploads/bluestar/28891/5.jpg",
-    ],
-    description: "CARRIER 1.0T NON INV 3★ ESTRELLA FX Window AC",
-  },
-  {
-    id: "carrier-1.5t-inv-5star-estrella-fxi",
-    type: "window",
-    brand: "carrier",
-    inverter: "inverter",
-    tonnage: "1.5T",
-    starRating: "5★",
-    modelNumber: "ESTRELLA FXI",
-    price: 37054,
-    mrp: 58190,
-    gasType: "R32",
-    coolingCapacity: "5150",
-    productUrl:
-      "https://carriermideaindia.com/product/estrella-fxi-5-star-window-inverter-ac/",
-    indoorUnitDimensions: ' H-17" X W-26" X D-30.5"',
-    features: ["Inverter compressor", "High efficiency"],
-    image: "/lovable-uploads/bluestar/28891/1.jpg",
-    images: [
-      "/lovable-uploads/bluestar/28891/1.jpg",
-      "/lovable-uploads/bluestar/28891/2.jpg",
-      "/lovable-uploads/bluestar/28891/3.jpg",
-      "/lovable-uploads/bluestar/28891/4.jpg",
-      "/lovable-uploads/bluestar/28891/5.jpg",
-    ],
-    description: "CARRIER 1.5T INV 5★ ESTRELLA FXI Window AC",
-  },
-  {
-    id: "carrier-1.5t-inv-3star-estrella-fxi",
-    type: "window",
-    brand: "carrier",
-    inverter: "inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "ESTRELLA FXI",
-    price: 34365,
-    mrp: 47590,
-    gasType: "R32",
-    coolingCapacity: "5000",
-    productUrl:
-      "https://carriermideaindia.com/product/estrella-fxi-3-star-window-inverter-ac/",
-    indoorUnitDimensions: 'H-17" X W-26" X D-30.5"',
-    features: ["Inverter compressor", "Energy efficient"],
-    image: "/lovable-uploads/bluestar/28891/1.jpg",
-    images: [
-      "/lovable-uploads/bluestar/28891/1.jpg",
-      "/lovable-uploads/bluestar/28891/2.jpg",
-      "/lovable-uploads/bluestar/28891/3.jpg",
-      "/lovable-uploads/bluestar/28891/4.jpg",
-      "/lovable-uploads/bluestar/28891/5.jpg",
-    ],
-    description: "CARRIER 1.5T INV 3★ ESTRELLA FXI Window AC",
-  },
-  {
-    id: "carrier-1.5t-noninv-3star-estrella-fx",
-    type: "window",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "1.5T",
-    starRating: "3★",
-    modelNumber: "ESTRELLA FX",
-    price: 31100,
-    mrp: 45090,
-    gasType: "R32",
-    coolingCapacity: "5000",
-    productUrl:
-      "https://carriermideaindia.com/product/estrella-fx-3-star-window-fixed-speed/",
-    indoorUnitDimensions: 'H-17" X W-26" X D-27.6"',
-    features: ["Energy efficient", "Turbo mode"],
-    image: "/lovable-uploads/bluestar/28891/1.jpg",
-    images: [
-      "/lovable-uploads/bluestar/28891/1.jpg",
-      "/lovable-uploads/bluestar/28891/2.jpg",
-      "/lovable-uploads/bluestar/28891/3.jpg",
-      "/lovable-uploads/bluestar/28891/4.jpg",
-      "/lovable-uploads/bluestar/28891/5.jpg",
-    ],
-    description: "CARRIER 1.5T NON INV 3★ ESTRELLA FX Window AC",
-  },
-  {
-    id: "carrier-2.0t-noninv-3star-estrella-fx",
-    type: "window",
-    brand: "carrier",
-    inverter: "non-inverter",
-    tonnage: "2.0T",
-    starRating: "3★",
-    modelNumber: "ESTRELLA FX",
-    price: 38495,
-    mrp: 53390,
-    gasType: "R32",
-    coolingCapacity: "6000",
-    productUrl:
-      "https://cmiestore.com/room-air-conditioners/estrella-fx-1-0-ton-3-star",
-    indoorUnitDimensions: 'H-17" X W-26" X D-30.3"',
-    features: ["Energy efficient", "Turbo mode"],
-    image: "/lovable-uploads/bluestar/28891/1.jpg",
-    images: [
-      "/lovable-uploads/bluestar/28891/1.jpg",
-      "/lovable-uploads/bluestar/28891/2.jpg",
-      "/lovable-uploads/bluestar/28891/3.jpg",
-      "/lovable-uploads/bluestar/28891/4.jpg",
-      "/lovable-uploads/bluestar/28891/5.jpg",
-    ],
-    description: "CARRIER 2.0T NON INV 3★ ESTRELLA FX Window AC",
-  },
-  {
     id: "hitachi-1.5t-inv-5star-raw518hheo",
     type: "window",
     brand: "hitachi",
@@ -5814,8 +5692,8 @@ export const acProducts: ACProduct[] = [
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
 
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_1_1784201773767.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_1_1784201773767.png'],
+    image: '/lovable-uploads/daikin/FCVFQ100AV16/1.jpg',
+    images: ['/lovable-uploads/daikin/FCVFQ100AV16/1.jpg'],
     description: "DAIKIN 1.5T INV 5★ FCMF50 4-way cassette AC",
   },
   {
@@ -5834,8 +5712,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_2_1784201784259.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_2_1784201784259.png'],
+    image: '/lovable-uploads/daikin/FCVFQ125AV16/1.webp',
+    images: ['/lovable-uploads/daikin/FCVFQ125AV16/1.webp'],
     description: "DAIKIN 1.5T INV 4★ FCVF50 4-way cassette AC",
   },
 
@@ -5855,8 +5733,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_3_1784201794908.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_3_1784201794908.png'],
+    image: '/lovable-uploads/daikin/FCVFQ140AV16/1.jpg',
+    images: ['/lovable-uploads/daikin/FCVFQ140AV16/1.jpg'],
     description: "DAIKIN 2.0T INV 4★ FCVF71 4-way cassette AC",
   },
   {
@@ -5875,8 +5753,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_4_1784201805093.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_4_1784201805093.png'],
+    image: '/lovable-uploads/daikin/FCMF100ARV169/1.jpeg',
+    images: ['/lovable-uploads/daikin/FCMF100ARV169/1.jpeg'],
     description: "DAIKIN 2.6T INV 5★ FCMF90 4-way cassette AC",
   },
   {
@@ -5895,8 +5773,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_5_1784201815460.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_5_1784201815460.png'],
+    image: '/lovable-uploads/daikin/FCMF125ARV169/1.png',
+    images: ['/lovable-uploads/daikin/FCMF125ARV169/1.png'],
     description: "DAIKIN 2.6T INV 4★ FCVF90 4-way cassette AC",
   },
   {
@@ -5915,8 +5793,8 @@ export const acProducts: ACProduct[] = [
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
     indoorUnitDimensions: 'W-33" x 33" X H-11.7"',
     features: ["360° Airflow", "Energy Efficient", "Low Noise", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_6_1784201834670.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_6_1784201834670.png'],
+    image: '/lovable-uploads/daikin/FCMF140ARV169/1.png',
+    images: ['/lovable-uploads/daikin/FCMF140ARV169/1.png'],
     description: "DAIKIN 2.6T INV 3★ FCVFQ90 4-way cassette AC",
   },
   // {
@@ -11143,8 +11021,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
     features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_7_1784201844348.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_7_1784201844348.png'],
+    image: '/lovable-uploads/daikin/FCFQ125AV16/1.jpg',
+    images: ['/lovable-uploads/daikin/FCFQ125AV16/1.jpg'],
     description: "DAIKIN 1.5T INV 3★ FCVFQ50AV16 4-Way Cassette AC",
   },
   {
@@ -11189,8 +11067,8 @@ export const acProducts: ACProduct[] = [
       "https://acrobat.adobe.com/id/urn:aaid:sc:AP:04fbbbfd-dc46-4ebe-87a6-0c27d214efc9",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
     features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_8_1784201854498.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_8_1784201854498.png'],
+    image: '/lovable-uploads/daikin/FCVF125ARV169/1.jpg',
+    images: ['/lovable-uploads/daikin/FCVF125ARV169/1.jpg'],
     description: "DAIKIN 2.0T INV 5★ FCMF71 4-Way Cassette AC",
   },
   // {
@@ -11223,8 +11101,8 @@ export const acProducts: ACProduct[] = [
       "https://www.daikinindia.com/products-services/cassette-air-conditioner/fcvfq-series-cooling-only/5.3/fcvfq-series-cooling-only",
     indoorUnitDimensions: 'W-33" x 33" X H-10"',
     features: ["4-Way Cassette", "Inverter", "Energy efficient", "PM 2.5 Filter", "Econo Mode", "Stabilizer Inside"],
-    image: '/lovable-uploads/daikin/generated/daikin_cassette_9_1784201866857.png',
-    images: ['/lovable-uploads/daikin/generated/daikin_cassette_9_1784201866857.png'],
+    image: '/lovable-uploads/daikin/FCVF140ARV169/1.jpg',
+    images: ['/lovable-uploads/daikin/FCVF140ARV169/1.jpg'],
     description: "DAIKIN 2.0T INV 3★ FCVFQ71 4-Way Cassette AC",
   },
   // === BULK PRODUCT ADD: see documentation for standard entry format. Images, links, all required fields ===

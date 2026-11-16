@@ -48,38 +48,31 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-white/50 backdrop-blur-xl shadow-2xl border-b border-gray-100/50"
           : "bg-gradient-to-r from-blue-900/50 to-blue-800/50 backdrop-blur-md"
           }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
 
             {/* Logo Section */}
-            <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
-              <motion.div
-                className="relative"
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 12 }}
-              >
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group" aria-label="Venus Appliances Homepage">
+              <div className="relative">
                 <div className="flex items-center justify-center transition-all duration-300">
-
                   <img
                     src="/lovable-uploads/6c697fcb-f9ff-466e-97f0-7cddf3d6c664.png"
-                    alt="Venus Appliances"
+                    alt="Venus Appliances Kolkata"
+                    width="180"
+                    height="64"
                     className="h-14 sm:h-16 lg:h-20 w-auto object-contain drop-shadow-lg scale-110"
                   />
-
                 </div>
 
                 {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-              </motion.div>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -167,6 +160,8 @@ const Header = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={isMenuOpen}
                 className={`p-2 sm:p-3 rounded-2xl transition-all duration-300 ${scrolled
                   ? "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                   : "text-white hover:bg-white/15"
@@ -282,7 +277,7 @@ const Header = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.header>
+      </header>
 
       {/* Spacer to prevent content overlap */}
       <div className="h-14 sm:h-16 lg:h-20"></div>

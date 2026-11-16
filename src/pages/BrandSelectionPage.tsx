@@ -1,6 +1,5 @@
-
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SelectionLayout from "@/components/SelectionLayout";
 import SelectionCard from "@/components/SelectionCard";
 import { brands, acTypes, ACType } from "@/lib/ac-selection-data";
@@ -8,8 +7,15 @@ import { getAvailableBrands } from "@/lib/utils";
 
 const BrandSelectionPage = () => {
   const { type } = useParams<{ type: string }>();
+  const navigate = useNavigate();
   const acType = type as ACType;
   
+  useEffect(() => {
+    if (acType === "geyser") {
+      navigate("/appliances?category=geyser", { replace: true });
+    }
+  }, [acType, navigate]);
+
   // Find the current AC type name for display
   const currentType = acTypes.find(t => t.id === acType)?.name || "AC";
   
@@ -35,7 +41,6 @@ const BrandSelectionPage = () => {
             image={brand.logo}
             title={brand.name}
             to={`/select-inverter/${acType}/${brand.id}`}
-            className="h-48"
           />
         ))}
       </div>

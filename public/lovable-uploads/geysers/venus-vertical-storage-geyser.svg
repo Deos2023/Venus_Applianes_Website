@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380" width="640" height="760">
+  <defs>
+    <linearGradient id="vertBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#F8FAFC"/>
+      <stop offset="70%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+    <filter id="shadowVert" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Wall Mount Bracket Hint -->
+  <rect x="70" y="80" width="180" height="20" rx="4" fill="#64748B" fill-opacity="0.2"/>
+
+  <!-- Cylindrical Storage Main Body -->
+  <rect x="80" y="25" width="160" height="280" rx="55" fill="url(#vertBody)" stroke="#CBD5E1" stroke-width="2" filter="url(#shadowVert)"/>
+
+  <!-- Top Crown Band -->
+  <path d="M82 65 C82 40 105 27 135 27 L185 27 C215 27 238 40 238 65 Z" fill="url(#goldTrim)" fill-opacity="0.15"/>
+
+  <!-- Brand Name & Porcelain Glassline Tag -->
+  <text x="160" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="900" fill="#0F172A" text-anchor="middle" letter-spacing="3">VENUS</text>
+  <text x="160" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#B45309" text-anchor="middle" letter-spacing="1.2">PORCELAIN ENAMEL</text>
+
+  <!-- BEE 5-Star Energy Label Simulation -->
+  <rect x="115" y="110" width="90" height="52" rx="6" fill="#065F46" stroke="#047857" stroke-width="1.5"/>
+  <rect x="119" y="114" width="82" height="15" rx="3" fill="#047857"/>
+  <text x="160" y="125" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="800" fill="#FEF08A" text-anchor="middle">★ ★ ★ ★ ★</text>
+  <text x="160" y="142" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">BEE 5-STAR</text>
+  <text x="160" y="154" font-family="system-ui, -apple-system, sans-serif" font-size="6.5" font-weight="600" fill="#A7F3D0" text-anchor="middle">MAX POWER SAVING</text>
+
+  <!-- Digital Dial & Thermostat Control Knob -->
+  <circle cx="160" cy="210" r="32" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <circle cx="160" cy="210" r="24" fill="url(#goldTrim)" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="160" cy="210" r="14" fill="#0F172A"/>
+  <text x="160" y="214" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#38BDF8" text-anchor="middle">65°C</text>
+
+  <!-- LED Indicators -->
+  <circle cx="138" cy="265" r="4.5" fill="#10B981"/>
+  <text x="138" y="279" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#64748B" text-anchor="middle">POWER</text>
+
+  <circle cx="182" cy="265" r="4.5" fill="#EF4444"/>
+  <text x="182" y="279" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#64748B" text-anchor="middle">HEAT</text>
+
+  <!-- Pipe Inlets/Outlets -->
+  <rect x="122" y="305" width="18" height="40" rx="3" fill="#94A3B8"/>
+  <rect x="120" y="345" width="22" height="7" rx="2" fill="#3B82F6"/>
+  <text x="131" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle">IN</text>
+
+  <rect x="180" y="305" width="18" height="40" rx="3" fill="#94A3B8"/>
+  <rect x="178" y="345" width="22" height="7" rx="2" fill="#EF4444"/>
+  <text x="189" y="328" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="800" fill="#FFFFFF" text-anchor="middle">OUT</text>
+</svg>

@@ -9,7 +9,7 @@ const heroSlides = [
     title: "Welcome to a Home Beyond Excellence.",
     subtitle: "Crafted for reliability, built for tomorrow.",
     description: "Up to 50%* off | Cashback up to ₹15000*",
-    image: "/lovable-uploads/WhatsApp Image 2025-05-28 at 12.44.07_8c32963b.webp",
+    image: "/lovable-uploads/venus-hero-banner.webp",
     btnText: "Shop Now",
     btnLink: "/brand/voltas"
   },
@@ -45,9 +45,19 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    // Preload secondary slides in background after idle
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      window.requestIdleCallback(() => {
+        heroSlides.slice(1).forEach((s) => {
+          const img = new Image();
+          img.src = s.image;
+        });
+      });
+    }
+
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -64,17 +74,18 @@ const Hero = () => {
         {/* CHANGED: Image takes full width at a natural aspect ratio on mobile.
             No overlay text on top, so the image is completely visible and large. */}
         <div className="relative w-full overflow-hidden">
-          <div className="relative w-full">
+          <div className="relative w-full aspect-[16/9] bg-slate-900">
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
               loading={currentSlide === 0 ? "eager" : "lazy"}
-              fetchpriority={currentSlide === 0 ? "high" : "auto"}
               decoding={currentSlide === 0 ? "sync" : "async"}
+              width="640"
+              height="360"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
+                target.src = "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.webp";
               }}
             />
           </div>
@@ -101,14 +112,14 @@ const Hero = () => {
         <div className="bg-gray-900 px-4 py-5 text-white">
 
           {/* Subtitle */}
-          <span className="text-red-400 font-medium text-sm tracking-wider block mb-1">
+          <span className="text-amber-300 font-semibold text-sm tracking-wider block mb-1">
             {slide.subtitle}
           </span>
 
           {/* Title */}
-          <h1 className="text-xl font-bold leading-snug mb-2">
+          <h2 className="text-xl font-bold leading-snug mb-2">
             {slide.title}
-          </h1>
+          </h2>
 
           {/* Description */}
           <p className="text-sm text-white/80 mb-4">{slide.description}</p>
@@ -175,13 +186,12 @@ const Hero = () => {
               alt={slide.title}
               className="w-full h-full object-cover object-center"
               loading={index === 0 ? "eager" : "lazy"}
-              fetchpriority={index === 0 ? "high" : "auto"}
               decoding={index === 0 ? "sync" : "async"}
               width="1200"
               height="800"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = "https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg";
+                target.src = "/lovable-uploads/c542376e-7363-4d8d-9340-b22c64e94789.webp";
               }}
             />
 
@@ -191,9 +201,9 @@ const Hero = () => {
                   <span className="text-white/90 font-medium mb-2 block text-lg tracking-wider">
                     {slide.subtitle}
                   </span>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                     {slide.title}
-                  </h1>
+                  </h2>
                   <p className="text-xl text-white/90 mb-8">{slide.description}</p>
 
                   <Button

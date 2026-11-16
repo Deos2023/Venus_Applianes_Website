@@ -4,9 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import HomePage from "./pages/HomePage";
 import GlobalContactButtons from "./components/GlobalContactButtons";
+import ScrolltoTop from "./components/ScrolltoTop";
 
-const HomePage = lazy(() => import("./pages/HomePage"));
 const TypeSelectionPage = lazy(() => import("./pages/TypeSelectionPage"));
 const BrandSelectionPage = lazy(() => import("./pages/BrandSelectionPage"));
 const InverterSelectionPage = lazy(() => import("./pages/InverterSelectionPage"));
@@ -16,11 +17,11 @@ const ProductResultsPage = lazy(() => import("./pages/ProductResultsPage"));
 const BrandPage = lazy(() => import("./pages/BrandPage"));
 const ACDetailsPage = lazy(() => import("./pages/ACDetailsPage"));
 const GalleryPage = lazy(() => import("./pages/GalleryPage"));
+const AppliancesPage = lazy(() => import("./pages/AppliancesPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const ProductDetailsPage = lazy(() => import("./pages/ProductDetailsPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-import ScrolltoTop from "./components/ScrolltoTop";
 
 const queryClient = new QueryClient();
 
@@ -37,10 +38,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}>
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <ScrolltoTop />
         <GlobalContactButtons />
         <Suspense fallback={<LoadingSpinner />}>
@@ -56,6 +58,9 @@ const App = () => (
             <Route path="/brand/:brandName/ton/:tonValue/star/:starRating" element={<ACDetailsPage />} />
             <Route path="/product/:id" element={<ProductDetailsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/appliances" element={<AppliancesPage />} />
+            <Route path="/appliances/:category" element={<AppliancesPage />} />
+            <Route path="/geysers" element={<AppliancesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
