@@ -314,12 +314,14 @@ const HomePage = () => {
       return (
         g.name.toLowerCase().includes(q) ||
         g.modelCode.toLowerCase().includes(q) ||
+        g.brand?.toLowerCase().includes(q) ||
         g.capacity.toLowerCase().includes(q) ||
         g.tankType.toLowerCase().includes(q) ||
         g.description.toLowerCase().includes(q) ||
         (q.includes("geyser") && true) ||
         (q.includes("water") && true) ||
         (q.includes("heater") && true) ||
+        (q.includes("smith") && true) ||
         (q.includes("venus") && true)
       );
     });
@@ -435,7 +437,7 @@ const HomePage = () => {
                   {filteredGeysers.length > 0 && (
                     <div>
                       <div className="text-xs font-bold text-orange-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                        <Flame className="h-3.5 w-3.5" /> Matching Venus Water Geysers ({filteredGeysers.length})
+                        <Flame className="h-3.5 w-3.5" /> Matching Water Geysers ({filteredGeysers.length})
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                         {filteredGeysers.slice(0, 6).map((geyser) => (
@@ -452,10 +454,21 @@ const HomePage = () => {
                                 width="56"
                                 height="56"
                                 className="h-14 w-14 object-contain rounded bg-orange-50/50 p-1 shrink-0"
+                                onError={(e) => {
+                                  (e.currentTarget as HTMLImageElement).src =
+                                    "/lovable-uploads/geysers/venus-water-geyser.png";
+                                }}
                               />
                               <div className="min-w-0 flex-1">
-                                <div className="font-bold text-gray-900 text-xs truncate">{geyser.name}</div>
-                                <div className="text-[11px] text-orange-600 font-bold uppercase">{geyser.capacity} • {geyser.starRating}</div>
+                                <div className="font-bold text-gray-900 text-xs truncate flex items-center gap-1.5">
+                                  <span className={`text-[9px] font-black uppercase px-1.5 py-0.5 rounded text-white ${
+                                    geyser.brand === "AO Smith" ? "bg-blue-950" : "bg-orange-600"
+                                  }`}>
+                                    {geyser.brand}
+                                  </span>
+                                  <span className="truncate">{geyser.name}</span>
+                                </div>
+                                <div className="text-[11px] text-orange-600 font-bold uppercase mt-0.5">{geyser.capacity} • {geyser.starRating}</div>
                                 <div className="text-[10px] text-gray-500 truncate">{geyser.tankWarranty}</div>
                               </div>
                             </div>
@@ -466,7 +479,7 @@ const HomePage = () => {
                               </div>
                               <a
                                 href={`https://wa.me/919331962120?text=${encodeURIComponent(
-                                  `Hi Venus Appliances Kolkata, I want to inquire about ${geyser.name} (Offer Price: Rs.${geyser.offerPrice.toLocaleString()}).`
+                                  `Hi Venus Appliances Kolkata, I want to inquire about ${geyser.brand} ${geyser.name} (Offer Price: Rs.${geyser.offerPrice.toLocaleString()}).`
                                 )}`}
                                 target="_blank"
                                 rel="noopener noreferrer"

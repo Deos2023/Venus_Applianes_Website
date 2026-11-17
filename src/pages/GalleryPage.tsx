@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
@@ -26,11 +26,13 @@ import {
   Eye,
   SlidersHorizontal,
   ChevronRight,
+  ChevronDown,
   Layers,
   Wind,
   Box,
   Columns,
   Share2,
+  Loader2,
 } from 'lucide-react';
 
 const StarRating = ({ rating }: { rating: string }) => {
@@ -70,10 +72,13 @@ const getCategoryIcon = (catId: ACCategory) => {
   }
 };
 
+const PAGE_SIZE = 10;
+
 const GalleryPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
 
+  // Read initial filter values from URL search params
   const [activeCategory, setActiveCategory] = useState<ACCategory>(
     (searchParams.get('category') as ACCategory) || 'all'
   );
@@ -81,6 +86,14 @@ const GalleryPage = () => {
     searchParams.get('brand') || 'all'
   );
   const [selectedProduct, setSelectedProduct] = useState<ACProduct | null>(null);
+
+  // Pagination / Load More state for Single View
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
+  const [isLoadingMore, setIsLoadingMore] = useState<boolean>(false);
+
+  // Pagination state for Grouped View (per-category limits)
+  const [categoryLimits, setCategoryLimits] = useState<Record<string, number>>({});
+  const [loadingCategory, setLoadingCategory] = useState<string | null>(null);
 
   // Synchronize state with URL parameters
   useEffect(() => {
@@ -95,8 +108,14 @@ const GalleryPage = () => {
     }
   }, [location.search, searchParams]);
 
+  // Reset pagination count whenever filters change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [activeBrand, activeCategory]);
+
   const handleBrandSelect = (brandId: string) => {
     setActiveBrand(brandId);
+    setVisibleCount(PAGE_SIZE);
     const params = new URLSearchParams(searchParams);
     if (brandId === 'all') {
       params.delete('brand');
@@ -109,6 +128,7 @@ const GalleryPage = () => {
 
   const handleCategorySelect = (catId: ACCategory) => {
     setActiveCategory(catId);
+    setVisibleCount(PAGE_SIZE);
     const params = new URLSearchParams(searchParams);
     if (catId === 'all') {
       params.delete('category');
@@ -122,6 +142,7 @@ const GalleryPage = () => {
   const resetFilters = () => {
     setActiveBrand('all');
     setActiveCategory('all');
+    setVisibleCount(PAGE_SIZE);
     setSearchParams(new URLSearchParams());
   };
 
@@ -131,35 +152,59 @@ const GalleryPage = () => {
     [activeBrand]
   );
 
-  // Compute products according to requirements:
-  // 1. If an individual company category (brand) is selected -> show ONLY 10 recently popular AC details for that company
-  // 2. If a specific category is selected -> show ONLY 10 recently popular AC details for that category
-  // 3. If both are 'all' -> grouped view of top 10 for each category
-  const singleViewProducts = useMemo(() => {
+  // Compute all matching products for Single View (Brand selected OR Category selected)
+  const allFilteredProducts = useMemo(() => {
     if (activeBrand !== 'all') {
-      // Individual company category selected: 10 recently popular AC details
-      return getPopularACsByBrand(activeBrand, activeCategory, 10);
+      // Return ALL models matching this brand (e.g. all 26 models for O General)
+      return getPopularACsByBrand(activeBrand, activeCategory);
     }
     if (activeCategory !== 'all') {
-      // Specific AC category selected: 10 recently popular AC details
-      return getPopularACsByCategory(activeCategory, activeBrand, 10);
+      // Return ALL models matching this category
+      return getPopularACsByCategory(activeCategory, activeBrand);
     }
     return [];
   }, [activeBrand, activeCategory]);
 
-  // Grouped categories for 'all' mode: each category showing exactly 10 AC details
+  // Sliced products for current view based on visibleCount
+  const displayedProducts = useMemo(() => {
+    return allFilteredProducts.slice(0, visibleCount);
+  }, [allFilteredProducts, visibleCount]);
+
+  const hasMore = visibleCount < allFilteredProducts.length;
+
+  const handleLoadMore = useCallback(() => {
+    setIsLoadingMore(true);
+    // Smooth async batch loading simulation for polished lazy load feel
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + PAGE_SIZE);
+      setIsLoadingMore(false);
+    }, 200);
+  }, []);
+
+  // Grouped categories data for 'all' mode
   const allCategoriesData = useMemo(() => {
     if (activeBrand === 'all' && activeCategory === 'all') {
-      return getAllCategoriesTop10();
+      return getAllCategoriesTop10(50); // Get full list per category
     }
     return [];
   }, [activeBrand, activeCategory]);
+
+  const handleCategoryLoadMore = useCallback((catId: string) => {
+    setLoadingCategory(catId);
+    setTimeout(() => {
+      setCategoryLimits((prev) => ({
+        ...prev,
+        [catId]: (prev[catId] || PAGE_SIZE) + PAGE_SIZE,
+      }));
+      setLoadingCategory(null);
+    }, 200);
+  }, []);
 
   return (
     <Layout>
       <SEO
-        title="AC Products Gallery Kolkata | Top 10 Popular ACs with Original Photos"
-        description="Explore the top 10 recently popular Air Conditioners in Kolkata. Browse Split, Window & Cassette ACs from Daikin, Voltas, O General, Hitachi, Blue Star, LG & Panasonic with authentic images and authorized dealer pricing."
+        title="AC Products Gallery Kolkata | Official Models with Original Photos & Dealer Pricing"
+        description="Explore popular Air Conditioners in Kolkata. Browse Split, Window & Cassette ACs from O General (2026 Models), Daikin, Voltas, Hitachi, Blue Star, LG & Panasonic with authentic images and authorized dealer pricing."
         canonical="/gallery"
       />
 
@@ -169,24 +214,27 @@ const GalleryPage = () => {
           <div className="container mx-auto max-w-7xl text-center">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 text-blue-200 text-xs sm:text-sm font-semibold border border-blue-400/30 mb-4 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-amber-300" />
-              <span>Official AC Gallery • Top 10 Popular Models with Original Photos</span>
+              <span>Official AC Gallery • Verified Models with Original Photos &amp; Specs</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
               Air Conditioner Gallery &amp; Catalog
             </h1>
             <p className="text-blue-100 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed mb-6">
-              Discover the <strong className="text-white">top 10 recently popular AC models</strong> for every category and authorized brand. Every model features its authentic, individual photos, verified energy ratings, and direct Chandni Chowk wholesale dealer pricing.
+              Discover authentic air conditioners for every category and authorized brand. Every model features verified original photos, exact technical specifications (cooling capacity, dimensions, gas type), and direct Chandni Chowk wholesale dealer pricing.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm text-blue-200">
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full border border-white/10">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Only 10 Popular Models per Selection
+            <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-blue-200">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                100% Original Manufacturer Photos
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full border border-white/10">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" /> 100% Original &amp; Authentic Images
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                Authorized Brand Dealership in Kolkata
               </span>
-              <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full border border-white/10">
-                <Zap className="w-4 h-4 text-amber-300" /> Authorized Dealer GST Bill &amp; Warranty
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                Direct Wholesale Prices with GST Invoice &amp; Warranty
               </span>
             </div>
           </div>
@@ -202,7 +250,7 @@ const GalleryPage = () => {
                   <SlidersHorizontal className="w-3.5 h-3.5 text-blue-600" /> 1. Select AC Category
                 </span>
                 <span className="text-xs text-blue-600 font-medium">
-                  Showing 10 models per category
+                  {activeCategory === 'all' ? 'All categories available' : 'Filtered by category'}
                 </span>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -213,7 +261,7 @@ const GalleryPage = () => {
                       key={cat.id}
                       type="button"
                       onClick={() => handleCategorySelect(cat.id)}
-                      className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                      className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                         isSelected
                           ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 scale-[1.02]'
                           : 'bg-gray-50 text-gray-700 hover:bg-blue-50 hover:text-blue-700 border border-gray-200/60'
@@ -221,13 +269,6 @@ const GalleryPage = () => {
                     >
                       {getCategoryIcon(cat.id)}
                       <span>{cat.name}</span>
-                      <span
-                        className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
-                          isSelected ? 'bg-white/20 text-white' : 'bg-gray-200/80 text-gray-600'
-                        }`}
-                      >
-                        {cat.id === 'all' ? 'All' : '10'}
-                      </span>
                     </button>
                   );
                 })}
@@ -244,7 +285,7 @@ const GalleryPage = () => {
                   <button
                     type="button"
                     onClick={resetFilters}
-                    className="text-xs text-red-600 hover:text-red-700 font-semibold underline underline-offset-2"
+                    className="text-xs text-red-600 hover:text-red-700 font-semibold underline underline-offset-2 cursor-pointer"
                   >
                     Reset Filters
                   </button>
@@ -254,7 +295,7 @@ const GalleryPage = () => {
                 <button
                   type="button"
                   onClick={() => handleBrandSelect('all')}
-                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 ${
+                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 cursor-pointer ${
                     activeBrand === 'all'
                       ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
                       : 'bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-600'
@@ -265,12 +306,13 @@ const GalleryPage = () => {
 
                 {activeGalleryBrands.map((brand) => {
                   const isSelected = activeBrand === brand.id;
+                  const isOG = brand.id === 'o-general';
                   return (
                     <button
                       key={brand.id}
                       type="button"
                       onClick={() => handleBrandSelect(brand.id)}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 ${
+                      className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 cursor-pointer ${
                         isSelected
                           ? 'bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/20 scale-[1.02]'
                           : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50/50'
@@ -289,6 +331,15 @@ const GalleryPage = () => {
                         }}
                       />
                       <span>{brand.name}</span>
+                      {isOG && (
+                        <span
+                          className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                            isSelected ? 'bg-white/20 text-white' : 'bg-amber-100 text-amber-800'
+                          }`}
+                        >
+                          26 Models
+                        </span>
+                      )}
                     </button>
                   );
                 })}
@@ -299,39 +350,43 @@ const GalleryPage = () => {
           {/* Active Filter State Banner */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 px-1">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 flex items-center gap-2 flex-wrap">
                 {activeBrand !== 'all' ? (
                   <>
-                    <span>Top 10 Recently Popular {getBrandDisplayName(activeBrand)} ACs</span>
+                    <span>Official {getBrandDisplayName(activeBrand)} AC Collection</span>
                     <span className="text-xs bg-blue-100 text-blue-800 font-semibold px-2.5 py-0.5 rounded-full">
-                      10 Original Models
+                      {allFilteredProducts.length} Models Available
                     </span>
+                    {activeBrand === 'o-general' && (
+                      <span className="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-0.5 rounded-full">
+                        2026 Catalog Only
+                      </span>
+                    )}
                   </>
                 ) : activeCategory !== 'all' ? (
                   <>
                     <span>
-                      Top 10 Recently Popular{' '}
-                      {GALLERY_CATEGORIES.find((c) => c.id === activeCategory)?.name}
+                      {GALLERY_CATEGORIES.find((c) => c.id === activeCategory)?.name} Collection
                     </span>
                     <span className="text-xs bg-emerald-100 text-emerald-800 font-semibold px-2.5 py-0.5 rounded-full">
-                      10 Curated Models
+                      {allFilteredProducts.length} Models
                     </span>
                   </>
                 ) : (
                   <>
                     <span>Popular Air Conditioners by Category</span>
                     <span className="text-xs bg-purple-100 text-purple-800 font-semibold px-2.5 py-0.5 rounded-full">
-                      10 Models Per Category
+                      Full Catalog Showcase
                     </span>
                   </>
                 )}
               </h2>
               <p className="text-gray-500 text-xs sm:text-sm mt-0.5">
                 {activeBrand !== 'all'
-                  ? `Showing the 10 highest-demand ${getBrandDisplayName(activeBrand)} models in Kolkata with authentic original photos.`
+                  ? `Showing ${displayedProducts.length} of ${allFilteredProducts.length} ${getBrandDisplayName(activeBrand)} models in Kolkata with authentic original photos and direct wholesale pricing.`
                   : activeCategory !== 'all'
-                  ? `Showing top 10 bestselling models for this category across authorized brands.`
-                  : `Each AC category shows only the top 10 recently popular models with individual original photos.`}
+                  ? `Showing ${displayedProducts.length} of ${allFilteredProducts.length} models for this category across authorized brands.`
+                  : `Browse models across every category with authentic original photos and direct wholesale dealer pricing.`}
               </p>
             </div>
 
@@ -347,10 +402,10 @@ const GalleryPage = () => {
             )}
           </div>
 
-          {/* CASE A: Specific Brand OR Specific Category is selected -> Render 10 Cards */}
+          {/* CASE A: Specific Brand OR Specific Category is selected -> Render Paginated Cards with Load More */}
           {(activeBrand !== 'all' || activeCategory !== 'all') && (
             <div>
-              {singleViewProducts.length === 0 ? (
+              {allFilteredProducts.length === 0 ? (
                 <div className="bg-white rounded-2xl border border-gray-200 text-center py-16 px-4">
                   <p className="text-gray-600 text-base font-semibold mb-2">
                     No models found matching both filters.
@@ -363,25 +418,86 @@ const GalleryPage = () => {
                   </Button>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-5">
-                  {singleViewProducts.map((product, index) => (
-                    <ProductGalleryCard
-                      key={product.id}
-                      product={product}
-                      rankIndex={index + 1}
-                      onSelect={() => setSelectedProduct(product)}
-                    />
-                  ))}
-                </div>
+                <>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-5">
+                    {displayedProducts.map((product, index) => (
+                      <ProductGalleryCard
+                        key={product.id}
+                        product={product}
+                        rankIndex={index + 1}
+                        onSelect={() => setSelectedProduct(product)}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Load More Button & Progress Bar */}
+                  <div className="mt-10 flex flex-col items-center justify-center gap-3">
+                    <div className="w-full max-w-xs text-center space-y-1.5">
+                      <div className="flex justify-between text-xs text-gray-500 font-medium">
+                        <span>Loaded Models</span>
+                        <span>
+                          <strong>{displayedProducts.length}</strong> of{' '}
+                          <strong>{allFilteredProducts.length}</strong>
+                        </span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-1.5 overflow-hidden">
+                        <div
+                          className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
+                          style={{
+                            width: `${Math.min(
+                              100,
+                              Math.round(
+                                (displayedProducts.length / allFilteredProducts.length) * 100
+                              )
+                            )}%`,
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    {hasMore ? (
+                      <Button
+                        type="button"
+                        onClick={handleLoadMore}
+                        disabled={isLoadingMore}
+                        className="px-8 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2 group cursor-pointer"
+                      >
+                        {isLoadingMore ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin text-white" />
+                            <span>Loading 10 More Models...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>Load More Models (+10)</span>
+                            <ChevronDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                          </>
+                        )}
+                      </Button>
+                    ) : (
+                      allFilteredProducts.length > PAGE_SIZE && (
+                        <div className="inline-flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full font-semibold">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                          <span>All {allFilteredProducts.length} models loaded</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </>
               )}
             </div>
           )}
 
-          {/* CASE B: Both filters are 'all' -> Render Each Category with its Top 10 AC details */}
+          {/* CASE B: Both filters are 'all' -> Render Each Category with its Models and Category Load More */}
           {activeBrand === 'all' && activeCategory === 'all' && (
             <div className="space-y-12">
-              {allCategoriesData.map(({ category, meta, products }) => {
+              {allCategoriesData.map(({ category, meta, products, totalCount }) => {
                 if (products.length === 0) return null;
+                const limit = categoryLimits[category] || PAGE_SIZE;
+                const catDisplayed = products.slice(0, limit);
+                const catHasMore = limit < products.length;
+                const isCatLoading = loadingCategory === category;
+
                 return (
                   <section
                     key={category}
@@ -397,7 +513,7 @@ const GalleryPage = () => {
                             {meta.name}
                           </h3>
                           <span className="text-xs font-semibold bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-full">
-                            Top 10 Models
+                            {catDisplayed.length} of {products.length} Models
                           </span>
                         </div>
                         <p className="text-gray-500 text-xs sm:text-sm mt-1">{meta.description}</p>
@@ -406,14 +522,14 @@ const GalleryPage = () => {
                       <button
                         type="button"
                         onClick={() => handleCategorySelect(category)}
-                        className="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 self-start sm:self-auto hover:underline"
+                        className="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 self-start sm:self-auto hover:underline cursor-pointer"
                       >
                         Explore All {meta.name} <ChevronRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-5">
-                      {products.map((product, index) => (
+                      {catDisplayed.map((product, index) => (
                         <ProductGalleryCard
                           key={product.id}
                           product={product}
@@ -422,6 +538,31 @@ const GalleryPage = () => {
                         />
                       ))}
                     </div>
+
+                    {/* Per-Category Load More Button */}
+                    {catHasMore && (
+                      <div className="mt-8 flex justify-center">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={() => handleCategoryLoadMore(category)}
+                          disabled={isCatLoading}
+                          className="border-blue-300 text-blue-700 hover:bg-blue-50 px-6 py-2 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer"
+                        >
+                          {isCatLoading ? (
+                            <>
+                              <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-600" />
+                              <span>Loading 10 More...</span>
+                            </>
+                          ) : (
+                            <>
+                              <span>Load 10 More in {meta.name}</span>
+                              <ChevronDown className="w-3.5 h-3.5" />
+                            </>
+                          )}
+                        </Button>
+                      </div>
+                    )}
                   </section>
                 );
               })}
@@ -455,34 +596,66 @@ const ProductGalleryCard = ({ product, rankIndex, onSelect }: CardProps) => {
   const brandName = getBrandDisplayName(product.brand);
   const mainImage = fixGalleryImage(product.image);
 
+  // Lazy loading state for smooth progressive loading
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+
+  const is2026Model = product.features?.some((f) => f.includes('2026'));
+  const isHotAndCold =
+    product.specialFeatures?.some((f) => f.toLowerCase().includes('hot & cold')) ||
+    product.description?.toLowerCase().includes('hot & cold');
+
   return (
     <div
       onClick={onSelect}
       className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 overflow-hidden border border-gray-200/90 flex flex-col justify-between"
     >
       <div>
-        {/* Thumbnail View */}
-        <div className="relative aspect-square overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100/50 flex items-center justify-center p-3">
+        {/* Thumbnail View with Aspect Ratio and Skeleton Placeholder */}
+        <div className="relative aspect-square overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100/60 flex items-center justify-center p-3">
           {/* Rank Badge */}
-          <span className="absolute top-2 left-2 z-10 text-[10px] font-extrabold bg-slate-900/80 text-white px-2 py-0.5 rounded-md backdrop-blur-xs">
+          <span className="absolute top-2 left-2 z-10 text-[10px] font-extrabold bg-slate-900/85 text-white px-2 py-0.5 rounded-md backdrop-blur-xs shadow-xs">
             #{rankIndex}
           </span>
 
-          {/* Genuine Stock Indicator */}
-          <span className="absolute top-2 right-2 z-10 text-[9px] font-bold bg-emerald-500/90 text-white px-1.5 py-0.5 rounded shadow-xs">
-            Original Photo
-          </span>
+          {/* Genuine Stock Indicator or 2026 Model Badge */}
+          <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-1 pointer-events-none">
+            {is2026Model ? (
+              <span className="text-[9px] font-extrabold bg-amber-500 text-white px-1.5 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                2026 Model
+              </span>
+            ) : (
+              <span className="text-[9px] font-bold bg-emerald-500/90 text-white px-1.5 py-0.5 rounded shadow-xs">
+                Original Photo
+              </span>
+            )}
+            {isHotAndCold && (
+              <span className="text-[8.5px] font-extrabold bg-rose-500 text-white px-1.5 py-0.5 rounded shadow-xs uppercase tracking-wide">
+                Hot &amp; Cold
+              </span>
+            )}
+          </div>
+
+          {/* Skeleton Placeholder while loading */}
+          {!imageLoaded && !imageError && (
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-gray-200/70 to-gray-100 animate-pulse flex items-center justify-center">
+              <span className="w-8 h-8 rounded-full border-2 border-blue-200 border-t-blue-600 animate-spin" />
+            </div>
+          )}
 
           <img
             src={mainImage}
             alt={`${brandName} ${product.modelNumber} air conditioner`}
-            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full object-contain transition-all duration-300 ${
+              imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+            } group-hover:scale-105`}
             loading="lazy"
             decoding="async"
             width="240"
             height="190"
+            onLoad={() => setImageLoaded(true)}
             onError={(e) => {
-              // Never fallback to an unrelated external photo
+              setImageError(true);
               const target = e.target as HTMLImageElement;
               target.src = '/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png';
             }}
@@ -500,11 +673,11 @@ const ProductGalleryCard = ({ product, rankIndex, onSelect }: CardProps) => {
             </span>
           </div>
 
-          <p className="text-xs font-mono text-gray-900 font-bold mb-1.5 truncate">
+          <p className="text-xs font-mono text-gray-900 font-bold mb-1.5 truncate" title={product.modelNumber}>
             {product.modelNumber}
           </p>
 
-          <div className="flex items-center gap-1.5 mb-2">
+          <div className="flex flex-wrap items-center gap-1.5 mb-2">
             <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full font-bold">
               {product.tonnage}
             </span>
@@ -517,6 +690,11 @@ const ProductGalleryCard = ({ product, rankIndex, onSelect }: CardProps) => {
             >
               {product.inverter === 'inverter' ? 'Inverter' : 'Fixed'}
             </span>
+            {product.coolingCapacity && (
+              <span className="text-[9.5px] bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded font-medium">
+                {product.coolingCapacity}
+              </span>
+            )}
           </div>
 
           <StarRating rating={product.starRating} />
@@ -577,6 +755,11 @@ const ProductModalContent = ({
           <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full flex items-center gap-1">
             <CheckCircle2 className="w-3 h-3" /> Genuine Manufacturer Stock
           </span>
+          {product.features?.some((f) => f.includes('2026')) && (
+            <span className="text-xs font-bold text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-0.5 rounded-full">
+              2026 Model
+            </span>
+          )}
         </div>
         <h2 className="text-lg sm:text-xl font-extrabold text-gray-900 leading-snug">
           {product.description || `${brandName} ${product.tonnage} ${product.starRating} AC`}
@@ -587,55 +770,49 @@ const ProductModalContent = ({
       </div>
 
       {/* Main Image View */}
-      <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 flex items-center justify-center min-h-[220px]">
+      <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4 flex items-center justify-center h-64 sm:h-72">
         <img
           src={images[activeImgIndex] || images[0]}
-          alt={`${brandName} ${product.modelNumber} view`}
-          className="max-h-56 max-w-full object-contain"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = '/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png';
-          }}
+          alt={`${brandName} ${product.modelNumber}`}
+          className="max-h-full max-w-full object-contain"
+          loading="eager"
         />
       </div>
 
-      {/* Thumbnails if multiple images exist */}
+      {/* Image Thumbnails Gallery */}
       {images.length > 1 && (
         <div className="flex gap-2 overflow-x-auto pb-1">
-          {images.map((src, i) => (
+          {images.map((img, idx) => (
             <button
-              key={i}
+              key={idx}
               type="button"
-              onClick={() => setActiveImgIndex(i)}
-              className={`h-14 w-14 shrink-0 rounded-xl bg-gray-50 border-2 overflow-hidden p-1 transition-all ${
-                activeImgIndex === i
-                  ? 'border-blue-600 shadow-sm'
-                  : 'border-gray-200 hover:border-blue-300'
+              onClick={() => setActiveImgIndex(idx)}
+              className={`h-14 w-14 shrink-0 rounded-xl border p-1 bg-white cursor-pointer transition-all ${
+                activeImgIndex === idx
+                  ? 'border-blue-600 ring-2 ring-blue-200'
+                  : 'border-gray-200 hover:border-gray-400 opacity-70 hover:opacity-100'
               }`}
             >
               <img
-                src={src}
-                alt={`${product.modelNumber} thumbnail ${i + 1}`}
+                src={img}
+                alt={`View ${idx + 1}`}
                 className="w-full h-full object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/lovable-uploads/e804a384-717d-4b21-8f27-3926969ddc06.png';
-                }}
+                loading="lazy"
+                decoding="async"
+                width="56"
+                height="56"
               />
             </button>
           ))}
         </div>
       )}
 
-      {/* Primary Specs Grid */}
+      {/* Quick Specs Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
         {[
           { label: 'Capacity', value: product.tonnage },
           { label: 'Star Rating', value: product.starRating || 'Standard' },
-          {
-            label: 'Compressor',
-            value: product.inverter === 'inverter' ? 'Inverter' : 'Fixed Speed',
-          },
+          { label: 'Compressor', value: product.inverter === 'inverter' ? 'Inverter' : 'Fixed Speed' },
           { label: 'AC Type', value: product.type.replace(/-/g, ' ').toUpperCase() },
         ].map(({ label, value }) => (
           <div key={label} className="bg-gray-50 rounded-xl p-2.5 text-center border border-gray-100">
@@ -650,7 +827,8 @@ const ProductModalContent = ({
         product.gasType ||
         product.indoorUnitDimensions ||
         product.outdoorUnitDimensions ||
-        product.airWing) && (
+        product.airWing ||
+        product.specialFeatures) && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-slate-50 p-3.5 rounded-xl border border-gray-100">
           {product.coolingCapacity && (
             <div>
@@ -682,6 +860,16 @@ const ProductModalContent = ({
             <div className="sm:col-span-2">
               <span className="text-gray-500">Air Wing Tech: </span>
               <strong className="text-cyan-800">{product.airWing}</strong>
+            </div>
+          )}
+          {product.specialFeatures && product.specialFeatures.length > 0 && (
+            <div className="sm:col-span-2">
+              <span className="text-gray-500">Special Highlights: </span>
+              <strong className="text-purple-800">
+                {Array.isArray(product.specialFeatures)
+                  ? product.specialFeatures.join(', ')
+                  : product.specialFeatures}
+              </strong>
             </div>
           )}
         </div>
@@ -735,7 +923,7 @@ const ProductModalContent = ({
             <MessageCircle className="w-4 h-4" /> WhatsApp Best Deal
           </a>
           <Link to={`/product/${product.id}`} onClick={onClose}>
-            <Button className="bg-blue-600 hover:bg-blue-700 rounded-xl px-4 py-2 text-xs font-bold">
+            <Button className="bg-blue-600 hover:bg-blue-700 rounded-xl px-4 py-2 text-xs font-bold cursor-pointer">
               Full Page
             </Button>
           </Link>

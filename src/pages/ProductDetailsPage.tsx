@@ -156,6 +156,25 @@ const ProductDetailsPage = () => {
                   />
                 )}
                 <span className="text-lg font-medium text-gray-700">{brand}</span>
+                {product.features?.some(f => f.includes("2026")) && (
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                    2026 Model
+                  </span>
+                )}
+                {product.specialFeatures?.map((badge, bIdx) => (
+                  <span
+                    key={bIdx}
+                    className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+                      badge.includes("Hot & Cold")
+                        ? "bg-rose-100 text-rose-800 border border-rose-300"
+                        : badge.includes("220")
+                        ? "bg-purple-100 text-purple-800 border border-purple-300"
+                        : "bg-blue-100 text-blue-800 border border-blue-300"
+                    }`}
+                  >
+                    {badge}
+                  </span>
+                ))}
               </div>
 
               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">
@@ -305,7 +324,7 @@ const ProductDetailsPage = () => {
                     {product.specialFeatures && (
                       <div className="flex">
                         <span className="w-40 font-medium text-gray-700">Special Features</span>
-                        <span className="text-gray-600">{product.specialFeatures}</span>
+                        <span className="text-gray-600">{Array.isArray(product.specialFeatures) ? product.specialFeatures.join(", ") : product.specialFeatures}</span>
                       </div>
                     )}
                     <div className="flex">

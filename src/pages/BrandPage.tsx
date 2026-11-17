@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getTonnageOptions, getACModels } from "@/lib/ac-data";
+import { acProducts } from "@/lib/ac-selection-data";
 import { useToast } from "@/hooks/use-toast";
 import SEO from "@/components/SEO";
 import { ShieldCheck, Truck, Wrench, MessageCircle, MapPin, CheckCircle2 } from "lucide-react";
@@ -27,6 +28,14 @@ const BrandPage = () => {
   }, [brandName, tonnageOptions, toast]);
 
   const handleAcOptions = (ton: string) => {
+    const norm = (brandName || "").toLowerCase().trim();
+    const product = acProducts.find((p) => p.brand.toLowerCase() === norm && p.tonnage === ton);
+    if (product) {
+      navigate(
+        `/select-star/${product.type}/${product.brand}/${product.inverter}/${product.tonnage}`
+      );
+      return;
+    }
     const tonnageAcData = acModels.find((model) => model.tonnage === ton);
     if (tonnageAcData) {
       navigate(

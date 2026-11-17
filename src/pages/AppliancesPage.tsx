@@ -157,6 +157,7 @@ const AppliancesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
   const activeTab = searchParams.get("category") || (location.pathname.includes("geyser") ? "geyser" : "all");
+  const [geyserBrand, setGeyserBrand] = useState<string>("All");
   const [geyserCapacity, setGeyserCapacity] = useState<string>("All");
   const [geyserOrientation, setGeyserOrientation] = useState<string>("all");
 
@@ -175,17 +176,18 @@ const AppliancesPage = () => {
       : COMMERCIAL_PRODUCTS.filter((item) => item.category === activeTab);
 
   const filteredGeysers = GEYSERS_DATA.filter((g) => {
+    const matchBrand = geyserBrand === "All" || g.brand === geyserBrand;
     const matchCapacity = geyserCapacity === "All" || g.capacity === geyserCapacity;
     const matchOrientation = geyserOrientation === "all" || g.orientation === geyserOrientation;
-    return matchCapacity && matchOrientation;
+    return matchBrand && matchCapacity && matchOrientation;
   });
 
   const appliancesSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Commercial Visi Coolers, Deep Freezers & Venus Geysers Dealer in Kolkata",
+    name: "AO Smith & Venus Geysers, Commercial Visi Coolers & Deep Freezers Dealer in Kolkata",
     description:
-      "Authorized wholesale and retail dealer in Kolkata for Commercial Visi Coolers, Deep Freezers, and Venus Water Geysers located at Chandni Chowk.",
+      "Authorized wholesale and retail dealer in Kolkata for AO Smith & Venus Water Geysers, Commercial Visi Coolers, and Deep Freezers located at Chandni Chowk.",
     url: "https://www.venusappliances.com/appliances",
     publisher: {
       "@type": "LocalBusiness",
@@ -205,9 +207,9 @@ const AppliancesPage = () => {
   return (
     <Layout>
       <SEO
-        title="Visi Cooler, Deep Freezer & Venus Geyser Dealer in Kolkata | Venus Appliances"
-        description="Venus Appliances is Kolkata's top dealer for Commercial Visi Coolers, Deep Freezers, Venus Water Geysers & Cassette ACs in Chandni Chowk. Best wholesale prices for supermarkets, dairy, restaurants & homes."
-        keywords="visi cooler dealer in kolkata, deep freezer dealer in kolkata, deep freedge dealer in kolkata, geyser dealer in kolkata, venus geyser kolkata, water heater dealer kolkata, commercial visi cooler chandni chowk, chest freezer kolkata"
+        title="AO Smith & Venus Geyser, Visi Cooler & Deep Freezer Dealer Kolkata | Venus Appliances"
+        description="Venus Appliances is Kolkata's top authorized dealer for AO Smith & Venus Water Geysers (3L to 35L), Commercial Visi Coolers, Deep Freezers & Cassette ACs in Chandni Chowk. Best wholesale prices with free installation & brand warranty."
+        keywords="ao smith geyser kolkata, venus geyser dealer kolkata, ao smith water heater chandni chowk, 5 star geyser kolkata, instant geyser 3l kolkata, storage geyser 10l 15l 25l, visi cooler dealer in kolkata, deep freezer dealer in kolkata"
         canonical="/appliances"
         schema={appliancesSchema}
       />
@@ -271,9 +273,9 @@ const AppliancesPage = () => {
                   : "bg-white text-gray-700 border border-gray-200 hover:border-orange-400 hover:text-orange-600"
               }`}
             >
-              <Flame className="h-4 w-4 text-orange-500" /> Venus Water Geysers
+              <Flame className="h-4 w-4 text-orange-500" /> Water Geysers
               <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-orange-100 text-orange-800">
-                22 Models
+                {GEYSERS_DATA.length} Models
               </span>
             </button>
             <button
@@ -308,19 +310,19 @@ const AppliancesPage = () => {
             </button>
           </div>
 
-          {/* DEDICATED VENUS GEYSER SHOWCASE SECTION (When 'geyser' or 'all') */}
+          {/* DEDICATED AO SMITH & VENUS GEYSER SHOWCASE SECTION (When 'geyser' or 'all') */}
           {(activeTab === "geyser" || activeTab === "all") && (
             <div className="mb-14">
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 pb-4 border-b border-gray-200">
                 <div>
                   <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold uppercase tracking-wider mb-2">
-                    <Flame className="h-3.5 w-3.5" /> Venus Home Appliances Official Dealer Showroom
+                    <Flame className="h-3.5 w-3.5" /> AO Smith &amp; Venus Authorized Geyser Showroom
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                    Venus Water Heaters &amp; Geysers Collection
+                    AO Smith &amp; Venus Water Heaters &amp; Geysers Collection
                   </h2>
                   <p className="text-xs sm:text-sm text-gray-600 mt-1 max-w-2xl">
-                    Instant 3L Kitchen Geysers, 6L/10L/15L 5-Star BEE Bathroom Storage Geysers, and 35L Heavy Storage Systems with 100% Copper &amp; Porcelain Glassline Tanks.
+                    Instant 3L Kitchen Geysers, 6L/10L/15L/25L 5-Star BEE Bathroom Storage Geysers, and 35L Heavy Storage Systems with Stainless Steel &amp; Glasslined Tanks.
                   </p>
                 </div>
                 <div className="mt-3 md:mt-0 flex items-center gap-2">
@@ -331,11 +333,42 @@ const AppliancesPage = () => {
               </div>
 
               {/* Sub-filters for Geysers */}
-              <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200 mb-8 space-y-3 text-xs">
+              <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200 mb-8 space-y-3.5 text-xs">
+                {/* Brand Filter */}
+                <div>
+                  <span className="font-bold text-gray-700 mr-2">Filter by Brand:</span>
+                  <div className="flex flex-wrap gap-1.5 mt-1.5">
+                    {[
+                      { id: "All", label: `All Brands (${GEYSERS_DATA.length})` },
+                      {
+                        id: "AO Smith",
+                        label: `AO Smith (${GEYSERS_DATA.filter((g) => g.brand === "AO Smith").length})`,
+                      },
+                      {
+                        id: "Venus",
+                        label: `Venus (${GEYSERS_DATA.filter((g) => g.brand === "Venus").length})`,
+                      },
+                    ].map((item) => (
+                      <button
+                        key={item.id}
+                        onClick={() => setGeyserBrand(item.id)}
+                        className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                          geyserBrand === item.id
+                            ? "bg-slate-900 text-white shadow-sm"
+                            : "bg-gray-100 text-gray-700 hover:bg-slate-200 hover:text-slate-900"
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Capacity Filter */}
                 <div>
                   <span className="font-bold text-gray-700 mr-2">Filter by Capacity:</span>
                   <div className="flex flex-wrap gap-1.5 mt-1.5">
-                    {["All", "3 LTR", "6 LTR", "10 LTR", "15 LTR", "35 LTR"].map((cap) => (
+                    {["All", "3 LTR", "6 LTR", "10 LTR", "15 LTR", "25 LTR", "35 LTR"].map((cap) => (
                       <button
                         key={cap}
                         onClick={() => setGeyserCapacity(cap)}
@@ -351,6 +384,7 @@ const AppliancesPage = () => {
                   </div>
                 </div>
 
+                {/* Orientation / Mounting Filter */}
                 <div>
                   <span className="font-bold text-gray-700 mr-2">Filter by Mounting / Type:</span>
                   <div className="flex flex-wrap gap-1.5 mt-1.5">
@@ -382,8 +416,9 @@ const AppliancesPage = () => {
                   const savings = product.mrp - product.offerPrice;
                   const discountPct = Math.round((savings / product.mrp) * 100);
                   const isCopper = product.tankType.toLowerCase().includes("copper");
+                  const isFreeInstall = product.installationTerms.toUpperCase().includes("FREE");
 
-                  const waText = `Hi Venus Appliances Kolkata, I want to inquire about ${product.name} (Capacity: ${product.capacity}, Offer Price: Rs.${product.offerPrice.toLocaleString()}). Please confirm stock and delivery at Chandni Chowk store.`;
+                  const waText = `Hi Venus Appliances Kolkata, I want to inquire about ${product.brand} ${product.name} (Capacity: ${product.capacity}, Offer Price: Rs.${product.offerPrice.toLocaleString()}). Please confirm stock and delivery at Chandni Chowk store.`;
 
                   return (
                     <Card
@@ -393,17 +428,28 @@ const AppliancesPage = () => {
                       <div>
                         {/* Badges Bar */}
                         <div className="flex items-center justify-between gap-2 mb-3">
-                          <span
-                            className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
-                              product.starRating.includes("5★")
-                                ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
-                                : product.starRating.includes("4★")
-                                ? "bg-blue-100 text-blue-800 border border-blue-300"
-                                : "bg-amber-100 text-amber-800 border border-amber-300"
-                            }`}
-                          >
-                            {product.starRating}
-                          </span>
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${
+                                product.brand === "AO Smith"
+                                  ? "bg-blue-950 text-white"
+                                  : "bg-orange-600 text-white"
+                              }`}
+                            >
+                              {product.brand}
+                            </span>
+                            <span
+                              className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
+                                product.starRating.includes("5★")
+                                  ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                                  : product.starRating.includes("4★")
+                                  ? "bg-blue-100 text-blue-800 border border-blue-300"
+                                  : "bg-amber-100 text-amber-800 border border-amber-300"
+                              }`}
+                            >
+                              {product.starRating}
+                            </span>
+                          </div>
                           <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wide">
                             {product.capacity} • {product.orientation.toUpperCase()}
                           </span>
@@ -419,6 +465,10 @@ const AppliancesPage = () => {
                             decoding="async"
                             width="220"
                             height="160"
+                            onError={(e) => {
+                              (e.currentTarget as HTMLImageElement).src =
+                                "/lovable-uploads/geysers/venus-water-geyser.png";
+                            }}
                           />
                         </div>
 
@@ -463,8 +513,18 @@ const AppliancesPage = () => {
                         </div>
 
                         {/* Installation Notice */}
-                        <div className="text-[11px] font-semibold text-blue-900 bg-blue-50/80 px-2.5 py-1.5 rounded-lg border border-blue-100 mb-4 flex items-center gap-1.5">
-                          <ShieldCheck className="h-3.5 w-3.5 text-blue-600 shrink-0" />
+                        <div
+                          className={`text-[11px] font-semibold px-2.5 py-1.5 rounded-lg border mb-4 flex items-center gap-1.5 ${
+                            isFreeInstall
+                              ? "text-emerald-800 bg-emerald-50 border-emerald-200"
+                              : "text-blue-900 bg-blue-50/80 border-blue-100"
+                          }`}
+                        >
+                          <ShieldCheck
+                            className={`h-3.5 w-3.5 shrink-0 ${
+                              isFreeInstall ? "text-emerald-600" : "text-blue-600"
+                            }`}
+                          />
                           <span className="truncate">{product.installationTerms}</span>
                         </div>
                       </div>
@@ -539,6 +599,31 @@ const AppliancesPage = () => {
                   );
                 })}
               </div>
+
+              {/* Empty state if filtered results are 0 */}
+              {filteredGeysers.length === 0 && (
+                <div className="bg-white rounded-2xl p-8 text-center border border-gray-200 max-w-lg mx-auto mb-10 shadow-sm">
+                  <Flame className="h-10 w-10 text-orange-500 mx-auto mb-3 opacity-80" />
+                  <h4 className="font-bold text-gray-900 text-base mb-1">
+                    No models match the selected filters
+                  </h4>
+                  <p className="text-xs text-gray-500 mb-4">
+                    Try changing your brand, capacity, or orientation filters to see available stock.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => {
+                      setGeyserBrand("All");
+                      setGeyserCapacity("All");
+                      setGeyserOrientation("all");
+                    }}
+                    className="font-bold text-xs"
+                  >
+                    Reset All Filters
+                  </Button>
+                </div>
+              )}
             </div>
           )}
 

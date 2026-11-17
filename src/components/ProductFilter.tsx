@@ -144,15 +144,15 @@ const products = [
     tag: "newest"
   },
   {
-    id: "o-general-split-1t-inv-5star-asgg12cgaa-b",
-    name: "O General 1 Ton 5 Star Inverter Split AC",
-    image: "/lovable-uploads/o-general/ASGG12CGAA-B/1.png",
-    originalPrice: 55790,
-    discountedPrice: 50200,
-    discountPercent: 10,
+    id: "o-general-split-1t-inv-5star-asgg12cgab-b",
+    name: "O General 1.0T 5 Star Inverter Split AC (2026 Model)",
+    image: "/lovable-uploads/o-general/12CGAA/1.png",
+    originalPrice: 56010,
+    discountedPrice: 50800,
+    discountPercent: 9,
     stars: 5,
-    reviews: 29,
-    badge: "NEW",
+    reviews: 32,
+    badge: "2026 MODEL",
     tag: "newest"
   },
 ];

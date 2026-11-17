@@ -35,10 +35,25 @@ const ProductCard = ({ product }: ProductCardProps) => {
     { label: "IDU", value: product.indoorUnitDimensions },
     { label: "ODU", value: product.outdoorUnitDimensions },
     { label: "Air Wing", value: product.airWing },
+    { label: "Gas", value: product.gasType },
   ].filter((spec) => Boolean(spec.value));
 
   return (
-    <Card className="overflow-hidden border border-gray-200 shadow-lg hover-lift flex flex-col h-full">
+    <Card className="overflow-hidden border border-gray-200 shadow-lg hover-lift flex flex-col h-full relative">
+      {(product.features?.some(f => f.includes("2026")) || product.specialFeatures?.length) && (
+        <div className="absolute top-2.5 right-2.5 z-10 flex flex-col items-end gap-1 pointer-events-none">
+          {product.features?.some(f => f.includes("2026")) && (
+            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-white shadow-sm uppercase tracking-wide">
+              2026 Model
+            </span>
+          )}
+          {product.specialFeatures?.some(f => f.toLowerCase().includes("hot & cold")) && (
+            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500 text-white shadow-sm uppercase tracking-wide">
+              Hot &amp; Cold
+            </span>
+          )}
+        </div>
+      )}
       <div className="h-52 flex items-center justify-center  p-4">
         <img 
           src={imageSrc}

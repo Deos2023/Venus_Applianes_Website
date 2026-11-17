@@ -22,15 +22,18 @@ const PREMIUM_BG_IMAGE =
 
 const ACSelectionGuide = () => {
   const [activeCategory, setActiveCategory] = useState<"ac" | "geyser">("ac");
+  const [selectedBrand, setSelectedBrand] = useState<string>("All");
   const [selectedCapacity, setSelectedCapacity] = useState<string>("All");
   const [selectedOrientation, setSelectedOrientation] = useState<string>("all");
 
   const filteredGeysers = GEYSERS_DATA.filter((g) => {
+    const matchBrand =
+      selectedBrand === "All" || g.brand === selectedBrand;
     const matchCapacity =
       selectedCapacity === "All" || g.capacity === selectedCapacity;
     const matchOrientation =
       selectedOrientation === "all" || g.orientation === selectedOrientation;
-    return matchCapacity && matchOrientation;
+    return matchBrand && matchCapacity && matchOrientation;
   });
 
   return (
@@ -95,9 +98,9 @@ const ACSelectionGuide = () => {
                   : "text-gray-700 hover:text-orange-700 hover:bg-white/60"
               }`}
             >
-              <Flame className="h-4 w-4" /> Venus Water Geysers
+              <Flame className="h-4 w-4" /> Water Geysers
               <span className="hidden sm:inline-block px-2 py-0.5 rounded-full text-[10px] font-black bg-white/20 text-white">
-                22 Models
+                {GEYSERS_DATA.length} Models
               </span>
             </button>
           </div>
@@ -258,23 +261,54 @@ const ACSelectionGuide = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-gray-100">
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 flex items-center gap-2">
-                      <Flame className="h-5 w-5 text-orange-500" /> Venus Water Heaters &amp; Geysers
+                      <Flame className="h-5 w-5 text-orange-500" /> AO Smith &amp; Venus Water Geysers
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600">
-                      Wholesale &amp; Retail Pricing directly from our Chandni Chowk showroom
+                      Authorized Wholesale &amp; Retail Pricing directly from our Chandni Chowk showroom
                     </p>
                   </div>
                   <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200 self-start md:self-auto flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4" /> 22 Models In Stock • Genuine Brand Warranty
+                    <CheckCircle2 className="h-4 w-4" /> {GEYSERS_DATA.length} Models In Stock • 100% Genuine Brand Warranty
                   </span>
                 </div>
 
-                {/* Capacity Pills */}
-                <div className="space-y-3 text-xs">
+                {/* Filter Controls Stack */}
+                <div className="space-y-3.5 text-xs">
+                  {/* Brand Pills */}
+                  <div>
+                    <span className="font-bold text-gray-700 mr-2">Filter by Brand:</span>
+                    <div className="flex flex-wrap gap-1.5 mt-1.5">
+                      {[
+                        { id: "All", label: `All Brands (${GEYSERS_DATA.length})` },
+                        {
+                          id: "AO Smith",
+                          label: `AO Smith (${GEYSERS_DATA.filter((g) => g.brand === "AO Smith").length})`,
+                        },
+                        {
+                          id: "Venus",
+                          label: `Venus (${GEYSERS_DATA.filter((g) => g.brand === "Venus").length})`,
+                        },
+                      ].map((item) => (
+                        <button
+                          key={item.id}
+                          onClick={() => setSelectedBrand(item.id)}
+                          className={`px-3 py-1 rounded-lg font-bold transition-all ${
+                            selectedBrand === item.id
+                              ? "bg-slate-900 text-white shadow-sm"
+                              : "bg-gray-100 text-gray-700 hover:bg-slate-200 hover:text-slate-900"
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Capacity Pills */}
                   <div>
                     <span className="font-bold text-gray-700 mr-2">Filter by Capacity:</span>
                     <div className="flex flex-wrap gap-1.5 mt-1.5">
-                      {["All", "3 LTR", "6 LTR", "10 LTR", "15 LTR", "35 LTR"].map((cap) => (
+                      {["All", "3 LTR", "6 LTR", "10 LTR", "15 LTR", "25 LTR", "35 LTR"].map((cap) => (
                         <button
                           key={cap}
                           onClick={() => setSelectedCapacity(cap)}
@@ -323,8 +357,9 @@ const ACSelectionGuide = () => {
                   const savings = product.mrp - product.offerPrice;
                   const discountPct = Math.round((savings / product.mrp) * 100);
                   const isCopper = product.tankType.toLowerCase().includes("copper");
+                  const isFreeInstall = product.installationTerms.toUpperCase().includes("FREE");
 
-                  const waText = `Hi Venus Appliances Kolkata, I want to inquire about ${product.name} (Capacity: ${product.capacity}, Offer Price: Rs.${product.offerPrice.toLocaleString()}). Please confirm stock and delivery at Chandni Chowk store.`;
+                  const waText = `Hi Venus Appliances Kolkata, I want to inquire about ${product.brand} ${product.name} (Capacity: ${product.capacity}, Offer Price: Rs.${product.offerPrice.toLocaleString()}). Please confirm stock and delivery at Chandni Chowk store.`;
 
                   return (
                     <Card
@@ -334,29 +369,44 @@ const ACSelectionGuide = () => {
                       <div>
                         {/* Badges Bar */}
                         <div className="flex items-center justify-between gap-2 mb-3">
-                          <span
-                            className={`px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
-                              product.starRating.includes("5★")
-                                ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
-                                : product.starRating.includes("4★")
-                                ? "bg-blue-100 text-blue-800 border border-blue-300"
-                                : "bg-amber-100 text-amber-800 border border-amber-300"
-                            }`}
-                          >
-                            {product.starRating}
-                          </span>
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              className={`px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider ${
+                                product.brand === "AO Smith"
+                                  ? "bg-blue-950 text-white"
+                                  : "bg-orange-600 text-white"
+                              }`}
+                            >
+                              {product.brand}
+                            </span>
+                            <span
+                              className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${
+                                product.starRating.includes("5★")
+                                  ? "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                                  : product.starRating.includes("4★")
+                                  ? "bg-blue-100 text-blue-800 border border-blue-300"
+                                  : "bg-amber-100 text-amber-800 border border-amber-300"
+                              }`}
+                            >
+                              {product.starRating}
+                            </span>
+                          </div>
                           <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wide">
                             {product.capacity} • {product.orientation.toUpperCase()}
                           </span>
                         </div>
 
                         {/* Image Graphic */}
-                        <div className="h-40 bg-gradient-to-b from-gray-50 to-white rounded-xl p-3 mb-4 flex items-center justify-center border border-gray-100 group-hover:scale-105 transition-transform">
+                        <div className="h-44 bg-gradient-to-b from-gray-50 to-white rounded-xl p-3 mb-4 flex items-center justify-center border border-gray-100 group-hover:scale-105 transition-transform">
                           <img
                             src={product.image}
                             alt={`${product.name} dealer in Kolkata`}
-                            className="max-h-36 max-w-[85%] object-contain drop-shadow"
+                            className="max-h-40 max-w-[85%] object-contain drop-shadow"
                             loading="lazy"
+                            onError={(e) => {
+                              (e.currentTarget as HTMLImageElement).src =
+                                "/lovable-uploads/geysers/venus-water-geyser.png";
+                            }}
                           />
                         </div>
 
@@ -401,8 +451,18 @@ const ACSelectionGuide = () => {
                         </div>
 
                         {/* Installation Notice */}
-                        <div className="text-[11px] font-semibold text-blue-900 bg-blue-50/80 px-2.5 py-1.5 rounded-lg border border-blue-100 mb-4 flex items-center gap-1.5">
-                          <ShieldCheck className="h-3.5 w-3.5 text-blue-600 shrink-0" />
+                        <div
+                          className={`text-[11px] font-bold px-2.5 py-1.5 rounded-lg border mb-4 flex items-center gap-1.5 ${
+                            isFreeInstall
+                              ? "text-emerald-800 bg-emerald-50 border-emerald-200"
+                              : "text-blue-900 bg-blue-50/80 border-blue-100"
+                          }`}
+                        >
+                          <ShieldCheck
+                            className={`h-3.5 w-3.5 shrink-0 ${
+                              isFreeInstall ? "text-emerald-600" : "text-blue-600"
+                            }`}
+                          />
                           <span className="truncate">{product.installationTerms}</span>
                         </div>
                       </div>
@@ -477,6 +537,31 @@ const ACSelectionGuide = () => {
                   );
                 })}
               </div>
+
+              {/* Empty state if filtered results are 0 */}
+              {filteredGeysers.length === 0 && (
+                <div className="bg-white/90 rounded-2xl p-8 text-center border border-gray-200 max-w-lg mx-auto mb-10 shadow-sm backdrop-blur-sm">
+                  <Flame className="h-10 w-10 text-orange-500 mx-auto mb-3 opacity-80" />
+                  <h4 className="font-bold text-gray-900 text-base mb-1">
+                    No models match the selected filters
+                  </h4>
+                  <p className="text-xs text-gray-500 mb-4">
+                    Try changing your brand, capacity, or orientation filters to see available stock.
+                  </p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => {
+                      setSelectedBrand("All");
+                      setSelectedCapacity("All");
+                      setSelectedOrientation("all");
+                    }}
+                    className="font-bold text-xs"
+                  >
+                    Reset All Filters
+                  </Button>
+                </div>
+              )}
 
               {/* View Full Catalog Link */}
               <div className="text-center">

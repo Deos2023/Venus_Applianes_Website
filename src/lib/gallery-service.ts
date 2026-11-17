@@ -114,7 +114,7 @@ const baseUniqueProducts: ACProduct[] = acProducts.filter(
 export function getPopularACsByBrand(
   brandId: string,
   categoryFilter: ACCategory = "all",
-  limit = 10
+  limit?: number
 ): ACProduct[] {
   let list = baseUniqueProducts.filter((p) => p.brand.toLowerCase() === brandId.toLowerCase());
 
@@ -129,6 +129,10 @@ export function getPopularACsByBrand(
   // Sort by popularity score
   const sorted = [...list].sort((a, b) => scoreProductPopularity(b) - scoreProductPopularity(a));
 
+  if (typeof limit !== "number") {
+    return sorted;
+  }
+
   const picked: ACProduct[] = [];
   const seenImages = new Set<string>();
   const seenModels = new Set<string>();
@@ -136,7 +140,7 @@ export function getPopularACsByBrand(
   for (const product of sorted) {
     const mainImg = fixGalleryImage(product.image);
 
-    // Ensure distinct original image per model among the 10
+    // Ensure distinct original image per model among the initial sample
     if (!seenImages.has(mainImg) && !seenModels.has(product.modelNumber.trim())) {
       seenImages.add(mainImg);
       seenModels.add(product.modelNumber.trim());
@@ -147,7 +151,7 @@ export function getPopularACsByBrand(
   }
 
   // If strict deduplication gave less than available, fill with remaining models to reach limit
-  if (picked.length < limit && list.length > picked.length) {
+  if (picked.length < limit && sorted.length > picked.length) {
     for (const product of sorted) {
       if (!picked.some((p) => p.id === product.id)) {
         picked.push(product);
@@ -167,13 +171,13 @@ export function getPopularACsByBrand(
 export function getPopularACsByCategory(
   category: ACCategory,
   brandFilter = "all",
-  limit = 10
+  limit?: number
 ): ACProduct[] {
   if (category === "all") {
     if (brandFilter !== "all") {
       return getPopularACsByBrand(brandFilter, "all", limit);
     }
-    return getCuratedTop10Showcase(limit);
+    return getCuratedTop10Showcase(limit ?? 10);
   }
 
   let list = baseUniqueProducts.filter((p) => {
@@ -189,6 +193,10 @@ export function getPopularACsByCategory(
 
   // Sort by popularity score
   const sorted = [...list].sort((a, b) => scoreProductPopularity(b) - scoreProductPopularity(a));
+
+  if (typeof limit !== "number") {
+    return sorted;
+  }
 
   const picked: ACProduct[] = [];
   const seenImages = new Set<string>();
@@ -207,7 +215,7 @@ export function getPopularACsByCategory(
     }
   }
 
-  // Second pass: if less than 10, fill from remaining sorted products
+  // Second pass: if less than limit, fill from remaining sorted products
   if (picked.length < limit) {
     for (const product of sorted) {
       const mainImg = fixGalleryImage(product.image);
@@ -271,20 +279,23 @@ export function getCuratedTop10Showcase(limit = 10): ACProduct[] {
 /**
  * Returns Top 10 AC details for every single AC category
  */
-export function getAllCategoriesTop10(): {
+export function getAllCategoriesTop10(limit = 10): {
   category: ACCategory;
   meta: GalleryCategoryMeta;
   products: ACProduct[];
+  totalCount: number;
 }[] {
   const categoriesToInclude: ACCategory[] = ["split", "window", "cassette", "tower", "multi-split"];
 
   return categoriesToInclude.map((cat) => {
     const meta = GALLERY_CATEGORIES.find((c) => c.id === cat)!;
-    const products = getPopularACsByCategory(cat, "all", 10);
+    const allProducts = getPopularACsByCategory(cat, "all");
+    const products = allProducts.slice(0, limit);
     return {
       category: cat,
       meta,
       products,
+      totalCount: allProducts.length,
     };
   });
 }
